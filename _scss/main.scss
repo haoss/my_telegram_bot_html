@@ -96,6 +96,90 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  &__navigation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 117px;
+    background: transparent;
+    &-round {
+      position: absolute;
+      top: 26px;
+      // width: 785px;
+      width: 170%;
+      height: 235px;
+      background: #fff;
+      border-radius: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+    }
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 22px 0 22px;
+      position: relative;
+      z-index: 2;
+    }
+    &-btn {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #555555;
+      font-size: 11px;
+      text-align: center;
+      position: relative;
+      &::before {
+        content: '';
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        outline: 4px solid #fff;
+      }
+      svg {
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        position: relative;
+        z-index: 2;
+        margin: 10px;
+        &+span {
+          margin-top: 7px;
+          line-height: 1;
+          width: 70px;
+        }
+      }
+      &.--your-pharmacy {
+        top: 13px;
+        &::before {
+          background: #55BE61;
+        }
+      }
+      &.--catalog {
+        &::before {
+          background: #34B9F1;
+        }
+      }
+      &.--settings {
+        top: 13px;
+        &::before {
+          background: #F3C04B;
+        }
+      }
+    }
+  }
 }
 
 .app-button-status {
