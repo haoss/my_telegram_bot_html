@@ -9,8 +9,12 @@ html(lang="uk")
   body 
     #app.app
       #section1.section.section1
-        button(type="button").btn-buy#j_test_01
-          span Купить
+        .you-pharmacy Ваша аптека:
+        form(action="#").search
+          input(type="text").search__input
+        .section1__wrapper
+          button(type="button").btn-buy#j_test_01
+            span Купить
         .section1__navigation
           .section1__navigation-round
           .section1__navigation-wrapper

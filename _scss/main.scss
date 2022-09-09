@@ -82,6 +82,12 @@ button {
   }
 }
 
+input {
+  &:hover, &:focus, &:active {
+    outline: none;
+  }
+}
+
 .section {
   width: 100%;
   max-width: 480px;
@@ -97,8 +103,7 @@ button {
   background: url('../images/section-1-bg.jpg') top center no-repeat;
   background-size: cover;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   overflow: hidden;
   &__navigation {
     position: absolute;
@@ -192,6 +197,13 @@ button {
       }
     }
   }
+  &__wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 117px;
+  }
 }
 
 .app-button-status {
@@ -210,16 +222,17 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    &>span {
+      line-height: 20px;
+      display: block;
+    }
   }
   &__count {
-    height: 20px;
     width: 20px;
+    padding: 0 2px;
     border-radius: 50%;
     background: #fff;
     color: #55BE61;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-right: 10px;
   }
 }
@@ -232,4 +245,27 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.you-pharmacy {
+  height: 28px;
+  background: #55BE61;
+  flex-shrink: 0;
+  // color: rgba(255,255,255,0.2);
+  color: #fff;
+  text-align: center;
+}
+
+.search {
+  flex-shrink: 0;
+  margin: 20px;
+  &__input {
+    width: 100%;
+    height: 40px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 150px;
+    border: 0;
+    padding: 0 80px 0 38px;
+    color: black;
+  }
 }
