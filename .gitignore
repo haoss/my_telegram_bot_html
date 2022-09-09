@@ -1,0 +1,8 @@
+content/*
+var/*
+node_modules/*
+*/node_modules/*
+vendor/*
+.directory
+*/.htaccess
+.DS_Store
