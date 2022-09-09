@@ -81,6 +81,7 @@ button {
 
 .section {
   width: 100%;
+  min-width: 320px;
   max-width: 480px;
   margin: 0 auto;
   position: relative;
@@ -135,7 +136,7 @@ button {
       font-size: 11px;
       text-align: center;
       position: relative;
-      &::before {
+      &::before, &::after {
         content: '';
         width: 44px;
         height: 44px;
@@ -144,7 +145,14 @@ button {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        outline: 4px solid #fff;
+        z-index: 2;
+      }
+      &::after {
+        width: 52px;
+        height: 52px;
+        background: #fff;
+        top: -4px;
+        z-index: 1;
       }
       svg {
         background: transparent;
@@ -154,7 +162,7 @@ button {
         width: 24px;
         height: 24px;
         position: relative;
-        z-index: 2;
+        z-index: 4;
         margin: 10px;
         &+span {
           margin-top: 7px;
