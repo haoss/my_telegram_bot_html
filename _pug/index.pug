@@ -7,5 +7,20 @@ html(lang="uk")
     title Telegram bot apteka911
     link(rel='stylesheet', href='./css/style.min.css?v0')
   body 
-    h1 Test
+    #app.app
+      #section1.section.section1
+        button(type="button").btn-buy#j_test_01
+          span Купить
+      #section2.section.section2(style="display: none")
+      #section3.section.section3(style="display: none")
+      #section4.section.section4(style="display: none")
+      #section5.section.section5(style="display: none")
+      #section6.section.section6(style="display: none")
+      #section7.section.section7(style="display: none")
+      button(type="button" style="display: none")#appButtonStatus.app-button-status
+        span.app-button-status__inner
+          span.app-button-status__count 5
+          span товаров. Оформить
+
+    script(src="./js/jquery/jquery-3.3.1.min.js")
     script(src="./js/common.js?v0")
