@@ -381,20 +381,44 @@ input {
       margin: 0 auto;
     }
   }
+  &__head {
+    height: 80px;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 20px 20px;
+    display: flex;
+    font-size: 17px;
+    color: #000;
+    &-icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      margin-right: 15px;
+      border-radius: 50%;
+      background: #eee;
+      overflow: hidden;
+      &.--your-pharmacy {
+        background: #55BE61;
+      }
+      &.--settings {
+        background: #F3C04B;
+      }
+      svg {
+        margin: 8px;
+        fill: #fff;
+        width: 24px;
+        height: 24px;
+      }
+    }
+    &-span {
+      line-height: 40px;
+    }
+  }
   &__content {
     background: #fff;
     border-radius: 25px 25px 0 0;
     overflow: auto;
     max-height: calc(100vh - 98px);
     height: auto;
-    &-head {
-      height: 80px;
-      border-bottom: 1px solid #E0E0E0;
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-      font-size: 17px;
-    }
     &-wrapper {
       font-weight: 400;
       padding: 30px 20px;

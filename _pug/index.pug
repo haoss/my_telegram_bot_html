@@ -5,13 +5,13 @@ html(lang="uk")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Telegram bot apteka911
-    link(rel='stylesheet', href='./css/style.min.css?v5')
+    link(rel='stylesheet', href='./css/style.min.css?v6')
   body 
     #app.app
       #section1.section.section1
         #youPharmacyLine.you-pharmacy-line(style="display: none")
           svg.icon
-            use(href='#vasha_apteca')
+            use(href='#vasha_apteka')
           .you-pharmacy-line__text Ваша аптека:
           button(type="button").you-pharmacy-line__btn#j_test_04
             span г. Харьков, просп. Гагарина, 722
@@ -34,13 +34,13 @@ html(lang="uk")
           .section1__navigation-wrapper
             button(type="button").section1__navigation-btn.--your-pharmacy#j_test_02
               svg.icon
-                use(xlink:href='#vasha_apteca')
+                use(xlink:href='#vasha_apteka')
               span Ваша аптека
             button(type="button").section1__navigation-btn.--catalog
               svg.icon
                 use(xlink:href='#catalog')
               span Каталог товаров
-            button(type="button").section1__navigation-btn.--settings
+            button(type="button").section1__navigation-btn.--settings#j_test_05
               svg.icon
                 use(xlink:href='#settings')
               span Настройки
@@ -50,13 +50,26 @@ html(lang="uk")
               svg.icon
                 use(xlink:href='#close')
             .app-modal__content
-              .app-modal__content-head Ваша аптека
+              .app-modal__head
+                .app-modal__head-icon.--your-pharmacy
+                  svg.icon
+                    use(xlink:href='#vasha_apteka')
+                .app-modal__head-span Ваша аптека
               .app-modal__content-wrapper 
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet tempus nunc, vel aliquet urna. Suspendisse vitae egestas metus. Proin a massa felis. Cras placerat aliquet consectetur. Nullam sit amet urna rhoncus, suscipit quam at, condimentum nisl. Pellentesque ornare egestas est, id sodales dolor condimentum ac. Mauris aliquam a urna eu pellentesque. Sed sit amet mollis justo. Etiam luctus sed est mattis pharetra. Mauris sagittis neque ac luctus luctus.
-                p Nunc facilisis vulputate velit, non condimentum nulla pulvinar vitae. Sed odio metus, elementum eu hendrerit et, facilisis at urna. Suspendisse potenti. Sed quis tristique ipsum, at rutrum elit. Mauris nisl magna, laoreet eu scelerisque at, imperdiet et massa. Nullam vulputate facilisis est, vel semper orci mattis nec. Morbi congue tellus non venenatis feugiat. Aenean luctus pretium gravida. Morbi id quam in dolor malesuada lacinia vel vitae nisl.
-                p Donec consectetur elementum sapien sed vulputate. Mauris at lacus eu libero blandit tincidunt. Curabitur ac porttitor ex, vitae dapibus turpis. In pharetra eleifend enim id molestie. Nunc dapibus eleifend elementum. Nam rutrum massa dictum, varius tortor nec, consequat mi. Integer at sagittis mi. Mauris cursus mauris id vulputate venenatis. Nullam consequat dapibus facilisis.
-                p Mauris eget purus quis sapien suscipit vulputate. Curabitur molestie aliquam mauris interdum mollis. Proin aliquet lacus sapien, et interdum justo tristique a. Cras bibendum mi quis egestas consequat. Cras porttitor nibh non pulvinar tempor. Sed at sapien vitae ligula hendrerit finibus. Cras scelerisque, purus et fermentum sodales, erat leo posuere velit, id tincidunt eros justo at tortor. Nullam pretium malesuada est sed cursus. Phasellus pellentesque porta ornare. Nam vestibulum ullamcorper arcu nec aliquet. Cras id eros metus. Maecenas tincidunt sit amet nisi quis pellentesque. Cras molestie magna et tortor maximus placerat. Nullam nec pharetra dolor, nec vehicula magna. Maecenas vehicula purus at ex tincidunt, a consectetur nunc rhoncus. Pellentesque a sapien nec ligula interdum convallis.
-                p Suspendisse at feugiat lectus. Morbi sodales pretium aliquam. Proin porta mauris ac iaculis faucibus. Integer gravida ut nisl sed pharetra. Pellentesque velit eros, finibus sit amet lacus accumsan, feugiat imperdiet massa. Sed pharetra, augue at tempus faucibus, lectus ipsum egestas orci, eget tempor nisl libero id ante. Nulla facilisi. Nullam porttitor risus tempor purus aliquet, ac mattis felis egestas. Ut laoreet massa in nulla elementum, sit amet auctor lectus rutrum. Nulla fringilla sapien eleifend nisi egestas, sed fermentum arcu gravida. Sed eu dolor pulvinar, molestie sapien at, blandit quam.
+                p test
+        #appModal2.app-modal(style="display: none")
+          .app-modal__wrapper
+            button(type="button").app-modal__close#j_test_06
+              svg.icon
+                use(xlink:href='#close')
+            .app-modal__content
+              .app-modal__head
+                .app-modal__head-icon.--settings
+                  svg.icon
+                    use(xlink:href='#settings')
+                .app-modal__head-span Настройки
+              .app-modal__content-wrapper 
+                p test
       #section2.section.section2(style="display: none")
       #section3.section.section3(style="display: none")
       #section4.section.section4(style="display: none")
@@ -70,6 +83,6 @@ html(lang="uk")
 
     script(src="./js/jquery/jquery-3.3.1.min.js")
     script(src="./js/jquery/jquery-migrate-3.0.1.min.js")
-    script(src="./js/common.js?v2")
+    script(src="./js/common.js?v3")
 
     include ./_include/_svg
