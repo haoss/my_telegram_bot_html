@@ -14,7 +14,7 @@
   --status-height: 48px;
   --accent-color: #31b545;
   --main-color: #f8a917;
-  --text-color: #222;
+  --text-color: #555555;
   --page-hint-color: #83878a;
   --hint-color: #74787a;
   --placeholder-color: #999da1;
@@ -79,6 +79,24 @@ button {
   font-weight: 500;
   &:hover, &:focus, &:active {
     outline: none;
+  }
+}
+
+.btn {
+  width: 100%;
+  display: block;
+  background: transparent;
+  border: 1px solid #eee;
+  border-radius: 7px;
+  font-size: 13px;
+  padding: 10px 15px;
+  text-align: center;
+  font-weight: 500;
+  text-decoration: none;
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+    color: currentColor;
+    border-color: currentColor;
   }
 }
 
@@ -431,3 +449,22 @@ input {
     }
   }
 }
+
+.you-pharmacy {
+  margin: -30px -20px;
+  &__bottom {
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15), 0px 2px 7px 1px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+  }
+  &__btn {
+    @extend .btn;
+    color: #55BE61;
+    border-color: #55BE61;
+    text-decoration: none;
+    &:hover, &:focus, &:active {
+      color: #55BE61;
+      border-color: #55BE61;
+    }
+  }
+}
+
