@@ -268,7 +268,6 @@ input {
     padding: 0;
     font-weight: 400;
     min-width: 1px;
-    line-height: 30px;
     span {
       border-bottom: 1px dashed currentColor;
       color: #fff;
@@ -281,7 +280,7 @@ input {
     }
   }
   &__text {
-    line-height: 28px;
+    line-height: 30px;
     margin-right: 5px;
     flex-shrink: 0;
   }
