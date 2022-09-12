@@ -95,7 +95,7 @@ input {
   position: relative;
   min-height: 400px;
   height: 100%;
-  border: 1px dashed pink;
+  // border: 1px dashed pink;
   flex-grow: 1;
 }
 
@@ -172,6 +172,7 @@ input {
         position: relative;
         z-index: 4;
         margin: 10px;
+        fill: #fff;
         &+span {
           margin-top: 7px;
           line-height: 1;
@@ -247,18 +248,58 @@ input {
   justify-content: center;
 }
 
-.you-pharmacy {
+.you-pharmacy-line {
   height: 28px;
   background: #55BE61;
   flex-shrink: 0;
   // color: rgba(255,255,255,0.2);
   color: #fff;
   text-align: center;
+  overflow: hidden;
+  display: flex;
+  white-space: nowrap;
+  padding: 0 10px;
+  font-size: 12px;
+  color: rgba(255,255,255, 0.7);
+  font-weight: 400;
+  &__btn {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    font-weight: 400;
+    min-width: 1px;
+    span {
+      border-bottom: 1px dashed currentColor;
+      color: #fff;
+      display: block;
+      line-height: 1.1;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &__text {
+    line-height: 28px;
+    margin-right: 5px;
+    flex-shrink: 0;
+  }
+  svg {
+    margin-right: 6px;
+    width: 18px;
+    height: 18px;
+    opacity: 0.7;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    flex-shrink: 0;
+  }
 }
 
 .search {
   flex-shrink: 0;
   margin: 20px;
+  position: relative;
   &__input {
     width: 100%;
     height: 40px;
@@ -267,5 +308,39 @@ input {
     border: 0;
     padding: 0 80px 0 38px;
     color: black;
+  }
+  [class*="__btn-"] {
+    position: absolute;
+    background: transparent;
+    padding: 0;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+      margin: 0 auto;
+      fill: #97A0A7;
+    }
+  }
+  .search__btn-search {
+    pointer-events: none;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 12px;
+    left: 12px;
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__btn-barcode {
+    right: 10px;
+  }
+  &__btn-microphone {
+    right: 40px;
   }
 }
