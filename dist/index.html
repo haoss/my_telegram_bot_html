@@ -10,7 +10,7 @@
     <body> 
         <div class="app" id="app">
             <div class="section section1" id="section1">
-                <div class="you-pharmacy-line">
+                <div class="you-pharmacy-line" id="youPharmacyLine" style="display: none">
                     <svg class="icon">
                         <use href="#vasha_apteca"></use>
                     </svg>
@@ -41,7 +41,7 @@
                 <div class="section1__navigation">
                     <div class="section1__navigation-round"></div>
                     <div class="section1__navigation-wrapper">
-                        <button class="section1__navigation-btn --your-pharmacy" type="button">
+                        <button class="section1__navigation-btn --your-pharmacy" type="button" id="j_test_02">
                             <svg class="icon">
                                 <use xlink:href="#vasha_apteca"></use>
                             </svg><span>Ваша аптека</span>
@@ -56,6 +56,25 @@
                                 <use xlink:href="#settings"></use>
                             </svg><span>Настройки</span>
                         </button>
+                    </div>
+                </div>
+                <div class="app-modal" id="appModal1" style="display: none">
+                    <div class="app-modal__wrapper">
+                        <button class="app-modal__close" type="button" id="j_test_03">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
+                        <div class="app-modal__content">
+                            <div class="app-modal__content-head">Ваша аптека</div>
+                            <div class="app-modal__content-wrapper"> 
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet tempus nunc, vel aliquet urna. Suspendisse vitae egestas metus. Proin a massa felis. Cras placerat aliquet consectetur. Nullam sit amet urna rhoncus, suscipit quam at, condimentum nisl. Pellentesque ornare egestas est, id sodales dolor condimentum ac. Mauris aliquam a urna eu pellentesque. Sed sit amet mollis justo. Etiam luctus sed est mattis pharetra. Mauris sagittis neque ac luctus luctus.</p>
+                                <p>Nunc facilisis vulputate velit, non condimentum nulla pulvinar vitae. Sed odio metus, elementum eu hendrerit et, facilisis at urna. Suspendisse potenti. Sed quis tristique ipsum, at rutrum elit. Mauris nisl magna, laoreet eu scelerisque at, imperdiet et massa. Nullam vulputate facilisis est, vel semper orci mattis nec. Morbi congue tellus non venenatis feugiat. Aenean luctus pretium gravida. Morbi id quam in dolor malesuada lacinia vel vitae nisl.</p>
+                                <p>Donec consectetur elementum sapien sed vulputate. Mauris at lacus eu libero blandit tincidunt. Curabitur ac porttitor ex, vitae dapibus turpis. In pharetra eleifend enim id molestie. Nunc dapibus eleifend elementum. Nam rutrum massa dictum, varius tortor nec, consequat mi. Integer at sagittis mi. Mauris cursus mauris id vulputate venenatis. Nullam consequat dapibus facilisis.</p>
+                                <p>Mauris eget purus quis sapien suscipit vulputate. Curabitur molestie aliquam mauris interdum mollis. Proin aliquet lacus sapien, et interdum justo tristique a. Cras bibendum mi quis egestas consequat. Cras porttitor nibh non pulvinar tempor. Sed at sapien vitae ligula hendrerit finibus. Cras scelerisque, purus et fermentum sodales, erat leo posuere velit, id tincidunt eros justo at tortor. Nullam pretium malesuada est sed cursus. Phasellus pellentesque porta ornare. Nam vestibulum ullamcorper arcu nec aliquet. Cras id eros metus. Maecenas tincidunt sit amet nisi quis pellentesque. Cras molestie magna et tortor maximus placerat. Nullam nec pharetra dolor, nec vehicula magna. Maecenas vehicula purus at ex tincidunt, a consectetur nunc rhoncus. Pellentesque a sapien nec ligula interdum convallis.</p>
+                                <p>Suspendisse at feugiat lectus. Morbi sodales pretium aliquam. Proin porta mauris ac iaculis faucibus. Integer gravida ut nisl sed pharetra. Pellentesque velit eros, finibus sit amet lacus accumsan, feugiat imperdiet massa. Sed pharetra, augue at tempus faucibus, lectus ipsum egestas orci, eget tempor nisl libero id ante. Nulla facilisi. Nullam porttitor risus tempor purus aliquet, ac mattis felis egestas. Ut laoreet massa in nulla elementum, sit amet auctor lectus rutrum. Nulla fringilla sapien eleifend nisi egestas, sed fermentum arcu gravida. Sed eu dolor pulvinar, molestie sapien at, blandit quam.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -91,6 +110,16 @@
             </svg>
             <svg id="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.056 11.924a6.401 6.401 0 1 0-1.132 1.132l1.883 1.882c.329.33.849.343 1.161.03.313-.312.3-.832-.03-1.161l-1.882-1.883Zm-1.662-7.318a4.8 4.8 0 1 1-6.789 6.788 4.8 4.8 0 0 1 6.789-6.788Z"></path>
+            </svg>
+            <svg id="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                <g clip-path="url(#close-a)">
+                    <path d="M6.954 17.774a.9.9 0 0 0 1.273 1.273L13 14.273l4.773 4.774a.9.9 0 0 0 1.273-1.273L14.273 13l4.773-4.773a.9.9 0 0 0-1.273-1.273L13 11.728 8.227 6.955a.9.9 0 0 0-1.273 1.273L11.727 13l-4.773 4.773Z"></path>
+                </g>
+                <defs>
+                    <clipPath id="close-a">
+                        <path transform="rotate(45 6.171 15.829)" d="M0 0h18v18H0z"></path>
+                    </clipPath>
+                </defs>
             </svg>
         </svg>
     </body>
