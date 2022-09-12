@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>Telegram bot apteka911</title>
-        <link rel="stylesheet" href="./css/style.min.css?v9">
+        <link rel="stylesheet" href="./css/style.min.css?v10">
     </head>
     <body> 
         <div class="app" id="app">
@@ -58,7 +58,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="app-modal" id="appModal1">
+                <div class="app-modal" id="appModal1" style="display: none">
                     <div class="app-modal__wrapper">
                         <button class="app-modal__close" type="button" id="j_test_03">
                             <svg class="icon">
@@ -113,7 +113,23 @@
                                 <div class="app-modal__head-span">Настройки</div>
                             </div>
                             <div class="app-modal__content-wrapper"> 
-                                <p>test</p>
+                                <div class="app-settings">
+                                    <div class="app-settings__wrapper">
+                                        <div class="app-settings__head">Язык</div>
+                                        <div class="app-settings__item">
+                                            <label class="form-radio" for="radio1">
+                                                <input class="form-radio__input" id="radio1" type="radio" name="app_settings" checked><span class="form-radio__div"></span>
+                                            </label>
+                                            <div class="app-settings__item-row">Украинский</div>
+                                        </div>
+                                        <div class="app-settings__item">
+                                            <label class="form-radio" for="radio2">
+                                                <input class="form-radio__input" id="radio2" type="radio" name="app_settings"><span class="form-radio__div"></span>
+                                            </label>
+                                            <div class="you-pharmacy__item-row">Русский</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

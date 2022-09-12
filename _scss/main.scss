@@ -452,6 +452,7 @@ input {
 
 .you-pharmacy {
   margin: -30px -20px;
+  font-weight: 500;
   &__bottom {
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15), 0px 2px 7px 1px rgba(0, 0, 0, 0.1);
     padding: 15px 20px;
@@ -471,7 +472,6 @@ input {
     min-height: 76px;
     padding-left: 79px;
     position: relative;
-    font-weight: 500;
     display: flex;
     align-items: center;
     &:last-child {
@@ -547,6 +547,99 @@ input {
       border-radius: 12px;
       background: #fff;
       border: 2px solid #C4C4C4;
+      transition: all .2s;
+    }
+  }
+}
+
+.app-settings {
+  margin: -30px -20px;
+  font-weight: 500;
+  &__head {
+    padding: 8px 20px;
+    font-size: 11px;
+    color: #50A7EA;
+  }
+  &__item {
+    min-height: 76px;
+    padding-left: 79px;
+    position: relative;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    &:last-child {
+      &::before {
+        display: none;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      left: 79px;
+      background: #E0E0E0;
+    }
+    .form-radio {
+      position: absolute;
+      top: 50%;
+      left: 25px;
+      transform: translateY(-50%);
+    }
+    &-row {
+      line-height: 1.2;
+      margin: 5px 0;
+      small {
+        display: block;
+        color: #97A0A7;
+        font-size: 13px;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+.form-radio {
+  position: relative;
+  width: 19px;
+  height: 19px;
+  margin: 0;
+  display: block;
+  &__input {
+    position: absolute;
+    margin: 0;
+    z-index: -1;
+    opacity: 0;
+    &:checked {
+      &+* {
+        border-color: #50A7EA;
+        &::before {
+          background: #50A7EA;
+        }
+      }
+    }
+  }
+  &__div {
+    height: 20px;
+    width: 20px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    border: 2px solid #C4C4C4;
+    transition: all .2s;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #fff;
       transition: all .2s;
     }
   }
