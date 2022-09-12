@@ -44,7 +44,7 @@ html(lang="uk")
               svg.icon
                 use(xlink:href='#settings')
               span Настройки
-        #appModal1.app-modal(style="display: none")
+        #appModal1.app-modal
           .app-modal__wrapper
             button(type="button").app-modal__close#j_test_03
               svg.icon
@@ -56,7 +56,19 @@ html(lang="uk")
                     use(xlink:href='#vasha_apteka')
                 .app-modal__head-span Ваша аптека
               .app-modal__content-wrapper 
-                p test
+                .you-pharmacy
+                  .you-pharmacy__wrapper
+                    .you-pharmacy__item
+                      label(for="") 
+                      .you-pharmacy__item-row Аптека оптовых цен
+                        small г. Харьков, просп. Гагарина, 72
+                    .you-pharmacy__item
+                      label(for="") 
+                      .you-pharmacy__item-row Аптечная сеть 911
+                        small г. Харьков, ул. Энергетическая, 1 (метро Турбоатом)
+                  .you-pharmacy__btn
+                    button(type="button")
+                      span Добавить аптеку
         #appModal2.app-modal(style="display: none")
           .app-modal__wrapper
             button(type="button").app-modal__close#j_test_06
