@@ -5,7 +5,7 @@ html(lang="uk")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Telegram bot apteka911
-    link(rel='stylesheet', href='./css/style.min.css?v8')
+    link(rel='stylesheet', href='./css/style.min.css?v9')
   body 
     #app.app
       #section1.section.section1
@@ -59,11 +59,15 @@ html(lang="uk")
                 .you-pharmacy
                   .you-pharmacy__wrapper
                     .you-pharmacy__item
-                      label(for="") 
+                      label(for="switch1").form-switch
+                        input#switch1(type="radio" name="your_pharmacy" checked).form-switch__input
+                        span.form-switch__div
                       .you-pharmacy__item-row Аптека оптовых цен
                         small г. Харьков, просп. Гагарина, 72
                     .you-pharmacy__item
-                      label(for="") 
+                      label(for="switch2").form-switch
+                        input#switch2(type="radio" name="your_pharmacy").form-switch__input
+                        span.form-switch__div
                       .you-pharmacy__item-row Аптечная сеть 911
                         small г. Харьков, ул. Энергетическая, 1 (метро Турбоатом)
                   .you-pharmacy__bottom
