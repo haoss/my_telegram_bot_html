@@ -229,6 +229,13 @@ input {
 
 .section2 {
   overflow: auto;
+  &::-webkit-scrollbar {
+    width: 3px;
+    background: #EB6161;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #eee;
+  }
 }
 
 .app-button-status {
