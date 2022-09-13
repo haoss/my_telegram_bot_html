@@ -5,10 +5,10 @@ html(lang="uk")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Telegram bot apteka911
-    link(rel='stylesheet', href='./css/style.min.css?v15')
+    link(rel='stylesheet', href='./css/style.min.css?v16')
   body 
     #app.app
-      #section1.section.section1(style="display: none")
+      #section1.section.section1
         #youPharmacyLine.you-pharmacy-line(style="display: none")
           svg.icon
             use(href='#vasha_apteka')
@@ -183,7 +183,7 @@ html(lang="uk")
                 small Дарниця | Украина
               .search-list__item2-price от 28,90 ₴
             - }
-      #section3.section.section3
+      #section3.section.section3(style="display: none")
         .category-head
           .div1
             .category-head__title «Расторопша»
