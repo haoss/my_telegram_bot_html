@@ -5,7 +5,7 @@ html(lang="uk")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Telegram bot apteka911
-    link(rel='stylesheet', href='./css/style.min.css?v10')
+    link(rel='stylesheet', href='./css/style.min.css?v11')
   body 
     #app.app
       #section1.section.section1
@@ -15,17 +15,6 @@ html(lang="uk")
           .you-pharmacy-line__text Ваша аптека:
           button(type="button").you-pharmacy-line__btn#j_test_04
             span г. Харьков, просп. Гагарина, 722
-        // - form(action="#").search
-          input(type="text").search__input
-          button(type="button").search__btn-search
-            svg.icon
-              use(xlink:href='#search')
-          button(type="button").search__btn-microphone
-            svg.icon
-              use(xlink:href='#microphone')
-          button(type="button").search__btn-barcode
-            svg.icon
-              use(xlink:href='#barcode')
         .search
           button(type="button").search__input#j_test_07
           button(type="button").search__btn-search
@@ -82,7 +71,7 @@ html(lang="uk")
                       .you-pharmacy__item-row Аптечная сеть 911
                         small г. Харьков, ул. Энергетическая, 1 (метро Турбоатом)
                   .you-pharmacy__bottom
-                    a(href="javascript:void(0)").you-pharmacy__btn#j_test_12
+                    a(href="javascript:void(0)").btn#j_test_12
                       span Добавить аптеку
         #appModal2.app-modal(style="display: none")
           .app-modal__wrapper
@@ -140,7 +129,19 @@ html(lang="uk")
               .app-modal__content-wrapper 
                 p Клик по кнопку Добавить аптеку
       #section2.section.section2(style="display: none")
-        p Блок поиска
+        form(action="#").search2
+          input(type="text").search2__input#j_test_14
+          button(type="button").search2__btn-microphone
+            svg.icon
+              use(xlink:href='#microphone')
+          button(type="button").search2__btn-barcode
+            svg.icon
+              use(xlink:href='#barcode')
+          button(type="button" style="display: none").search2__btn-close#j_test_15
+            svg.icon
+              use(xlink:href='#close')
+        .search-list
+          .search-list__head История поиска
       #section3.section.section3(style="display: none")
       #section4.section.section4(style="display: none")
       #section5.section.section5(style="display: none")
@@ -153,6 +154,6 @@ html(lang="uk")
 
     script(src="./js/jquery/jquery-3.3.1.min.js")
     script(src="./js/jquery/jquery-migrate-3.0.1.min.js")
-    script(src="./js/common.js?v4")
+    script(src="./js/common.js?v5")
 
     include ./_include/_svg

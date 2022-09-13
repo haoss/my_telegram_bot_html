@@ -17,5 +17,7 @@ $(document).on('ready', function(){
   $('#j_test_13').on('click', function(){ $('#appModal5').hide(); })
   
   $('#j_test_07').on('click', function(){ $('#section1').hide(); $('#section2').show(); })
-
+  
+  $('#j_test_14').on('click', function(){ $(this).val('Рас').next('.search2__btn-microphone').hide().next('.search2__btn-barcode').hide().next('.search2__btn-close').show(); })
+  $('#j_test_15').on('click', function(){ $(this).hide().prev('.search2__btn-barcode').show().prev('.search2__btn-microphone').show().prev().val('').focus(); })
 });

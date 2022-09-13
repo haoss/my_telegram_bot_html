@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>Telegram bot apteka911</title>
-        <link rel="stylesheet" href="./css/style.min.css?v10">
+        <link rel="stylesheet" href="./css/style.min.css?v11">
     </head>
     <body> 
         <div class="app" id="app">
@@ -17,18 +17,6 @@
                     <div class="you-pharmacy-line__text">Ваша аптека:</div>
                     <button class="you-pharmacy-line__btn" type="button" id="j_test_04"><span>г. Харьков, просп. Гагарина, 722</span></button>
                 </div>
-                <!-- - form(action="#").search
-                input(type="text").search__input
-                button(type="button").search__btn-search
-                  svg.icon
-                    use(xlink:href='#search')
-                button(type="button").search__btn-microphone
-                  svg.icon
-                    use(xlink:href='#microphone')
-                button(type="button").search__btn-barcode
-                  svg.icon
-                    use(xlink:href='#barcode')
-                -->
                 <div class="search">
                     <button class="search__input" type="button" id="j_test_07"></button>
                     <button class="search__btn-search" type="button">
@@ -102,7 +90,7 @@
                                             <div class="you-pharmacy__item-row">Аптечная сеть 911<small>г. Харьков, ул. Энергетическая, 1 (метро Турбоатом)</small></div>
                                         </div>
                                     </div>
-                                    <div class="you-pharmacy__bottom"><a class="you-pharmacy__btn" href="javascript:void(0)" id="j_test_12"><span>Добавить аптеку</span></a></div>
+                                    <div class="you-pharmacy__bottom"><a class="btn" href="javascript:void(0)" id="j_test_12"><span>Добавить аптеку</span></a></div>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +187,27 @@
                 </div>
             </div>
             <div class="section section2" id="section2" style="display: none">
-                <p>Блок поиска</p>
+                <form class="search2" action="#">
+                    <input class="search2__input" type="text" id="j_test_14">
+                    <button class="search2__btn-microphone" type="button">
+                        <svg class="icon">
+                            <use xlink:href="#microphone"></use>
+                        </svg>
+                    </button>
+                    <button class="search2__btn-barcode" type="button">
+                        <svg class="icon">
+                            <use xlink:href="#barcode"></use>
+                        </svg>
+                    </button>
+                    <button class="search2__btn-close" type="button" style="display: none" id="j_test_15">
+                        <svg class="icon">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                </form>
+                <div class="search-list">
+                    <div class="search-list__head">История поиска</div>
+                </div>
             </div>
             <div class="section section3" id="section3" style="display: none"></div>
             <div class="section section4" id="section4" style="display: none"></div>
@@ -210,7 +218,7 @@
         </div>
         <script src="./js/jquery/jquery-3.3.1.min.js"></script>
         <script src="./js/jquery/jquery-migrate-3.0.1.min.js"></script>
-        <script src="./js/common.js?v4"></script>
+        <script src="./js/common.js?v5"></script>
         <svg width="0" height="0" style="display: none">
             <symbol id="settings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2337 7.125H3.75C3.33579 7.125 3 7.46079 3 7.875C3 8.28921 3.33579 8.625 3.75 8.625H7.2337C7.55641 9.70931 8.56087 10.5 9.75 10.5C10.9391 10.5 11.9436 9.70931 12.2663 8.625H20.25C20.6642 8.625 21 8.28921 21 7.875C21 7.46079 20.6642 7.125 20.25 7.125H12.2663C11.9436 6.04069 10.9391 5.25 9.75 5.25C8.56087 5.25 7.55641 6.04069 7.2337 7.125ZM8.625 7.875C8.625 7.25368 9.12868 6.75 9.75 6.75C10.3713 6.75 10.875 7.25368 10.875 7.875C10.875 8.49632 10.3713 9 9.75 9C9.12868 9 8.625 8.49632 8.625 7.875Z"></path>
