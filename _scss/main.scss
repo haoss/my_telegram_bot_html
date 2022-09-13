@@ -117,6 +117,14 @@ input {
   height: 100%;
   // border: 1px dashed pink;
   flex-grow: 1;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 3px;
+    background: #eee;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #EB6161;
+  }
 }
 
 .section1 {
@@ -224,17 +232,6 @@ input {
     align-items: center;
     justify-content: center;
     padding-bottom: 117px;
-  }
-}
-
-.section2 {
-  overflow: auto;
-  &::-webkit-scrollbar {
-    width: 3px;
-    background: #eee;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: #EB6161;
   }
 }
 
