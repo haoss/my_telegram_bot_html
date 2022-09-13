@@ -82,7 +82,7 @@ html(lang="uk")
                       .you-pharmacy__item-row Аптечная сеть 911
                         small г. Харьков, ул. Энергетическая, 1 (метро Турбоатом)
                   .you-pharmacy__bottom
-                    a(href="http://").you-pharmacy__btn
+                    a(href="javascript:void(0)").you-pharmacy__btn#j_test_12
                       span Добавить аптеку
         #appModal2.app-modal(style="display: none")
           .app-modal__wrapper
@@ -129,6 +129,16 @@ html(lang="uk")
                 .app-modal__head-span Обработка клика
               .app-modal__content-wrapper 
                 p Клик по сканеру штрихкода
+        #appModal5.app-modal(style="display: none")
+          .app-modal__wrapper
+            button(type="button").app-modal__close#j_test_13
+              svg.icon
+                use(xlink:href='#close')
+            .app-modal__content
+              .app-modal__head
+                .app-modal__head-span Обработка клика
+              .app-modal__content-wrapper 
+                p Клик по кнопку Добавить аптеку
       #section2.section.section2(style="display: none")
         p Блок поиска
       #section3.section.section3(style="display: none")
@@ -143,6 +153,6 @@ html(lang="uk")
 
     script(src="./js/jquery/jquery-3.3.1.min.js")
     script(src="./js/jquery/jquery-migrate-3.0.1.min.js")
-    script(src="./js/common.js?v3")
+    script(src="./js/common.js?v4")
 
     include ./_include/_svg
