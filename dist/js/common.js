@@ -16,8 +16,8 @@ $(document).on('ready', function(){
   $('#j_test_10').on('click', function(){ $('#appModal4').hide(); })
   $('#j_test_13').on('click', function(){ $('#appModal5').hide(); })
   
-  $('#j_test_07').on('click', function(){ $('#section1').hide(); $('#section2').show(); })
+  $('#j_test_07').on('click', function(){ $('#section1').hide(); $('#section2').show(); $('#j_test_14').focus(); })
   
-  $('#j_test_14').on('click', function(){ $(this).val('Рас').next('.search2__btn-microphone').hide().next('.search2__btn-barcode').hide().next('.search2__btn-close').show(); })
-  $('#j_test_15').on('click', function(){ $(this).hide().prev('.search2__btn-barcode').show().prev('.search2__btn-microphone').show().prev().val('').focus(); })
+  $('#j_test_14').on('click', function(){ $(this).val('Рас').next('.search2__btn-microphone').hide().next('.search2__btn-barcode').hide().next('.search2__btn-close').show(); $('#searchListItem1').hide(); $('#searchListItem2').hide(); $('#searchListItem3').hide(); $('#searchListItem4').show(); $('#searchListItem5').show(); $('#searchListHead').hide(); })
+  $('#j_test_15').on('click', function(){ $(this).hide().prev('.search2__btn-barcode').show().prev('.search2__btn-microphone').show().prev().val('').focus(); $('#searchListItem1').show(); $('#searchListItem2').show(); $('#searchListItem3').show(); $('#searchListItem4').hide(); $('#searchListItem5').hide(); $('#searchListHead').show(); })
 });
