@@ -20,4 +20,8 @@ $(document).on('ready', function(){
   
   $('#j_test_14').on('click', function(){ $(this).val('Рас').next('.search2__btn-microphone').hide().next('.search2__btn-barcode').hide().next('.search2__btn-close').show(); $('#searchListItem1').hide(); $('#searchListItem2').hide(); $('#searchListItem3').hide(); $('#searchListItem4').show(); $('#searchListItem5').show(); $('#searchListHead').hide(); })
   $('#j_test_15').on('click', function(){ $(this).hide().prev('.search2__btn-barcode').show().prev('.search2__btn-microphone').show().prev().val('').focus(); $('#searchListItem1').show(); $('#searchListItem2').show(); $('#searchListItem3').show(); $('#searchListItem4').hide(); $('#searchListItem5').hide(); $('#searchListHead').show(); $('#section1').show(); $('#section2').hide(); })
+
+  $('#j_test_16').on('click', function(){ $('#section2').hide(); $('#section3').show(); })
+  $('#j_test_17').on('click', function(){ $('#catalog2').hide(); $('#catalog1').show(); $('#j_test_18').removeClass('active'); $(this).addClass('active'); })
+  $('#j_test_18').on('click', function(){ $('#catalog1').hide(); $('#catalog2').show(); $('#j_test_17').removeClass('active'); $(this).addClass('active'); })
 });

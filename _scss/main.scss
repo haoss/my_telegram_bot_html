@@ -786,3 +786,137 @@ input {
     }
   }
 }
+
+.catalog-list {
+  &__item {
+    display: flex;
+    padding: 20px 20px 20px 100px;
+    width: 100%;
+    position: relative;
+    min-height: 80px;
+    &-text {
+      flex-grow: 1;
+      line-height: 1.2;
+      small {
+        display: block;
+        font-size: 13px;
+        color: #97A0A7;
+        margin-top: 3px;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      left: 100px;
+      background: #E0E0E0;
+    }
+    &-price {
+      font-size: 13px;
+      color: #55BE61;
+      flex-shrink: 0;
+      margin-left: 10px;
+    }
+    &-thumb {
+      width: 60px;
+      flex-shrink: 0;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.category-head {
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+  &>.div1 {
+    flex-grow: 1;
+  }
+  &>.div2 {
+    flex-shrink: 0;
+    margin-left: 10px;
+  }
+  &__title {
+    font-size: 17px;
+    color: #000000;
+    line-height: 1.2;
+  }
+  &__count {
+    color: #97A0A7;
+    font-size: 13px;
+    margin-top: 10px;
+    line-height: 1;
+  }
+}
+.category-view {
+  display: flex;
+  align-items: center;
+  &__btn {
+    background: transparent;
+    text-decoration: none;
+    padding: 0;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    .icon {
+      width: 24px;
+      height: 24px;
+      fill: #97A0A7;
+      display: block;
+      margin: 0 auto;
+    }
+    &+* {
+      margin-left: 4px;
+    }
+    &.active {
+      .icon {
+        fill: #55BE61;
+      }
+    }
+  }
+}
+
+.catalog-head {
+  display: flex;
+  background: #E0E0E0;
+  min-height: 50px;
+  &>div {
+    width: 50%;
+    &+div {
+      border-left: 1px solid #E0E0E0;
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    .icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
+    &-count {
+      min-width: 20px;
+      height: 20px;
+      line-height: 20px;
+      margin-left: 10px;
+      color: #fff;
+      font-size: 13px;
+      background: #55BE61;
+      border-radius: 50%;
+    }
+  }
+}

@@ -5,11 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>Telegram bot apteka911</title>
-        <link rel="stylesheet" href="./css/style.min.css?v14">
+        <link rel="stylesheet" href="./css/style.min.css?v15">
     </head>
     <body> 
         <div class="app" id="app">
-            <div class="section section1" id="section1">
+            <div class="section section1" id="section1" style="display: none">
                 <div class="you-pharmacy-line" id="youPharmacyLine" style="display: none">
                     <svg class="icon">
                         <use href="#vasha_apteka"></use>
@@ -205,7 +205,7 @@
                         </svg>
                     </button>
                 </form>
-                <div class="search-list">
+                <div class="search-list" id="j_test_16">
                     <div class="search-list__head" id="searchListHead">История поиска</div>
                     <div class="search-list__wrapper">
                         <div class="search-list__item" id="searchListItem1">
@@ -294,10 +294,220 @@
                             <div class="search-list__item2-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
                             <div class="search-list__item2-price">от 28,90 ₴</div>
                         </div>
+                        <div class="search-list__item2">
+                            <div class="search-list__item2-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                            <div class="search-list__item2-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="search-list__item2-price">от 62,68 ₴</div>
+                        </div>
+                        <div class="search-list__item2">
+                            <div class="search-list__item2-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                            <div class="search-list__item2-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                            <div class="search-list__item2-price">от 175,60 ₴</div>
+                        </div>
+                        <div class="search-list__item2">
+                            <div class="search-list__item2-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                            <div class="search-list__item2-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="search-list__item2-price">от 28,90 ₴</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="section section3" id="section3" style="display: none"></div>
+            <div class="section section3" id="section3">
+                <div class="category-head">
+                    <div class="div1">
+                        <div class="category-head__title">«Расторопша»</div>
+                        <div class="category-head__count">Товаров: 6</div>
+                    </div>
+                    <div class="div2">
+                        <div class="category-view">
+                            <button class="category-view__btn" type="button" id="j_test_17">
+                                <svg class="icon">
+                                    <use xlink:href="#view1"></use>
+                                </svg>
+                            </button>
+                            <button class="category-view__btn active" type="button" id="j_test_18">
+                                <svg class="icon">
+                                    <use xlink:href="#view2"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-head">
+                    <div class="div1">
+                        <button class="catalog-head__btn" type="button">
+                            <svg class="icon">
+                                <use xlink:href="#filter"></use>
+                            </svg><span class="catalog-head__btn-text">Фильтр</span><span class="catalog-head__btn-count">5</span>
+                        </button>
+                    </div>
+                    <div class="div2">
+                        <button class="catalog-head__btn" type="button">
+                            <svg class="icon">
+                                <use xlink:href="#sort"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div id="catalog1" style="display: none">
+                    <div class="catalog-list">
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 62,68 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 175,60 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 28,90 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 62,68 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 175,60 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 28,90 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 62,68 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 175,60 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 28,90 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 62,68 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 175,60 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 28,90 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 62,68 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 175,60 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 28,90 ₴</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="catalog2">
+                    <div class="catalog-list">
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 175,60 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 28,90 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 62,68 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 175,60 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 28,90 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 62,68 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 175,60 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 28,90 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 62,68 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 175,60 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 28,90 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 62,68 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 175,60 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 28,90 ₴</div>
+                        </div>
+                        <div class="catalog-list__item">
+                            <div class="catalog-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                            <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="catalog-list__item-price">от 62,68 ₴</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="section section4" id="section4" style="display: none"></div>
             <div class="section section5" id="section5" style="display: none"></div>
             <div class="section section6" id="section6" style="display: none"></div>
@@ -306,7 +516,7 @@
         </div>
         <script src="./js/jquery/jquery-3.3.1.min.js"></script>
         <script src="./js/jquery/jquery-migrate-3.0.1.min.js"></script>
-        <script src="./js/common.js?v6"></script>
+        <script src="./js/common.js?v7"></script>
         <svg width="0" height="0" style="display: none">
             <symbol id="settings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2337 7.125H3.75C3.33579 7.125 3 7.46079 3 7.875C3 8.28921 3.33579 8.625 3.75 8.625H7.2337C7.55641 9.70931 8.56087 10.5 9.75 10.5C10.9391 10.5 11.9436 9.70931 12.2663 8.625H20.25C20.6642 8.625 21 8.28921 21 7.875C21 7.46079 20.6642 7.125 20.25 7.125H12.2663C11.9436 6.04069 10.9391 5.25 9.75 5.25C8.56087 5.25 7.55641 6.04069 7.2337 7.125ZM8.625 7.875C8.625 7.25368 9.12868 6.75 9.75 6.75C10.3713 6.75 10.875 7.25368 10.875 7.875C10.875 8.49632 10.3713 9 9.75 9C9.12868 9 8.625 8.49632 8.625 7.875Z"></path>
@@ -349,6 +559,19 @@
                         <path d="M0 0h18v18H0z"></path>
                     </clipPath>
                 </defs>
+            </svg>
+            <svg id="filter" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.6 5.4a.6.6 0 0 1 .6-.6h15.6a.6.6 0 1 1 0 1.2H4.2a.6.6 0 0 1-.6-.6Zm3.6 6a.6.6 0 0 1 .6-.6h8.4a.6.6 0 1 1 0 1.2H7.8a.6.6 0 0 1-.6-.6Zm4.2 5.4a.6.6 0 1 0 0 1.2h1.2a.6.6 0 1 0 0-1.2h-1.2Z"></path>
+            </svg>
+            <svg id="sort" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.4 6a.6.6 0 0 1 .6-.6h12.75a.6.6 0 1 1 0 1.2H5a.6.6 0 0 1-.6-.6Zm13.35 3.9a.6.6 0 0 1 .6.6v7.552l2.726-2.726a.6.6 0 1 1 .848.849l-3.75 3.75a.6.6 0 0 1-.848 0l-3.75-3.75a.6.6 0 0 1 .849-.85l2.725 2.726V10.5a.6.6 0 0 1 .6-.6ZM5 11.4a.6.6 0 1 0 0 1.2h6.75a.6.6 0 1 0 0-1.2H5Zm0 6a.6.6 0 1 0 0 1.2h5.25a.6.6 0 1 0 0-1.2H5Z"></path>
+            </svg>
+            <svg id="view1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.4 4.8a2.4 2.4 0 0 1 2.4-2.4h3.6a2.4 2.4 0 0 1 2.4 2.4v3.6a2.4 2.4 0 0 1-2.4 2.4H4.8a2.4 2.4 0 0 1-2.4-2.4V4.8Zm2.4-1.2h3.6a1.2 1.2 0 0 1 1.2 1.2v3.6a1.2 1.2 0 0 1-1.2 1.2H4.8a1.2 1.2 0 0 1-1.2-1.2V4.8a1.2 1.2 0 0 1 1.2-1.2ZM2.4 15.6a2.4 2.4 0 0 1 2.4-2.4h3.6a2.4 2.4 0 0 1 2.4 2.4v3.6a2.4 2.4 0 0 1-2.4 2.4H4.8a2.4 2.4 0 0 1-2.4-2.4v-3.6Zm2.4-1.2h3.6a1.2 1.2 0 0 1 1.2 1.2v3.6a1.2 1.2 0 0 1-1.2 1.2H4.8a1.2 1.2 0 0 1-1.2-1.2v-3.6a1.2 1.2 0 0 1 1.2-1.2ZM15.6 2.4a2.4 2.4 0 0 0-2.4 2.4v3.6a2.4 2.4 0 0 0 2.4 2.4h3.6a2.4 2.4 0 0 0 2.4-2.4V4.8a2.4 2.4 0 0 0-2.4-2.4h-3.6Zm3.6 1.2h-3.6a1.2 1.2 0 0 0-1.2 1.2v3.6a1.2 1.2 0 0 0 1.2 1.2h3.6a1.2 1.2 0 0 0 1.2-1.2V4.8a1.2 1.2 0 0 0-1.2-1.2ZM13.2 15.6a2.4 2.4 0 0 1 2.4-2.4h3.6a2.4 2.4 0 0 1 2.4 2.4v3.6a2.4 2.4 0 0 1-2.4 2.4h-3.6a2.4 2.4 0 0 1-2.4-2.4v-3.6Zm2.4-1.2h3.6a1.2 1.2 0 0 1 1.2 1.2v3.6a1.2 1.2 0 0 1-1.2 1.2h-3.6a1.2 1.2 0 0 1-1.2-1.2v-3.6a1.2 1.2 0 0 1 1.2-1.2Z"></path>
+            </svg>
+            <svg id="view2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.4 3.6a1.2 1.2 0 0 1 1.2-1.2H6a1.2 1.2 0 0 1 1.2 1.2V6A1.2 1.2 0 0 1 6 7.2H3.6A1.2 1.2 0 0 1 2.4 6V3.6Zm1.2 0H6V6H3.6V3.6ZM2.4 10.8a1.2 1.2 0 0 1 1.2-1.2H6a1.2 1.2 0 0 1 1.2 1.2v2.4A1.2 1.2 0 0 1 6 14.4H3.6a1.2 1.2 0 0 1-1.2-1.2v-2.4Zm1.2 0H6v2.4H3.6v-2.4ZM3.6 16.8A1.2 1.2 0 0 0 2.4 18v2.4a1.2 1.2 0 0 0 1.2 1.2H6a1.2 1.2 0 0 0 1.2-1.2V18A1.2 1.2 0 0 0 6 16.8H3.6ZM6 18H3.6v2.4H6V18Z"></path>
+                <path d="M10.2 4.2a.6.6 0 1 0 0 1.2H21a.6.6 0 1 0 0-1.2H10.2ZM9.6 12a.6.6 0 0 1 .6-.6H21a.6.6 0 1 1 0 1.2H10.2a.6.6 0 0 1-.6-.6ZM10.2 18.6a.6.6 0 1 0 0 1.2H21a.6.6 0 1 0 0-1.2H10.2Z"></path>
             </svg>
         </svg>
     </body>

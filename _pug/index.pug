@@ -5,10 +5,10 @@ html(lang="uk")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Telegram bot apteka911
-    link(rel='stylesheet', href='./css/style.min.css?v14')
+    link(rel='stylesheet', href='./css/style.min.css?v15')
   body 
     #app.app
-      #section1.section.section1
+      #section1.section.section1(style="display: none")
         #youPharmacyLine.you-pharmacy-line(style="display: none")
           svg.icon
             use(href='#vasha_apteka')
@@ -140,7 +140,7 @@ html(lang="uk")
           button(type="button" style="display: none").search2__btn-close#j_test_15
             svg.icon
               use(xlink:href='#close')
-        .search-list
+        .search-list#j_test_16
           #searchListHead.search-list__head История поиска
           .search-list__wrapper
             .search-list__item#searchListItem1
@@ -163,6 +163,7 @@ html(lang="uk")
               .search-list__item-text Экстракт расторопши пятнистой
                 small Дарниця | Украина
               .search-list__item-count 6
+            - for (var i=0; i<=4; i++) {
             .search-list__item2
               .search-list__item2-thumb
                 img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
@@ -181,61 +182,75 @@ html(lang="uk")
               .search-list__item2-text Расторопши плоды 200г
                 small Дарниця | Украина
               .search-list__item2-price от 28,90 ₴
-            .search-list__item2
-              .search-list__item2-thumb
+            - }
+      #section3.section.section3
+        .category-head
+          .div1
+            .category-head__title «Расторопша»
+            .category-head__count Товаров: 6
+          .div2
+            .category-view
+              button(type='button').category-view__btn#j_test_17
+                svg.icon
+                  use(xlink:href='#view1')
+              button(type='button').category-view__btn.active#j_test_18
+                svg.icon
+                  use(xlink:href='#view2')
+        .catalog-head
+          .div1
+            button(type="button").catalog-head__btn
+              svg.icon
+                use(xlink:href='#filter')
+              span.catalog-head__btn-text Фильтр
+              span.catalog-head__btn-count 5
+          .div2
+            button(type="button").catalog-head__btn
+              svg.icon
+                use(xlink:href='#sort')
+        #catalog1(style="display: none")
+          .catalog-list
+            - for (var i=0; i<=4; i++) {
+            .catalog-list__item
+              .catalog-list__item-thumb
                 img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
-              .search-list__item2-text Расторопши плоды 200г
+              .catalog-list__item-text Расторопши плоды 200г
                 small Дарниця | Украина
-              .search-list__item2-price от 62,68 ₴
-            .search-list__item2
-              .search-list__item2-thumb
+              .catalog-list__item-price от 62,68 ₴
+            .catalog-list__item
+              .catalog-list__item-thumb
                 img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
-              .search-list__item2-text Расторопши плоды 200г Solution Pharm
+              .catalog-list__item-text Расторопши плоды 200г Solution Pharm
                 small Дарниця | Украина
-              .search-list__item2-price от 175,60 ₴
-            .search-list__item2
-              .search-list__item2-thumb
+              .catalog-list__item-price от 175,60 ₴
+            .catalog-list__item
+              .catalog-list__item-thumb
                 img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
-              .search-list__item2-text Расторопши плоды 200г
+              .catalog-list__item-text Расторопши плоды 200г
                 small Дарниця | Украина
-              .search-list__item2-price от 28,90 ₴
-            .search-list__item2
-              .search-list__item2-thumb
+              .catalog-list__item-price от 28,90 ₴
+            - }
+        #catalog2
+          .catalog-list
+            - for (var i=0; i<=4; i++) {
+            .catalog-list__item
+              .catalog-list__item-thumb
+                img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
+              .catalog-list__item-text Расторопши плоды 200г Solution Pharm
+                small Дарниця | Украина
+              .catalog-list__item-price от 175,60 ₴
+            .catalog-list__item
+              .catalog-list__item-thumb
+                img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
+              .catalog-list__item-text Расторопши плоды 200г
+                small Дарниця | Украина
+              .catalog-list__item-price от 28,90 ₴
+            .catalog-list__item
+              .catalog-list__item-thumb
                 img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
-              .search-list__item2-text Расторопши плоды 200г
+              .catalog-list__item-text Расторопши плоды 200г
                 small Дарниця | Украина
-              .search-list__item2-price от 62,68 ₴
-            .search-list__item2
-              .search-list__item2-thumb
-                img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
-              .search-list__item2-text Расторопши плоды 200г Solution Pharm
-                small Дарниця | Украина
-              .search-list__item2-price от 175,60 ₴
-            .search-list__item2
-              .search-list__item2-thumb
-                img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
-              .search-list__item2-text Расторопши плоды 200г
-                small Дарниця | Украина
-              .search-list__item2-price от 28,90 ₴
-            .search-list__item2
-              .search-list__item2-thumb
-                img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
-              .search-list__item2-text Расторопши плоды 200г
-                small Дарниця | Украина
-              .search-list__item2-price от 62,68 ₴
-            .search-list__item2
-              .search-list__item2-thumb
-                img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
-              .search-list__item2-text Расторопши плоды 200г Solution Pharm
-                small Дарниця | Украина
-              .search-list__item2-price от 175,60 ₴
-            .search-list__item2
-              .search-list__item2-thumb
-                img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
-              .search-list__item2-text Расторопши плоды 200г
-                small Дарниця | Украина
-              .search-list__item2-price от 28,90 ₴
-      #section3.section.section3(style="display: none")
+              .catalog-list__item-price от 62,68 ₴
+            - }
       #section4.section.section4(style="display: none")
       #section5.section.section5(style="display: none")
       #section6.section.section6(style="display: none")
@@ -247,6 +262,6 @@ html(lang="uk")
 
     script(src="./js/jquery/jquery-3.3.1.min.js")
     script(src="./js/jquery/jquery-migrate-3.0.1.min.js")
-    script(src="./js/common.js?v6")
+    script(src="./js/common.js?v7")
 
     include ./_include/_svg
