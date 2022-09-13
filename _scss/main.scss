@@ -227,6 +227,10 @@ input {
   }
 }
 
+.section2 {
+  overflow: auto;
+}
+
 .app-button-status {
   flex-shrink: 0;
   background: #55BE61;
