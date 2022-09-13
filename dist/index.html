@@ -17,24 +17,36 @@
                     <div class="you-pharmacy-line__text">Ваша аптека:</div>
                     <button class="you-pharmacy-line__btn" type="button" id="j_test_04"><span>г. Харьков, просп. Гагарина, 722</span></button>
                 </div>
-                <form class="search" action="#">
-                    <input class="search__input" type="text">
+                <!-- - form(action="#").search
+                input(type="text").search__input
+                button(type="button").search__btn-search
+                  svg.icon
+                    use(xlink:href='#search')
+                button(type="button").search__btn-microphone
+                  svg.icon
+                    use(xlink:href='#microphone')
+                button(type="button").search__btn-barcode
+                  svg.icon
+                    use(xlink:href='#barcode')
+                -->
+                <div class="search">
+                    <button class="search__input" type="button" id="j_test_07"></button>
                     <button class="search__btn-search" type="button">
                         <svg class="icon">
                             <use xlink:href="#search"></use>
                         </svg>
                     </button>
-                    <button class="search__btn-microphone" type="button">
+                    <button class="search__btn-microphone" type="button" id="j_test_09">
                         <svg class="icon">
                             <use xlink:href="#microphone"></use>
                         </svg>
                     </button>
-                    <button class="search__btn-barcode" type="button">
+                    <button class="search__btn-barcode" type="button" id="j_test_11">
                         <svg class="icon">
                             <use xlink:href="#barcode"></use>
                         </svg>
                     </button>
-                </form>
+                </div>
                 <div class="section1__wrapper">
                     <button class="btn-buy" type="button" id="j_test_01"><span>Купить</span></button>
                 </div>
@@ -134,8 +146,44 @@
                         </div>
                     </div>
                 </div>
+                <div class="app-modal" id="appModal3" style="display: none">
+                    <div class="app-modal__wrapper">
+                        <button class="app-modal__close" type="button" id="j_test_08">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
+                        <div class="app-modal__content">
+                            <div class="app-modal__head">
+                                <div class="app-modal__head-span">Обработка клика</div>
+                            </div>
+                            <div class="app-modal__content-wrapper"> 
+                                <p>Клик по микрофону</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-modal" id="appModal4" style="display: none">
+                    <div class="app-modal__wrapper">
+                        <button class="app-modal__close" type="button" id="j_test_10">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
+                        <div class="app-modal__content">
+                            <div class="app-modal__head">
+                                <div class="app-modal__head-span">Обработка клика</div>
+                            </div>
+                            <div class="app-modal__content-wrapper"> 
+                                <p>Клик по сканеру штрихкода</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="section section2" id="section2" style="display: none"></div>
+            <div class="section section2" id="section2" style="display: none">
+                <p>Блок поиска</p>
+            </div>
             <div class="section section3" id="section3" style="display: none"></div>
             <div class="section section4" id="section4" style="display: none"></div>
             <div class="section section5" id="section5" style="display: none"></div>

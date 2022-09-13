@@ -15,7 +15,7 @@ html(lang="uk")
           .you-pharmacy-line__text Ваша аптека:
           button(type="button").you-pharmacy-line__btn#j_test_04
             span г. Харьков, просп. Гагарина, 722
-        form(action="#").search
+        // - form(action="#").search
           input(type="text").search__input
           button(type="button").search__btn-search
             svg.icon
@@ -24,6 +24,17 @@ html(lang="uk")
             svg.icon
               use(xlink:href='#microphone')
           button(type="button").search__btn-barcode
+            svg.icon
+              use(xlink:href='#barcode')
+        .search
+          button(type="button").search__input#j_test_07
+          button(type="button").search__btn-search
+            svg.icon
+              use(xlink:href='#search')
+          button(type="button").search__btn-microphone#j_test_09
+            svg.icon
+              use(xlink:href='#microphone')
+          button(type="button").search__btn-barcode#j_test_11
             svg.icon
               use(xlink:href='#barcode')
         .section1__wrapper
@@ -98,7 +109,28 @@ html(lang="uk")
                         input#radio2(type="radio" name="app_settings").form-radio__input
                         span.form-radio__div
                       .you-pharmacy__item-row Русский
+        #appModal3.app-modal(style="display: none")
+          .app-modal__wrapper
+            button(type="button").app-modal__close#j_test_08
+              svg.icon
+                use(xlink:href='#close')
+            .app-modal__content
+              .app-modal__head
+                .app-modal__head-span Обработка клика
+              .app-modal__content-wrapper 
+                p Клик по микрофону
+        #appModal4.app-modal(style="display: none")
+          .app-modal__wrapper
+            button(type="button").app-modal__close#j_test_10
+              svg.icon
+                use(xlink:href='#close')
+            .app-modal__content
+              .app-modal__head
+                .app-modal__head-span Обработка клика
+              .app-modal__content-wrapper 
+                p Клик по сканеру штрихкода
       #section2.section.section2(style="display: none")
+        p Блок поиска
       #section3.section.section3(style="display: none")
       #section4.section.section4(style="display: none")
       #section5.section.section5(style="display: none")
