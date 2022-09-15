@@ -5,7 +5,7 @@ html(lang="uk")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Telegram bot apteka911
-    link(rel='stylesheet', href='./css/style.min.css?v19')
+    link(rel='stylesheet', href='./css/style.min.css?v20')
   body 
     #app.app
       #section1.section.section1
@@ -208,53 +208,41 @@ html(lang="uk")
               svg.icon
                 use(xlink:href='#sort')
         #catalog1(style="display: none")
-          .catalog-list
-            - for (var i=0; i<=4; i++) {
-            .catalog-list__item
-              .catalog-list__item-thumb
-                img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
-              .catalog-list__item-text Расторопши плоды 200г
-                small Дарниця | Украина
-              .catalog-list__item-price от 62,68 ₴
-            .catalog-list__item
-              .catalog-list__item-thumb
-                img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
-              .catalog-list__item-text Расторопши плоды 200г Solution Pharm
-                small Дарниця | Украина
-              .catalog-list__item-price от 175,60 ₴
-            .catalog-list__item
-              .catalog-list__item-thumb
-                img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
-              .catalog-list__item-text Расторопши плоды 200г
-                small Дарниця | Украина
-              .catalog-list__item-price от 28,90 ₴
-            - }
+          include ./_include/_catalog_view_1
         #catalog2
-          .catalog-list
-            - for (var i=0; i<=4; i++) {
-            .catalog-list__item
-              .catalog-list__item-thumb
-                img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
-              .catalog-list__item-text Расторопши плоды 200г Solution Pharm
-                small Дарниця | Украина
-              .catalog-list__item-price от 175,60 ₴
-            .catalog-list__item
-              .catalog-list__item-thumb
-                img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
-              .catalog-list__item-text Расторопши плоды 200г
-                small Дарниця | Украина
-              .catalog-list__item-price от 28,90 ₴
-            .catalog-list__item
-              .catalog-list__item-thumb
-                img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
-              .catalog-list__item-text Расторопши плоды 200г
-                small Дарниця | Украина
-              .catalog-list__item-price от 62,68 ₴
-            - }
+          include ./_include/_catalog_view_2
       #section4.section.section4(style="display: none")
+        .category-head
+          .div1
+            .category-head__title Экстракт расторопши пятнистой
+            .category-head__count Товаров: 6
+          .div2
+            .category-view
+              button(type='button').category-view__btn#j_test_20
+                svg.icon
+                  use(xlink:href='#view1')
+              button(type='button').category-view__btn.active#j_test_21
+                svg.icon
+                  use(xlink:href='#view2')
+        .catalog-head
+          .div1
+            button(type="button").catalog-head__btn
+              svg.icon
+                use(xlink:href='#filter')
+              span.catalog-head__btn-text Фильтр
+              span.catalog-head__btn-count 5
+          .div2
+            button(type="button").catalog-head__btn
+              svg.icon
+                use(xlink:href='#sort')
+        #catalog3(style="display: none")
+          include ./_include/_catalog_view_1
+        #catalog4
+          include ./_include/_catalog_view_2
       #section5.section.section5(style="display: none")
+        p Product card
       #section6.section.section6(style="display: none")
-      #section7.section.section7(style="display: none")
+        p Checkout card
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner
           span.app-button-status__count 5
@@ -262,6 +250,6 @@ html(lang="uk")
 
     script(src="./js/jquery/jquery-3.3.1.min.js")
     script(src="./js/jquery/jquery-migrate-3.0.1.min.js")
-    script(src="./js/common.js?v7")
+    script(src="./js/common.js?v8")
 
     include ./_include/_svg
