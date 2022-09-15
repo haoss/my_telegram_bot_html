@@ -5,10 +5,10 @@ html(lang="uk")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Telegram bot apteka911
-    link(rel='stylesheet', href='./css/style.min.css?v20')
+    link(rel='stylesheet', href='./css/style.min.css?v21')
   body 
     #app.app
-      #section1.section.section1
+      #section1.section.section1(style="display: none")
         #youPharmacyLine.you-pharmacy-line(style="display: none")
           svg.icon
             use(href='#vasha_apteka')
@@ -184,64 +184,77 @@ html(lang="uk")
               .search-list__item2-price от 28,90 ₴
             - }
       #section3.section.section3(style="display: none")
-        .category-head
-          .div1
-            .category-head__title «Расторопша»
-            .category-head__count Товаров: 6
-          .div2
-            .category-view
-              button(type='button').category-view__btn#j_test_17
-                svg.icon
-                  use(xlink:href='#view1')
-              button(type='button').category-view__btn.active#j_test_18
-                svg.icon
-                  use(xlink:href='#view2')
         .catalog-head
           .div1
-            button(type="button").catalog-head__btn
+            .catalog-head__title «Расторопша»
+            .catalog-head__count Товаров: 6
+          .div2
+            .catalog-view
+              button(type='button').catalog-view__btn#j_test_17
+                svg.icon
+                  use(xlink:href='#view1')
+              button(type='button').catalog-view__btn.active#j_test_18
+                svg.icon
+                  use(xlink:href='#view2')
+        .filter-head
+          .div1
+            button(type="button").filter-head__btn
               svg.icon
                 use(xlink:href='#filter')
-              span.catalog-head__btn-text Фильтр
-              span.catalog-head__btn-count 5
+              span.filter-head__btn-text Фильтр
+              span.filter-head__btn-count 5
           .div2
-            button(type="button").catalog-head__btn
+            button(type="button").filter-head__btn
               svg.icon
                 use(xlink:href='#sort')
         #catalog1(style="display: none")
           include ./_include/_catalog_view_1
         #catalog2
           include ./_include/_catalog_view_2
-      #section4.section.section4(style="display: none")
-        .category-head
-          .div1
-            .category-head__title Экстракт расторопши пятнистой
-            .category-head__count Товаров: 6
-          .div2
-            .category-view
-              button(type='button').category-view__btn#j_test_20
+      #section4.section.section4
+        .category-list
+          .category-head
+            .category-head__title Каталог товаров
+            button(type="button").category-head__btn
+              svg.icon
+                use(xlink:href='#search')
+          .category-list__wrapper
+            .category-list__item
+              .category-list__item-thumb
                 svg.icon
-                  use(xlink:href='#view1')
-              button(type='button').category-view__btn.active#j_test_21
-                svg.icon
-                  use(xlink:href='#view2')
+                  use(xlink:href='#search')
+              .category-list__item-text Лекарственные препараты
+      #section5.section.section5(style="display: none")
         .catalog-head
           .div1
-            button(type="button").catalog-head__btn
+            .catalog-head__title Экстракт расторопши пятнистой
+            .catalog-head__count Товаров: 6
+          .div2
+            .catalog-view
+              button(type='button').catalog-view__btn#j_test_20
+                svg.icon
+                  use(xlink:href='#view1')
+              button(type='button').catalog-view__btn.active#j_test_21
+                svg.icon
+                  use(xlink:href='#view2')
+        .filter-head
+          .div1
+            button(type="button").filter-head__btn
               svg.icon
                 use(xlink:href='#filter')
-              span.catalog-head__btn-text Фильтр
-              span.catalog-head__btn-count 5
+              span.filter-head__btn-text Фильтр
+              span.filter-head__btn-count 5
           .div2
-            button(type="button").catalog-head__btn
+            button(type="button").filter-head__btn
               svg.icon
                 use(xlink:href='#sort')
         #catalog3(style="display: none")
           include ./_include/_catalog_view_1
         #catalog4
           include ./_include/_catalog_view_2
-      #section5.section.section5(style="display: none")
+      #section6.section.section5(style="display: none")
         p Product card
-      #section6.section.section6(style="display: none")
+      #section7.section.section6(style="display: none")
         p Checkout card
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner

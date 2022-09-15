@@ -29,5 +29,5 @@ $(document).on('ready', function(){
   $('#j_test_20').on('click', function(){ $('#catalog4').hide(); $('#catalog3').show(); $('#j_test_21').removeClass('active'); $(this).addClass('active'); })
   $('#j_test_21').on('click', function(){ $('#catalog3').hide(); $('#catalog4').show(); $('#j_test_20').removeClass('active'); $(this).addClass('active'); })
 
-  $('.j_test_22').on('click', function(){ $('.section').hide(); $('#section5').show(); })
+  $('.j_test_22').on('click', function(){ $('.section').hide(); $('#section6').show(); })
 });
