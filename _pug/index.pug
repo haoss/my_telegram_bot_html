@@ -5,7 +5,7 @@ html(lang="uk")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Telegram bot apteka911
-    link(rel='stylesheet', href='./css/style.min.css?v24')
+    link(rel='stylesheet', href='./css/style.min.css?v25')
   body 
     #app.app
       #section1.section.section1
@@ -46,7 +46,7 @@ html(lang="uk")
               span Настройки
         #appModal1.app-modal(style="display: none")
           .app-modal__wrapper
-            button(type="button").app-modal__close#j_test_03
+            button(type="button").app-modal__close.j-app-modal-close-03
               svg.icon
                 use(xlink:href='#close')
             .app-modal__content
@@ -75,7 +75,7 @@ html(lang="uk")
                       span Добавить аптеку
         #appModal2.app-modal(style="display: none")
           .app-modal__wrapper
-            button(type="button").app-modal__close#j_test_06
+            button(type="button").app-modal__close.j-app-modal-close-03
               svg.icon
                 use(xlink:href='#close')
             .app-modal__content
@@ -100,7 +100,7 @@ html(lang="uk")
                       .you-pharmacy__item-row Русский
         #appModal3.app-modal(style="display: none")
           .app-modal__wrapper
-            button(type="button").app-modal__close#j_test_08
+            button(type="button").app-modal__close.j-app-modal-close-03
               svg.icon
                 use(xlink:href='#close')
             .app-modal__content
@@ -110,7 +110,7 @@ html(lang="uk")
                 p Клик по микрофону
         #appModal4.app-modal(style="display: none")
           .app-modal__wrapper
-            button(type="button").app-modal__close#j_test_10
+            button(type="button").app-modal__close.j-app-modal-close-03
               svg.icon
                 use(xlink:href='#close')
             .app-modal__content
@@ -120,7 +120,7 @@ html(lang="uk")
                 p Клик по сканеру штрихкода
         #appModal5.app-modal(style="display: none")
           .app-modal__wrapper
-            button(type="button").app-modal__close#j_test_13
+            button(type="button").app-modal__close.j-app-modal-close-03
               svg.icon
                 use(xlink:href='#close')
             .app-modal__content
@@ -471,7 +471,58 @@ html(lang="uk")
         #catalog4
           include ./_include/_catalog_view_2
       #section6.section.section5(style="display: none")
-        p Product card
+        #appModal6.app-modal(style="display: none")
+          .app-modal__wrapper
+            button(type="button").app-modal__close.j-app-modal-close-03
+              svg.icon
+                use(xlink:href='#close')
+            .app-modal__content
+              .app-modal__head
+                .app-modal__head-icon.--your-pharmacy
+                  svg.icon
+                    use(xlink:href='#vasha_apteka')
+                .app-modal__head-span Основная информция
+              .app-modal__content-wrapper 
+                p Основная информция
+        #appModal7.app-modal(style="display: none")
+          .app-modal__wrapper
+            button(type="button").app-modal__close.j-app-modal-close-03
+              svg.icon
+                use(xlink:href='#close')
+            .app-modal__content
+              .app-modal__head
+                .app-modal__head-icon.--your-pharmacy
+                  svg.icon
+                    use(xlink:href='#vasha_apteka')
+                .app-modal__head-span Инструкция
+              .app-modal__content-wrapper 
+                p Основная информция
+        #appModal7.app-modal(style="display: none")
+          .app-modal__wrapper
+            button(type="button").app-modal__close.j-app-modal-close-03
+              svg.icon
+                use(xlink:href='#close')
+            .app-modal__content
+              .app-modal__head
+                .app-modal__head-icon.--your-pharmacy
+                  svg.icon
+                    use(xlink:href='#vasha_apteka')
+                .app-modal__head-span Аналоги
+              .app-modal__content-wrapper 
+                p Основная информция
+        #appModal7.app-modal(style="display: none")
+          .app-modal__wrapper
+            button(type="button").app-modal__close.j-app-modal-close-03
+              svg.icon
+                use(xlink:href='#close')
+            .app-modal__content
+              .app-modal__head
+                .app-modal__head-icon.--your-pharmacy
+                  svg.icon
+                    use(xlink:href='#vasha_apteka')
+                .app-modal__head-span Отзывы
+              .app-modal__content-wrapper 
+                p Основная информция
       #section7.section.section6(style="display: none")
         p Checkout card
       button(type="button" style="display: none")#appButtonStatus.app-button-status
@@ -481,6 +532,6 @@ html(lang="uk")
 
     script(src="./js/jquery/jquery-3.3.1.min.js")
     script(src="./js/jquery/jquery-migrate-3.0.1.min.js")
-    script(src="./js/common.js?v10")
+    script(src="./js/common.js?v11")
 
     include ./_include/_svg
