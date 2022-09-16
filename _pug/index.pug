@@ -471,7 +471,28 @@ html(lang="uk")
         #catalog4
           include ./_include/_catalog_view_2
       #section6.section.section5
-        #appModal6.app-modal
+        .product
+          .product__head Парацетамол-Дарница табл. 500мг №10
+          .product__desc Глаксо | Польша
+          .product-available 
+            span Наличие в 180 аптеке в Харькове
+          .product-gallery 1
+          .product-price 160 uhy
+          .product-quantity
+            .product-quantity__head Количество в упаковке:
+            .product-quantity__wrapper
+              span.active 100 шт
+              a(href='#!') 20 шт
+              a(href='#!').disabled 50 шт
+          .product-quantity
+            .product-quantity__head Форма выпуска:
+            .product-quantity__wrapper
+              span.active Таблетки
+              a(href='#!') Суспензия
+              a(href='#!') Раство оральный
+              a(href='#!') Капли
+              a(href='#!') Апмпулы
+        #appModal6.app-modal(style="display: none")
           .app-modal__wrapper
             button(type="button").app-modal__close.j-app-modal-close-03
               svg.icon
