@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>Telegram bot apteka911</title>
-        <link rel="stylesheet" href="./css/style.min.css?v26">
+        <link rel="stylesheet" href="./css/style.min.css?v27">
     </head>
     <body> 
         <div class="app" id="app">
@@ -1049,18 +1049,82 @@
             </div>
             <div class="section section5" id="section6">
                 <div class="product">
-                    <div class="product__head">Парацетамол-Дарница табл. 500мг №10</div>
-                    <div class="product__desc">Глаксо | Польша</div>
-                    <div class="product-available"> <span>Наличие в 180 аптеке в Харькове</span></div>
-                    <div class="product-gallery">1</div>
-                    <div class="product-price">160 uhy</div>
+                    <div class="product__head">
+                        <div class="product__head-title">Парацетамол-Дарница табл. 500мг №10</div>
+                        <div class="product__head-desc">Глаксо | Польша</div>
+                        <div class="product__head-available"> 
+                            <svg class="icon">
+                                <use xlink:href="#check_success"></use>
+                            </svg><span>Наличие в 180 аптеке в Харькове</span>
+                        </div>
+                    </div>
+                    <div class="product-gallery">
+                        <div class="swiper j-product-gallery">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="./tmp/product-gallery.jpg" width="240" height="240" alt=""></div>
+                                <div class="swiper-slide"><img src="./tmp/product-gallery.jpg" width="240" height="240" alt=""></div>
+                                <div class="swiper-slide"><img src="./tmp/product-gallery.jpg" width="240" height="240" alt=""></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="product-price">
+                        <div class="product-price__wrapper">
+                            <div class="div">
+                                <div class="product-price__label">Упаковка / 100 шт.</div>
+                                <div class="product-price__price"><small>от </small><span>149.67 </span><small>₴</small></div>
+                            </div>
+                            <div class="div">
+                                <div class="product-price__label">Пластина / 10 шт.</div>
+                                <div class="product-price__price"><small>от </small><span>14.97 </span><small>₴</small></div>
+                            </div>
+                        </div>
+                        <button class="product-price__btn" type="button" id="j_test_29">
+                            <svg class="icon">
+                                <use xlink:href="#cart"></use>
+                            </svg><span class="product-price__btn-round">
+                                <svg class="icon --check">
+                                    <use xlink:href="#check_success"></use>
+                                </svg></span>
+                        </button>
+                    </div>
                     <div class="product-quantity">
                         <div class="product-quantity__head">Количество в упаковке:</div>
-                        <div class="product-quantity__wrapper"><span class="active">100 шт</span><a href="#!">20 шт</a><a class="disabled" href="#!">50 шт</a></div>
+                        <div class="product-quantity__wrapper j_test_24"><span class="active">100 шт</span><a href="#!">20 шт</a><a class="disabled" href="#!">50 шт</a></div>
                     </div>
                     <div class="product-quantity">
                         <div class="product-quantity__head">Форма выпуска:</div>
-                        <div class="product-quantity__wrapper"><span class="active">Таблетки</span><a href="#!">Суспензия</a><a href="#!">Раство оральный</a><a href="#!">Капли</a><a href="#!">Апмпулы</a></div>
+                        <div class="product-quantity__wrapper j_test_24"><span class="active">Таблетки</span><a href="#!">Суспензия</a><a href="#!">Раство оральный</a><a href="#!">Капли</a><a href="#!">Апмпулы</a></div>
+                    </div>
+                    <div class="product-menu">
+                        <button class="product-menu__btn" type="button" id="j_test_25">
+                            <div class="product-menu__btn-icon --basic">
+                                <svg class="icon">
+                                    <use xlink:href="#icon_info"></use>
+                                </svg>
+                            </div><span>Основная информация</span>
+                        </button>
+                        <button class="product-menu__btn" type="button" id="j_test_26">
+                            <div class="product-menu__btn-icon --document">
+                                <svg class="icon">
+                                    <use xlink:href="#document"></use>
+                                </svg>
+                            </div><span>Инструкция</span>
+                        </button>
+                        <button class="product-menu__btn" type="button" id="j_test_27">
+                            <div class="product-menu__btn-icon --analogs">
+                                <svg class="icon">
+                                    <use xlink:href="#category1"></use>
+                                </svg>
+                            </div><span>Аналоги</span>
+                        </button>
+                        <button class="product-menu__btn" type="button" id="j_test_28">
+                            <div class="product-menu__btn-icon --comment">
+                                <svg class="icon">
+                                    <use xlink:href="#vasha_apteka"></use>
+                                </svg>
+                            </div><span>Отзывы</span>
+                        </button>
                     </div>
                 </div>
                 <div class="app-modal" id="appModal6" style="display: none">
@@ -1468,7 +1532,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="app-modal" id="appModal7" style="display: none">
+                <div class="app-modal" id="appModal8" style="display: none">
                     <div class="app-modal__wrapper">
                         <button class="app-modal__close j-app-modal-close-03" type="button">
                             <svg class="icon">
@@ -1522,7 +1586,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="app-modal" id="appModal7" style="display: none">
+                <div class="app-modal" id="appModal9" style="display: none">
                     <div class="app-modal__wrapper">
                         <button class="app-modal__close j-app-modal-close-03" type="button">
                             <svg class="icon">
@@ -1552,7 +1616,8 @@
         </div>
         <script src="./js/jquery/jquery-3.3.1.min.js"></script>
         <script src="./js/jquery/jquery-migrate-3.0.1.min.js"></script>
-        <script src="./js/common.js?v12"></script>
+        <script src="./js/swiper/swiper-bundle.js"></script>
+        <script src="./js/common.js?v13"></script>
         <svg width="0" height="0" style="display: none">
             <symbol id="settings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2337 7.125H3.75C3.33579 7.125 3 7.46079 3 7.875C3 8.28921 3.33579 8.625 3.75 8.625H7.2337C7.55641 9.70931 8.56087 10.5 9.75 10.5C10.9391 10.5 11.9436 9.70931 12.2663 8.625H20.25C20.6642 8.625 21 8.28921 21 7.875C21 7.46079 20.6642 7.125 20.25 7.125H12.2663C11.9436 6.04069 10.9391 5.25 9.75 5.25C8.56087 5.25 7.55641 6.04069 7.2337 7.125ZM8.625 7.875C8.625 7.25368 9.12868 6.75 9.75 6.75C10.3713 6.75 10.875 7.25368 10.875 7.875C10.875 8.49632 10.3713 9 9.75 9C9.12868 9 8.625 8.49632 8.625 7.875Z"></path>
@@ -1742,6 +1807,12 @@
             <svg id="minus" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="12" cy="12" r="12"></circle>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.35 12a.7.7 0 0 1 .7-.7h11.9a.7.7 0 1 1 0 1.4H6.05a.7.7 0 0 1-.7-.7Z" fill="#fff"></path>
+            </svg>
+            <svg id="check_success" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-4.177-2.887a.653.653 0 0 0-.05-.942.703.703 0 0 0-.971.05l-5.703 6.144L5.174 9.53a.703.703 0 0 0-.973 0 .652.652 0 0 0 0 .942l3.438 3.334a.699.699 0 0 0 .997-.026l6.188-6.666Z"></path>
+            </svg>
+            <svg id="cart" viewBox="0 0 30 28" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.866 27.067a2.333 2.333 0 1 0 0-4.667 2.333 2.333 0 0 0 0 4.667ZM22.066 27.067a2.333 2.333 0 1 0 0-4.667 2.333 2.333 0 0 0 0 4.667ZM26.985 7.467a.933.933 0 0 0-.719-.345H7.6l-.933-5.404a.933.933 0 0 0-.933-.784H1.066a.933.933 0 1 0 0 1.866H4.94l2.296 13.786A3.733 3.733 0 0 0 10.97 19.6h11.107a3.678 3.678 0 0 0 3.677-2.986l1.447-8.4a.933.933 0 0 0-.215-.747Zm-3.117 8.83A1.811 1.811 0 0 1 22 17.742H10.922a1.867 1.867 0 0 1-1.867-1.456L7.87 8.988h17.285l-1.288 7.308Z"></path>
             </svg>
         </svg>
     </body>

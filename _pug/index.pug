@@ -5,7 +5,7 @@ html(lang="uk")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Telegram bot apteka911
-    link(rel='stylesheet', href='./css/style.min.css?v26')
+    link(rel='stylesheet', href='./css/style.min.css?v27')
   body 
     #app.app
       #section1.section.section1(style="display: none")
@@ -472,26 +472,78 @@ html(lang="uk")
           include ./_include/_catalog_view_2
       #section6.section.section5
         .product
-          .product__head Парацетамол-Дарница табл. 500мг №10
-          .product__desc Глаксо | Польша
-          .product-available 
-            span Наличие в 180 аптеке в Харькове
-          .product-gallery 1
-          .product-price 160 uhy
+          .product__head
+            .product__head-title Парацетамол-Дарница табл. 500мг №10
+            .product__head-desc Глаксо | Польша
+            .product__head-available 
+              svg.icon
+                use(xlink:href='#check_success')
+              span Наличие в 180 аптеке в Харькове
+          .product-gallery
+            .swiper.j-product-gallery
+              .swiper-wrapper
+                .swiper-slide
+                  img(src="./tmp/product-gallery.jpg", width="240" height="240" alt="")
+                .swiper-slide
+                  img(src="./tmp/product-gallery.jpg", width="240" height="240" alt="")
+                .swiper-slide
+                  img(src="./tmp/product-gallery.jpg", width="240" height="240" alt="")
+              .swiper-pagination
+          .product-price
+            .product-price__wrapper
+              .div
+                .product-price__label Упаковка / 100 шт.
+                .product-price__price
+                  small от 
+                  span 149.67 
+                  small ₴
+              .div
+                .product-price__label Пластина / 10 шт.
+                .product-price__price
+                  small от 
+                  span 14.97 
+                  small ₴
+            button(type="button").product-price__btn#j_test_29
+              svg.icon
+                use(xlink:href='#cart')
+              span.product-price__btn-round
+                svg.icon.--check
+                  use(xlink:href='#check_success')
           .product-quantity
             .product-quantity__head Количество в упаковке:
-            .product-quantity__wrapper
+            .product-quantity__wrapper.j_test_24
               span.active 100 шт
               a(href='#!') 20 шт
               a(href='#!').disabled 50 шт
           .product-quantity
             .product-quantity__head Форма выпуска:
-            .product-quantity__wrapper
+            .product-quantity__wrapper.j_test_24
               span.active Таблетки
               a(href='#!') Суспензия
               a(href='#!') Раство оральный
               a(href='#!') Капли
               a(href='#!') Апмпулы
+          .product-menu
+            button(type="button").product-menu__btn#j_test_25
+              .product-menu__btn-icon.--basic
+                svg.icon
+                  use(xlink:href='#icon_info')
+              span Основная информация
+            button(type="button").product-menu__btn#j_test_26
+              .product-menu__btn-icon.--document
+                svg.icon
+                  use(xlink:href='#document')
+              span Инструкция
+            button(type="button").product-menu__btn#j_test_27
+              .product-menu__btn-icon.--analogs
+                svg.icon
+                  use(xlink:href='#category1')
+              span Аналоги
+            button(type="button").product-menu__btn#j_test_28
+              .product-menu__btn-icon.--comment
+                svg.icon
+                  use(xlink:href='#vasha_apteka')
+              span Отзывы
         #appModal6.app-modal(style="display: none")
           .app-modal__wrapper
             button(type="button").app-modal__close.j-app-modal-close-03
@@ -806,7 +858,7 @@ html(lang="uk")
                 p
                   b Фармакокінетика.
                 p Абсорбція – висока, практично 100 %. У системному кровотоку 15 % препарату, що всмоктався, зв’язується з білками плазми крові. Час досягнення максимальної концентрації у крові (TCmax) становить 20−30 хвилин. Терапевтично ефективна концентрація парацетамолу у плазмі крові досягається при його призначенні в дозі 10−15 мг/кг. Проникає крізь гематоенцефалічний бар’єр і в грудне молоко. Кількість препарату у грудному молоці становить менше 1 % від прийнятої матір’ю-годувальницею дози парацетамолу. Метаболізується у печінці: 80 % вступає в реакції кон’югації з глюкуроновою кислотою і сульфатами з утворенням неактивних метаболітів. 17 % препарату піддається гідроксилюванню з утворенням активних метаболітів, що кон’югують із глутатіоном і утворюють неактивні метаболіти. При нестачі глутатіону ці метаболіти можуть блокувати ферментні системи гепатоцитів і зумовлювати їхній некроз. Період напіввиведення (T1/2) парацетамолу – 2−3 години. У хворих літнього віку знижується кліренс препарату і збільшується T1/2. Виводиться нирками – 3 % у незміненому вигляді.
-        #appModal7.app-modal(style="display: none")
+        #appModal8.app-modal(style="display: none")
           .app-modal__wrapper
             button(type="button").app-modal__close.j-app-modal-close-03
               svg.icon
@@ -853,7 +905,7 @@ html(lang="uk")
                       .analogs-list__item-text Расторопши плоды 200г
                         small Дарниця | Украина
                       .analogs-list__item-price от 62,68 ₴
-        #appModal7.app-modal(style="display: none")
+        #appModal9.app-modal(style="display: none")
           .app-modal__wrapper
             button(type="button").app-modal__close.j-app-modal-close-03
               svg.icon
@@ -875,6 +927,7 @@ html(lang="uk")
 
     script(src="./js/jquery/jquery-3.3.1.min.js")
     script(src="./js/jquery/jquery-migrate-3.0.1.min.js")
-    script(src="./js/common.js?v12")
+    script(src="./js/swiper/swiper-bundle.js")
+    script(src="./js/common.js?v13")
 
     include ./_include/_svg

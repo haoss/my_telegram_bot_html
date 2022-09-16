@@ -11,10 +11,11 @@ $(document).on('ready', function(){
   $('#j_test_09').on('click', function(){ $('#appModal3').show(); })
   $('#j_test_11').on('click', function(){ $('#appModal4').show(); })
   $('#j_test_12').on('click', function(){ $('#appModal5').show(); })
-  // $('#j_test_06').on('click', function(){ $('#appModal2').hide(); })
-  // $('#j_test_08').on('click', function(){ $('#appModal3').hide(); })
-  // $('#j_test_10').on('click', function(){ $('#appModal4').hide(); })
-  // $('#j_test_13').on('click', function(){ $('#appModal5').hide(); })
+  
+  $('#j_test_25').on('click', function(){ $('#appModal6').show(); })
+  $('#j_test_26').on('click', function(){ $('#appModal7').show(); })
+  $('#j_test_27').on('click', function(){ $('#appModal8').show(); })
+  $('#j_test_28').on('click', function(){ $('#appModal9').show(); })
   
   $('#j_test_07').on('click', function(){ $('#section1').hide(); $('#section2').show(); $('#j_test_14').focus(); })
   
@@ -35,6 +36,9 @@ $(document).on('ready', function(){
   $('#categoryList2').on('click', function(){ $(this).hide(); $('#categoryList3').show(); })
   $('#categoryList3').on('click', function(){ $(this).hide(); $('#categoryList1').show(); $('#section3').hide(); $('#section5').show(); })
 
+  $('.j_test_24 > *:not(.disabled)').on('click', function(){ $(this).parent().children().removeClass('active'); $(this).addClass('active'); })
+  $('#j_test_29').on('click', function(){ $(this).toggleClass('active'); })
+
   $(document).on('click', '.collapsible-heading', function(e){
     e.preventDefault();
     var _this = $(this);
@@ -45,6 +49,17 @@ $(document).on('ready', function(){
       _this.addClass('open-block');
       _this.next().attr('aria-expanded', true).slideDown();
     }
-    // $(this).toggleClass('open-block').next().slideToggle();
+  });
+
+  var swiper = new Swiper(".j-product-gallery", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
   });
 });
