@@ -391,7 +391,6 @@ input {
     left: 0;
     right: 0;
     max-height: calc(100% - 98px);
-    // height: 100%;
   }
   &__close {
     background: #fff;
@@ -424,13 +423,19 @@ input {
       flex-shrink: 0;
       margin-right: 15px;
       border-radius: 50%;
-      background: #eee;
+      background: #ccc;
       overflow: hidden;
       &.--your-pharmacy {
         background: #55BE61;
       }
-      &.--settings {
+      &.--settings, &.--analogs {
         background: #F3C04B;
+      }
+      &.--document {
+        background: #EB6161;
+      }
+      &.--basic {
+        background: #34B9F1;
       }
       svg {
         margin: 8px;
@@ -458,6 +463,19 @@ input {
         }
       }
     }
+    &::-webkit-scrollbar {
+      width: 3px;
+      background: #eee;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #EB6161;
+    }
+  }
+  &__separator {
+    height: 1px;
+    background: #E0E0E0;
+    clear: both;
+    margin: 0 -20px 30px -20px;
   }
 }
 
@@ -750,6 +768,7 @@ input {
     width: 100%;
     position: relative;
     min-height: 80px;
+    font-weight: 500;
     &-text {
       flex-grow: 1;
       line-height: 1.1;
@@ -987,11 +1006,6 @@ input {
 }
 
 .category-head {
-  // position: absolute;
-  // z-index: 25;
-  // top: 0;
-  // left: 0;
-  // right: 0;
   min-height: 70px;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15), 0px 2px 7px 1px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -1126,6 +1140,332 @@ input {
         width: 18px;
         height: 18px;
         fill: #97A0A7;
+      }
+    }
+  }
+}
+
+.analogs-list {
+  margin: -30px -20px;
+  padding-bottom: 5px;
+  &__wrapper {
+    padding-bottom: 5px;
+  }
+  &__head {
+    font-size: 14px;
+    background: #F6F6F6;
+    padding: 15px 20px;
+    font-weight: 500;
+  }
+  &__item {
+    display: flex;
+    padding: 20px 20px 20px 100px;
+    width: 100%;
+    position: relative;
+    min-height: 80px;
+    font-weight: 500;
+    &-text {
+      flex-grow: 1;
+      line-height: 1.1;
+      small {
+        display: block;
+        font-size: 13px;
+        color: #97A0A7;
+        margin-top: 3px;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      left: 100px;
+      background: #E0E0E0;
+    }
+    &-price {
+      font-size: 13px;
+      color: #55BE61;
+      flex-shrink: 0;
+      margin-left: 10px;
+    }
+    &-thumb {
+      width: 60px;
+      flex-shrink: 0;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.product-parameters {
+  $this: &;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.1;
+  margin: 0 0 20px 0;
+  border-top: 1px solid #EDEDED;
+  caption {
+    font-size: 15px;
+    line-height: 1.2;
+    caption-side: top;
+    padding: 0;
+    color: #555555;
+    padding-bottom: 20px;
+    font-weight: 500;
+  }
+  a {
+    text-decoration: underline;
+    color: #50A7EA;
+  }
+  &>tbody {
+    &>tr {
+      &>td {
+        border-bottom: 1px solid #EDEDED;
+        height: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        &:first-child {
+          width: 160px;
+          color: #97A0A7;
+          padding-right: 10px;
+        }
+      }
+      span:not([data-link]) {
+        display: inline-block;
+        padding-left: 24px;
+        position: relative;
+        line-height: 1.07;
+        &:first-letter {
+          text-transform: capitalize;
+        }
+        i {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          margin-top: -1px;
+          font-size: 17px;
+          transform: translate(0,-50%);
+        }
+      }
+      span[data-link] {
+        color: #50A7EA;
+        cursor: pointer;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      &.product-parameters__category {
+        &>td {
+          padding-right: 0;
+          width: auto;
+        }
+        table {
+          display: block;
+          tbody {
+            display: block;
+            &>tr {
+              display: flex;
+              flex-direction: column;
+              p {
+                margin-bottom: 10px;
+              }
+              td {
+                &:last-child {
+                  p {
+                    margin-bottom: 0;
+                    &.atc-code {
+                      color: var(--color-d-6);
+                      margin-bottom: 10px;
+                      &:last-child {
+                        margin-bottom: 0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.block-lights {
+  margin-bottom: 30px;
+  &__head {
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+  }
+  &__grid-icon {
+    position: relative;
+    .icon {
+      fill: #97A0A7;
+      width: 34px;
+      height: 34px;
+      display: block;
+      &+.icon {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        top: 21px;
+        right: 1px;
+      }
+      &.icon_check_1 {
+        fill: #55BE61;
+      }
+      &.icon_check_2 {
+        fill: #F3C04B;
+      }
+      &.icon_check_3 {
+        fill: #EB6161;
+      }
+    }
+    i {
+      font-size: 34px;
+      position: relative;
+      color: var(--color-d-7);
+      i {
+        position: absolute;
+        top: 21px;
+        right: 1px;
+        font-size: 13px;
+        background: var(--color-white);
+      }
+    }
+    .icon-check-circle {
+      color: var(--color-d-4);
+    }
+    .icon-exclamation-circle {
+      color: var(--color-d-5);
+    }
+    .icon-minus-circle {
+      color: var(--color-s-1);
+    }
+  }
+  &__grid-row {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    grid-column-gap: 10px;
+  }
+  &__title {
+    font-size: 12px;
+    line-height: 1.16;
+    margin-bottom: 5px;
+    color: #97A0A7;
+  }
+  &__desk {
+    font-size: 10px;
+    line-height: 1.2;
+  }
+}
+
+.collapsible-container {
+  border-radius: 4px;
+  margin-bottom: 0px;
+  &__row {
+    border-bottom: 1px solid #E0E0E0;
+  }
+  .collapsible-heading {
+    display: flex;
+    align-items: center;
+    border: 0;
+    width: 100%;
+    padding: 0;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+    background: transparent;
+    h4, h3, h2, h1, .h4, .h3, .h2, .h1, button {
+      margin-bottom: 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      vertical-align: middle;
+      min-height: inherit;
+      padding: 23px 0;
+      color: #555;
+      text-decoration: none;
+      font-size: 15px;
+      background: transparent;
+      border: 0;
+      width: 100%;
+    }
+    &.open-block {
+      svg.icon {
+        opacity: 0;
+        visibility: visible;
+        &.--minus {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    &__arrow {
+      width: 24px;
+      height: 24px;
+      position: relative;
+      flex-shrink: 0;
+      margin-left: 15px;
+      display: block;
+      svg.icon {
+        display: block;
+        height: 24px;
+        width: 24px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        fill: #C4C4C4;
+        transition: all 0.35s;
+        &.--minus {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+      .open-block & {
+        
+      }
+    }
+  }
+  .collapsible-block {
+    font-size: 14px;
+    h4, h3, h2, h1, .h4, .h3, .h2, .h1 {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    p, ol, ul {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &>div {
+      padding-bottom: 20px;
+      h4, h3, h2, h1, .h4, .h3, .h2, .h1 {
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      p, ol, ul {
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }

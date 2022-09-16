@@ -5,10 +5,10 @@ html(lang="uk")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Telegram bot apteka911
-    link(rel='stylesheet', href='./css/style.min.css?v25')
+    link(rel='stylesheet', href='./css/style.min.css?v26')
   body 
     #app.app
-      #section1.section.section1
+      #section1.section.section1(style="display: none")
         #youPharmacyLine.you-pharmacy-line(style="display: none")
           svg.icon
             use(href='#vasha_apteka')
@@ -470,20 +470,280 @@ html(lang="uk")
           include ./_include/_catalog_view_1
         #catalog4
           include ./_include/_catalog_view_2
-      #section6.section.section5(style="display: none")
-        #appModal6.app-modal(style="display: none")
+      #section6.section.section5
+        #appModal6.app-modal
           .app-modal__wrapper
             button(type="button").app-modal__close.j-app-modal-close-03
               svg.icon
                 use(xlink:href='#close')
             .app-modal__content
               .app-modal__head
-                .app-modal__head-icon.--your-pharmacy
+                .app-modal__head-icon.--basic
                   svg.icon
                     use(xlink:href='#vasha_apteka')
-                .app-modal__head-span Основная информция
+                .app-modal__head-span Основная информация
               .app-modal__content-wrapper 
-                p Основная информция
+                .block-lights
+                  .block-lights__head Кому можно
+                  .block-lights__grid
+                    div
+                      .block-lights__grid-row
+                        .block-lights__grid-icon
+                          svg.icon
+                            use(xlink:href='#who_can_1')
+                          svg.icon.icon_check_1
+                            use(xlink:href='#icon_check')
+                        .block-lights__content
+                          .block-lights__title Взрослым
+                          .block-lights__desk Можно
+                    div
+                      .block-lights__grid-row
+                        .block-lights__grid-icon
+                          svg.icon
+                            use(xlink:href='#who_can_2')
+                          svg.icon.icon_check_2
+                            use(xlink:href='#icon_check')
+                        .block-lights__content
+                          .block-lights__title Детям
+                          .block-lights__desk С 2-х месяцев до 12 лет
+                    div
+                      .block-lights__grid-row
+                        .block-lights__grid-icon
+                          svg.icon
+                            use(xlink:href='#who_can_3')
+                          svg.icon.icon_check_3
+                            use(xlink:href='#icon_check')
+                        .block-lights__content
+                          .block-lights__title Беременным
+                          .block-lights__desk Нельзя
+                    div
+                      .block-lights__grid-row
+                        .block-lights__grid-icon
+                          svg.icon
+                            use(xlink:href='#who_can_4')
+                          svg.icon.icon_check_3
+                            use(xlink:href='#icon_check')
+                        .block-lights__content
+                          .block-lights__title Кормящим
+                          .block-lights__desk По назначению врача
+                    div
+                      .block-lights__grid-row
+                        .block-lights__grid-icon
+                          svg.icon
+                            use(xlink:href='#who_can_5')
+                          svg.icon.icon_check_1
+                            use(xlink:href='#icon_check')
+                        .block-lights__content
+                          .block-lights__title Аллергикам
+                          .block-lights__desk Можно
+                    div
+                      .block-lights__grid-row
+                        .block-lights__grid-icon
+                          svg.icon
+                            use(xlink:href='#who_can_6')
+                          svg.icon.icon_check_1
+                            use(xlink:href='#icon_check')
+                        .block-lights__content
+                          .block-lights__title Диабетикам
+                          .block-lights__desk Можно
+                    div
+                      .block-lights__grid-row
+                        .block-lights__grid-icon
+                          svg.icon
+                            use(xlink:href='#who_can_7')
+                          svg.icon.icon_check_2
+                            use(xlink:href='#icon_check')
+                        .block-lights__content
+                          .block-lights__title Водителям
+                          .block-lights__desk С осторожностью
+                    div
+                      .block-lights__grid-row
+                        .block-lights__grid-icon
+                          svg.icon
+                            use(xlink:href='#who_can_8')
+                          svg.icon.icon_check_2
+                            use(xlink:href='#icon_check')
+                        .block-lights__content
+                          .block-lights__title С алкоголем
+                          .block-lights__desk С осторожностью
+                .app-modal__separator
+                table.product-parameters
+                  caption Парацетамол-Дарница табл. 500мг №10
+                  tbody
+                    tr
+                      td Торговое название
+                      td
+                        a(href='#!') Парацетамол
+                    tr
+                      td Действующие вещества
+                      td
+                        a(href='#!') Парацетамол
+                    tr.product-parameters__category
+                      td(colspan='2')
+                        table
+                          tbody
+                            tr
+                              td
+                                p Категория
+                              td
+                                p
+                                  a(href='#!') Сердце
+                                  | , 
+                                  a(href='#!') сосуды
+                                  | , 
+                                  a(href='#!') кровь
+                                  |  > 
+                                  a(href='#!') Лечение сердца
+                    tr
+                      td Количество действующего вещества:
+                      td 500 мг
+                    tr
+                      td Форма выпуска:
+                      td таблетки для внутреннего применения
+                    tr
+                      td Количество в упаковке:
+                      td 10 таблеток
+                    tr
+                      td Заявитель:
+                      td Дарница
+                    tr
+                      td Первичная упаковка:
+                      td блистер
+                    tr
+                      td Способ применения:
+                      td Оральные
+                    tr
+                      td Взаимодействие с едой:
+                      td После
+                    tr
+                      td Температура хранения:
+                      td от 5°C до 25°C
+                    tr
+                      td Чувствительность к свету:
+                      td Не чувствительный
+                    tr
+                      td Признак:
+                      td Отечественный
+                    tr
+                      td Происхождение:
+                      td Химический
+                    tr
+                      td Рыночный статус:
+                      td Дженерик-дженерик
+                    tr
+                      td Страна производства:
+                      td Украина
+                    tr
+                      td Производитель:
+                      td ДАРНИЦА ЧАО ФАРМ. ФИРМА
+                    tr
+                      td Условия отпуска:
+                      td Без рецепта
+                    tr.product-parameters__category
+                      td(colspan='2')
+                        table
+                          tbody
+                            tr
+                              td
+                                p Код АТС
+                              td
+                                p.atc-code
+                                  | N 
+                                  span(data-link='aHR0cDovL2xvY2FsaG9zdDo4MDgwL2FwdGVrYTkxMS5jb20udWEvc2hvcC9wcmVwYXJhdHlpLWRseWEtbGVjaGVuaXlhLXphYm9sZXZhbml5LW5lcnZub3ktc2lzdGVteWktYXRjPW4=') Препараты для лечения заболеваний нервной системы
+                                p.atc-code
+                                  | N02 
+                                  span(data-link='aHR0cDovL2xvY2FsaG9zdDo4MDgwL2FwdGVrYTkxMS5jb20udWEvc2hvcC9ib2xldXRvbHlheXVzY2hpZS1zcmVkc3R2YS1hdGM9bjAy') Болеутоляющие средства
+                                p.atc-code
+                                  | N02B 
+                                  span(data-link='aHR0cDovL2xvY2FsaG9zdDo4MDgwL2FwdGVrYTkxMS5jb20udWEvc2hvcC9wcm9jaGllLWFuYWxnZXRpa2ktaS1hbnRpcGlyZXRpa2ktYXRjPW4wMmI=') Прочие анальгетики и антипиретики
+                                p.atc-code
+                                  | N02BE 
+                                  span(data-link='aHR0cDovL2xvY2FsaG9zdDo4MDgwL2FwdGVrYTkxMS5jb20udWEvc2hvcC9hbmlsaWR5aS1hdGM9bjAyYmU=') Анилиды
+                                p.atc-code
+                                  b N02BE01
+                                  span(data-link='aHR0cDovL2xvY2FsaG9zdDo4MDgwL2FwdGVrYTkxMS5jb20udWEvc2hvcC9wYXJhdHNldGFtb2wtYXRjPW4wMmJlMDE=') Парацетамол
+                .collapsible-container
+                  .collapsible-container__row
+                    button(type="button").collapsible-heading
+                      h2 Фармакологические свойства
+                      span.collapsible-heading__arrow
+                        svg.icon.--minus
+                          use(xlink:href='#minus')
+                        svg.icon
+                          use(xlink:href='#plus')
+                    .collapsible-block(aria-expanded='false' style='display: none;')
+                      div
+                        p Фармакодинамика. ацц® лонг. n-ацетил-l-цистеин (ацетилцистеин, ацц) — муколитическое, отхаркивающее средство, применяемое для разжижения мокроты при заболеваниях дыхательной системы, сопровождающихся образованием густой слизи. ацетилцистеин является производным аминокислоты цистеин. муколитический эффект препарата имеет химическую природу. за счет свободной сульфгидрильной группы ацетилцистеин разрывает дисульфидные связи кислых мукополисахаридов, что приводит к деполимеризации мукопротеидов мокроты и уменьшению вязкости слизи и способствует отхаркиванию и отхождению бронхиального секрета. препарат сохраняет активность при наличии гнойной мокроты.
+                        p Ацетилцистеин обладает также антиоксидантными пневмопротекторными свойствами, что обусловлено связыванием его сульфгидрильными группами химических радикалов и, таким образом, обезвреживанием их. Кроме того, препарат способствует повышению синтеза глутатиона — важного фактора внутриклеточной защиты не только от окислительных токсинов экзогенного и эндогенного происхождения, но и от ряда цитотоксических веществ. Эта особенность ацетилцистеина дает возможность эффективно применять последний при передозировке парацетамола.
+                        p
+                          | АЦЦ
+                          sup ®
+                          |  Лонг Лимон. N-ацетил-L-цистеин (ацетилцистеин) — муколитическое, отхаркивающее средство, которое применяется для разжижения мокроты при заболеваниях дыхательной системы, сопровождающихся образованием густой слизи. Ацетилцистеин является производным аминокислоты цистеина. Ацетилцистеин оказывает выраженное муколитическое действие на слизистый и слизисто-гнойный секрет за счет деполимеризации мукопротеиновых комплексов и нуклеиновых кислот, которые придают вязкость гиалиновому и гнойному компонентам мокроты и другим секретам. Дополнительные свойства: снижение индуцированной гиперплазии мукоцитов, повышение выработки сурфактанта за счет стимуляции пневмоцитов типа II, стимуляция активности мукоцилиарного аппарата, что способствует улучшению мукоцилиарного клиренса. В результате мокрота становится менее вязкой.
+                        p N-ацетил-L-цистеин также оказывает прямое антиоксидантное пневмопротекторное действие за счет наличия нуклеофильной свободной тиольной группы (SH), которая способна непосредственно взаимодействовать с электрофильными группами окислительных радикалов. Особенно интересен тот факт, что ацетилцистеин предотвращает инактивацию α-1-антитрипсина — фермента, который ингибирует эластазу, хлорноватистой кислотой (HOCl) — сильным окислителем, который продуцируется миелопероксидазой активных фагоцитов.
+                        p Кроме того, молекулярная структура ацетилцистеина дает ему возможность легко проникать через клеточные мембраны. Внутри клетки ацетилцистеин деацетилируется с образованием L-цистеина, незаменимой аминокислоты для синтеза глутатиона. В дополнение к этому ацетилцистеин, который является прекурсором глутатиона, оказывает косвенный антиоксидантный эффект. Глутатион является высокоактивным трипептидом, распространенным в различных тканях животных и незаменим для сохранения функциональной способности клетки и ее морфологической целостности. Фактически он является частью наиболее важного внутриклеточного механизма защиты от окислительных радикалов как экзо-, так и эндогенных и некоторых цитотоксических веществ, включая парацетамол.
+                        p Парацетамол оказывает цитотоксическое действие путем прогрессирующего снижения содержания глутатиона. Ацетилцистеин играет первостепенную роль в сохранении адекватных уровней глутатиона, таким образом, усиливая клеточную защиту. В результате ацетилцистеин представляет собой специфический антидот при отравлении парацетамолом и другими токсичными веществами (альдегидами, фенолами).
+                        p У пациентов с ХОБЛ (хроническая обструктивная болезнь легких) прием 1200 мг ацетилцистеина в сутки в течение 6 нед приводил к значительному увеличению объема вдоха и ФЖЕЛ (форсированная жизненная емкость легких), возможно, вследствие уменьшения воздушного захвата.
+                        p У больных с ИФЛ (идиопатическим фиброзом легких) применение ацетилцистеина внутрь по 600 мг 3 раза в сутки в течение 1 года в сочетании со стандартной терапией ИФЛ (преднизолон и азатиоприн) способствовало сохранению жизненной емкости легких (ЖЕЛ) и диффузной способности легких, измеренной методом одиночного вдоха окиси углерода.
+                        p В форме ингаляционной терапии в течение 1 года ацетилцистеин способствовал снижению интенсивности прогрессирования заболевания у больных с ИФЛ.
+                        p При применении в очень высоких дозах (до 3000 мг/сут в течение 4 нед) у больных муковисцидозом ацетилцистеин не оказывал значительного токсического действия.
+                        p Антиоксидантная эффективность ацетилцистеина связана с выраженным снижением активности эластазы в мокроте, что является самым значительным показателем функции легких у больных муковисцидозом. Кроме этого, на фоне лечения отмечалось уменьшение числа нейтрофилов в дыхательных путях, а также числа нейтрофилов, которые активно выделяют богатые эластазой гранулы.
+                  .collapsible-container__row
+                    button(type="button").collapsible-heading
+                      h2 Противопоказания
+                      span.collapsible-heading__arrow
+                        svg.icon.--minus
+                          use(xlink:href='#minus')
+                        svg.icon
+                          use(xlink:href='#plus')
+                    .collapsible-block(aria-expanded='false' style='display: none;')
+                      div
+                        p Повышенная чувствительность к ацц или другим компонентам препарата. гепатит, почечная недостаточность (во избежание повышения содержания азотсодержащих веществ в организме). язва желудка и двенадцатиперстной кишки в стадии обострения, кровохарканье, легочное кровотечение.
+                  .collapsible-container__row
+                    button(type="button").collapsible-heading
+                      h2 Побочные эффекты
+                      span.collapsible-heading__arrow
+                        svg.icon.--minus
+                          use(xlink:href='#minus')
+                        svg.icon
+                          use(xlink:href='#plus')
+                    .collapsible-block(aria-expanded='false' style='display: none;')
+                      div
+                        p Оценка побочных эффектов основана на такой классификации по частоте возникновения: очень часто (≥1/10); часто (≥1/100, 1/10); нечасто (≥1/1000, 1/100); единичные (≥1/10 000, 1/1000); редко (1/10 000); частота неизвестна (полученные данные не позволяют оценить частоту).
+                        p Общие нарушения и реакции в месте введения: нечасто — головная боль, лихорадка, гипертермия, лихорадка, аллергические реакции (зуд, крапивница, экзантема, сыпь, бронхоспазм, ангионевротический отек, отек Квинке, тахикардия и артериальная гипотензия); редко — анафилактические реакции и шок; неизвестно — отек лица, экзема.
+                        p Со стороны крови и лимфатической системы: частота неизвестна — анемия.
+                        p Со стороны сердечно-сосудистой системы, органов грудной клетки и средостения: нечасто — тахикардия, артериальная гипотензия; редко — одышка, бронхоспазм — в основном у пациентов с гиперреактивностью бронхов при БА, одышка, геморрагии, кровоизлияние.
+                        p Со стороны пищеварительного тракта: нечасто — стоматит, боль в животе, тошнота, рвота и диарея; редко — диспепсия; неизвестно — неприятный запах изо рта.
+                        p Со стороны органа слуха и лабиринта: нечасто — звон в ушах.
+                        p Со стороны дыхательной системы: редко — ринорея.
+                        p Со стороны нервной системы: нечасто — головная боль.
+                        p Со стороны иммунной системы: нечасто — реакции гиперчувствительности; редко — анафилактический шок, анафилактические/анафилактоидные реакции.
+                        p Исследования: нечасто — снижение АД.
+                        p В очень редких случаях в связи с применением АЦЦ сообщалось о кожных реакциях, таких как синдром Стивенса — Джонсона и синдром Лайелла. В большинстве случаев, как минимум, еще один препарат может с большей вероятностью быть причиной появления кожно-слизистого синдрома. Поэтому при появлении любых новых изменений на коже или слизистых оболочках следует обратиться к врачу и немедленно отменить применение АЦЦ.
+                        p В нескольких исследованиях выявлено ослабление агрегации тромбоцитов при приеме АЦЦ. Клиническая значимость этого наблюдения неизвестна.
+                  .collapsible-container__row
+                    button(type="button").collapsible-heading
+                      h2 Передозировка
+                      span.collapsible-heading__arrow
+                        svg.icon.--minus
+                          use(xlink:href='#minus')
+                        svg.icon
+                          use(xlink:href='#plus')
+                    .collapsible-block(aria-expanded='false' style='display: none;')
+                      div
+                        p До настоящего времени не наблюдалось случаев тяжелых и опасных для жизни побочных эффектов даже при значительной передозировке. добровольцы принимали 11,6 г ацц в сутки в течение 3 мес без возникновения каких-либо серьезных побочных эффектов. пероральные дозы ацц до 500 мг/кг/сут переносились без симптомов интоксикации.
+                        p Передозировка может вызвать такие желудочно-кишечные симптомы, как тошнота, рвота и диарея. Для детей есть риск гиперсекреции.
+                        p Специфического антидота при отравлении АЦЦ нет, терапия симптоматическая.
+                  .collapsible-container__row
+                    button(type="button").collapsible-heading
+                      h2 Условия хранения
+                      span.collapsible-heading__arrow
+                        svg.icon.--minus
+                          use(xlink:href='#minus')
+                        svg.icon
+                          use(xlink:href='#plus')
+                    .collapsible-block(aria-expanded='false' style='display: none;')
+                      div
+                        p Специальных условий хранения не требуется. хранить в недоступном для детей месте.
         #appModal7.app-modal(style="display: none")
           .app-modal__wrapper
             button(type="button").app-modal__close.j-app-modal-close-03
@@ -491,12 +751,40 @@ html(lang="uk")
                 use(xlink:href='#close')
             .app-modal__content
               .app-modal__head
-                .app-modal__head-icon.--your-pharmacy
+                .app-modal__head-icon.--document
                   svg.icon
-                    use(xlink:href='#vasha_apteka')
+                    use(xlink:href='#document')
                 .app-modal__head-span Инструкция
               .app-modal__content-wrapper 
-                p Основная информция
+                p(style="text-align: center;")
+                  b ІНСТРУКЦІЯ
+                p(style="text-align: center;") 
+                  b для медичного застосування лікарського засобу
+                p(style="text-align: center;") 
+                  b ПАРАЦЕТАМОЛ-ДАРНИЦЯ
+                p(style="text-align: center;") 
+                  b (PARACETAMOL-DARNITSA)
+                p
+                  b Склад:
+                p діюча речовина: paracetamol;
+                  br
+                  | 1 таблетка містить парацетамолу 500 мг;
+                  br
+                  | допоміжні речовини: крохмаль прежелатинізований, повідон, целюлоза мікрокристалічна, натрію кроскармелоза, кальцію стеарат.
+                p
+                  b Лікарська форма. 
+                  | Таблетки.
+                p Основні фізико-хімічні властивості: таблетки білого або майже білого кольору, плоскоциліндричної форми, з фаскою та рискою. Допускається сіруватий відтінок.
+                p 
+                  b Фармакотерапевтична група.
+                p Аналгетики та антипіретики. Аніліди. Парацетамол. Код АТХ N02B E01.
+                p
+                  b Фармакологічні властивості.
+                p Фармакодинаміка.
+                p Ненаркотичний аналгетик. Неселективно інгібує циклооксигеназу (ЦОГ), впливаючи на центри болю і терморегуляції. У запалених тканинах клітинні пероксидази нейтралізують вплив парацетамолу на ЦОГ, що пояснює незначний протизапальний ефект. Відсутній вплив на синтез простагландинів у периферичних тканинах, що зумовлює відсутність у парацетамолу негативного впливу на водно-сольовий обмін (затримка натрію і води) і слизову оболонку шлунково-кишкового тракту. Можливість утворення метгемоглобіну і сульфгемоглобіну малоймовірна.
+                p
+                  b Фармакокінетика.
+                p Абсорбція – висока, практично 100 %. У системному кровотоку 15 % препарату, що всмоктався, зв’язується з білками плазми крові. Час досягнення максимальної концентрації у крові (TCmax) становить 20−30 хвилин. Терапевтично ефективна концентрація парацетамолу у плазмі крові досягається при його призначенні в дозі 10−15 мг/кг. Проникає крізь гематоенцефалічний бар’єр і в грудне молоко. Кількість препарату у грудному молоці становить менше 1 % від прийнятої матір’ю-годувальницею дози парацетамолу. Метаболізується у печінці: 80 % вступає в реакції кон’югації з глюкуроновою кислотою і сульфатами з утворенням неактивних метаболітів. 17 % препарату піддається гідроксилюванню з утворенням активних метаболітів, що кон’югують із глутатіоном і утворюють неактивні метаболіти. При нестачі глутатіону ці метаболіти можуть блокувати ферментні системи гепатоцитів і зумовлювати їхній некроз. Період напіввиведення (T1/2) парацетамолу – 2−3 години. У хворих літнього віку знижується кліренс препарату і збільшується T1/2. Виводиться нирками – 3 % у незміненому вигляді.
         #appModal7.app-modal(style="display: none")
           .app-modal__wrapper
             button(type="button").app-modal__close.j-app-modal-close-03
@@ -504,12 +792,46 @@ html(lang="uk")
                 use(xlink:href='#close')
             .app-modal__content
               .app-modal__head
-                .app-modal__head-icon.--your-pharmacy
+                .app-modal__head-icon.--analogs
                   svg.icon
-                    use(xlink:href='#vasha_apteka')
+                    use(xlink:href='#category1')
                 .app-modal__head-span Аналоги
               .app-modal__content-wrapper 
-                p Основная информция
+                .analogs-list
+                  .analogs-list__head Полный аналог
+                  .analogs-list__wrapper
+                    .analogs-list__item
+                      .analogs-list__item-thumb
+                        img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
+                      .analogs-list__item-text Расторопши плоды 200г
+                        small Дарниця | Украина
+                      .analogs-list__item-price от 62,68 ₴
+                    .analogs-list__item
+                      .analogs-list__item-thumb
+                        img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
+                      .analogs-list__item-text Расторопши плоды 200г Solution Pharm
+                        small Дарниця | Украина
+                      .analogs-list__item-price от 175,60 ₴
+                    .analogs-list__item
+                      .analogs-list__item-thumb
+                        img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
+                      .analogs-list__item-text Расторопши плоды 200г
+                        small Дарниця | Украина
+                      .analogs-list__item-price от 28,90 ₴
+                  .analogs-list__head Аналог в других формах выпуска
+                  .analogs-list__wrapper
+                    .analogs-list__item
+                      .analogs-list__item-thumb
+                        img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
+                      .analogs-list__item-text Расторопши плоды 200г
+                        small Дарниця | Украина
+                      .analogs-list__item-price от 28,90 ₴
+                    .analogs-list__item
+                      .analogs-list__item-thumb
+                        img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
+                      .analogs-list__item-text Расторопши плоды 200г
+                        small Дарниця | Украина
+                      .analogs-list__item-price от 62,68 ₴
         #appModal7.app-modal(style="display: none")
           .app-modal__wrapper
             button(type="button").app-modal__close.j-app-modal-close-03
@@ -532,6 +854,6 @@ html(lang="uk")
 
     script(src="./js/jquery/jquery-3.3.1.min.js")
     script(src="./js/jquery/jquery-migrate-3.0.1.min.js")
-    script(src="./js/common.js?v11")
+    script(src="./js/common.js?v12")
 
     include ./_include/_svg
