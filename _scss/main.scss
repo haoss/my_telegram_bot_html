@@ -436,6 +436,11 @@ input {
       }
       &.--basic {
         background: #34B9F1;
+        svg {
+          fill: #34B9F1;
+          transform-origin: 50%;
+          transform: rotate(-180deg);
+        }
       }
       svg {
         margin: 8px;
