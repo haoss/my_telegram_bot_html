@@ -62,4 +62,39 @@ $(document).on('ready', function(){
       disableOnInteraction: false,
     },
   });
+
+  inputFocus();
 });
+
+function inputFocus() {
+  var jinput = $(".css-input");
+
+  jinput.each(function(){
+    var _this = $(this);
+    var val = _this.val();
+    var field = _this.parents('.j-field-text');
+
+    if (val.length > 0 && _this.is('input') || val.length > 0 && _this.is('textarea')) {
+      field.addClass("active-full");
+    } else {
+      field.removeClass("active-full");
+    }
+
+    // input on focus
+    _this.focus(function () {
+      field.addClass("active");
+    }).blur(function () {
+      field.removeClass("active");
+    })
+
+    _this.on('change', function () {
+      var val = _this.val();
+
+      if (val == '') {
+        field.removeClass("active-full");
+      } else {
+        field.addClass("active-full");
+      }
+    });
+  })
+}

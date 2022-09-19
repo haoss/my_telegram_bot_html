@@ -9,7 +9,7 @@
     </head>
     <body> 
         <div class="app" id="app">
-            <div class="section section1" id="section1">
+            <div class="section section1" id="section1" style="display: none">
                 <div class="you-pharmacy-line" id="youPharmacyLine" style="display: none">
                     <svg class="icon">
                         <use href="#vasha_apteka"></use>
@@ -1047,7 +1047,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section section6" id="section6" style="display: none">
+            <div class="section section6" id="section6">
                 <div class="product">
                     <div class="product__head">
                         <div class="product__head-title">Парацетамол-Дарница табл. 500мг №10</div>
@@ -1586,7 +1586,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="app-modal" id="appModal9" style="display: none">
+                <div class="app-modal" id="appModal9">
                     <div class="app-modal__wrapper">
                         <button class="app-modal__close j-app-modal-close-03" type="button">
                             <svg class="icon">
@@ -1603,7 +1603,222 @@
                                 <div class="app-modal__head-span">Отзывы</div>
                             </div>
                             <div class="app-modal__content-wrapper"> 
-                                <p>Основная информция</p>
+                                <!-- Review form-->
+                                <div class="review-form">
+                                    <form action="#!">
+                                        <div class="form-group">
+                                            <div class="div-table">
+                                                <div class="div-table__cell"> 
+                                                    <div class="form-label mb0">Оценить</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <fieldset> 
+                                            <div class="form-group">
+                                                    <label class="field-text j-field-text">
+                                                        <input class="field-text__input css-input" type="text" value="" aria-invalid="false" name="review-name" placeholder=""><span class="field-text__name css-label">Имя<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
+                                                    </label>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label class="field-text j-field-text">
+                                                        <input class="field-text__input css-input" type="text" value="" aria-invalid="false" name="review-email" placeholder="" autocomplete="email"><span class="field-text__name css-label">E-mail<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
+                                                    </label>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label class="field-text j-field-text">
+                                                        <textarea class="field-text__input css-input" aria-invalid="false" name="review-message" placeholder="" rows="1"></textarea><span class="field-text__name css-label">Отзыв<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
+                                                    </label>
+                                            </div>
+                                        </fieldset>
+                                        <div class="review-form__btn">
+                                            <button class="btn" type="button"><span>Отмена</span></button>
+                                            <button class="btn --accent" type="button"><span>Отправить</span></button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- Comments list-->
+                                <div class="comment-list">
+                                    <!-- Comment-->
+                                    <div class="comment"> 
+                                        <div class="comment__head">
+                                            <div class="comment__name">Неля </div>
+                                            <div class="comment__date">17 февраля 2022 </div>
+                                        </div>
+                                        <div class="comment__rating">
+                                            <div class="rating --r-1">
+                                                <div class="rating__score"></div>
+                                            </div>
+                                        </div>
+                                        <div class="comment__content"> 
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                        </div>
+                                        <div class="comment__foot">
+                                            <div class="comment__foot-btns">
+                                                <button class="btn --link" type="button" data-modal="commentAnswer"><i class="icon-reviews"></i><span>Ответить</span></button>
+                                                <button class="btn --link" type="button" data-modal="commentComplaint"><i class="icon-warning-o"></i><span>Пожаловаться</span></button>
+                                            </div>
+                                            <div class="comment__foot-response">
+                                                <button class="btn" type="button"><i class="icon-unlike"></i><span>2</span></button>
+                                                <button class="btn" type="button"><i class="icon-like"></i><span>0</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Comment-->
+                                    <div class="comment"> 
+                                        <div class="comment__head">
+                                            <div class="comment__name">Неля </div>
+                                            <div class="comment__date">17 февраля 2022 </div>
+                                        </div>
+                                        <div class="comment__rating">
+                                            <div class="rating --r-2">
+                                                <div class="rating__score"></div>
+                                            </div>
+                                        </div>
+                                        <div class="comment__content">
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                        </div>
+                                        <div class="comment__foot">
+                                            <div class="comment__foot-btns">
+                                                <button class="btn --link" type="button" data-modal="commentAnswer"><i class="icon-reviews"></i><span>Ответить</span></button>
+                                                <button class="btn --link" type="button" data-modal="commentComplaint"><i class="icon-warning-o"></i><span>Пожаловаться</span></button>
+                                            </div>
+                                            <div class="comment__foot-response">
+                                                <button class="btn" type="button"><i class="icon-unlike"></i><span>2</span></button>
+                                                <button class="btn" type="button"><i class="icon-like"></i><span>0</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Comment-->
+                                    <div class="comment --answer">
+                                        <div class="comment__head">
+                                            <div class="comment__name">Неля </div>
+                                            <div class="comment__date">17 февраля 2022 </div>
+                                        </div>
+                                        <div class="comment__content">
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Comment-->
+                                    <div class="comment --answer">
+                                        <div class="comment__head">
+                                            <div class="comment__name">Неля </div>
+                                            <div class="comment__date">17 февраля 2022 </div>
+                                        </div>
+                                        <div class="comment__content">
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Comment-->
+                                    <div class="comment"> 
+                                        <div class="comment__head">
+                                            <div class="comment__name">Неля </div>
+                                            <div class="comment__date">17 февраля 2022 </div>
+                                        </div>
+                                        <div class="comment__rating">
+                                            <div class="rating --r-3">
+                                                <div class="rating__score"></div>
+                                            </div>
+                                        </div>
+                                        <div class="comment__content">
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                        </div>
+                                        <div class="comment__foot">
+                                            <div class="comment__foot-btns">
+                                                <button class="btn --link" type="button" data-modal="commentAnswer"><i class="icon-reviews"></i><span>Ответить</span></button>
+                                                <button class="btn --link" type="button" data-modal="commentComplaint"><i class="icon-warning-o"></i><span>Пожаловаться</span></button>
+                                            </div>
+                                            <div class="comment__foot-response">
+                                                <button class="btn" type="button"><i class="icon-unlike"></i><span>2</span></button>
+                                                <button class="btn" type="button"><i class="icon-like"></i><span>0</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Comment-->
+                                    <div class="comment"> 
+                                        <div class="comment__head">
+                                            <div class="comment__name">Неля </div>
+                                            <div class="comment__date">17 февраля 2022 </div>
+                                        </div>
+                                        <div class="comment__rating">
+                                            <div class="rating --r-4">
+                                                <div class="rating__score"></div>
+                                            </div>
+                                        </div>
+                                        <div class="comment__content">
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                        </div>
+                                        <div class="comment__foot">
+                                            <div class="comment__foot-btns">
+                                                <button class="btn --link" type="button" data-modal="commentAnswer"><i class="icon-reviews"></i><span>Ответить</span></button>
+                                                <button class="btn --link" type="button" data-modal="commentComplaint"><i class="icon-warning-o"></i><span>Пожаловаться</span></button>
+                                            </div>
+                                            <div class="comment__foot-response">
+                                                <button class="btn" type="button"><i class="icon-unlike"></i><span>2</span></button>
+                                                <button class="btn" type="button"><i class="icon-like"></i><span>0</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Comment-->
+                                    <div class="comment"> 
+                                        <div class="comment__head">
+                                            <div class="comment__name">Неля </div>
+                                            <div class="comment__date">17 февраля 2022 </div>
+                                        </div>
+                                        <div class="comment__rating">
+                                            <div class="rating --r-5">
+                                                <div class="rating__score"></div>
+                                            </div>
+                                        </div>
+                                        <div class="comment__content">
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                        </div>
+                                        <div class="comment__foot">
+                                            <div class="comment__foot-btns">
+                                                <button class="btn --link" type="button" data-modal="commentAnswer"><i class="icon-reviews"></i><span>Ответить</span></button>
+                                                <button class="btn --link" type="button" data-modal="commentComplaint"><i class="icon-warning-o"></i><span>Пожаловаться</span></button>
+                                            </div>
+                                            <div class="comment__foot-response">
+                                                <button class="btn" type="button"><i class="icon-unlike"></i><span>2</span></button>
+                                                <button class="btn" type="button"><i class="icon-like"></i><span>0</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Comment-->
+                                    <div class="comment --answer">
+                                        <div class="comment__head">
+                                            <div class="comment__name">Неля </div>
+                                            <div class="comment__date">17 февраля 2022 </div>
+                                        </div>
+                                        <div class="comment__content">
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Comment-->
+                                    <div class="comment"> 
+                                        <div class="comment__head">
+                                            <div class="comment__name">Неля </div>
+                                            <div class="comment__date">17 февраля 2022 </div>
+                                        </div>
+                                        <div class="comment__rating">
+                                            <div class="rating --r-1">
+                                                <div class="rating__score"></div>
+                                            </div>
+                                        </div>
+                                        <div class="comment__content">
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                        </div>
+                                        <div class="comment__foot">
+                                            <div class="comment__foot-btns">
+                                                <button class="btn --link" type="button" data-modal="commentAnswer"><i class="icon-reviews"></i><span>Ответить</span></button>
+                                                <button class="btn --link" type="button" data-modal="commentComplaint"><i class="icon-warning-o"></i><span>Пожаловаться</span></button>
+                                            </div>
+                                            <div class="comment__foot-response">
+                                                <button class="btn" type="button"><i class="icon-unlike"></i><span>2</span></button>
+                                                <button class="btn" type="button"><i class="icon-like"></i><span>0</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,6 @@
 doctype html
 html(lang="uk")
+  include ./_include/_mixin_field-text
   head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -8,7 +9,7 @@ html(lang="uk")
     link(rel='stylesheet', href='./css/style.min.css?v29')
   body 
     #app.app
-      #section1.section.section1
+      #section1.section.section1(style="display: none")
         #youPharmacyLine.you-pharmacy-line(style="display: none")
           svg.icon
             use(href='#vasha_apteka')
@@ -470,7 +471,7 @@ html(lang="uk")
           include ./_include/_catalog_view_1
         #catalog4
           include ./_include/_catalog_view_2
-      #section6.section.section6(style="display: none")
+      #section6.section.section6
         .product
           .product__head
             .product__head-title Парацетамол-Дарница табл. 500мг №10
@@ -905,7 +906,7 @@ html(lang="uk")
                       .analogs-list__item-text Расторопши плоды 200г
                         small Дарниця | Украина
                       .analogs-list__item-price от 62,68 ₴
-        #appModal9.app-modal(style="display: none")
+        #appModal9.app-modal
           .app-modal__wrapper
             button(type="button").app-modal__close.j-app-modal-close-03
               svg.icon
@@ -917,7 +918,239 @@ html(lang="uk")
                     use(xlink:href='#vasha_apteka')
                 .app-modal__head-span Отзывы
               .app-modal__content-wrapper 
-                p Основная информция
+                // Review form
+                .review-form
+                  form(action="#!")
+                    .form-group
+                      .div-table
+                        .div-table__cell 
+                          .form-label.mb0 Оценить
+                    fieldset 
+                      .form-group
+                        +field-text({
+                          title: 'Имя',
+                          hasJs: true,
+                          isTextarea: false,
+                          isRequired: true,
+                          hasError: false,
+                          helpText: 'Текст ошибки или подсказка',
+                          mods: '',
+                          val: '',
+                          attrs: {
+                            name: 'review-name',
+                            placeholder: ''
+                          }
+                        }) 
+                      .form-group
+                        +field-text({
+                          title: 'E-mail',
+                          hasJs: true,
+                          isTextarea: false,
+                          isRequired: true,
+                          hasError: false,
+                          helpText: 'Текст ошибки или подсказка',
+                          mods: '',
+                          val: '',
+                          attrs: {
+                            name: 'review-email',
+                            placeholder: '',
+                            autocomplete: 'email'
+                          }
+                        }) 
+                      .form-group
+                        +field-text({
+                          title: 'Отзыв',
+                          hasJs: true,
+                          isTextarea: true,
+                          isRequired: true,
+                          hasError: false,
+                          helpText: 'Текст ошибки или подсказка',
+                          mods: '',
+                          val: '',
+                          attrs: {
+                            name: 'review-message',
+                            placeholder: '',
+                            rows: 1
+                          }
+                        }) 
+                    .review-form__btn
+                      button(type="button").btn
+                        span Отмена
+                      button(type="button").btn.--accent
+                        span Отправить
+                // Comments list
+                .comment-list
+                  // Comment
+                  .comment 
+                    .comment__head
+                      .comment__name Неля 
+                      .comment__date 17 февраля 2022 
+                    .comment__rating
+                      .rating.--r-1
+                        .rating__score
+                    .comment__content 
+                      p У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.
+                    .comment__foot
+                      .comment__foot-btns
+                        button(type="button" data-modal="commentAnswer").btn.--link
+                          i.icon-reviews
+                          span Ответить
+                        button(type="button" data-modal="commentComplaint").btn.--link
+                          i.icon-warning-o
+                          span Пожаловаться
+                      .comment__foot-response
+                        button(type="button").btn
+                          i.icon-unlike
+                          span 2
+                        button(type="button").btn
+                          i.icon-like
+                          span 0
+                  // Comment
+                  .comment 
+                    .comment__head
+                      .comment__name Неля 
+                      .comment__date 17 февраля 2022 
+                    .comment__rating
+                      .rating.--r-2
+                        .rating__score
+                    .comment__content
+                      p У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.
+                    .comment__foot
+                      .comment__foot-btns
+                        button(type="button" data-modal="commentAnswer").btn.--link
+                          i.icon-reviews
+                          span Ответить
+                        button(type="button" data-modal="commentComplaint").btn.--link
+                          i.icon-warning-o
+                          span Пожаловаться
+                      .comment__foot-response
+                        button(type="button").btn
+                          i.icon-unlike
+                          span 2
+                        button(type="button").btn
+                          i.icon-like
+                          span 0
+                  // Comment
+                  .comment.--answer
+                    .comment__head
+                      .comment__name Неля 
+                      .comment__date 17 февраля 2022 
+                    .comment__content
+                      p У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.
+                  // Comment
+                  .comment.--answer
+                    .comment__head
+                      .comment__name Неля 
+                      .comment__date 17 февраля 2022 
+                    .comment__content
+                      p У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.
+                  // Comment
+                  .comment 
+                    .comment__head
+                      .comment__name Неля 
+                      .comment__date 17 февраля 2022 
+                    .comment__rating
+                      .rating.--r-3
+                        .rating__score
+                    .comment__content
+                      p У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.
+                    .comment__foot
+                      .comment__foot-btns
+                        button(type="button" data-modal="commentAnswer").btn.--link
+                          i.icon-reviews
+                          span Ответить
+                        button(type="button" data-modal="commentComplaint").btn.--link
+                          i.icon-warning-o
+                          span Пожаловаться
+                      .comment__foot-response
+                        button(type="button").btn
+                          i.icon-unlike
+                          span 2
+                        button(type="button").btn
+                          i.icon-like
+                          span 0
+                  // Comment
+                  .comment 
+                    .comment__head
+                      .comment__name Неля 
+                      .comment__date 17 февраля 2022 
+                    .comment__rating
+                      .rating.--r-4
+                        .rating__score
+                    .comment__content
+                      p У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.
+                    .comment__foot
+                      .comment__foot-btns
+                        button(type="button" data-modal="commentAnswer").btn.--link
+                          i.icon-reviews
+                          span Ответить
+                        button(type="button" data-modal="commentComplaint").btn.--link
+                          i.icon-warning-o
+                          span Пожаловаться
+                      .comment__foot-response
+                        button(type="button").btn
+                          i.icon-unlike
+                          span 2
+                        button(type="button").btn
+                          i.icon-like
+                          span 0
+                  // Comment
+                  .comment 
+                    .comment__head
+                      .comment__name Неля 
+                      .comment__date 17 февраля 2022 
+                    .comment__rating
+                      .rating.--r-5
+                        .rating__score
+                    .comment__content
+                      p У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.
+                    .comment__foot
+                      .comment__foot-btns
+                        button(type="button" data-modal="commentAnswer").btn.--link
+                          i.icon-reviews
+                          span Ответить
+                        button(type="button" data-modal="commentComplaint").btn.--link
+                          i.icon-warning-o
+                          span Пожаловаться
+                      .comment__foot-response
+                        button(type="button").btn
+                          i.icon-unlike
+                          span 2
+                        button(type="button").btn
+                          i.icon-like
+                          span 0
+                  // Comment
+                  .comment.--answer
+                    .comment__head
+                      .comment__name Неля 
+                      .comment__date 17 февраля 2022 
+                    .comment__content
+                      p У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.
+                  // Comment
+                  .comment 
+                    .comment__head
+                      .comment__name Неля 
+                      .comment__date 17 февраля 2022 
+                    .comment__rating
+                      .rating.--r-1
+                        .rating__score
+                    .comment__content
+                      p У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.
+                    .comment__foot
+                      .comment__foot-btns
+                        button(type="button" data-modal="commentAnswer").btn.--link
+                          i.icon-reviews
+                          span Ответить
+                        button(type="button" data-modal="commentComplaint").btn.--link
+                          i.icon-warning-o
+                          span Пожаловаться
+                      .comment__foot-response
+                        button(type="button").btn
+                          i.icon-unlike
+                          span 2
+                        button(type="button").btn
+                          i.icon-like
+                          span 0
       #section7.section.section6(style="display: none")
         p Checkout card
       button(type="button" style="display: none")#appButtonStatus.app-button-status
