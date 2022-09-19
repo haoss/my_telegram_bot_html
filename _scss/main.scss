@@ -2182,10 +2182,11 @@ input {
   &.has-error {
     #{$this} {
       &__help-text {
-        color: red;
+        color: #EB6161;
       }
       &__input {
-        border-color: red;
+        border-color: #EB6161;
+        border-width: 2px;
       }
     }
   }
@@ -2193,8 +2194,8 @@ input {
   &.has-success {
     #{$this} {
       &__input {
-        padding-right: 36px;
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDIwIDIwIj48cGF0aCBmaWxsPSIjMzlBRkE4IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xOC41IDMuNmMuNS40LjUgMS4xLjEgMS42bC0xMCAxMS4xYTEuMSAxLjEgMCAwIDEtMS42IDBsLTUuNi01LjVBMS4xIDEuMSAwIDEgMSAzIDkuMkw3LjcgMTQgMTcgMy43Yy40LS41IDEtLjUgMS41IDB6IiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=);
+        border-color: #55BE61;
+        border-width: 2px;
       }
     }
   }
@@ -2206,6 +2207,7 @@ input {
       }
       &__input {
         border-color: #EB6161;
+        border-width: 2px;
       }
     }
   }
