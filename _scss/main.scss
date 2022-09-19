@@ -2046,7 +2046,7 @@ input {
     border-bottom: 1px solid #E0E0E0;
     border-radius: 0;
     box-shadow: none;
-    transition: color 0.35s, border-color 0.35s, background 0.35s;
+    // transition: color 0.35s, border-color 0.35s, background 0.35s;
     &:hover {
       border-color: #50A7EA;
       border-width: 2px;
@@ -2214,7 +2214,7 @@ input {
 textarea.field-text__input {
   height: auto;
   resize: vertical;
-  padding: 0;
+  padding: 0 0 5px 0;
   min-height: 40px;
   &.css-input {
     padding-top: 18px;
