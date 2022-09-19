@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>Telegram bot apteka911</title>
-        <link rel="stylesheet" href="./css/style.min.css?v29">
+        <link rel="stylesheet" href="./css/style.min.css?v30">
     </head>
     <body> 
         <div class="app" id="app">
@@ -1605,36 +1605,38 @@
                             <div class="app-modal__content-wrapper"> 
                                 <!-- Review form-->
                                 <div class="review-form">
-                                    <form action="#!">
-                                        <div class="form-group">
-                                            <div class="div-table">
-                                                <div class="div-table__cell"> 
-                                                    <div class="form-label mb0">Оценить</div>
+                                    <div class="mssg-alert --success" id="mssgSuccess" style="display: none">Спасибо за ваш отзыв! После модерации сообщение будет размещено на сайте</div>
+                                    <button class="btn" type="button" id="j_test_30"><span>Написать отзыв</span></button>
+                                    <div class="review-form__form" id="reviewForm" style="display: none">
+                                        <form action="#!">
+                                            <input class="review_rating" type="hidden" name="review_rating">
+                                            <div class="review-form__estimate">
+                                                <div class="review-form__estimate-label">Оценить</div>
+                                                <input id="j-range-slider" type="text" name="my_range">
+                                            </div>
+                                            <fieldset> 
+                                                <div class="form-group">
+                                                        <label class="field-text j-field-text">
+                                                            <input class="field-text__input css-input" type="text" value="Евгений" aria-invalid="false" name="review-name" placeholder=""><span class="field-text__name css-label">Имя<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
+                                                        </label>
                                                 </div>
+                                                <div class="form-group">
+                                                        <label class="field-text j-field-text">
+                                                            <input class="field-text__input css-input" type="text" value="" aria-invalid="false" name="review-email" placeholder="" autocomplete="email"><span class="field-text__name css-label">E-mail<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
+                                                        </label>
+                                                </div>
+                                                <div class="form-group">
+                                                        <label class="field-text j-field-text">
+                                                            <textarea class="field-text__input css-input" aria-invalid="false" name="review-message" placeholder="" rows="1"></textarea><span class="field-text__name css-label">Отзыв<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
+                                                        </label>
+                                                </div>
+                                            </fieldset>
+                                            <div class="review-form__btn">
+                                                <button class="btn" type="button" id="j_test_31"><span>Отмена</span></button>
+                                                <button class="btn --accent" type="button" id="j_test_32"><span>Отправить</span></button>
                                             </div>
-                                        </div>
-                                        <fieldset> 
-                                            <div class="form-group">
-                                                    <label class="field-text j-field-text">
-                                                        <input class="field-text__input css-input" type="text" value="" aria-invalid="false" name="review-name" placeholder=""><span class="field-text__name css-label">Имя<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
-                                                    </label>
-                                            </div>
-                                            <div class="form-group">
-                                                    <label class="field-text j-field-text">
-                                                        <input class="field-text__input css-input" type="text" value="" aria-invalid="false" name="review-email" placeholder="" autocomplete="email"><span class="field-text__name css-label">E-mail<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
-                                                    </label>
-                                            </div>
-                                            <div class="form-group">
-                                                    <label class="field-text j-field-text">
-                                                        <textarea class="field-text__input css-input" aria-invalid="false" name="review-message" placeholder="" rows="1"></textarea><span class="field-text__name css-label">Отзыв<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
-                                                    </label>
-                                            </div>
-                                        </fieldset>
-                                        <div class="review-form__btn">
-                                            <button class="btn" type="button"><span>Отмена</span></button>
-                                            <button class="btn --accent" type="button"><span>Отправить</span></button>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
                                 <!-- Comments list-->
                                 <div class="comment-list">
@@ -1643,23 +1645,88 @@
                                         <div class="comment__head">
                                             <div class="comment__name">Неля </div>
                                             <div class="comment__date">17 февраля 2022 </div>
-                                        </div>
-                                        <div class="comment__rating">
-                                            <div class="rating --r-1">
-                                                <div class="rating__score"></div>
+                                            <div class="rating --r-2">
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
                                             </div>
+                                        </div>
+                                        <div class="comment__content"> 
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                        </div>
+                                        <div class="comment__foot">
+                                            <div class="comment__foot-btns">
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#back"></use>
+                                                    </svg><span>Ответить</span>
+                                                </button>
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#icon_info_o"></use>
+                                                    </svg><span>Пожаловаться</span>
+                                                </button>
+                                            </div>
+                                            <div class="comment__foot-response">
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --like">
+                                                        <use xlink:href="#like"></use>
+                                                    </svg><span>2</span>
+                                                </button>
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --dislike">
+                                                        <use xlink:href="#dislike"></use>
+                                                    </svg><span>0</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Comment-->
+                                    <div class="comment"> 
+                                        <div class="comment__head">
+                                            <div class="comment__name">Неля </div>
+                                            <div class="comment__date">17 февраля 2022 </div>
                                         </div>
                                         <div class="comment__content"> 
                                             <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
                                         </div>
                                         <div class="comment__foot">
                                             <div class="comment__foot-btns">
-                                                <button class="btn --link" type="button" data-modal="commentAnswer"><i class="icon-reviews"></i><span>Ответить</span></button>
-                                                <button class="btn --link" type="button" data-modal="commentComplaint"><i class="icon-warning-o"></i><span>Пожаловаться</span></button>
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#back"></use>
+                                                    </svg><span>Ответить</span>
+                                                </button>
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#icon_info_o"></use>
+                                                    </svg><span>Пожаловаться</span>
+                                                </button>
                                             </div>
                                             <div class="comment__foot-response">
-                                                <button class="btn" type="button"><i class="icon-unlike"></i><span>2</span></button>
-                                                <button class="btn" type="button"><i class="icon-like"></i><span>0</span></button>
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --like">
+                                                        <use xlink:href="#like"></use>
+                                                    </svg><span>2</span>
+                                                </button>
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --dislike">
+                                                        <use xlink:href="#dislike"></use>
+                                                    </svg><span>0</span>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1668,68 +1735,52 @@
                                         <div class="comment__head">
                                             <div class="comment__name">Неля </div>
                                             <div class="comment__date">17 февраля 2022 </div>
-                                        </div>
-                                        <div class="comment__rating">
                                             <div class="rating --r-2">
-                                                <div class="rating__score"></div>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
                                             </div>
                                         </div>
-                                        <div class="comment__content">
+                                        <div class="comment__content"> 
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
                                             <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
                                         </div>
                                         <div class="comment__foot">
                                             <div class="comment__foot-btns">
-                                                <button class="btn --link" type="button" data-modal="commentAnswer"><i class="icon-reviews"></i><span>Ответить</span></button>
-                                                <button class="btn --link" type="button" data-modal="commentComplaint"><i class="icon-warning-o"></i><span>Пожаловаться</span></button>
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#back"></use>
+                                                    </svg><span>Ответить</span>
+                                                </button>
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#icon_info_o"></use>
+                                                    </svg><span>Пожаловаться</span>
+                                                </button>
                                             </div>
                                             <div class="comment__foot-response">
-                                                <button class="btn" type="button"><i class="icon-unlike"></i><span>2</span></button>
-                                                <button class="btn" type="button"><i class="icon-like"></i><span>0</span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Comment-->
-                                    <div class="comment --answer">
-                                        <div class="comment__head">
-                                            <div class="comment__name">Неля </div>
-                                            <div class="comment__date">17 февраля 2022 </div>
-                                        </div>
-                                        <div class="comment__content">
-                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
-                                        </div>
-                                    </div>
-                                    <!-- Comment-->
-                                    <div class="comment --answer">
-                                        <div class="comment__head">
-                                            <div class="comment__name">Неля </div>
-                                            <div class="comment__date">17 февраля 2022 </div>
-                                        </div>
-                                        <div class="comment__content">
-                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
-                                        </div>
-                                    </div>
-                                    <!-- Comment-->
-                                    <div class="comment"> 
-                                        <div class="comment__head">
-                                            <div class="comment__name">Неля </div>
-                                            <div class="comment__date">17 февраля 2022 </div>
-                                        </div>
-                                        <div class="comment__rating">
-                                            <div class="rating --r-3">
-                                                <div class="rating__score"></div>
-                                            </div>
-                                        </div>
-                                        <div class="comment__content">
-                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
-                                        </div>
-                                        <div class="comment__foot">
-                                            <div class="comment__foot-btns">
-                                                <button class="btn --link" type="button" data-modal="commentAnswer"><i class="icon-reviews"></i><span>Ответить</span></button>
-                                                <button class="btn --link" type="button" data-modal="commentComplaint"><i class="icon-warning-o"></i><span>Пожаловаться</span></button>
-                                            </div>
-                                            <div class="comment__foot-response">
-                                                <button class="btn" type="button"><i class="icon-unlike"></i><span>2</span></button>
-                                                <button class="btn" type="button"><i class="icon-like"></i><span>0</span></button>
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --like">
+                                                        <use xlink:href="#like"></use>
+                                                    </svg><span>2</span>
+                                                </button>
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --dislike">
+                                                        <use xlink:href="#dislike"></use>
+                                                    </svg><span>0</span>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1739,22 +1790,87 @@
                                             <div class="comment__name">Неля </div>
                                             <div class="comment__date">17 февраля 2022 </div>
                                         </div>
-                                        <div class="comment__rating">
-                                            <div class="rating --r-4">
-                                                <div class="rating__score"></div>
-                                            </div>
-                                        </div>
-                                        <div class="comment__content">
+                                        <div class="comment__content"> 
                                             <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
                                         </div>
                                         <div class="comment__foot">
                                             <div class="comment__foot-btns">
-                                                <button class="btn --link" type="button" data-modal="commentAnswer"><i class="icon-reviews"></i><span>Ответить</span></button>
-                                                <button class="btn --link" type="button" data-modal="commentComplaint"><i class="icon-warning-o"></i><span>Пожаловаться</span></button>
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#back"></use>
+                                                    </svg><span>Ответить</span>
+                                                </button>
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#icon_info_o"></use>
+                                                    </svg><span>Пожаловаться</span>
+                                                </button>
                                             </div>
                                             <div class="comment__foot-response">
-                                                <button class="btn" type="button"><i class="icon-unlike"></i><span>2</span></button>
-                                                <button class="btn" type="button"><i class="icon-like"></i><span>0</span></button>
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --like">
+                                                        <use xlink:href="#like"></use>
+                                                    </svg><span>2</span>
+                                                </button>
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --dislike">
+                                                        <use xlink:href="#dislike"></use>
+                                                    </svg><span>0</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Comment-->
+                                    <div class="comment"> 
+                                        <div class="comment__head">
+                                            <div class="comment__name">Неля </div>
+                                            <div class="comment__date">17 февраля 2022 </div>
+                                            <div class="rating --r-2">
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="comment__content"> 
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                        </div>
+                                        <div class="comment__foot">
+                                            <div class="comment__foot-btns">
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#back"></use>
+                                                    </svg><span>Ответить</span>
+                                                </button>
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#icon_info_o"></use>
+                                                    </svg><span>Пожаловаться</span>
+                                                </button>
+                                            </div>
+                                            <div class="comment__foot-response">
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --like">
+                                                        <use xlink:href="#like"></use>
+                                                    </svg><span>2</span>
+                                                </button>
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --dislike">
+                                                        <use xlink:href="#dislike"></use>
+                                                    </svg><span>0</span>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1764,33 +1880,88 @@
                                             <div class="comment__name">Неля </div>
                                             <div class="comment__date">17 февраля 2022 </div>
                                         </div>
-                                        <div class="comment__rating">
-                                            <div class="rating --r-5">
-                                                <div class="rating__score"></div>
-                                            </div>
-                                        </div>
-                                        <div class="comment__content">
+                                        <div class="comment__content"> 
                                             <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
                                         </div>
                                         <div class="comment__foot">
                                             <div class="comment__foot-btns">
-                                                <button class="btn --link" type="button" data-modal="commentAnswer"><i class="icon-reviews"></i><span>Ответить</span></button>
-                                                <button class="btn --link" type="button" data-modal="commentComplaint"><i class="icon-warning-o"></i><span>Пожаловаться</span></button>
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#back"></use>
+                                                    </svg><span>Ответить</span>
+                                                </button>
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#icon_info_o"></use>
+                                                    </svg><span>Пожаловаться</span>
+                                                </button>
                                             </div>
                                             <div class="comment__foot-response">
-                                                <button class="btn" type="button"><i class="icon-unlike"></i><span>2</span></button>
-                                                <button class="btn" type="button"><i class="icon-like"></i><span>0</span></button>
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --like">
+                                                        <use xlink:href="#like"></use>
+                                                    </svg><span>2</span>
+                                                </button>
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --dislike">
+                                                        <use xlink:href="#dislike"></use>
+                                                    </svg><span>0</span>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- Comment-->
-                                    <div class="comment --answer">
+                                    <div class="comment"> 
                                         <div class="comment__head">
                                             <div class="comment__name">Неля </div>
                                             <div class="comment__date">17 февраля 2022 </div>
+                                            <div class="rating --r-2">
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </div>
                                         </div>
-                                        <div class="comment__content">
+                                        <div class="comment__content"> 
                                             <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                        </div>
+                                        <div class="comment__foot">
+                                            <div class="comment__foot-btns">
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#back"></use>
+                                                    </svg><span>Ответить</span>
+                                                </button>
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#icon_info_o"></use>
+                                                    </svg><span>Пожаловаться</span>
+                                                </button>
+                                            </div>
+                                            <div class="comment__foot-response">
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --like">
+                                                        <use xlink:href="#like"></use>
+                                                    </svg><span>2</span>
+                                                </button>
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --dislike">
+                                                        <use xlink:href="#dislike"></use>
+                                                    </svg><span>0</span>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- Comment-->
@@ -1799,22 +1970,123 @@
                                             <div class="comment__name">Неля </div>
                                             <div class="comment__date">17 февраля 2022 </div>
                                         </div>
-                                        <div class="comment__rating">
-                                            <div class="rating --r-1">
-                                                <div class="rating__score"></div>
-                                            </div>
-                                        </div>
-                                        <div class="comment__content">
+                                        <div class="comment__content"> 
                                             <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
                                         </div>
                                         <div class="comment__foot">
                                             <div class="comment__foot-btns">
-                                                <button class="btn --link" type="button" data-modal="commentAnswer"><i class="icon-reviews"></i><span>Ответить</span></button>
-                                                <button class="btn --link" type="button" data-modal="commentComplaint"><i class="icon-warning-o"></i><span>Пожаловаться</span></button>
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#back"></use>
+                                                    </svg><span>Ответить</span>
+                                                </button>
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#icon_info_o"></use>
+                                                    </svg><span>Пожаловаться</span>
+                                                </button>
                                             </div>
                                             <div class="comment__foot-response">
-                                                <button class="btn" type="button"><i class="icon-unlike"></i><span>2</span></button>
-                                                <button class="btn" type="button"><i class="icon-like"></i><span>0</span></button>
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --like">
+                                                        <use xlink:href="#like"></use>
+                                                    </svg><span>2</span>
+                                                </button>
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --dislike">
+                                                        <use xlink:href="#dislike"></use>
+                                                    </svg><span>0</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Comment-->
+                                    <div class="comment"> 
+                                        <div class="comment__head">
+                                            <div class="comment__name">Неля </div>
+                                            <div class="comment__date">17 февраля 2022 </div>
+                                            <div class="rating --r-2">
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="icon">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="comment__content"> 
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                        </div>
+                                        <div class="comment__foot">
+                                            <div class="comment__foot-btns">
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#back"></use>
+                                                    </svg><span>Ответить</span>
+                                                </button>
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#icon_info_o"></use>
+                                                    </svg><span>Пожаловаться</span>
+                                                </button>
+                                            </div>
+                                            <div class="comment__foot-response">
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --like">
+                                                        <use xlink:href="#like"></use>
+                                                    </svg><span>2</span>
+                                                </button>
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --dislike">
+                                                        <use xlink:href="#dislike"></use>
+                                                    </svg><span>0</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Comment-->
+                                    <div class="comment"> 
+                                        <div class="comment__head">
+                                            <div class="comment__name">Неля </div>
+                                            <div class="comment__date">17 февраля 2022 </div>
+                                        </div>
+                                        <div class="comment__content"> 
+                                            <p>У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.</p>
+                                        </div>
+                                        <div class="comment__foot">
+                                            <div class="comment__foot-btns">
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#back"></use>
+                                                    </svg><span>Ответить</span>
+                                                </button>
+                                                <button class="btn" type="button">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#icon_info_o"></use>
+                                                    </svg><span>Пожаловаться</span>
+                                                </button>
+                                            </div>
+                                            <div class="comment__foot-response">
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --like">
+                                                        <use xlink:href="#like"></use>
+                                                    </svg><span>2</span>
+                                                </button>
+                                                <button class="btn j_test_33" type="button">
+                                                    <svg class="icon --dislike">
+                                                        <use xlink:href="#dislike"></use>
+                                                    </svg><span>0</span>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1832,7 +2104,8 @@
         <script src="./js/jquery/jquery-3.3.1.min.js"></script>
         <script src="./js/jquery/jquery-migrate-3.0.1.min.js"></script>
         <script src="./js/swiper/swiper-bundle.js"></script>
-        <script src="./js/common.js?v14"></script>
+        <script src="./js/ion.rangeSlider/ion.rangeSlider.js"></script>
+        <script src="./js/common.js?v15"></script>
         <svg width="0" height="0" style="display: none">
             <symbol id="settings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2337 7.125H3.75C3.33579 7.125 3 7.46079 3 7.875C3 8.28921 3.33579 8.625 3.75 8.625H7.2337C7.55641 9.70931 8.56087 10.5 9.75 10.5C10.9391 10.5 11.9436 9.70931 12.2663 8.625H20.25C20.6642 8.625 21 8.28921 21 7.875C21 7.46079 20.6642 7.125 20.25 7.125H12.2663C11.9436 6.04069 10.9391 5.25 9.75 5.25C8.56087 5.25 7.55641 6.04069 7.2337 7.125ZM8.625 7.875C8.625 7.25368 9.12868 6.75 9.75 6.75C10.3713 6.75 10.875 7.25368 10.875 7.875C10.875 8.49632 10.3713 9 9.75 9C9.12868 9 8.625 8.49632 8.625 7.875Z"></path>
@@ -2004,6 +2277,10 @@
                 <rect width="14" height="14" rx="7" fill="#fff"></rect>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 7A6 6 0 1 1 1 7a6 6 0 0 1 12 0ZM7 3c.358 0 .75.252.75.675v4.15c0 .423-.392.675-.75.675s-.75-.252-.75-.675v-4.15C6.25 3.252 6.642 3 7 3Zm.75 6.977c0-.424-.359-.727-.75-.727s-.75.303-.75.727v.046c0 .424.359.727.75.727s.75-.303.75-.727v-.046Z"></path>
             </svg>
+            <svg id="icon_info_o" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 4.25a.75.75 0 0 1 .75.75v6.375a.75.75 0 0 1-1.5 0V5a.75.75 0 0 1 .75-.75Zm0 9a.75.75 0 0 1 .75.75v.1a.75.75 0 0 1-1.5 0V14a.75.75 0 0 1 .75-.75Z"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm0 1a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path>
+            </svg>
             <svg id="icon_minus" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
                 <rect width="14" height="14" rx="7" fill="#fff"></rect>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7 13A6 6 0 1 0 7 1a6 6 0 0 0 0 12ZM4 6.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5H4Z"></path>
@@ -2028,6 +2305,32 @@
             </svg>
             <svg id="cart" viewBox="0 0 30 28" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.866 27.067a2.333 2.333 0 1 0 0-4.667 2.333 2.333 0 0 0 0 4.667ZM22.066 27.067a2.333 2.333 0 1 0 0-4.667 2.333 2.333 0 0 0 0 4.667ZM26.985 7.467a.933.933 0 0 0-.719-.345H7.6l-.933-5.404a.933.933 0 0 0-.933-.784H1.066a.933.933 0 1 0 0 1.866H4.94l2.296 13.786A3.733 3.733 0 0 0 10.97 19.6h11.107a3.678 3.678 0 0 0 3.677-2.986l1.447-8.4a.933.933 0 0 0-.215-.747Zm-3.117 8.83A1.811 1.811 0 0 1 22 17.742H10.922a1.867 1.867 0 0 1-1.867-1.456L7.87 8.988h17.285l-1.288 7.308Z"></path>
+            </svg>
+            <svg id="star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#star-a)">
+                    <path d="M8.985 3.278c-.041-.166-.163-.248-.326-.29l-2.61-.372L4.867.217c-.122-.29-.612-.29-.734 0L2.951 2.575l-2.569.413c-.163 0-.285.124-.367.29-.04.165 0 .33.123.414l1.875 1.86L1.565 8.2c-.041.165.04.33.163.414a.432.432 0 0 0 .448.04L4.5 7.415l2.324 1.24h.204a.574.574 0 0 0 .244-.082.396.396 0 0 0 .163-.413L6.987 5.51l1.875-1.86c.123-.084.163-.249.123-.373Z"></path>
+                </g>
+                <defs>
+                    <clipPath id="star-a">
+                        <path fill="#fff" d="M0 0h9v9H0z"></path>
+                    </clipPath>
+                </defs>
+            </svg>
+            <svg id="back" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#back-a)">
+                    <path d="M8.222 6.556V3L2 9.222l6.222 6.222V11.8c4.445 0 7.556 1.422 9.778 4.533-.889-4.444-3.556-8.889-9.778-9.777Z"></path>
+                </g>
+                <defs>
+                    <clipPath id="back-a">
+                        <path fill="#fff" d="M0 0h20v20H0z"></path>
+                    </clipPath>
+                </defs>
+            </svg>
+            <svg id="like" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.75 8.4a2.5 2.5 0 0 0-1.917-.9h-3.8l.466-1.191a3.44 3.44 0 0 0-3.241-4.642.833.833 0 0 0-.759.492L6.124 7.5H4.166a2.5 2.5 0 0 0-2.5 2.5v5.834a2.5 2.5 0 0 0 2.5 2.5h10.608a2.5 2.5 0 0 0 2.459-2.05l1.058-5.834a2.5 2.5 0 0 0-.542-2.05ZM5.832 16.667H4.166a.834.834 0 0 1-.833-.833V10a.833.833 0 0 1 .833-.833h1.667v7.5Zm10.833-6.517-1.058 5.834a.833.833 0 0 1-.834.683H7.5V8.509l2.267-5.1a1.759 1.759 0 0 1 1.15 2.316l-.442 1.192a1.668 1.668 0 0 0 1.559 2.25h3.8a.833.833 0 0 1 .641.3.834.834 0 0 1 .192.683Z"></path>
+            </svg>
+            <svg id="dislike" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.834 1.667H5.225a2.5 2.5 0 0 0-2.458 2.05L1.71 9.55a2.5 2.5 0 0 0 2.458 2.95h3.8L7.5 13.692a3.442 3.442 0 0 0 3.242 4.642.834.834 0 0 0 .758-.492l2.376-5.342h1.958a2.5 2.5 0 0 0 2.5-2.5V4.167a2.5 2.5 0 0 0-2.5-2.5ZM12.5 11.492l-2.267 5.1a1.776 1.776 0 0 1-1.15-2.317l.441-1.191a1.667 1.667 0 0 0-1.558-2.25h-3.8a.833.833 0 0 1-.642-.3.834.834 0 0 1-.191-.684l1.058-5.833a.833.833 0 0 1 .833-.683h7.276v8.158ZM16.666 10a.834.834 0 0 1-.833.834h-1.667v-7.5h1.667a.833.833 0 0 1 .833.833V10Z"></path>
             </svg>
         </svg>
     </body>

@@ -38,6 +38,10 @@ $(document).on('ready', function(){
 
   $('.j_test_24 > *:not(.disabled)').on('click', function(){ $(this).parent().children().removeClass('active'); $(this).addClass('active'); })
   $('#j_test_29').on('click', function(){ $(this).toggleClass('active'); })
+  $('#j_test_30').on('click', function(){ $(this).hide(); $('#reviewForm').show(); })
+  $('#j_test_31').on('click', function(){ $('#j_test_30').show(); $('#reviewForm').hide(); })
+  $('#j_test_32').on('click', function(){ $('#mssgSuccess').show(); $('#j_test_30').show(); $('#reviewForm').hide(); })
+  $('.j_test_33').on('click', function(){ var _this = $(this); $(this).parent().find('.btn').removeClass('active'); setTimeout(function(){ _this.addClass('active'); }, 100) })
 
   $(document).on('click', '.collapsible-heading', function(e){
     e.preventDefault();
@@ -61,6 +65,25 @@ $(document).on('ready', function(){
       delay: 3500,
       disableOnInteraction: false,
     },
+  });
+
+  $("#j-range-slider").ionRangeSlider({
+    min: 1,
+    max: 5,
+    step: 1,
+    from: 4,
+    skin: "round",
+    grid: true,
+    grid_margin: true,
+    hide_min_max: true,
+    onStart: function (data) {
+      $('.review_rating').prop("value", data.from);
+      $('.irs-with-grid').attr('data-number', data.from);
+    },
+    onChange: function (data) {
+      $('.review_rating').prop("value", data.from);
+      $('.irs-with-grid').attr('data-number', data.from);
+    }
   });
 
   inputFocus();
