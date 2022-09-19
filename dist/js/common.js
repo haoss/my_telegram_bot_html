@@ -87,6 +87,9 @@ $(document).on('ready', function(){
   });
 
   inputFocus();
+  autosize();
+
+  autosize($('textarea.field-text__input.css-input'));
 });
 
 function inputFocus() {

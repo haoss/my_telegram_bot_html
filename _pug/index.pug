@@ -6,7 +6,7 @@ html(lang="uk")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Telegram bot apteka911
-    link(rel='stylesheet', href='./css/style.min.css?v30')
+    link(rel='stylesheet', href='./css/style.min.css?v31')
   body 
     #app.app
       #section1.section.section1(style="display: none")
@@ -963,21 +963,13 @@ html(lang="uk")
                             }
                           }) 
                         .form-group
-                          +field-text({
-                            title: 'Отзыв',
-                            hasJs: true,
-                            isTextarea: true,
-                            isRequired: true,
-                            hasError: false,
-                            helpText: 'Текст ошибки или подсказка',
-                            mods: '',
-                            val: '',
-                            attrs: {
-                              name: 'review-message',
-                              placeholder: '',
-                              rows: 1
-                            }
-                          }) 
+                          label.field-text.j-field-text
+                            textarea.field-text__input.css-input(aria-invalid='false' name='review-message' placeholder)
+                            //- span.field-text__input.textarea.css-input(role="textbox" contenteditable)
+                            span.field-text__name.css-label
+                              | Отзыв
+                              sup *
+                            span.field-text__help-text(style='display: none') Текст ошибки или подсказка
                       .review-form__btn
                         button(type="button").btn#j_test_31
                           span Отмена
@@ -1062,6 +1054,7 @@ html(lang="uk")
     script(src="./js/jquery/jquery-migrate-3.0.1.min.js")
     script(src="./js/swiper/swiper-bundle.js")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
-    script(src="./js/common.js?v15")
+    script(src="./js/autosize/autosize.js")
+    script(src="./js/common.js?v16")
 
     include ./_include/_svg

@@ -1598,6 +1598,7 @@ input {
     font-size: 15px;
     color: #4D4D4D;
     background: transparent;
+    width: 100%;
     &-icon {
       width: 40px;
       height: 40px;
@@ -1881,7 +1882,7 @@ input {
 
 .comment-list {
   padding: 20px;
-  margin: 0 -20px;
+  margin: 0 -20px -30px -20px;
 }
 
 .comment {
@@ -2084,6 +2085,12 @@ input {
         border-color: #eee;
       }
     }
+    &.textarea {
+      min-height: 40px;
+      height: auto;
+      padding-bottom: 2px;
+      padding-top: 18px;
+    }
   }
   &__input-wrap {
     position: relative;
@@ -2205,7 +2212,7 @@ input {
 }
 
 textarea.field-text__input {
-  height: auto !important;
+  height: auto;
   resize: vertical;
   padding: 0;
   min-height: 40px;
