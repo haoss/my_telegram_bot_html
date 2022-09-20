@@ -46,6 +46,8 @@ $(document).on('ready', function(){
   $('#j_test_37').on('click', function(){ $('#appFilter2').hide(); })
   $('#j_test_36').on('click', function(){ $('#appFilter').show(); })
   $('#j_test_38').on('click', function(){ $('#appFilter2').show(); })
+  $('.j_test_39').on('click', function(){ $(this).next().toggle(); })
+  $('.j_test_40').on('click', function(){ $(this).hide(); })
 
   $(document).on('click', '.collapsible-heading', function(e){
     e.preventDefault();

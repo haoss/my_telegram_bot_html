@@ -8,7 +8,7 @@ html(lang="uk")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Telegram bot apteka911
-    link(rel='stylesheet', href='./css/style.min.css?v35')
+    link(rel='stylesheet', href='./css/style.min.css?v36')
   body 
     #app.app
       #section1.section.section1
@@ -438,9 +438,18 @@ html(lang="uk")
               span.filter-head__btn-text Фильтр
               span.filter-head__btn-count 5
           .div2
-            button(type="button").filter-head__btn
-              svg.icon
-                use(xlink:href='#sort')
+            .sort
+              button(type="button").filter-head__btn.j_test_39
+                svg.icon
+                  use(xlink:href='#sort')
+                span.filter-head__btn-text Сортировка
+              .sort__dropdown.j_test_40(style="display: none")
+                button(type="button").sort__dropdown-btn
+                  span По рейтингу
+                button(type="button").sort__dropdown-btn
+                  span От дешевых
+                button(type="button").sort__dropdown-btn
+                  span От дорогих
         #catalog1(style="display: none")
           include ./_include/_catalog_view_1
         #catalog2
@@ -482,9 +491,18 @@ html(lang="uk")
               span.filter-head__btn-text Фильтр
               span.filter-head__btn-count 5
           .div2
-            button(type="button").filter-head__btn
-              svg.icon
-                use(xlink:href='#sort')
+            .sort
+              button(type="button").filter-head__btn.j_test_39
+                svg.icon
+                  use(xlink:href='#sort')
+                span.filter-head__btn-text Сортировка
+              .sort__dropdown.j_test_40(style="display: none")
+                button(type="button").sort__dropdown-btn
+                  span По рейтингу
+                button(type="button").sort__dropdown-btn
+                  span От дешевых
+                button(type="button").sort__dropdown-btn
+                  span От дорогих
         #catalog3(style="display: none")
           include ./_include/_catalog_view_1
         #catalog4
@@ -1089,6 +1107,6 @@ html(lang="uk")
     script(src="./js/swiper/swiper-bundle.js")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
-    script(src="./js/common.js?v19")
+    script(src="./js/common.js?v20")
 
     include ./_include/_svg
