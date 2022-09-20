@@ -5,10 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>Telegram bot apteka911</title>
-        <link rel="stylesheet" href="./css/style.min.css?v36">
+        <link rel="stylesheet" href="./css/style.min.css?v37">
     </head>
     <body> 
         <div class="app" id="app">
+            <div class="test-navigation">
+                <button class="test-navigation__hide" type="button"></button>
+                <button class="test-navigation__btn" type="button" data-section="section1">1</button>
+                <button class="test-navigation__btn" type="button" data-section="section2">2</button>
+                <button class="test-navigation__btn" type="button" data-section="section3">3</button>
+                <button class="test-navigation__btn" type="button" data-section="section4">4</button>
+                <button class="test-navigation__btn" type="button" data-section="section5">5</button>
+                <button class="test-navigation__btn" type="button" data-section="section6">6</button>
+                <button class="test-navigation__btn" type="button" data-section="section7">7</button>
+            </div>
             <div class="section section1" id="section1">
                 <div class="you-pharmacy-line" id="youPharmacyLine" style="display: none">
                     <svg class="icon">
@@ -2541,16 +2551,404 @@
                 </div>
             </div>
             <div class="section section6" id="section7" style="display: none">
-                <p>Checkout card</p>
+                <div class="checkout-head">
+                    <div class="checkout-head__title">Корзина</div>
+                    <button class="checkout-head__btn" type="button" id="j_test_41">
+                        <svg class="icon">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="checkout-list">
+                    <div class="checkout-list">
+                        <div class="checkout-list__item">
+                            <button class="checkout-list__item-delete" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#trash"></use>
+                                </svg>
+                            </button>
+                            <div class="checkout-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                            <div class="checkout-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="checkout-list__item-bottom">
+                                <div class="checkout-list__item-count">
+                                    <div class="block-count j-cart-count">
+                                        <button class="block-count__minus" type="button" aria-label="Уменьшить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_minus"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="block-count__plus" type="button" aria-label="Увеличить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_plus"></use>
+                                            </svg>
+                                        </button>
+                                        <input class="block-count__input" type="text" value="1 упак." data-label="упак." id="" aria-label="Количество">
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item-price">от 62,68 ₴</div>
+                            </div>
+                        </div>
+                        <div class="checkout-list__item">
+                            <button class="checkout-list__item-delete" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#trash"></use>
+                                </svg>
+                            </button>
+                            <div class="checkout-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                            <div class="checkout-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                            <div class="checkout-list__item-bottom">
+                                <div class="checkout-list__item-count">
+                                    <div class="block-count j-cart-count">
+                                        <button class="block-count__minus" type="button" aria-label="Уменьшить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_minus"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="block-count__plus" type="button" aria-label="Увеличить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_plus"></use>
+                                            </svg>
+                                        </button>
+                                        <input class="block-count__input" type="text" value="1 упак." data-label="упак." id="" aria-label="Количество">
+                                    </div>
+                                    <div class="block-count j-cart-count">
+                                        <button class="block-count__minus" type="button" aria-label="Уменьшить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_minus"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="block-count__plus" type="button" aria-label="Увеличить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_plus"></use>
+                                            </svg>
+                                        </button>
+                                        <input class="block-count__input" type="text" value="0 блис." data-label="блис." id="" aria-label="Количество">
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item-price">от 62,68 ₴</div>
+                            </div>
+                        </div>
+                        <div class="checkout-list__item">
+                            <button class="checkout-list__item-delete" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#trash"></use>
+                                </svg>
+                            </button>
+                            <div class="checkout-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                            <div class="checkout-list__item-text">Расторопши плоды 200г Банка<small>Дарниця | Украина</small></div>
+                            <div class="checkout-list__item-bottom">
+                                <div class="checkout-list__item-count">
+                                    <div class="block-count j-cart-count">
+                                        <button class="block-count__minus" type="button" aria-label="Уменьшить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_minus"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="block-count__plus" type="button" aria-label="Увеличить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_plus"></use>
+                                            </svg>
+                                        </button>
+                                        <input class="block-count__input" type="text" value="1 упак." data-label="упак." id="" aria-label="Количество">
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item-price">от 62,68 ₴</div>
+                            </div>
+                        </div>
+                        <div class="checkout-list__item">
+                            <button class="checkout-list__item-delete" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#trash"></use>
+                                </svg>
+                            </button>
+                            <div class="checkout-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                            <div class="checkout-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="checkout-list__item-bottom">
+                                <div class="checkout-list__item-count">
+                                    <div class="block-count j-cart-count">
+                                        <button class="block-count__minus" type="button" aria-label="Уменьшить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_minus"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="block-count__plus" type="button" aria-label="Увеличить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_plus"></use>
+                                            </svg>
+                                        </button>
+                                        <input class="block-count__input" type="text" value="1 упак." data-label="упак." id="" aria-label="Количество">
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item-price">от 62,68 ₴</div>
+                            </div>
+                        </div>
+                        <div class="checkout-list__item">
+                            <button class="checkout-list__item-delete" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#trash"></use>
+                                </svg>
+                            </button>
+                            <div class="checkout-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                            <div class="checkout-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                            <div class="checkout-list__item-bottom">
+                                <div class="checkout-list__item-count">
+                                    <div class="block-count j-cart-count">
+                                        <button class="block-count__minus" type="button" aria-label="Уменьшить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_minus"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="block-count__plus" type="button" aria-label="Увеличить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_plus"></use>
+                                            </svg>
+                                        </button>
+                                        <input class="block-count__input" type="text" value="1 упак." data-label="упак." id="" aria-label="Количество">
+                                    </div>
+                                    <div class="block-count j-cart-count">
+                                        <button class="block-count__minus" type="button" aria-label="Уменьшить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_minus"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="block-count__plus" type="button" aria-label="Увеличить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_plus"></use>
+                                            </svg>
+                                        </button>
+                                        <input class="block-count__input" type="text" value="0 блис." data-label="блис." id="" aria-label="Количество">
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item-price">от 62,68 ₴</div>
+                            </div>
+                        </div>
+                        <div class="checkout-list__item">
+                            <button class="checkout-list__item-delete" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#trash"></use>
+                                </svg>
+                            </button>
+                            <div class="checkout-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                            <div class="checkout-list__item-text">Расторопши плоды 200г Банка<small>Дарниця | Украина</small></div>
+                            <div class="checkout-list__item-bottom">
+                                <div class="checkout-list__item-count">
+                                    <div class="block-count j-cart-count">
+                                        <button class="block-count__minus" type="button" aria-label="Уменьшить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_minus"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="block-count__plus" type="button" aria-label="Увеличить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_plus"></use>
+                                            </svg>
+                                        </button>
+                                        <input class="block-count__input" type="text" value="1 упак." data-label="упак." id="" aria-label="Количество">
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item-price">от 62,68 ₴</div>
+                            </div>
+                        </div>
+                        <div class="checkout-list__item">
+                            <button class="checkout-list__item-delete" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#trash"></use>
+                                </svg>
+                            </button>
+                            <div class="checkout-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                            <div class="checkout-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="checkout-list__item-bottom">
+                                <div class="checkout-list__item-count">
+                                    <div class="block-count j-cart-count">
+                                        <button class="block-count__minus" type="button" aria-label="Уменьшить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_minus"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="block-count__plus" type="button" aria-label="Увеличить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_plus"></use>
+                                            </svg>
+                                        </button>
+                                        <input class="block-count__input" type="text" value="1 упак." data-label="упак." id="" aria-label="Количество">
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item-price">от 62,68 ₴</div>
+                            </div>
+                        </div>
+                        <div class="checkout-list__item">
+                            <button class="checkout-list__item-delete" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#trash"></use>
+                                </svg>
+                            </button>
+                            <div class="checkout-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                            <div class="checkout-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                            <div class="checkout-list__item-bottom">
+                                <div class="checkout-list__item-count">
+                                    <div class="block-count j-cart-count">
+                                        <button class="block-count__minus" type="button" aria-label="Уменьшить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_minus"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="block-count__plus" type="button" aria-label="Увеличить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_plus"></use>
+                                            </svg>
+                                        </button>
+                                        <input class="block-count__input" type="text" value="1 упак." data-label="упак." id="" aria-label="Количество">
+                                    </div>
+                                    <div class="block-count j-cart-count">
+                                        <button class="block-count__minus" type="button" aria-label="Уменьшить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_minus"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="block-count__plus" type="button" aria-label="Увеличить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_plus"></use>
+                                            </svg>
+                                        </button>
+                                        <input class="block-count__input" type="text" value="0 блис." data-label="блис." id="" aria-label="Количество">
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item-price">от 62,68 ₴</div>
+                            </div>
+                        </div>
+                        <div class="checkout-list__item">
+                            <button class="checkout-list__item-delete" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#trash"></use>
+                                </svg>
+                            </button>
+                            <div class="checkout-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                            <div class="checkout-list__item-text">Расторопши плоды 200г Банка<small>Дарниця | Украина</small></div>
+                            <div class="checkout-list__item-bottom">
+                                <div class="checkout-list__item-count">
+                                    <div class="block-count j-cart-count">
+                                        <button class="block-count__minus" type="button" aria-label="Уменьшить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_minus"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="block-count__plus" type="button" aria-label="Увеличить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_plus"></use>
+                                            </svg>
+                                        </button>
+                                        <input class="block-count__input" type="text" value="1 упак." data-label="упак." id="" aria-label="Количество">
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item-price">от 62,68 ₴</div>
+                            </div>
+                        </div>
+                        <div class="checkout-list__item">
+                            <button class="checkout-list__item-delete" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#trash"></use>
+                                </svg>
+                            </button>
+                            <div class="checkout-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                            <div class="checkout-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                            <div class="checkout-list__item-bottom">
+                                <div class="checkout-list__item-count">
+                                    <div class="block-count j-cart-count">
+                                        <button class="block-count__minus" type="button" aria-label="Уменьшить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_minus"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="block-count__plus" type="button" aria-label="Увеличить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_plus"></use>
+                                            </svg>
+                                        </button>
+                                        <input class="block-count__input" type="text" value="1 упак." data-label="упак." id="" aria-label="Количество">
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item-price">от 62,68 ₴</div>
+                            </div>
+                        </div>
+                        <div class="checkout-list__item">
+                            <button class="checkout-list__item-delete" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#trash"></use>
+                                </svg>
+                            </button>
+                            <div class="checkout-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                            <div class="checkout-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                            <div class="checkout-list__item-bottom">
+                                <div class="checkout-list__item-count">
+                                    <div class="block-count j-cart-count">
+                                        <button class="block-count__minus" type="button" aria-label="Уменьшить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_minus"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="block-count__plus" type="button" aria-label="Увеличить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_plus"></use>
+                                            </svg>
+                                        </button>
+                                        <input class="block-count__input" type="text" value="1 упак." data-label="упак." id="" aria-label="Количество">
+                                    </div>
+                                    <div class="block-count j-cart-count">
+                                        <button class="block-count__minus" type="button" aria-label="Уменьшить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_minus"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="block-count__plus" type="button" aria-label="Увеличить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_plus"></use>
+                                            </svg>
+                                        </button>
+                                        <input class="block-count__input" type="text" value="0 блис." data-label="блис." id="" aria-label="Количество">
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item-price">от 62,68 ₴</div>
+                            </div>
+                        </div>
+                        <div class="checkout-list__item">
+                            <button class="checkout-list__item-delete" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#trash"></use>
+                                </svg>
+                            </button>
+                            <div class="checkout-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                            <div class="checkout-list__item-text">Расторопши плоды 200г Банка<small>Дарниця | Украина</small></div>
+                            <div class="checkout-list__item-bottom">
+                                <div class="checkout-list__item-count">
+                                    <div class="block-count j-cart-count">
+                                        <button class="block-count__minus" type="button" aria-label="Уменьшить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_minus"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="block-count__plus" type="button" aria-label="Увеличить количество">
+                                            <svg class="icon">
+                                                <use xlink:href="#count_plus"></use>
+                                            </svg>
+                                        </button>
+                                        <input class="block-count__input" type="text" value="1 упак." data-label="упак." id="" aria-label="Количество">
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item-price">от 62,68 ₴</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <button class="app-button-status" type="button" style="display: none" id="appButtonStatus"><span class="app-button-status__inner"><span class="app-button-status__count">5</span><span>товаров. Оформить</span></span></button>
+            <button class="app-button-status" type="button" id="checkoutButtonStatus"><span class="app-button-status__inner"><span class="app-button-status__count">от 149,67 ₴ </span><span>Оформить</span></span></button>
         </div>
         <script src="./js/jquery/jquery-3.3.1.min.js"></script>
         <script src="./js/jquery/jquery-migrate-3.0.1.min.js"></script>
         <script src="./js/swiper/swiper-bundle.js"></script>
         <script src="./js/ion.rangeSlider/ion.rangeSlider.js"></script>
         <script src="./js/autosize/autosize.js"></script>
-        <script src="./js/common.js?v20"></script>
+        <script src="./js/common.js?v21"></script>
         <svg width="0" height="0" style="display: none">
             <symbol id="settings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2337 7.125H3.75C3.33579 7.125 3 7.46079 3 7.875C3 8.28921 3.33579 8.625 3.75 8.625H7.2337C7.55641 9.70931 8.56087 10.5 9.75 10.5C10.9391 10.5 11.9436 9.70931 12.2663 8.625H20.25C20.6642 8.625 21 8.28921 21 7.875C21 7.46079 20.6642 7.125 20.25 7.125H12.2663C11.9436 6.04069 10.9391 5.25 9.75 5.25C8.56087 5.25 7.55641 6.04069 7.2337 7.125ZM8.625 7.875C8.625 7.25368 9.12868 6.75 9.75 6.75C10.3713 6.75 10.875 7.25368 10.875 7.875C10.875 8.49632 10.3713 9 9.75 9C9.12868 9 8.625 8.49632 8.625 7.875Z"></path>
@@ -2779,6 +3177,24 @@
             </svg>
             <svg id="checkbox" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.204 17C1.469 17 0 16.56 0 14.796V2.204C0 1.469.44 0 2.204 0h12.592C15.531 0 17 .44 17 2.204v12.592c0 .735-.44 2.204-2.204 2.204H2.204ZM13.908 4.982a.882.882 0 0 0-1.251 0l-6.014 6.051-2.3-2.308a.882.882 0 0 0-1.25 0 .89.89 0 0 0 0 1.255l2.994 3.007c.185.178.662.426 1.086 0l6.735-6.761a.875.875 0 0 0 0-1.244Z"></path>
+            </svg>
+            <svg id="trash" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.4 17.1V6.3H3.6v10.8h10.8Zm.9-10.8v10.8a.9.9 0 0 1-.9.9H3.6a.9.9 0 0 1-.9-.9V6.3a.9.9 0 0 1 .9-.9h10.8a.9.9 0 0 1 .9.9Z"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.198 5.4V3.6h-14.4v1.8h14.4Zm.9-1.8v1.8a.9.9 0 0 1-.9.9h-14.4a.9.9 0 0 1-.9-.9V3.6a.9.9 0 0 1 .9-.9h14.4a.9.9 0 0 1 .9.9Z"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.698 2.7V.9h-5.4v1.8h5.4Zm.9-1.8v1.8a.9.9 0 0 1-.9.9h-5.4a.9.9 0 0 1-.9-.9V.9a.9.9 0 0 1 .9-.9h5.4a.9.9 0 0 1 .9.9ZM11.247 8.55a.45.45 0 0 1 .45.45v5.85a.45.45 0 0 1-.9 0V9a.45.45 0 0 1 .45-.45ZM6.747 8.55a.45.45 0 0 1 .45.45v5.85a.45.45 0 0 1-.9 0V9a.45.45 0 0 1 .45-.45Z"></path>
+            </svg>
+            <svg id="count_minus" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M.45 9a.9.9 0 0 1 .9-.9h15.3a.9.9 0 1 1 0 1.8H1.35a.9.9 0 0 1-.9-.9Z"></path>
+            </svg>
+            <svg id="count_plus" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#count_plus-a)">
+                    <path d="M8.1 16.65a.9.9 0 0 0 1.8 0V9.9h6.75a.9.9 0 1 0 0-1.8H9.9V1.35a.9.9 0 0 0-1.8 0V8.1H1.35a.9.9 0 0 0 0 1.8H8.1v6.75Z"></path>
+                </g>
+                <defs>
+                    <clipPath id="count_plus-a">
+                        <path fill="#fff" d="M0 0h18v18H0z"></path>
+                    </clipPath>
+                </defs>
             </svg>
         </svg>
     </body>

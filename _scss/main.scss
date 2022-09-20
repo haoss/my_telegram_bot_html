@@ -18,6 +18,7 @@
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  font-size: 13px;
   &>* {
     line-height: 1;
   }
@@ -26,17 +27,18 @@
     align-items: center;
     justify-content: center;
     &>span {
-      line-height: 20px;
+      line-height: 1;
       display: block;
+      &[class*="__count"] {
+        min-width: 20px;
+        padding: 0 6px;
+        border-radius: 15px;
+        background: #fff;
+        color: #55BE61;
+        margin-right: 10px;
+        line-height: 20px;
+      }
     }
-  }
-  &__count {
-    width: 20px;
-    padding: 0 2px;
-    border-radius: 50%;
-    background: #fff;
-    color: #55BE61;
-    margin-right: 10px;
   }
 }
 
@@ -499,7 +501,7 @@
   }
 }
 
-.category-head {
+.category-head, .checkout-head {
   min-height: 70px;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15), 0px 2px 7px 1px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -1642,6 +1644,177 @@
       padding: 9px 16px;
       color: #555;
       line-height: 1.2;
+    }
+  }
+}
+
+.checkout-list {
+  padding-bottom: 10px;
+  &__item {
+    padding: 20px 20px 20px 100px;
+    width: 100%;
+    position: relative;
+    min-height: 80px;
+    &-text {
+      line-height: 1.2;
+      margin-bottom: 10px;
+      padding-right: 30px;
+      small {
+        display: block;
+        font-size: 13px;
+        color: #97A0A7;
+        margin-top: 3px;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      left: 100px;
+      background: #E0E0E0;
+    }
+    &-price {
+      font-size: 13px;
+      color: #55BE61;
+      flex-shrink: 0;
+      line-height: 1.1;
+      padding-top: 12px;
+    }
+    &-thumb {
+      width: 60px;
+      flex-shrink: 0;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      overflow: hidden;
+      img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+      }
+    }
+    &-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      .block-count {
+        &+.block-count {
+          margin-top: 5px;
+        }
+      }
+    }
+    &-count {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+    &-delete {
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      background: transparent;
+      padding: 0;
+      border: 0;
+      top: 20px;
+      right: 20px;
+      svg.icon {
+        width: 18px;
+        height: 18px;
+        display: block;
+        fill: #97A0A7;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.block-count {
+  $this: &;
+  width: 150px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  height: 40px;
+  padding: 0;
+  &__input {
+    height: 40px;
+    width: 100%;
+    padding: 0 32px;
+    text-align: center;
+    font-size: 15px;
+    color: #555;
+    background: transparent;
+    border: 0;
+    border-radius: 0px;
+  }
+  button {
+    display: block;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    color: rgba(17, 17, 17, 0.48);
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%;
+    margin-top: 4px;
+    &:disabled, 
+    &.disabled {
+      opacity: 0.2;
+      pointer-events: none;
+      cursor: default;
+    }
+    svg.icon {
+      width: 18px;
+      height: 18px;
+      fill: #C4C4C4;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &__plus {
+    right: 0;
+  }
+}
+
+.test-navigation {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  left: 5px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0.5;
+  &__btn, &__hide {
+    background: #34b9f1;
+    border-radius: 50%;
+    color: #000;
+    font-size: 13px;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__hide {
+    &::before {
+      content: '+';
+      .show & {
+        content: '-';
+      }
+    }
+  }
+  &__btn {
+    display: none;
+    .show & {
+      display: block;
     }
   }
 }
