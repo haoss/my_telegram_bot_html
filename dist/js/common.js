@@ -3,7 +3,7 @@
 // Document ready
 $(document).on('ready', function(){
 
-  $('#j_test_01').on('click', function(){ $('#appButtonStatus').toggle(); })
+  $('#j_test_01').on('click', function(){ $('#appButtonStatus').toggle(); $('#checkoutButtonStatus').hide(); })
   $('#j_test_02').on('click', function(){ $('#youPharmacyLine').show(); $('#appModal1').show(); })
   $('.j-app-modal-close-03').on('click', function(){ $(this).parents('.app-modal').hide(); })
   $('#j_test_04').on('click', function(){ $('#appModal1').show(); })
@@ -102,6 +102,7 @@ $(document).on('ready', function(){
   cartCountTest();
 
   $('.test-navigation__btn').on('click', function(){ $('.section').hide(); $('#' + $(this).data('section')).show(); });
+  $('.test-navigation__btn[data-section="section7"]').on('click', function(){ $('#appButtonStatus').hide(); $('#checkoutButtonStatus').show(); });
   $('.test-navigation__hide').on('click', function(){ $(this).parent().toggleClass('show'); });
 });
 
