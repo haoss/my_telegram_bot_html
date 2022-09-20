@@ -5,11 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>Telegram bot apteka911</title>
-        <link rel="stylesheet" href="./css/style.min.css?v34">
+        <link rel="stylesheet" href="./css/style.min.css?v35">
     </head>
     <body> 
         <div class="app" id="app">
-            <div class="section section1" id="section1" style="display: none">
+            <div class="section section1" id="section1">
                 <div class="you-pharmacy-line" id="youPharmacyLine" style="display: none">
                     <svg class="icon">
                         <use href="#vasha_apteka"></use>
@@ -708,7 +708,7 @@
                 </div>
                 <div class="filter-head">
                     <div class="div1">
-                        <button class="filter-head__btn" type="button">
+                        <button class="filter-head__btn" type="button" id="j_test_38">
                             <svg class="icon">
                                 <use xlink:href="#filter"></use>
                             </svg><span class="filter-head__btn-text">Фильтр</span><span class="filter-head__btn-count">5</span>
@@ -865,8 +865,223 @@
                         </div>
                     </div>
                 </div>
+                <div class="app-filter" id="appFilter2" style="display: none">
+                    <div class="app-filter__wrapper">
+                        <div class="app-filter__head">
+                            <div class="app-filter__head-title">Фильтр</div>
+                            <button class="app-filter__head-btn" type="button" id="j_test_37">
+                                <svg class="icon">
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="app-filter__body">
+                            <div class="app-filter__body-wrapper">
+                                <div class="filter">
+                                    <div class="filter__wrapper">
+                                        <div class="filter__block j-filter is-active">
+                                            <div class="filter__block-head"> <span>Кому можно</span>
+                                                <svg class="icon">
+                                                    <use xlink:href="#arrow_right"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="filter__block-wrapper">
+                                                <div class="filter__block-container">
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">Взрослым</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">Детям</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">Беременным</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">Кормящим</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked disabled" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">Диабетикам</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__block j-filter">
+                                            <div class="filter__block-head"> <span>Срок годности</span>
+                                                <svg class="icon">
+                                                    <use xlink:href="#arrow_right"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="filter__block-wrapper">
+                                                <div class="filter__block-container">
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">1 год</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">1 год и 6 месяцев</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">2 года</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">4 года</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">5 лет</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">6 лет</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__block j-filter">
+                                            <div class="filter__block-head"> <span>Вид продукции</span>
+                                                <svg class="icon">
+                                                    <use xlink:href="#arrow_right"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="filter__block-wrapper">
+                                                <div class="filter__block-container">
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">Для новорождённых</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">Подгузники</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">Для новорождённых</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">Трусики-подгузники</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">Трусики для плавания</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__block j-filter">
+                                            <div class="filter__block-head"> <span>Торговое наименование</span>
+                                                <svg class="icon">
+                                                    <use xlink:href="#arrow_right"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="filter__block-wrapper">
+                                                <div class="filter__block-container">
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">Айдринк</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">Амицитрон</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">Амицитрон без Сахара</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">Амицитрон Екстраб</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="filter__block-group">
+                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#checkbox"></use>
+                                                                </svg></span><span class="field-checkbox__label">Амицитрон Плюс</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-filter__foot">
+                            <button class="btn --accent" type="button"><span>Применить</span><span class="app-filter__foot-count">117</span></button>
+                            <button class="btn" type="button" id="j_test_34"><span>Сбросить</span></button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="section section5" id="section5">
+            <div class="section section5" id="section5" style="display: none">
                 <div class="catalog-head">
                     <div class="div1">
                         <div class="catalog-head__title">Экстракт расторопши пятнистой</div>
@@ -889,7 +1104,7 @@
                 </div>
                 <div class="filter-head">
                     <div class="div1">
-                        <button class="filter-head__btn" type="button">
+                        <button class="filter-head__btn" type="button" id="j_test_36">
                             <svg class="icon">
                                 <use xlink:href="#filter"></use>
                             </svg><span class="filter-head__btn-text">Фильтр</span><span class="filter-head__btn-count">5</span>
@@ -1046,7 +1261,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="app-filter" id="appFilter">
+                <div class="app-filter" id="appFilter" style="display: none">
                     <div class="app-filter__wrapper">
                         <div class="app-filter__head">
                             <div class="app-filter__head-title">Фильтр</div>
@@ -2321,7 +2536,7 @@
         <script src="./js/swiper/swiper-bundle.js"></script>
         <script src="./js/ion.rangeSlider/ion.rangeSlider.js"></script>
         <script src="./js/autosize/autosize.js"></script>
-        <script src="./js/common.js?v18"></script>
+        <script src="./js/common.js?v19"></script>
         <svg width="0" height="0" style="display: none">
             <symbol id="settings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2337 7.125H3.75C3.33579 7.125 3 7.46079 3 7.875C3 8.28921 3.33579 8.625 3.75 8.625H7.2337C7.55641 9.70931 8.56087 10.5 9.75 10.5C10.9391 10.5 11.9436 9.70931 12.2663 8.625H20.25C20.6642 8.625 21 8.28921 21 7.875C21 7.46079 20.6642 7.125 20.25 7.125H12.2663C11.9436 6.04069 10.9391 5.25 9.75 5.25C8.56087 5.25 7.55641 6.04069 7.2337 7.125ZM8.625 7.875C8.625 7.25368 9.12868 6.75 9.75 6.75C10.3713 6.75 10.875 7.25368 10.875 7.875C10.875 8.49632 10.3713 9 9.75 9C9.12868 9 8.625 8.49632 8.625 7.875Z"></path>

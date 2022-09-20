@@ -43,6 +43,9 @@ $(document).on('ready', function(){
   $('#j_test_32').on('click', function(){ $('#mssgSuccess').show(); $('#j_test_30').show(); $('#reviewForm').hide(); })
   $('.j_test_33').on('click', function(){ var _this = $(this); $(this).parent().find('.btn').removeClass('active'); setTimeout(function(){ _this.addClass('active'); }, 100) })
   $('#j_test_35').on('click', function(){ $('#appFilter').hide(); })
+  $('#j_test_37').on('click', function(){ $('#appFilter2').hide(); })
+  $('#j_test_36').on('click', function(){ $('#appFilter').show(); })
+  $('#j_test_38').on('click', function(){ $('#appFilter2').show(); })
 
   $(document).on('click', '.collapsible-heading', function(e){
     e.preventDefault();
