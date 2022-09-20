@@ -42,6 +42,7 @@ $(document).on('ready', function(){
   $('#j_test_31').on('click', function(){ $('#j_test_30').show(); $('#reviewForm').hide(); })
   $('#j_test_32').on('click', function(){ $('#mssgSuccess').show(); $('#j_test_30').show(); $('#reviewForm').hide(); })
   $('.j_test_33').on('click', function(){ var _this = $(this); $(this).parent().find('.btn').removeClass('active'); setTimeout(function(){ _this.addClass('active'); }, 100) })
+  $('#j_test_35').on('click', function(){ $('#appFilter').hide(); })
 
   $(document).on('click', '.collapsible-heading', function(e){
     e.preventDefault();
@@ -85,11 +86,13 @@ $(document).on('ready', function(){
       $('.irs-with-grid').attr('data-number', data.from);
     }
   });
+  autosize($('textarea.field-text__input.css-input'));
 
   inputFocus();
   autosize();
+  filterBlock();
 
-  autosize($('textarea.field-text__input.css-input'));
+  formCheckedTest();
 });
 
 function inputFocus() {
@@ -123,4 +126,52 @@ function inputFocus() {
       }
     });
   })
+}
+
+function filterBlock() {
+  var block = $('.j-filter');
+  var btn = $('#j_test_34');
+
+  block.each(function () {
+    var _this = $(this);
+    var head = _this.find('.filter__block-head');
+    var body = _this.find('.filter__block-wrapper');
+
+    if (_this.hasClass('is-active')) {
+      body.attr('aria-expanded', false).show();
+    } else {
+      body.attr('aria-expanded', true).hide();
+    }
+
+    head.on('click', function(){
+      var _parent = $(this).parent();
+      if (_parent.hasClass('is-active')) {
+        _parent.removeClass('is-active');
+        body.attr('aria-expanded', false).slideUp('fast');
+      } else {
+        _parent.addClass('is-active');
+        body.attr('aria-expanded', true).slideDown('fast');
+      }
+    });
+  });
+
+  btn.on('click', function(e){
+    e.preventDefault();
+    $(this).parent().prev().find('.field-checkbox').removeClass('checked');
+  })
+}
+
+function formCheckedTest() {
+  var block = $('.j-checked');
+  block.on('click', function (e) {
+    e.preventDefault();
+    var _this = $(this);
+    if (_this.hasClass('checked') && !_this.hasClass('disabled')) {
+      _this.removeClass('checked')
+    } else if (!_this.hasClass('checked') && _this.hasClass('disabled')) {
+      _this.removeClass('checked')
+    } else {
+      _this.addClass('checked')
+    }
+  });
 }

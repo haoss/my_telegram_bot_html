@@ -1,0 +1,241 @@
+.filter
+  .filter__wrapper
+    .filter__block.j-filter.is-active
+      .filter__block-head 
+        span Кому можно
+        svg.icon
+          use(xlink:href='#arrow_right')
+      .filter__block-wrapper
+        .filter__block-container
+          .filter__block-group
+            +field-checkbox({
+              title: 'Взрослым',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox1',
+                checked: true,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: 'Детям',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox2',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: 'Беременным',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox3',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: 'Кормящим',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox4',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: 'Диабетикам',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox4',
+                checked: false,
+                disabled: true
+              }
+            })
+    .filter__block.j-filter
+      .filter__block-head 
+        span Срок годности
+        svg.icon
+          use(xlink:href='#arrow_right')
+      .filter__block-wrapper
+        .filter__block-container
+          .filter__block-group
+            +field-checkbox({
+              title: '1 год',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: '1 год и 6 месяцев',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: '2 года',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: '4 года',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: '5 лет',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: '6 лет',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox',
+                checked: false,
+              }
+            })
+    .filter__block.j-filter
+      .filter__block-head 
+        span Вид продукции
+        svg.icon
+          use(xlink:href='#arrow_right')
+      .filter__block-wrapper
+        .filter__block-container
+          .filter__block-group
+            +field-checkbox({
+              title: 'Для новорождённых',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: 'Подгузники',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: 'Для новорождённых',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: 'Трусики-подгузники',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: 'Трусики для плавания',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox',
+                checked: false,
+              }
+            })
+    .filter__block.j-filter
+      .filter__block-head 
+        span Торговое наименование
+        svg.icon
+          use(xlink:href='#arrow_right')
+      .filter__block-wrapper
+        .filter__block-container
+          .filter__block-group
+            +field-checkbox({
+              title: 'Айдринк',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: 'Амицитрон',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: 'Амицитрон без Сахара',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: 'Амицитрон Екстраб',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: 'Амицитрон Плюс',
+              isLink: true,
+              mods: '',
+              attrs: {
+                name: 'checkbox',
+                checked: false,
+              }
+            })

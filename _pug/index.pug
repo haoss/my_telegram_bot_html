@@ -1,15 +1,17 @@
+include ./_include/_mixin_field-text
+include ./_include/_mixin_field-checkbox
+
 doctype html
 html(lang="uk")
-  include ./_include/_mixin_field-text
   head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Telegram bot apteka911
-    link(rel='stylesheet', href='./css/style.min.css?v33')
+    link(rel='stylesheet', href='./css/style.min.css?v34')
   body 
     #app.app
-      #section1.section.section1
+      #section1.section.section1(style="display: none")
         #youPharmacyLine.you-pharmacy-line(style="display: none")
           svg.icon
             use(href='#vasha_apteka')
@@ -443,7 +445,7 @@ html(lang="uk")
           include ./_include/_catalog_view_1
         #catalog2
           include ./_include/_catalog_view_2
-      #section5.section.section5(style="display: none")
+      #section5.section.section5
         .catalog-head
           .div1
             .catalog-head__title Экстракт расторопши пятнистой
@@ -471,6 +473,22 @@ html(lang="uk")
           include ./_include/_catalog_view_1
         #catalog4
           include ./_include/_catalog_view_2
+        #appFilter.app-filter
+          .app-filter__wrapper
+            .app-filter__head
+              .app-filter__head-title Фильтр
+              button(type="button").app-filter__head-btn#j_test_35
+                svg.icon
+                  use(xlink:href='#close')
+            .app-filter__body
+              .app-filter__body-wrapper
+                include ./_include/_filter
+            .app-filter__foot
+              button(type="button").btn.--accent
+                span Применить
+                span.app-filter__foot-count 117
+              button(type="button").btn#j_test_34
+                span Сбросить
       #section6.section.section6(style="display: none")
         .product
           .product__head
@@ -906,7 +924,7 @@ html(lang="uk")
                       .analogs-list__item-text Расторопши плоды 200г
                         small Дарниця | Украина
                       .analogs-list__item-price от 62,68 ₴
-        #appModal9.app-modal
+        #appModal9.app-modal(style="display: none")
           .app-modal__wrapper
             button(type="button").app-modal__close.j-app-modal-close-03
               svg.icon
@@ -1055,6 +1073,6 @@ html(lang="uk")
     script(src="./js/swiper/swiper-bundle.js")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
-    script(src="./js/common.js?v17")
+    script(src="./js/common.js?v18")
 
     include ./_include/_svg
