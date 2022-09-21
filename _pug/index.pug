@@ -8,7 +8,7 @@ html(lang="uk")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Telegram bot apteka911
-    link(rel='stylesheet', href='./css/style.min.css?v38')
+    link(rel='stylesheet', href='./css/style.min.css?v39')
   body 
     #app.app
       .test-navigation
@@ -532,7 +532,7 @@ html(lang="uk")
                 span.app-filter__foot-count 117
               button(type="button").btn#j_test_34
                 span Сбросить
-      #section6.section.section6(style="display: none")
+      #section6.section.section6
         .product
           .product__head
             .product__head-title Парацетамол-Дарница табл. 500мг №10
@@ -967,7 +967,7 @@ html(lang="uk")
                       .analogs-list__item-text Расторопши плоды 200г
                         small Дарниця | Украина
                       .analogs-list__item-price от 62,68 ₴
-        #appModal9.app-modal(style="display: none")
+        #appModal9.app-modal
           .app-modal__wrapper
             button(type="button").app-modal__close.j-app-modal-close-03
               svg.icon
@@ -1055,9 +1055,10 @@ html(lang="uk")
                           use(xlink:href='#star')
                         svg.icon
                           use(xlink:href='#star')
-                    .comment__content 
+                    .comment__content.--more
                       p У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.
                       p У меня хронический гайморит. Спасаюсь только Синупретом, главное вовремя начать принимать таблетки, чтобы не затянулось лечение.
+                    button(type="button").comment__content-more.j_test_42 Читать далее
                     .comment__foot
                       .comment__foot-btns
                         button(type="button").btn
@@ -1193,6 +1194,6 @@ html(lang="uk")
     script(src="./js/swiper/swiper-bundle.js")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
-    script(src="./js/common.js?v22")
+    script(src="./js/common.js?v23")
 
     include ./_include/_svg

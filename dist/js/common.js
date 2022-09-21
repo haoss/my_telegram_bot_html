@@ -104,6 +104,8 @@ $(document).on('ready', function(){
   $('.test-navigation__btn').on('click', function(){ $('.section').hide(); $('#' + $(this).data('section')).show(); });
   $('.test-navigation__btn[data-section="section7"]').on('click', function(){ $('#appButtonStatus').hide(); $('#checkoutButtonStatus').show(); });
   $('.test-navigation__hide').on('click', function(){ $(this).parent().toggleClass('show'); });
+  
+  $('.j_test_42').on('click', function(){ $(this).hide().prev().removeClass('--more'); });
 });
 
 function inputFocus() {

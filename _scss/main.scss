@@ -1404,10 +1404,24 @@
         margin-bottom: 0;
       }
     }
+    &-more {
+      background: transparent;
+      padding: 0;
+      text-decoration: underline;
+      border: 0;
+      color: #34B9F1;
+      font-size: 11px;
+    }
+    &.--more {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
   }
   &__foot {
     margin-top: 15px;
-    margin-bottom: -5px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
