@@ -122,14 +122,14 @@ $(document).on('ready', function(){
   
   $('#j_test_43').on('click', function(){ $('#appSaveCart').hide(); });
 
-  var masterTimeline = new TimelineMax({ paused:true }), headerTl = new TimelineMax();
-  // headerTl.set(".search", {autoAlpha: 0});
-  masterTimeline.add([headerTl]);
-  masterTimeline
-    // .to($('.loader'), 1, {autoAlpha:  0})
-    .fromTo($('.search'), 0.35, {autoAlpha: 0, y: -35}, {autoAlpha: 1, y: 0})
-    .fromTo($('.section1__navigation-round'), 0.35, {autoAlpha: 0, y: 35}, {autoAlpha: 1, y: 0})
-    .staggerFromTo($('.section1__navigation-btn'), 0.35, {autoAlpha: 0, y: 35}, {autoAlpha: 1, y: 0}, 0.2);
+  // var masterTimeline = new TimelineMax({ paused:true }), headerTl = new TimelineMax();
+  // // headerTl.set(".search", {autoAlpha: 0});
+  // masterTimeline.add([headerTl]);
+  // masterTimeline
+  //   // .to($('.loader'), 1, {autoAlpha:  0})
+  //   .fromTo($('.search'), 0.35, {autoAlpha: 0, y: -35}, {autoAlpha: 1, y: 0})
+  //   .fromTo($('.section1__navigation-round'), 0.35, {autoAlpha: 0, y: 35}, {autoAlpha: 1, y: 0})
+  //   .staggerFromTo($('.section1__navigation-btn'), 0.35, {autoAlpha: 0, y: 35}, {autoAlpha: 1, y: 0}, 0.2);
               // .set(".search")
               // .from(".search", 1, {autoAlpha: 0, y: -100}, 1)
               // .staggerFrom(".section1__navigation-btn", 1, {autoAlpha: 0, y: 100}, 0.1);
@@ -138,8 +138,8 @@ $(document).on('ready', function(){
             // .from(".devices-chat-picture", 1, {x:100, opacity:0});
   
   $(window).on('load', function(){
-    $(".loader").delay(400).fadeOut("slow");
-    masterTimeline.play();
+    // $(".loader").delay(400).fadeOut("slow");
+    // masterTimeline.play();
 
     var swiper2 = new Swiper(".j-main-slider", {
       loop: true,
@@ -173,6 +173,10 @@ $(document).on('ready', function(){
 
   
 });
+
+// $(window).on('load', function(){
+//   $(".loader").delay(400).fadeOut("slow");
+// });
 
 function inputFocus() {
   var jinput = $(".css-input");
