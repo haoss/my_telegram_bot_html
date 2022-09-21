@@ -101,11 +101,24 @@ $(document).on('ready', function(){
   formCheckedTest();
   cartCountTest();
 
-  $('.test-navigation__btn').on('click', function(){ $('.section').hide(); $('#' + $(this).data('section')).show(); });
+  $('.test-navigation__btn').on('click', function(){ 
+    var _this = $(this);
+    var _attr = $(this).is("[data-section='section7']");
+    $('.section').hide(); $('#' + $(this).data('section')).show(); 
+    $('.test-navigation__btn').removeClass('active'); 
+    $(this).addClass('active'); 
+
+    if (_attr) {
+      setTimeout(function(){
+        $('#appSaveCart').show();
+      }, 400);
+    }
+  });
+
   $('.test-navigation__btn[data-section="section7"]').on('click', function(){ $('#appButtonStatus').hide(); $('#checkoutButtonStatus').show(); });
   $('.test-navigation__hide').on('click', function(){ $(this).parent().toggleClass('show'); });
   
-  $('.j_test_42').on('click', function(){ $(this).hide().prev().removeClass('--more'); });
+  $('#j_test_43').on('click', function(){ $('#appSaveCart').hide(); });
 });
 
 function inputFocus() {
@@ -202,16 +215,12 @@ function cartCountTest() {
     plus.on('click', function(){
       value = parseFloat(value) + 1;
       input.val(value + ' ' + input.data('label'));
-
-      priceUpdateTest();
     });
   
     minus.on('click', function(){
       if (value <= 0) return;
       value = parseFloat(value) - 1;
       input.val(value + ' ' + input.data('label'));
-
-      priceUpdateTest();
     });
   })
 }

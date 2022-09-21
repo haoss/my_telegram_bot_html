@@ -8,7 +8,7 @@ html(lang="uk")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Telegram bot apteka911
-    link(rel='stylesheet', href='./css/style.min.css?v39')
+    link(rel='stylesheet', href='./css/style.min.css?v40')
   body 
     #app.app
       .test-navigation
@@ -20,7 +20,7 @@ html(lang="uk")
         button(type="button" data-section="section5").test-navigation__btn 5
         button(type="button" data-section="section6").test-navigation__btn 6
         button(type="button" data-section="section7").test-navigation__btn 7
-      #section1.section.section1
+      #section1.section.section1(style="display: none")
         #youPharmacyLine.you-pharmacy-line(style="display: none")
           svg.icon
             use(href='#vasha_apteka')
@@ -532,7 +532,7 @@ html(lang="uk")
                 span.app-filter__foot-count 117
               button(type="button").btn#j_test_34
                 span Сбросить
-      #section6.section.section6
+      #section6.section.section6(style="display: none")
         .product
           .product__head
             .product__head-title Парацетамол-Дарница табл. 500мг №10
@@ -967,7 +967,7 @@ html(lang="uk")
                       .analogs-list__item-text Расторопши плоды 200г
                         small Дарниця | Украина
                       .analogs-list__item-price от 62,68 ₴
-        #appModal9.app-modal
+        #appModal9.app-modal(style="display: none")
           .app-modal__wrapper
             button(type="button").app-modal__close.j-app-modal-close-03
               svg.icon
@@ -1105,7 +1105,7 @@ html(lang="uk")
                             use(xlink:href='#dislike')
                           span 0
                   - }
-      #section7.section.section6(style="display: none")
+      #section7.section.section7(style="display: none")
         .checkout-head
           .checkout-head__title Корзина
           button(type="button").checkout-head__btn#j_test_41
@@ -1180,6 +1180,15 @@ html(lang="uk")
                     input.block-count__input(type='text' value='1 упак.' data-label="упак." id="" aria-label="Количество")
                 .checkout-list__item-price от 62,68 ₴
             - }
+        #appSaveCart.app-save-cart(style="display: none")
+          .app-save-cart__wrapper
+            .app-save-cart__title Сохранить корзину?
+            p Если вы сохраните товары в крризене, тогда вы сможете продолжить оформление при следующем посещении
+            .app-save-cart__btns#j_test_43
+              button(type="button").app-save-cart__btn
+                span Сохранить
+              button(type="button").app-save-cart__btn
+                span Не сохранять
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner
           span.app-button-status__count 5
@@ -1194,6 +1203,6 @@ html(lang="uk")
     script(src="./js/swiper/swiper-bundle.js")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
-    script(src="./js/common.js?v23")
+    script(src="./js/common.js?v24")
 
     include ./_include/_svg
