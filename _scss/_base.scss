@@ -18,7 +18,7 @@ body {
   font-size: 15px;
   font-weight: 500;
   background-color: var(--block-bg-color);
-  color: var(var(--tg-theme-text-color));
+  color: var(--text-color);
   color-scheme: var(--tg-color-scheme);
   margin: 0;
   padding: 0;
@@ -35,7 +35,7 @@ body {
   cursor: default;
 }
 
-html.dark {
+html.dark body {
   --tg-theme-bg-color: #333;
   --text-color: #fff;
 }
