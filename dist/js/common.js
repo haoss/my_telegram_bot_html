@@ -89,7 +89,7 @@ $(document).on('ready', function(){
           setTimeout(function () {
             var currentImg = $(swiper.slides[swiper.activeIndex]).attr("data-img");
           }, 500);
-          gsap.to($(".swiper-img img"), 0.4, {autoAlpha: 1, x: -240, ease: Power1.easeIn});
+          gsap.to($(".swiper-img img"), 0.4, {x: -240, ease: Power1.easeIn});
       },
       slideChangeTransitionEnd: function () {
           // Slide captions
@@ -98,7 +98,7 @@ $(document).on('ready', function(){
           $(".swiper-img").html(function() {
             return "<img src='" + currentImg + "' width='240' height='280' alt='' />";
           });
-          gsap.from($(".swiper-img img"), 0.4, {autoAlpha: 1, x: 140, ease: Power1.easeOut});
+          gsap.from($(".swiper-img img"), 0.4, {x: 140, ease: Power1.easeOut});
       }
     }
   };
