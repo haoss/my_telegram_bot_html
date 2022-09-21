@@ -1,7 +1,7 @@
 /* filter */
 .filter {
   $this: &;
-  background: #fff;
+  background: var(--tg-theme-bg-color);
   padding-bottom: 10px;
   .modal & {
     box-shadow: none;
@@ -115,7 +115,7 @@
       input {
         border: 1px solid #CCC;
         border-radius: 4px;
-        background: #fff;
+        background: var(--tg-theme-bg-color);
         height: 36px;
         padding: 0 10px;
         font-weight: 400;
@@ -209,7 +209,7 @@
     left: 0;
     right: 0;
     padding: 10px 20px;
-    background: #fff;
+    background: var(--tg-theme-bg-color);
     box-shadow: 0 0 2px rgba(68,84,99, 0.25), 0 2px 8px rgba(68,84,99,0.25);
   }
 }

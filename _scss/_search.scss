@@ -14,7 +14,7 @@
     border: 0;
     padding: 0 80px 0 38px;
     color: black;
-    background: #fff;
+    background: var(--tg-theme-bg-color);
   }
   [class*="__btn-"] {
     position: absolute;
@@ -66,7 +66,7 @@
     border: 0;
     padding: 0 80px 0 20px;
     color: black;
-    background: #fff;
+    background: var(--tg-theme-bg-color);
   }
   [class*="__btn-"] {
     position: absolute;

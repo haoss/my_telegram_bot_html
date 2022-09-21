@@ -30,7 +30,7 @@
       // width: 785px;
       width: 170%;
       height: 235px;
-      background: #fff;
+      background: var(--tg-theme-bg-color);
       border-radius: 25px;
       left: 50%;
       transform: translateX(-50%);
@@ -69,7 +69,7 @@
       &::after {
         width: 52px;
         height: 52px;
-        background: #fff;
+        background: var(--tg-theme-bg-color);
         top: 0;
         z-index: 1;
       }
@@ -83,7 +83,7 @@
         position: relative;
         z-index: 4;
         margin: 10px;
-        fill: #fff;
+        fill: var(--tg-theme-bg-color);
         &+span {
           margin-top: 7px;
           line-height: 1;
@@ -137,14 +137,14 @@
   top: 0;
   position: fixed;
   z-index: 10000;
-  background-color: #fff;
+  background-color: var(--tg-theme-bg-color);
 }
 
 .swiper-img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	color: #FFF;
+	color: var(--tg-theme-bg-color);
 	z-index: 999;
 	transform: translate(-50%,-50%);
   img {
@@ -155,7 +155,7 @@
 .app-button-status {
   flex-shrink: 0;
   background: #55BE61;
-  color: #fff;
+  color: var(--tg-theme-bg-color);
   height: 47px;
   display: flex;
   align-items: center;
@@ -176,7 +176,7 @@
         min-width: 20px;
         padding: 0 6px;
         border-radius: 15px;
-        background: #fff;
+        background: var(--tg-theme-bg-color);
         color: #55BE61;
         margin-right: 10px;
         line-height: 20px;
@@ -200,7 +200,7 @@
   background: #55BE61;
   flex-shrink: 0;
   // color: rgba(255,255,255,0.2);
-  color: #fff;
+  color: var(--tg-theme-bg-color);
   text-align: center;
   overflow: hidden;
   display: flex;
@@ -217,7 +217,7 @@
     min-width: 1px;
     span {
       border-bottom: 1px dashed currentColor;
-      color: #fff;
+      color: var(--tg-theme-bg-color);
       display: block;
       line-height: 1.1;
       width: 100%;
@@ -241,7 +241,7 @@
     position: relative;
     transform: translateY(-50%);
     flex-shrink: 0;
-    fill: #fff;
+    fill: var(--tg-theme-bg-color);
   }
 }
 
@@ -262,7 +262,7 @@
     max-height: calc(100% - 98px);
   }
   &__close {
-    background: #fff;
+    background: var(--tg-theme-bg-color);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
     border-radius: 50%;
     width: 40px;
@@ -313,7 +313,7 @@
       }
       svg {
         margin: 8px;
-        fill: #fff;
+        fill: var(--tg-theme-bg-color);
         width: 24px;
         height: 24px;
       }
@@ -323,7 +323,7 @@
     }
   }
   &__content {
-    background: #fff;
+    background: var(--tg-theme-bg-color);
     border-radius: 25px 25px 0 0;
     overflow: auto;
     max-height: calc(100vh - 98px);
@@ -359,7 +359,7 @@
   &__bottom {
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15), 0px 2px 7px 1px rgba(0, 0, 0, 0.1);
     padding: 15px 20px;
-    background: #fff;
+    background: var(--tg-theme-bg-color);
   }
   &__item {
     min-height: 76px;
@@ -633,7 +633,7 @@
       height: 20px;
       line-height: 20px;
       margin-left: 10px;
-      color: #fff;
+      color: var(--tg-theme-bg-color);
       font-size: 13px;
       background: #55BE61;
       border-radius: 50%;
@@ -985,7 +985,7 @@
         top: 21px;
         right: 1px;
         font-size: 13px;
-        background: #fff;
+        background: var(--tg-theme-bg-color);
       }
     }
     .icon-check-circle {
@@ -1256,7 +1256,7 @@
       }
       svg {
         margin: 8px;
-        fill: #fff;
+        fill: var(--tg-theme-bg-color);
         width: 24px;
         height: 24px;
       }
@@ -1306,7 +1306,7 @@
       width: 28px;
       height: 28px;
       margin: 0 auto;
-      fill: #fff;
+      fill: var(--tg-theme-bg-color);
       &.--check {
         fill: #EB6161;
         width: 25px;
@@ -1318,7 +1318,7 @@
       }
     }
     &-round {
-      background: #fff;
+      background: var(--tg-theme-bg-color);
       position: absolute;
       top: 2px;
       right: 2px;
@@ -1358,7 +1358,7 @@
   &-slide {
     text-align: center;
     font-size: 15px;
-    background: #fff;
+    background: var(--tg-theme-bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1478,7 +1478,7 @@
       border-radius: 50%;
       margin-left: -3px;
       top: 38px;
-      box-shadow: 0 0 0 2px #fff;
+      box-shadow: 0 0 0 2px var(--tg-theme-bg-color);
       background: #97A0A7;
       z-index: 1;
       &.small {
@@ -1490,7 +1490,7 @@
       width: 15px;
       height: 15px;
       background: #50A7EA;
-      border: 2px solid #fff;
+      border: 2px solid var(--tg-theme-bg-color);
       top: 29px;
       box-shadow: none;
       z-index: 2;
@@ -1687,7 +1687,7 @@
   right: 0;
   bottom: 0;
   z-index: 5;
-  background: #fff;
+  background: var(--tg-theme-bg-color);
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -1703,7 +1703,7 @@
     padding: 15px 10px 15px 20px;
     position: fixed;
     width: 100%;
-    background: #fff;
+    background: var(--tg-theme-bg-color);
     top: 0;
     left: 0;
     z-index: 3;
@@ -1753,7 +1753,7 @@
     flex-shrink: 0;
     height: 70px;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15), 0px 2px 7px 1px rgba(0, 0, 0, 0.1);
-    background: #fff;
+    background: var(--tg-theme-bg-color);
     position: fixed;
     left: 0;
     width: 100%;
@@ -1769,7 +1769,7 @@
     }
     &-count {
       line-height: 20px;
-      background: #fff;
+      background: var(--tg-theme-bg-color);
       padding: 0 6px;
       font-size: 13px;
       border-radius: 15px;
@@ -1784,7 +1784,7 @@
   &__dropdown {
     position: absolute;
     top: 100%;
-    background: #fff;
+    background: var(--tg-theme-bg-color);
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 2px 10px rgba(0, 0, 0, 0.04);
     border-radius: 6px;
     overflow: hidden;
@@ -1990,7 +1990,7 @@
     position: absolute;
     width: 298px;
     height: auto;
-    background: #fff;
+    background: var(--tg-theme-bg-color);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
     border-radius: 7px;
     overflow: hidden;
