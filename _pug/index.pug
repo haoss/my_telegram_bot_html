@@ -8,9 +8,10 @@ html(lang="uk")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Telegram bot apteka911
-    link(rel='stylesheet', href='./css/style.min.css?v40')
+    link(rel='stylesheet', href='./css/style.min.css?v41')
   body 
     #app.app
+      //- .loader
       .test-navigation
         button(type="button").test-navigation__hide
         button(type="button" data-section="section1").test-navigation__btn 1
@@ -39,8 +40,14 @@ html(lang="uk")
             svg.icon
               use(xlink:href='#barcode')
         .section1__wrapper
-          button(type="button").btn-buy#j_test_01
-            span Купить
+          //- button(type="button").btn-buy#j_test_01
+          //-   span Купить
+          .section1__slider.j-main-slider
+            .swiper-wrapper
+              .swiper-slide(data-img="./tmp/img-slider-1.png")
+              .swiper-slide(data-img="./tmp/img-slider-2.png")
+              .swiper-slide(data-img="./tmp/img-slider-3.png")
+            .swiper-img
         .section1__navigation
           .section1__navigation-round
           .section1__navigation-wrapper
@@ -1203,6 +1210,7 @@ html(lang="uk")
     script(src="./js/swiper/swiper-bundle.js")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
-    script(src="./js/common.js?v24")
+    script(src="./js/gsap.min.js")
+    script(src="./js/common.js?v25")
 
     include ./_include/_svg

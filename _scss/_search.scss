@@ -1,7 +1,10 @@
 .search {
   flex-shrink: 0;
   margin: 20px;
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
   &__input {
     width: 100%;
     height: 40px;
