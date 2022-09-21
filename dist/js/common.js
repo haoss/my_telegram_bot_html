@@ -165,7 +165,7 @@ $(document).on('ready', function(){
             $(".swiper-img").html(function() {
               return "<img src='" + currentImg + "' width='360' height='360' alt='' />";
             });
-            gsap.from($(".swiper-img img"), 0.4, {autoAlpha: 0, x: 40, ease: Power1.easeOut});
+            gsap.from($(".swiper-img img"), 0.4, {autoAlpha: 0, x: 140, ease: Power1.easeOut});
         }
       }
     });
