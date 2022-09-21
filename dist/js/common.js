@@ -96,7 +96,7 @@ $(document).on('ready', function(){
           var swiper = this;
           var currentImg = $(swiper.slides[swiper.activeIndex]).attr("data-img");
           $(".swiper-img").html(function() {
-            return "<img src='" + currentImg + "' width='360' height='360' alt='' />";
+            return "<img src='" + currentImg + "' width='290' height='290' alt='' />";
           });
           gsap.from($(".swiper-img img"), 0.4, {autoAlpha: 0, x: 140, ease: Power1.easeOut});
       }

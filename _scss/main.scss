@@ -141,10 +141,13 @@
 .swiper-img {
 	position: absolute;
 	top: 50%;
-	left: 15%;
+	left: 50%;
 	color: #FFF;
 	z-index: 999;
-	transform: translateY(-50%);
+	transform: translate(-50%,-50%);
+  img {
+    object-fit: contain;
+  }
 }
 
 .app-button-status {
