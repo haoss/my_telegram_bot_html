@@ -29,9 +29,21 @@ body {
   --block-bg-color: var(--tg-theme-bg-color);
   --tg-theme-bg-color: #fff;
   --text-color: #555;
+  --color-d-1: #50A7EA;
+  --color-d-2: #34B9F1;
   --color-d-3: #55BE61;
+  --color-d-4: #F3C04B;
+  --color-d-5: #EB6161;
   --color-d-7: #97A0A7;
   --color-d-8: #C4C4C4;
+  --color-l-1: #F6F6F6;
+  --color-l-3: #E0E0E0;
+  --color-red: #CE494A;
+  --color-black: #000;
+  --color-black-rgba: 0,0,0;
+  --color-disabled: #eee;
+  --color-gray: #ccc;
+  --table-border: #EDEDED;
   
   -webkit-user-select: none;
   user-select: none;
@@ -58,7 +70,7 @@ button {
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: #eee;
+  background-color: var(--color-disabled);
   border: 0;
   outline: none;
   font-weight: 500;
@@ -89,9 +101,6 @@ button {
   &.--accent {
     color: var(--tg-theme-bg-color);
     background: var(--color-d-3);
-    &:hover, &:focus, &:active {
-
-    }
   }
 }
 
@@ -113,7 +122,7 @@ input {
   overflow: auto;
   &::-webkit-scrollbar {
     width: 3px;
-    background: #eee;
+    background: var(--color-disabled)
   }
   &::-webkit-scrollbar-thumb {
     background-color: var(--color-d-5);

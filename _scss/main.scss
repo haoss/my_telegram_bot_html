@@ -23,7 +23,7 @@
     height: 117px;
     background: transparent;
     z-index: 3;
-    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.14)) drop-shadow(0px 1px 18px rgba(0, 0, 0, 0.12)) drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0px 5px 10px rgba(var(--color-black-rgba), 0.14)) drop-shadow(0px 1px 18px rgba(var(--color-black-rgba), 0.12)) drop-shadow(0px 3px 5px rgba(var(--color-black-rgba), 0.2));
     &-round {
       position: absolute;
       top: 26px;
@@ -253,7 +253,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(var(--color-black-rgba), 0.4);
   overflow: hidden;
   &__wrapper {
     position: absolute;
@@ -264,7 +264,7 @@
   }
   &__close {
     background: var(--tg-theme-bg-color);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 10px rgba(var(--color-black-rgba), 0.14), 0px 1px 18px rgba(var(--color-black-rgba), 0.12), 0px 3px 5px rgba(var(--color-black-rgba), 0.2);
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -272,7 +272,7 @@
     top: -60px;
     position: absolute;
     svg {
-      fill: #393939;
+      fill: var(--color-d-7);
       width: 26px;
       height: 26px;
       display: block;
@@ -293,7 +293,7 @@
       flex-shrink: 0;
       margin-right: 15px;
       border-radius: 50%;
-      background: #ccc;
+      background: var(--color-gray);
       overflow: hidden;
       &.--your-pharmacy {
         background: var(--color-d-3);
@@ -340,7 +340,7 @@
     }
     &::-webkit-scrollbar {
       width: 3px;
-      background: #eee;
+      background: var(--color-disabled)
     }
     &::-webkit-scrollbar-thumb {
       background-color: var(--color-d-5);
@@ -358,7 +358,7 @@
   margin: -30px -20px;
   font-weight: 500;
   &__bottom {
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15), 0px 2px 7px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 2px rgba(var(--color-black-rgba), 0.15), 0px 2px 7px 1px rgba(var(--color-black-rgba), 0.1);
     padding: 15px 20px;
     background: var(--tg-theme-bg-color);
   }
@@ -407,7 +407,7 @@
   &__head {
     padding: 8px 20px;
     font-size: 11px;
-    color: #50A7EA;
+    color: var(--color-d-1);
   }
   &__item {
     min-height: 76px;
@@ -647,7 +647,7 @@
 
 .category-head, .checkout-head {
   min-height: 70px;
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15), 0px 2px 7px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 2px rgba(var(--color-black-rgba), 0.15), 0px 2px 7px 1px rgba(var(--color-black-rgba), 0.1);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -705,7 +705,7 @@
       left: 20px;
       top: 50%;
       transform: translateY(-50%);
-      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15), 0px 2px 7px 1px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 0px 2px rgba(var(--color-black-rgba), 0.15), 0px 2px 7px 1px rgba(var(--color-black-rgba), 0.1);
       border-radius: 80%;
       flex-shrink: 0;
       display: flex;
@@ -851,7 +851,7 @@
   font-size: 14px;
   line-height: 1.1;
   margin: 0 0 20px 0;
-  border-top: 1px solid #EDEDED;
+  border-top: 1px solid var(--table-border);
   caption {
     font-size: 15px;
     line-height: 1.2;
@@ -863,12 +863,12 @@
   }
   a {
     text-decoration: underline;
-    color: #50A7EA;
+    color: var(--color-d-1);
   }
   &>tbody {
     &>tr {
       &>td {
-        border-bottom: 1px solid #EDEDED;
+        border-bottom: 1px solid var(--table-border);
         height: 40px;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -896,7 +896,7 @@
         }
       }
       span[data-link] {
-        color: #50A7EA;
+        color: var(--color-d-1);
         cursor: pointer;
         text-decoration: underline;
         &:hover {
@@ -1115,7 +1115,6 @@
   margin-bottom: 22px;
   &__head {
     margin-bottom: 15px;
-    color: #4D4D4D;
     line-height: 1.2;
   }
   &__wrapper {
@@ -1214,7 +1213,7 @@
 }
 
 .product-menu {
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 10px rgba(var(--color-black-rgba), 0.14), 0px 1px 18px rgba(var(--color-black-rgba), 0.12), 0px 3px 5px rgba(var(--color-black-rgba), 0.2);
   border-radius: 20px 20px 0px 0px;
   padding: 10px 0;
   margin: 0 -20px -30px -20px;
@@ -1224,7 +1223,7 @@
     display: flex;
     align-items: center;
     font-size: 15px;
-    color: #4D4D4D;
+    color: var(--color-d-6);
     background: transparent;
     width: 100%;
     &-icon {
@@ -1233,7 +1232,7 @@
       flex-shrink: 0;
       margin-right: 15px;
       border-radius: 50%;
-      background: #ccc;
+      background: var(--color-gray);
       overflow: hidden;
       &.--your-pharmacy {
         background: var(--color-d-3);
@@ -1414,7 +1413,7 @@
     .irs-grid-pol {
       &:not(.small) {
         &:nth-child(1) {
-          background: #50A7EA;
+          background: var(--color-d-1);
         }
       }
     }
@@ -1423,7 +1422,7 @@
     .irs-grid-pol {
       &:not(.small) {
         &:nth-child(-n+6) {
-          background: #50A7EA;
+          background: var(--color-d-1);
         }
       }
     }
@@ -1432,7 +1431,7 @@
     .irs-grid-pol {
       &:not(.small) {
         &:nth-child(-n+11) {
-          background: #50A7EA;
+          background: var(--color-d-1);
         }
       }
     }
@@ -1441,7 +1440,7 @@
     .irs-grid-pol {
       &:not(.small) {
         &:nth-child(-n+16) {
-          background: #50A7EA;
+          background: var(--color-d-1);
         }
       }
     }
@@ -1450,7 +1449,7 @@
     .irs-grid-pol {
       &:not(.small) {
         &:nth-child(-n+21) {
-          background: #50A7EA;
+          background: var(--color-d-1);
         }
       }
     }
@@ -1470,7 +1469,7 @@
       height: 2px;
     }
     .irs--round .irs-bar {
-      background: #50A7EA;
+      background: var(--color-d-1);
       height: 2px;
     }
     .irs-grid-pol {
@@ -1490,7 +1489,7 @@
     .irs--round .irs-handle {
       width: 15px;
       height: 15px;
-      background: #50A7EA;
+      background: var(--color-d-1);
       border: 2px solid var(--tg-theme-bg-color);
       top: 29px;
       box-shadow: none;
@@ -1697,7 +1696,7 @@
   &__head {
     flex-shrink: 0;
     min-height: 70px;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15), 0px 2px 7px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 2px rgba(var(--color-black-rgba), 0.15), 0px 2px 7px 1px rgba(var(--color-black-rgba), 0.1);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -1743,7 +1742,7 @@
       scrollbar-gutter: stable;
       &::-webkit-scrollbar {
         width: 3px;
-        background: #eee;
+        background: var(--color-disabled)
       }
       &::-webkit-scrollbar-thumb {
         background-color: var(--color-d-5);
@@ -1753,7 +1752,7 @@
   &__foot {
     flex-shrink: 0;
     height: 70px;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15), 0px 2px 7px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 2px rgba(var(--color-black-rgba), 0.15), 0px 2px 7px 1px rgba(var(--color-black-rgba), 0.1);
     background: var(--tg-theme-bg-color);
     position: fixed;
     left: 0;
@@ -1786,7 +1785,7 @@
     position: absolute;
     top: 100%;
     background: var(--tg-theme-bg-color);
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 2px 10px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 0px 1px rgba(var(--color-black-rgba), 0.2), 0px 1px 1px rgba(var(--color-black-rgba), 0.05), 0px 2px 10px rgba(var(--color-black-rgba), 0.04);
     border-radius: 6px;
     overflow: hidden;
     z-index: 5;
@@ -1912,7 +1911,7 @@
     width: 32px;
     position: absolute;
     z-index: 5;
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(var(--color-black-rgba), 0.05);
     text-decoration: none;
     color: rgba(17, 17, 17, 0.48);
     text-align: center;
@@ -1985,14 +1984,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(var(--color-black-rgba), 0.4);
   overflow: hidden;
   &__wrapper {
     position: absolute;
     width: 298px;
     height: auto;
     background: var(--tg-theme-bg-color);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 10px rgba(var(--color-black-rgba), 0.14), 0px 1px 18px rgba(var(--color-black-rgba), 0.12), 0px 3px 5px rgba(var(--color-black-rgba), 0.2);
     border-radius: 7px;
     overflow: hidden;
     left: 50%;
@@ -2020,7 +2019,7 @@
     border: 0;
     font-size: 13px;
     text-transform: uppercase;
-    color: #50A7EA;
+    color: var(--color-d-1);
     &+* {
       // margin-left: 10px;
       color: var(--color-d-5);

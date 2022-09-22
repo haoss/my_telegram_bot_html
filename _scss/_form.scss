@@ -11,9 +11,9 @@
     opacity: 0;
     &:checked {
       &+* {
-        background: #50A7EA;
+        background: var(--color-d-1);
         &::before {
-          border-color: #50A7EA;
+          border-color: var(--color-d-1);
           left: 13px;
         }
       }
@@ -56,9 +56,9 @@
     opacity: 0;
     &:checked {
       &+* {
-        border-color: #50A7EA;
+        border-color: var(--color-d-1);
         &::before {
-          background: #50A7EA;
+          background: var(--color-d-1);
         }
       }
     }
@@ -142,7 +142,7 @@
     box-shadow: none;
     // transition: color 0.35s, border-color 0.35s, background 0.35s;
     &:hover {
-      border-color: #50A7EA;
+      border-color: var(--color-d-1);
       border-width: 2px;
       outline: none;
     }
@@ -172,11 +172,11 @@
       }
     }
     &:disabled {
-      background: #eee;
-      border-color: #eee;
+      background: var(--color-disabled);
+      border-color: var(--color-disabled);
       &:hover {
-        background: #eee;
-        border-color: #eee;
+        background: var(--color-disabled);
+        border-color: var(--color-disabled);
       }
     }
     &.textarea {
@@ -220,7 +220,7 @@
   &.active-full {
     #{$this} {
       &__name {
-        color: #50A7EA;
+        color: var(--color-d-1);
         &.css-label {
           top: 2px;
           font-size: 11px;
@@ -228,13 +228,13 @@
           opacity: 1;
           z-index: 9;
           sup {
-            color: #50A7EA;
+            color: var(--color-d-1);
           }
         }
       }
       &__input {
         border-width: 2px;
-        border-color: #50A7EA;
+        border-color: var(--color-d-1);
       }
     }
   }
@@ -339,7 +339,7 @@ textarea.field-text__input {
       height: 17px;
       left: -1px;
       top: -1px;
-      fill: #50A7EA;
+      fill: var(--color-d-1);
       opacity: 0;
     }
   }
@@ -378,7 +378,7 @@ textarea.field-text__input {
     }
   }
   &__number {
-    color: #eee;
+    color: var(--color-disabled);
     font-size: 12px;
     margin-left: 5px;
   }
@@ -422,7 +422,7 @@ textarea.field-text__input {
       height: 14px;
       content: '';
       border-radius: 50%;
-      background: #eee;
+      background: var(--color-disabled)
     }
   }
   &__input {
@@ -430,7 +430,7 @@ textarea.field-text__input {
       &~#{$this} {
         &__span-input {
           &::before {
-            background: #ccc;
+            background: var(--color-gray);
           }
         }
       }
@@ -449,7 +449,7 @@ textarea.field-text__input {
     #{$this} {
       &__span-input {
         &::before {
-          background: #ccc;
+          background: var(--color-gray);
         }
       }
     }

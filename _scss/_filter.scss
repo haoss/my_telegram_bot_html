@@ -62,7 +62,7 @@
       margin: 0px;
       &::-webkit-scrollbar {
         width: 3px;
-        background: #eee;
+        background: var(--color-disabled)
       }
       &::-webkit-scrollbar-thumb {
         background-color: var(--color-d-5);
@@ -100,116 +100,5 @@
         }
       }
     }
-  }
-  &__slider {
-    padding-bottom: 20px;
-    padding-top: 8px;
-  }
-  &__cost {
-    display: flex;
-    margin-bottom: 12px;
-    align-items: center;
-    &-block {
-      flex-grow: 1;
-      margin-right: 8px;
-      input {
-        border: 1px solid #CCC;
-        border-radius: 4px;
-        background: var(--tg-theme-bg-color);
-        height: 36px;
-        padding: 0 10px;
-        font-weight: 400;
-        font-size: 14px;
-        width: 100%;
-        color: var(--text-color);
-      }
-    }
-    &-separator {
-      width: 21px;
-      flex-shrink: 0;
-      text-align: center;
-      color: #909090;
-      font-weight: bold;
-    }
-    .btn {
-      min-width: 46px;
-      flex-shrink: 0;
-    }
-  }
-  &__selected {
-    padding: 0 20px;
-    font-size: 14px;
-    color: var(--color-black);
-    &-head, &-row {
-      position: relative;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 28px;
-      padding-right: 26px;
-      margin-bottom: 12px;
-      i {
-        font-weight: 400;
-      }
-    }
-    &-head {
-      font-weight: 600;
-      font-size: 18px;
-      padding-right: 0;
-    }
-    &-row {
-      background: #FFF3E7;
-      border-radius: 6px;
-      font-weight: 800;
-      padding-left: 8px;
-      &:last-child {
-        margin-bottom: 12px;
-      }
-      &>div {
-        &:first-child {
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          margin-right: 5px;
-        }
-      }
-    }
-    &-close {
-      background: transparent;
-      border: 0;
-      position: absolute;
-      right: 3px;
-      top: 2px;
-      min-width: 24px;
-      height: 24px;
-      font-size: 0;
-      &>span {
-        display: block;
-        font-size: 14px;
-      }
-      &::before {
-        font-size: 24px;
-        content: '\1f493';
-        
-        color: orange;
-        display: block;
-        line-height: 1;
-        position: absolute;
-        left: 0;
-        top: 0;
-        font-weight: 400;
-      }
-    }
-  }
-  &__btns {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px 20px;
-    background: var(--tg-theme-bg-color);
-    box-shadow: 0 0 2px rgba(68,84,99, 0.25), 0 2px 8px rgba(68,84,99,0.25);
   }
 }
