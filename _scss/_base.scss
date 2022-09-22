@@ -48,6 +48,7 @@ body {
   --color-black-inverse: #000;
   --color-you-pharmacy-line: rgba(255,255,255, 0.7);
   --btn-background: #eee;
+  --collapsing-icon: var(--color-d-8);
   
   -webkit-user-select: none;
   user-select: none;
@@ -62,6 +63,7 @@ html.dark body {
   --color-l-3: #333;
   --color-you-pharmacy-line: rgba(0,0,0, 0.7);
   --btn-background: #333;
+  --collapsing-icon: #333;
 }
 
 #app, .app {
