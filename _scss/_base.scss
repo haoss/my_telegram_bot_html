@@ -29,6 +29,9 @@ body {
   --block-bg-color: var(--tg-theme-bg-color);
   --tg-theme-bg-color: #fff;
   --text-color: #555;
+  --color-d-3: #55BE61;
+  --color-d-7: #97A0A7;
+  --color-d-8: #C4C4C4;
   
   -webkit-user-select: none;
   user-select: none;
@@ -70,22 +73,22 @@ button {
   align-items: center;
   justify-content: center;
   background: transparent;
-  border: 1px solid #55BE61;
+  border: 1px solid var(--color-d-3);
   border-radius: 7px;
   font-size: 13px;
   padding: 10px 15px;
   text-align: center;
   font-weight: 500;
   text-decoration: none;
-  color: #55BE61;
+  color: var(--color-d-3);
   &:hover, &:focus, &:active {
-    color: #55BE61;
-    border-color: #55BE61;
+    color: var(--color-d-3);
+    border-color: var(--color-d-3);
     text-decoration: none;
   }
   &.--accent {
     color: var(--tg-theme-bg-color);
-    background: #55BE61;
+    background: var(--color-d-3);
     &:hover, &:focus, &:active {
 
     }
@@ -113,6 +116,6 @@ input {
     background: #eee;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: #EB6161;
+    background-color: var(--color-d-5);
   }
 }

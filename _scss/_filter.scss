@@ -18,7 +18,7 @@
       right: 0;
       left: 20px;
       height: 1px;
-      background: #e0e0e0;
+      background: var(--color-l-3);
     }
     &-wrapper {
       padding-top: 0;
@@ -40,7 +40,7 @@
         width: 18px;
         height: 18px;
         display: block;
-        fill: #97A0A7;
+        fill: var(--color-d-7);
         transform-origin: 50%;
         flex-shrink: 0;
         margin-left: 10px;
@@ -65,7 +65,7 @@
         background: #eee;
       }
       &::-webkit-scrollbar-thumb {
-        background-color: #EB6161;
+        background-color: var(--color-d-5);
       }
     }
     &.has-selected {
@@ -139,7 +139,7 @@
   &__selected {
     padding: 0 20px;
     font-size: 14px;
-    color: #000;
+    color: var(--color-black);
     &-head, &-row {
       position: relative;
       display: flex;
