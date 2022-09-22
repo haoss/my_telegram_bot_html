@@ -39,11 +39,15 @@ body {
   --color-l-1: #F6F6F6;
   --color-l-3: #E0E0E0;
   --color-red: #CE494A;
+  --color-white: #fff;
   --color-black: #000;
   --color-black-rgba: 0,0,0;
   --color-disabled: #eee;
   --color-gray: #ccc;
   --table-border: #EDEDED;
+  --color-black-inverse: #000;
+  --color-you-pharmacy-line: rgba(255,255,255, 0.7);
+  --btn-background: #eee;
   
   -webkit-user-select: none;
   user-select: none;
@@ -53,6 +57,11 @@ body {
 html.dark body {
   --tg-theme-bg-color: #333;
   --text-color: #fff;
+  --color-black-inverse: #fff;
+  --color-l-1: #333;
+  --color-l-3: #333;
+  --color-you-pharmacy-line: rgba(0,0,0, 0.7);
+  --btn-background: #333;
 }
 
 #app, .app {
@@ -70,7 +79,8 @@ button {
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: var(--color-disabled);
+  background-color: var(--btn-background);
+  color: var(--color-black-inverse);
   border: 0;
   outline: none;
   font-weight: 500;
