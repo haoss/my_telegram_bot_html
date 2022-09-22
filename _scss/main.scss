@@ -622,6 +622,9 @@
   display: flex;
   background: var(--color-l-3);
   min-height: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
   &>div {
     width: 50%;
     &+div {
