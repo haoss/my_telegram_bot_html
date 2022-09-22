@@ -15,7 +15,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v57')
+    link(rel='stylesheet', href='./css/style.min.css?v58')
   
   body 
     #app.app
@@ -85,14 +85,14 @@ html(lang="uk")
               .app-modal__content-wrapper 
                 .you-pharmacy
                   .you-pharmacy__wrapper
-                    .you-pharmacy__item
-                      label(for="switch1").form-switch
+                    label(for="switch1").you-pharmacy__item
+                      .form-switch
                         input#switch1(type="radio" name="your_pharmacy" checked).form-switch__input
                         span.form-switch__div
                       .you-pharmacy__item-row Аптека оптовых цен
                         small г. Харьков, просп. Гагарина, 72
-                    .you-pharmacy__item
-                      label(for="switch2").form-switch
+                    label(for="switch2").you-pharmacy__item
+                      .form-switch
                         input#switch2(type="radio" name="your_pharmacy").form-switch__input
                         span.form-switch__div
                       .you-pharmacy__item-row Аптечная сеть 911
@@ -115,13 +115,13 @@ html(lang="uk")
                 .app-settings
                   .app-settings__wrapper
                     .app-settings__head Язык
-                    .app-settings__item
-                      label(for="radio1").form-radio
+                    label(for="radio1").app-settings__item
+                      .form-radio
                         input#radio1(type="radio" name="app_settings" checked).form-radio__input
                         span.form-radio__div
                       .app-settings__item-row Украинский
-                    .app-settings__item
-                      label(for="radio2").form-radio
+                    label(for="radio2").app-settings__item
+                      .form-radio
                         input#radio2(type="radio" name="app_settings").form-radio__input
                         span.form-radio__div
                       .you-pharmacy__item-row Русский
