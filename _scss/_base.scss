@@ -124,7 +124,7 @@ input {
 
 .section {
   width: 100%;
-  max-width: 480px;
+  max-width: inherit;
   margin: 0 auto;
   position: relative;
   min-height: 400px;
