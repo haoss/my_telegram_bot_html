@@ -38,7 +38,7 @@ $(document).on('ready', function(){
   $('#categoryList3').on('click', function(){ $(this).hide(); $('#categoryList1').show(); $('#section3').hide(); $('#section5').show(); })
 
   $('.j_test_24 > *:not(.disabled)').on('click', function(){ $(this).parent().children().removeClass('active'); $(this).addClass('active'); })
-  $('#j_test_29').on('click', function(){ $(this).toggleClass('active'); })
+  $('#j_test_29').on('click', function(){ $(this).toggleClass('active'); $('#appButtonStatus').show(); $('#checkoutButtonStatus').hide(); })
   $('#j_test_30').on('click', function(){ $(this).hide(); $('#reviewForm').show(); })
   $('#j_test_31').on('click', function(){ $('#j_test_30').show(); $('#reviewForm').hide(); })
   $('#j_test_32').on('click', function(){ $('#mssgSuccess').show(); $('#j_test_30').show(); $('#reviewForm').hide(); })
@@ -51,7 +51,7 @@ $(document).on('ready', function(){
   $('.j_test_40').on('click', function(){ $(this).hide(); })
   $('.j_test_42').on('click', function(){ $(this).prev().removeClass('--more'); $(this).hide(); })
   $('#j_test_43').on('click', function(){ $('#appSaveCart').hide(); });
-  $('#j_test_44').on('click', function(){ });
+  $('#j_test_44').on('click', function(){ $('#section1').hide(); $('#section8').show(); });
   $('.j_test_45').on('click', function(){
     var _this = $(this);
     if (_this.hasClass('--is-active')) {
@@ -59,7 +59,10 @@ $(document).on('ready', function(){
     } else {
       _this.hide().next().show();
     }
+    $('#checkoutButtonStatus').hide();
+    $('#appButtonStatus').show();
   });
+  $('#appButtonStatus').on('click', function(){ $(this).hide(); $('.section').hide(); $('#section7').show(); });
 
   $(document).on('click', '.collapsible-heading', function(e){
     e.preventDefault();
@@ -167,6 +170,7 @@ $(document).on('ready', function(){
 
   $('.test-navigation__btn[data-section="section7"]').on('click', function(){ $('#appButtonStatus').hide(); $('#checkoutButtonStatus').show(); });
   $('.test-navigation__hide').on('click', function(){ $(this).parent().toggleClass('show'); });
+  $('.test-navigation__btn[data-section="section8"]').on('click', function(){ $('#appButtonStatus').show(); $('#checkoutButtonStatus').hide(); });
   
 });
 

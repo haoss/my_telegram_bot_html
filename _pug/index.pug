@@ -15,7 +15,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v62')
+    link(rel='stylesheet', href='./css/style.min.css?v63')
   
   body 
     #app.app
@@ -30,13 +30,13 @@ html(lang="uk")
         button(type="button" data-section="section6").test-navigation__btn 6
         button(type="button" data-section="section7").test-navigation__btn 7
         button(type="button" data-section="section8").test-navigation__btn 8
+      #youPharmacyLine.you-pharmacy-line(style="display: none")
+        svg.icon
+          use(href='#vasha_apteka')
+        .you-pharmacy-line__text Ваша аптека:
+        button(type="button").you-pharmacy-line__btn#j_test_04
+          span г. Харьков, просп. Гагарина, 722
       #section1.section.section1
-        #youPharmacyLine.you-pharmacy-line(style="display: none")
-          svg.icon
-            use(href='#vasha_apteka')
-          .you-pharmacy-line__text Ваша аптека:
-          button(type="button").you-pharmacy-line__btn#j_test_04
-            span г. Харьков, просп. Гагарина, 722
         .search.--search-main
           button(type="button" placeholder="Поиск").search__input.j_test_07
           .search__btn-search
@@ -1236,7 +1236,7 @@ html(lang="uk")
                 use(xlink:href='#trash')
             .favorites-list__item-thumb
               img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
-            .favorites-list__item-text Расторопши плоды 200г
+            .favorites-list__item-text.j_test_22 Расторопши плоды 200г
               small Дарниця | Украина
             .favorites-list__item-bottom
               button(type="button").favorites-list__item-btn.j_test_45
@@ -1254,7 +1254,7 @@ html(lang="uk")
                 use(xlink:href='#trash')
             .favorites-list__item-thumb
               img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
-            .favorites-list__item-text Расторопши плоды 200г Solution Pharm
+            .favorites-list__item-text.j_test_22 Расторопши плоды 200г Solution Pharm
               small Дарниця | Украина
             .favorites-list__item-bottom
               button(type="button" style="display: none").favorites-list__item-btn.j_test_45
@@ -1272,7 +1272,7 @@ html(lang="uk")
                 use(xlink:href='#trash')
             .favorites-list__item-thumb
               img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
-            .favorites-list__item-text Расторопши плоды 200г Банка
+            .favorites-list__item-text.j_test_22 Расторопши плоды 200г Банка
               small Дарниця | Украина
             .favorites-list__item-bottom
               button(type="button" style="display: none").favorites-list__item-btn.j_test_45
@@ -1300,6 +1300,6 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v40")
+    script(src="./js/common.js?v41")
 
     include ./_include/_svg
