@@ -15,7 +15,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v61')
+    link(rel='stylesheet', href='./css/style.min.css?v62')
   
   body 
     #app.app
@@ -29,6 +29,7 @@ html(lang="uk")
         button(type="button" data-section="section5").test-navigation__btn 5
         button(type="button" data-section="section6").test-navigation__btn 6
         button(type="button" data-section="section7").test-navigation__btn 7
+        button(type="button" data-section="section8").test-navigation__btn 8
       #section1.section.section1
         #youPharmacyLine.you-pharmacy-line(style="display: none")
           svg.icon
@@ -36,15 +37,15 @@ html(lang="uk")
           .you-pharmacy-line__text Ваша аптека:
           button(type="button").you-pharmacy-line__btn#j_test_04
             span г. Харьков, просп. Гагарина, 722
-        .search
-          button(type="button").search__input#j_test_07
-          button(type="button").search__btn-search
+        .search.--search-main
+          button(type="button" placeholder="Поиск").search__input.j_test_07
+          .search__btn-search
             svg.icon
               use(xlink:href='#search')
-          button(type="button").search__btn-microphone#j_test_09
+          .search__btn-microphone
             svg.icon
               use(xlink:href='#microphone')
-          button(type="button").search__btn-barcode#j_test_11
+          .search__btn-barcode
             svg.icon
               use(xlink:href='#barcode')
         .section1__wrapper
@@ -129,26 +130,6 @@ html(lang="uk")
                         input#radio2(type="radio" name="app_settings").form-radio__input
                         span.form-radio__div
                       .you-pharmacy__item-row Русский
-        #appModal3.app-modal(style="display: none")
-          .app-modal__wrapper
-            button(type="button").app-modal__close.j-app-modal-close-03
-              svg.icon
-                use(xlink:href='#close')
-            .app-modal__content
-              .app-modal__head
-                .app-modal__head-span Обработка клика
-              .app-modal__content-wrapper 
-                p Клик по микрофону
-        #appModal4.app-modal(style="display: none")
-          .app-modal__wrapper
-            button(type="button").app-modal__close.j-app-modal-close-03
-              svg.icon
-                use(xlink:href='#close')
-            .app-modal__content
-              .app-modal__head
-                .app-modal__head-span Обработка клика
-              .app-modal__content-wrapper 
-                p Клик по сканеру штрихкода
         #appModal5.app-modal(style="display: none")
           .app-modal__wrapper
             button(type="button").app-modal__close.j-app-modal-close-03
@@ -161,11 +142,11 @@ html(lang="uk")
                 p Клик по кнопку Добавить аптеку
       #section2.section.section2(style="display: none")
         form(action="#").search2
-          input(type="text").search2__input#j_test_14
-          button(type="button").search2__btn-microphone
+          input(type="text" placeholder="Поиск").search2__input#j_test_14
+          button(type="button").search2__btn-microphone#j_test_09
             svg.icon
               use(xlink:href='#microphone')
-          button(type="button").search2__btn-barcode
+          button(type="button").search2__btn-barcode#j_test_11
             svg.icon
               use(xlink:href='#barcode')
           button(type="button" style="display: none").search2__btn-close#j_test_15
@@ -214,6 +195,26 @@ html(lang="uk")
                 small Дарниця | Украина
               .search-list__item2-price от 28,90 ₴
             - }
+        #appModal3.app-modal(style="display: none")
+          .app-modal__wrapper
+            button(type="button").app-modal__close.j-app-modal-close-03
+              svg.icon
+                use(xlink:href='#close')
+            .app-modal__content
+              .app-modal__head
+                .app-modal__head-span Обработка клика
+              .app-modal__content-wrapper 
+                p Клик по микрофону
+        #appModal4.app-modal(style="display: none")
+          .app-modal__wrapper
+            button(type="button").app-modal__close.j-app-modal-close-03
+              svg.icon
+                use(xlink:href='#close')
+            .app-modal__content
+              .app-modal__head
+                .app-modal__head-span Обработка клика
+              .app-modal__content-wrapper 
+                p Клик по сканеру штрихкода
       #section3.section.section3(style="display: none")
         .category-list
           .category-list__wrapper#categoryList1
@@ -1139,74 +1140,73 @@ html(lang="uk")
             svg.icon
               use(xlink:href='#search')
         .checkout-list
-          .checkout-list
-            - for (var i=0; i<=3; i++) {
-            .checkout-list__item
-              button(type="button").checkout-list__item-delete
-                svg.icon
-                  use(xlink:href='#trash')
-              .checkout-list__item-thumb
-                img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
-              .checkout-list__item-text Расторопши плоды 200г
-                small Дарниця | Украина
-              .checkout-list__item-bottom
-                .checkout-list__item-count
-                  .block-count.j-cart-count
-                    button(type="button" aria-label="Уменьшить количество").block-count__minus
-                      svg.icon
-                        use(xlink:href='#count_minus')
-                    button(type="button" aria-label="Увеличить количество").block-count__plus
-                      svg.icon
-                        use(xlink:href='#count_plus')
-                    input.block-count__input(type='text' value='1 упак.' data-label="упак." id="" aria-label="Количество")
-                .checkout-list__item-price от 62,68 ₴
-            .checkout-list__item
-              button(type="button").checkout-list__item-delete
-                svg.icon
-                  use(xlink:href='#trash')
-              .checkout-list__item-thumb
-                img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
-              .checkout-list__item-text Расторопши плоды 200г Solution Pharm
-                small Дарниця | Украина
-              .checkout-list__item-bottom
-                .checkout-list__item-count
-                  .block-count.j-cart-count
-                    button(type="button" aria-label="Уменьшить количество").block-count__minus
-                      svg.icon
-                        use(xlink:href='#count_minus')
-                    button(type="button" aria-label="Увеличить количество").block-count__plus
-                      svg.icon
-                        use(xlink:href='#count_plus')
-                    input.block-count__input(type='text' value='1 упак.' data-label="упак." id="" aria-label="Количество")
-                  .block-count.j-cart-count
-                    button(type="button" aria-label="Уменьшить количество").block-count__minus
-                      svg.icon
-                        use(xlink:href='#count_minus')
-                    button(type="button" aria-label="Увеличить количество").block-count__plus
-                      svg.icon
-                        use(xlink:href='#count_plus')
-                    input.block-count__input(type='text' value='0 блис.' data-label="блис." id="" aria-label="Количество")
-                .checkout-list__item-price от 62,68 ₴
-            .checkout-list__item
-              button(type="button").checkout-list__item-delete
-                svg.icon
-                  use(xlink:href='#trash')
-              .checkout-list__item-thumb
-                img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
-              .checkout-list__item-text Расторопши плоды 200г Банка
-                small Дарниця | Украина
-              .checkout-list__item-bottom
-                .checkout-list__item-count
-                  .block-count.j-cart-count
-                    button(type="button" aria-label="Уменьшить количество").block-count__minus
-                      svg.icon
-                        use(xlink:href='#count_minus')
-                    button(type="button" aria-label="Увеличить количество").block-count__plus
-                      svg.icon
-                        use(xlink:href='#count_plus')
-                    input.block-count__input(type='text' value='1 упак.' data-label="упак." id="" aria-label="Количество")
-                .checkout-list__item-price от 62,68 ₴
-            - }
+          - for (var i=0; i<=3; i++) {
+          .checkout-list__item
+            button(type="button").checkout-list__item-delete
+              svg.icon
+                use(xlink:href='#trash')
+            .checkout-list__item-thumb
+              img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
+            .checkout-list__item-text Расторопши плоды 200г
+              small Дарниця | Украина
+            .checkout-list__item-bottom
+              .checkout-list__item-count
+                .block-count.j-cart-count
+                  button(type="button" aria-label="Уменьшить количество").block-count__minus
+                    svg.icon
+                      use(xlink:href='#count_minus')
+                  button(type="button" aria-label="Увеличить количество").block-count__plus
+                    svg.icon
+                      use(xlink:href='#count_plus')
+                  input.block-count__input(type='text' value='1 упак.' data-label="упак." id="" aria-label="Количество")
+              .checkout-list__item-price от 62,68 ₴
+          .checkout-list__item
+            button(type="button").checkout-list__item-delete
+              svg.icon
+                use(xlink:href='#trash')
+            .checkout-list__item-thumb
+              img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
+            .checkout-list__item-text Расторопши плоды 200г Solution Pharm
+              small Дарниця | Украина
+            .checkout-list__item-bottom
+              .checkout-list__item-count
+                .block-count.j-cart-count
+                  button(type="button" aria-label="Уменьшить количество").block-count__minus
+                    svg.icon
+                      use(xlink:href='#count_minus')
+                  button(type="button" aria-label="Увеличить количество").block-count__plus
+                    svg.icon
+                      use(xlink:href='#count_plus')
+                  input.block-count__input(type='text' value='1 упак.' data-label="упак." id="" aria-label="Количество")
+                .block-count.j-cart-count
+                  button(type="button" aria-label="Уменьшить количество").block-count__minus
+                    svg.icon
+                      use(xlink:href='#count_minus')
+                  button(type="button" aria-label="Увеличить количество").block-count__plus
+                    svg.icon
+                      use(xlink:href='#count_plus')
+                  input.block-count__input(type='text' value='0 блис.' data-label="блис." id="" aria-label="Количество")
+              .checkout-list__item-price от 62,68 ₴
+          .checkout-list__item
+            button(type="button").checkout-list__item-delete
+              svg.icon
+                use(xlink:href='#trash')
+            .checkout-list__item-thumb
+              img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
+            .checkout-list__item-text Расторопши плоды 200г Банка
+              small Дарниця | Украина
+            .checkout-list__item-bottom
+              .checkout-list__item-count
+                .block-count.j-cart-count
+                  button(type="button" aria-label="Уменьшить количество").block-count__minus
+                    svg.icon
+                      use(xlink:href='#count_minus')
+                  button(type="button" aria-label="Увеличить количество").block-count__plus
+                    svg.icon
+                      use(xlink:href='#count_plus')
+                  input.block-count__input(type='text' value='1 упак.' data-label="упак." id="" aria-label="Количество")
+              .checkout-list__item-price от 62,68 ₴
+          - }
         #appSaveCart.app-save-cart(style="display: none")
           .app-save-cart__wrapper
             .app-save-cart__title Сохранить корзину?
@@ -1216,6 +1216,75 @@ html(lang="uk")
                 span Сохранить
               button(type="button").app-save-cart__btn
                 span Не сохранять
+      #section8.section.section8(style="display: none")
+        .search
+          button(type="button" placeholder="Поиск").search__input.j_test_07
+          .search__btn-search
+            svg.icon
+              use(xlink:href='#search')
+          .search__btn-microphone
+            svg.icon
+              use(xlink:href='#microphone')
+          .search__btn-barcode
+            svg.icon
+              use(xlink:href='#barcode')
+        .favorites-list
+          - for (var i=0; i<=3; i++) {
+          .favorites-list__item
+            button(type="button").favorites-list__item-delete
+              svg.icon
+                use(xlink:href='#trash')
+            .favorites-list__item-thumb
+              img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
+            .favorites-list__item-text Расторопши плоды 200г
+              small Дарниця | Украина
+            .favorites-list__item-bottom
+              button(type="button").favorites-list__item-btn.j_test_45
+                svg.icon
+                  use(xlink:href='#cart')
+                span В корзину
+              button(type="button" style="display: none").favorites-list__item-btn.--is-active.j_test_45
+                svg.icon
+                  use(xlink:href='#cart-check')
+                span В корзине
+              .favorites-list__item-price от 62,68 ₴
+          .favorites-list__item
+            button(type="button").favorites-list__item-delete
+              svg.icon
+                use(xlink:href='#trash')
+            .favorites-list__item-thumb
+              img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
+            .favorites-list__item-text Расторопши плоды 200г Solution Pharm
+              small Дарниця | Украина
+            .favorites-list__item-bottom
+              button(type="button" style="display: none").favorites-list__item-btn.j_test_45
+                svg.icon
+                  use(xlink:href='#cart')
+                span В корзину
+              button(type="button").favorites-list__item-btn.--is-active.j_test_45
+                svg.icon
+                  use(xlink:href='#cart-check')
+                span В корзине
+              .favorites-list__item-price от 62,68 ₴
+          .favorites-list__item
+            button(type="button").favorites-list__item-delete
+              svg.icon
+                use(xlink:href='#trash')
+            .favorites-list__item-thumb
+              img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
+            .favorites-list__item-text Расторопши плоды 200г Банка
+              small Дарниця | Украина
+            .favorites-list__item-bottom
+              button(type="button" style="display: none").favorites-list__item-btn.j_test_45
+                svg.icon
+                  use(xlink:href='#cart')
+                span В корзину
+              button(type="button").favorites-list__item-btn.--is-active.j_test_45
+                svg.icon
+                  use(xlink:href='#cart-check')
+                span В корзине
+              .favorites-list__item-price от 62,68 ₴
+          - }
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner
           span.app-button-status__count 5
@@ -1231,6 +1300,6 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v39")
+    script(src="./js/common.js?v40")
 
     include ./_include/_svg

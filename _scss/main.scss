@@ -1103,9 +1103,6 @@
           visibility: hidden;
         }
       }
-      .open-block & {
-        
-      }
     }
   }
   .collapsible-block {
@@ -1831,7 +1828,7 @@
   }
 }
 
-.checkout-list {
+.checkout-list, .favorites-list {
   padding-bottom: 10px;
   &__item {
     padding: 20px 20px 20px 100px;
@@ -1887,19 +1884,15 @@
         }
       }
     }
-    &-count {
-      flex-grow: 1;
-      margin-right: 10px;
-    }
     &-delete {
-      width: 22px;
-      height: 22px;
+      width: 42px;
+      height: 42px;
       position: absolute;
       background: transparent;
       padding: 0;
       border: 0;
-      top: 20px;
-      right: 20px;
+      top: 6px;
+      right: 10px;
       svg.icon {
         width: 18px;
         height: 18px;
@@ -1907,6 +1900,50 @@
         fill: var(--color-d-7);
         margin: 0 auto;
       }
+    }
+  }
+}
+
+.checkout-list {
+  &__item {
+    &-count {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+  }
+}
+
+.favorites-list {
+  &__item {
+    &-btn {
+      display: flex;
+      align-items: center;
+      height: 28px;
+      padding: 0 10px;
+      border-radius: 7px;
+      font-size: 12px;
+      background: var(--color-d-3);
+      color: var(--block-bg-color);
+      font-weight: normal;
+      .icon {
+        flex-shrink: 0;
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
+        fill: var(--block-bg-color);
+      }
+      &.--is-active {
+        background: var(--block-bg-color);
+        color: var(--color-d-3);
+        .icon {
+          fill: var(--color-d-3);
+        }
+      }
+    }
+    &-price {
+      flex-grow: 1;
+      text-align: right;
+      padding-top: 8px;
     }
   }
 }
