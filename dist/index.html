@@ -13,7 +13,7 @@
             Telegram.WebApp.onEvent('themeChanged', setThemeClass);
             setThemeClass();
         </script>
-        <link rel="stylesheet" href="./css/style.min.css?v63">
+        <link rel="stylesheet" href="./css/style.min.css?v64">
     </head>
     <body> 
         <div class="app" id="app">
@@ -35,7 +35,7 @@
                 <div class="you-pharmacy-line__text">Ваша аптека:</div>
                 <button class="you-pharmacy-line__btn" type="button" id="j_test_04"><span>г. Харьков, просп. Гагарина, 722</span></button>
             </div>
-            <div class="section section1" id="section1">
+            <div class="section section1" id="section1" style="display: none">
                 <div class="search --search-main">
                     <button class="search__input j_test_07" type="button" placeholder="Поиск"></button>
                     <div class="search__btn-search">
@@ -1535,15 +1535,30 @@
                     </div>
                 </div>
             </div>
-            <div class="section section6" id="section6" style="display: none">
+            <div class="section section6" id="section6">
                 <div class="product">
                     <div class="product__head">
                         <div class="product__head-title">Парацетамол-Дарница табл. 500мг №10</div>
                         <div class="product__head-desc">Глаксо | Польша</div>
-                        <div class="product__head-available"> 
+                        <div class="product__head-available j_test_46" data-count="1">
                             <svg class="icon">
                                 <use xlink:href="#check_success"></use>
-                            </svg><span>Наличие в 180 аптеке в Харькове</span>
+                            </svg><span> <span class="color">В наличии: </span>180 аптеках в Харькове</span>
+                        </div>
+                        <div class="product__head-available j_test_46" style="display: none" data-count="2">
+                            <svg class="icon --red">
+                                <use xlink:href="#info_alert"></use>
+                            </svg><span> <span class="color --red">Нет товара</span></span>
+                        </div>
+                        <div class="product__head-available j_test_46" style="display: none" data-count="3">
+                            <svg class="icon">
+                                <use xlink:href="#check_success"></use>
+                            </svg><span> <span class="color">В аптеке: </span>10 упак. и 2 блис.</span>
+                        </div>
+                        <div class="product__head-available j_test_46" style="display: none" data-count="4">
+                            <svg class="icon --red">
+                                <use xlink:href="#info_alert"></use>
+                            </svg><span> <span class="color --red">Нет в вашей аптеке</span></span>
                         </div>
                     </div>
                     <div class="product-gallery">
@@ -3282,7 +3297,7 @@
         <script src="./js/ion.rangeSlider/ion.rangeSlider.js"></script>
         <script src="./js/autosize/autosize.js"></script>
         <script src="./js/gsap.min.js"></script>
-        <script src="./js/common.js?v41"></script>
+        <script src="./js/common.js?v42"></script>
         <svg width="0" height="0" style="display: none">
             <symbol id="settings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2337 7.125H3.75C3.33579 7.125 3 7.46079 3 7.875C3 8.28921 3.33579 8.625 3.75 8.625H7.2337C7.55641 9.70931 8.56087 10.5 9.75 10.5C10.9391 10.5 11.9436 9.70931 12.2663 8.625H20.25C20.6642 8.625 21 8.28921 21 7.875C21 7.46079 20.6642 7.125 20.25 7.125H12.2663C11.9436 6.04069 10.9391 5.25 9.75 5.25C8.56087 5.25 7.55641 6.04069 7.2337 7.125ZM8.625 7.875C8.625 7.25368 9.12868 6.75 9.75 6.75C10.3713 6.75 10.875 7.25368 10.875 7.875C10.875 8.49632 10.3713 9 9.75 9C9.12868 9 8.625 8.49632 8.625 7.875Z"></path>
@@ -3483,6 +3498,9 @@
             </symbol>
             <symbol id="check_success" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-4.177-2.887a.653.653 0 0 0-.05-.942.703.703 0 0 0-.971.05l-5.703 6.144L5.174 9.53a.703.703 0 0 0-.973 0 .652.652 0 0 0 0 .942l3.438 3.334a.699.699 0 0 0 .997-.026l6.188-6.666Z"></path>
+            </symbol>
+            <symbol id="info_alert" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M10 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm.75-14a.75.75 0 0 0-1.5 0v6.38a.75.75 0 0 0 1.5 0V5Zm0 9a.75.75 0 0 0-1.5 0v.1a.75.75 0 0 0 1.5 0V14Z" clip-rule="evenodd"></path>
             </symbol>
             <symbol id="cart" viewBox="0 0 30 28" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.866 27.067a2.333 2.333 0 1 0 0-4.667 2.333 2.333 0 0 0 0 4.667ZM22.066 27.067a2.333 2.333 0 1 0 0-4.667 2.333 2.333 0 0 0 0 4.667ZM26.985 7.467a.933.933 0 0 0-.719-.345H7.6l-.933-5.404a.933.933 0 0 0-.933-.784H1.066a.933.933 0 1 0 0 1.866H4.94l2.296 13.786A3.733 3.733 0 0 0 10.97 19.6h11.107a3.678 3.678 0 0 0 3.677-2.986l1.447-8.4a.933.933 0 0 0-.215-.747Zm-3.117 8.83A1.811 1.811 0 0 1 22 17.742H10.922a1.867 1.867 0 0 1-1.867-1.456L7.87 8.988h17.285l-1.288 7.308Z"></path>

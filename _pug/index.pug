@@ -15,7 +15,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v63')
+    link(rel='stylesheet', href='./css/style.min.css?v64')
   
   body 
     #app.app
@@ -36,7 +36,7 @@ html(lang="uk")
         .you-pharmacy-line__text Ваша аптека:
         button(type="button").you-pharmacy-line__btn#j_test_04
           span г. Харьков, просп. Гагарина, 722
-      #section1.section.section1
+      #section1.section.section1(style="display: none")
         .search.--search-main
           button(type="button" placeholder="Поиск").search__input.j_test_07
           .search__btn-search
@@ -560,15 +560,33 @@ html(lang="uk")
                 span.app-filter__foot-count 117
               button(type="button").btn#j_test_34
                 span Сбросить
-      #section6.section.section6(style="display: none")
+      #section6.section.section6
         .product
           .product__head
             .product__head-title Парацетамол-Дарница табл. 500мг №10
             .product__head-desc Глаксо | Польша
-            .product__head-available 
+            .product__head-available.j_test_46(data-count="1")
               svg.icon
                 use(xlink:href='#check_success')
-              span Наличие в 180 аптеке в Харькове
+              span 
+                span.color В наличии: 
+                | 180 аптеках в Харькове
+            .product__head-available.j_test_46(style="display: none" data-count="2")
+              svg.icon.--red
+                use(xlink:href='#info_alert')
+              span 
+                span.color.--red Нет товара
+            .product__head-available.j_test_46(style="display: none" data-count="3")
+              svg.icon
+                use(xlink:href='#check_success')
+              span 
+                span.color В аптеке: 
+                | 10 упак. и 2 блис.
+            .product__head-available.j_test_46(style="display: none" data-count="4")
+              svg.icon.--red
+                use(xlink:href='#info_alert')
+              span 
+                span.color.--red Нет в вашей аптеке
           .product-gallery
             .swiper.j-product-gallery
               .swiper-wrapper
@@ -1300,6 +1318,6 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v41")
+    script(src="./js/common.js?v42")
 
     include ./_include/_svg

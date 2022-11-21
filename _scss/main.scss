@@ -1223,17 +1223,27 @@
       border-radius: 50px;
       display: inline-flex;
       align-items: center;
-      padding: 4px;
+      padding: 4px 5px 4px 4px;
       font-size: 11px;
       color: var(--color-d-7);
       font-weight: 400;
-      line-height: 1;
+      line-height: 1.4;
+      white-space: nowrap;
       .icon {
         flex-shrink: 0;
         width: 18px;
         height: 18px;
         margin-right: 6px;
         fill: var(--color-d-3);
+        &.--red {
+          fill: var(--color-d-5);
+        }
+      }
+      .color {
+        color: var(--color-d-3);
+        &.--red {
+          color: var(--color-d-5);
+        }
       }
     }
   }

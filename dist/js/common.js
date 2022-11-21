@@ -63,6 +63,21 @@ $(document).on('ready', function(){
     $('#appButtonStatus').show();
   });
   $('#appButtonStatus').on('click', function(){ $(this).hide(); $('.section').hide(); $('#section7').show(); });
+  
+  $('.j_test_46').on('click', function(){
+    var _this = $(this);
+    var dataCount = parseFloat(_this.data('count'));
+    var count = parseFloat($('.j_test_46').length);
+    $('.j_test_46').hide();
+      
+    if (dataCount < count) {
+      _this.next().show();
+    } else {
+      $('.j_test_46').filter('[data-count="1"]').show();
+    }
+
+    // console.log('кол-во - ' + count + "; " + "текущий " + dataCount);
+  });
 
   $(document).on('click', '.collapsible-heading', function(e){
     e.preventDefault();
