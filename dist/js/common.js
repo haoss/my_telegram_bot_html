@@ -79,6 +79,12 @@ $(document).on('ready', function(){
     // console.log('кол-во - ' + count + "; " + "текущий " + dataCount);
   });
 
+  $('.j_test_47').on('click', function(e){ e.stopPropagation(); $('.test-navigation__btn[data-section="section1"]').trigger('click'); });
+  $('.j_test_48').on('click', function(e){ e.stopPropagation(); $('#categoryList1').show(); $('#categoryList2').hide(); });
+  $('.j_test_49').on('click', function(e){ e.stopPropagation(); $('#categoryList2').show(); $('#categoryList3').hide(); });
+  $('.j_test_50').on('click', function(e){ e.stopPropagation(); $('#section3').show(); $('#categoryList1').hide(); $('#categoryList2').hide(); $('#categoryList3').show(); $('#section5').hide(); $('#section6').hide(); });
+  $('#j_test_51').on('click', function(){ $('#section6').hide(); $('#section2').show(); })
+
   $(document).on('click', '.collapsible-heading', function(e){
     e.preventDefault();
     var _this = $(this);

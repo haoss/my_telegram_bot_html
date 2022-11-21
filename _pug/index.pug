@@ -1,5 +1,6 @@
 include ./_include/_mixin_field-text
 include ./_include/_mixin_field-checkbox
+include ./_include/_mixin_breadcrumbs
 
 doctype html
 html(lang="uk")
@@ -15,7 +16,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v64')
+    link(rel='stylesheet', href='./css/style.min.css?v65')
   
   body 
     #app.app
@@ -36,7 +37,7 @@ html(lang="uk")
         .you-pharmacy-line__text Ваша аптека:
         button(type="button").you-pharmacy-line__btn#j_test_04
           span г. Харьков, просп. Гагарина, 722
-      #section1.section.section1
+      #section1.section.section1(style="display: none")
         .search.--search-main
           button(type="button" placeholder="Поиск").search__input.j_test_07
           .search__btn-search
@@ -216,8 +217,11 @@ html(lang="uk")
               .app-modal__content-wrapper 
                 p Клик по сканеру штрихкода
       #section3.section.section3(style="display: none")
+        // Breadcrumbs
         .category-list
           .category-list__wrapper#categoryList1
+            +breadcrumbs()
+              +breadcrumbs-item('Главная')(class="j_test_47")
             .category-head
               .category-head__title Каталог товаров
               button(type="button").category-head__btn#j_test_23
@@ -288,6 +292,8 @@ html(lang="uk")
                 svg.icon
                   use(xlink:href='#arrow_right')
           .category-list__wrapper#categoryList2(style="display: none")
+            +breadcrumbs()
+              +breadcrumbs-item('Каталог товаров')(class="j_test_48")
             .category-head
               .category-head__title Лекарственные препараты
               button(type="button").category-head__btn#j_test_23
@@ -414,6 +420,8 @@ html(lang="uk")
                 svg.icon
                   use(xlink:href='#arrow_right')
           .category-list__wrapper#categoryList3(style="display: none")
+            +breadcrumbs()
+              +breadcrumbs-item('Лекарственные препараты')(class="j_test_49")
             .category-head
               .category-head__title Простуда и грипп
               button(type="button").category-head__btn#j_test_23
@@ -508,6 +516,8 @@ html(lang="uk")
               button(type="button").btn#j_test_34
                 span Сбросить
       #section5.section.section5(style="display: none")
+        +breadcrumbs()
+          +breadcrumbs-item('Лекарственные препараты')(class="j_test_50")
         .catalog-head
           .div1
             .catalog-head__title Экстракт расторопши пятнистой
@@ -560,11 +570,18 @@ html(lang="uk")
                 span.app-filter__foot-count 117
               button(type="button").btn#j_test_34
                 span Сбросить
-      #section6.section.section6(style="display: none")
+      #section6.section.section6
+        +breadcrumbs()
+          +breadcrumbs-item('Лекарственные препараты')(class="j_test_50")
         .product
           .product__head
-            .product__head-title Парацетамол-Дарница табл. 500мг №10
-            .product__head-desc Глаксо | Польша
+            .product__head-wrapper
+              .product__head-top
+                .product__head-title Парацетамол-Дарница табл. 500мг №10
+                .product__head-desc Глаксо | Польша
+              button.product__head-btn#j_test_51(type='button')
+                svg.icon
+                  use(href='#search')
             .product__head-available.j_test_46(data-count="1")
               svg.icon
                 use(xlink:href='#check_success')
@@ -1318,6 +1335,6 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v42")
+    script(src="./js/common.js?v43")
 
     include ./_include/_svg

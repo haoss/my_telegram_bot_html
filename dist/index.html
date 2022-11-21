@@ -13,7 +13,7 @@
             Telegram.WebApp.onEvent('themeChanged', setThemeClass);
             setThemeClass();
         </script>
-        <link rel="stylesheet" href="./css/style.min.css?v64">
+        <link rel="stylesheet" href="./css/style.min.css?v65">
     </head>
     <body> 
         <div class="app" id="app">
@@ -35,7 +35,7 @@
                 <div class="you-pharmacy-line__text">Ваша аптека:</div>
                 <button class="you-pharmacy-line__btn" type="button" id="j_test_04"><span>г. Харьков, просп. Гагарина, 722</span></button>
             </div>
-            <div class="section section1" id="section1">
+            <div class="section section1" id="section1" style="display: none">
                 <div class="search --search-main">
                     <button class="search__input j_test_07" type="button" placeholder="Поиск"></button>
                     <div class="search__btn-search">
@@ -344,8 +344,16 @@
                 </div>
             </div>
             <div class="section section3" id="section3" style="display: none">
+                <!-- Breadcrumbs-->
                 <div class="category-list">
                     <div class="category-list__wrapper" id="categoryList1">
+                        <ol class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
+                            <li class="breadcrumbs__item j_test_47" role="list"><span>
+                                    <svg class="icon">
+                                        <use xlink:href="#arrow_left"></use>
+                                    </svg><span>Главная</span></span>
+                            </li>
+                        </ol>
                         <div class="category-head">
                             <div class="category-head__title">Каталог товаров</div>
                             <button class="category-head__btn" type="button" id="j_test_23">
@@ -460,6 +468,13 @@
                         </div>
                     </div>
                     <div class="category-list__wrapper" id="categoryList2" style="display: none">
+                        <ol class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
+                            <li class="breadcrumbs__item j_test_48" role="list"><span>
+                                    <svg class="icon">
+                                        <use xlink:href="#arrow_left"></use>
+                                    </svg><span>Каталог товаров</span></span>
+                            </li>
+                        </ol>
                         <div class="category-head">
                             <div class="category-head__title">Лекарственные препараты</div>
                             <button class="category-head__btn" type="button" id="j_test_23">
@@ -662,6 +677,13 @@
                         </div>
                     </div>
                     <div class="category-list__wrapper" id="categoryList3" style="display: none">
+                        <ol class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
+                            <li class="breadcrumbs__item j_test_49" role="list"><span>
+                                    <svg class="icon">
+                                        <use xlink:href="#arrow_left"></use>
+                                    </svg><span>Лекарственные препараты</span></span>
+                            </li>
+                        </ol>
                         <div class="category-head">
                             <div class="category-head__title">Простуда и грипп</div>
                             <button class="category-head__btn" type="button" id="j_test_23">
@@ -1133,6 +1155,13 @@
                 </div>
             </div>
             <div class="section section5" id="section5" style="display: none">
+                <ol class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
+                    <li class="breadcrumbs__item j_test_50" role="list"><span>
+                            <svg class="icon">
+                                <use xlink:href="#arrow_left"></use>
+                            </svg><span>Лекарственные препараты</span></span>
+                    </li>
+                </ol>
                 <div class="catalog-head">
                     <div class="div1">
                         <div class="catalog-head__title">Экстракт расторопши пятнистой</div>
@@ -1535,11 +1564,27 @@
                     </div>
                 </div>
             </div>
-            <div class="section section6" id="section6" style="display: none">
+            <div class="section section6" id="section6">
+                <ol class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
+                    <li class="breadcrumbs__item j_test_50" role="list"><span>
+                            <svg class="icon">
+                                <use xlink:href="#arrow_left"></use>
+                            </svg><span>Лекарственные препараты</span></span>
+                    </li>
+                </ol>
                 <div class="product">
                     <div class="product__head">
-                        <div class="product__head-title">Парацетамол-Дарница табл. 500мг №10</div>
-                        <div class="product__head-desc">Глаксо | Польша</div>
+                        <div class="product__head-wrapper">
+                            <div class="product__head-top">
+                                <div class="product__head-title">Парацетамол-Дарница табл. 500мг №10</div>
+                                <div class="product__head-desc">Глаксо | Польша</div>
+                            </div>
+                            <button class="product__head-btn" id="j_test_51" type="button">
+                                <svg class="icon">
+                                    <use href="#search"></use>
+                                </svg>
+                            </button>
+                        </div>
                         <div class="product__head-available j_test_46" data-count="1">
                             <svg class="icon">
                                 <use xlink:href="#check_success"></use>
@@ -3297,7 +3342,7 @@
         <script src="./js/ion.rangeSlider/ion.rangeSlider.js"></script>
         <script src="./js/autosize/autosize.js"></script>
         <script src="./js/gsap.min.js"></script>
-        <script src="./js/common.js?v42"></script>
+        <script src="./js/common.js?v43"></script>
         <svg width="0" height="0" style="display: none">
             <symbol id="settings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2337 7.125H3.75C3.33579 7.125 3 7.46079 3 7.875C3 8.28921 3.33579 8.625 3.75 8.625H7.2337C7.55641 9.70931 8.56087 10.5 9.75 10.5C10.9391 10.5 11.9436 9.70931 12.2663 8.625H20.25C20.6642 8.625 21 8.28921 21 7.875C21 7.46079 20.6642 7.125 20.25 7.125H12.2663C11.9436 6.04069 10.9391 5.25 9.75 5.25C8.56087 5.25 7.55641 6.04069 7.2337 7.125ZM8.625 7.875C8.625 7.25368 9.12868 6.75 9.75 6.75C10.3713 6.75 10.875 7.25368 10.875 7.875C10.875 8.49632 10.3713 9 9.75 9C9.12868 9 8.625 8.49632 8.625 7.875Z"></path>
@@ -3414,6 +3459,9 @@
             </symbol>
             <symbol id="arrow_right" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.664 15.036a.9.9 0 0 1 0-1.273L10.428 9 5.664 4.236a.9.9 0 1 1 1.273-1.273l5.4 5.4a.9.9 0 0 1 0 1.273l-5.4 5.4a.9.9 0 0 1-1.273 0Z"></path>
+            </symbol>
+            <symbol id="arrow_left" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M12.34 2.96a.9.9 0 0 1 0 1.28L7.57 9l4.77 4.76a.9.9 0 1 1-1.28 1.28l-5.4-5.4a.9.9 0 0 1 0-1.28l5.4-5.4a.9.9 0 0 1 1.28 0z" clip-rule="evenodd"></path>
             </symbol>
             <symbol id="document" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.6 22.8h16.8V6h-3a1.8 1.8 0 0 1-1.8-1.8v-3h-12v21.6ZM16.8 1.697V4.2a.6.6 0 0 0 .6.6h2.503L16.8 1.697ZM3.6 0a1.2 1.2 0 0 0-1.2 1.2v21.6A1.2 1.2 0 0 0 3.6 24h16.8a1.2 1.2 0 0 0 1.2-1.2V5.297a1.2 1.2 0 0 0-.351-.848L17.152.35A1.2 1.2 0 0 0 16.303 0H3.6ZM6 9a.6.6 0 0 1 .6-.6h10.8a.6.6 0 1 1 0 1.2H6.6A.6.6 0 0 1 6 9Zm.6 4.2a.6.6 0 1 0 0 1.2h10.8a.6.6 0 1 0 0-1.2H6.6ZM6 18.6a.6.6 0 0 1 .6-.6h6a.6.6 0 1 1 0 1.2h-6a.6.6 0 0 1-.6-.6Z"></path>

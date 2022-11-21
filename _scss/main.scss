@@ -8,6 +8,7 @@
 @import "./_form.scss";
 @import "./_search.scss";
 @import "./_filter.scss";
+@import "./_breadcrumbs.scss";
 
 .section1 {
   background: url('../images/section-1-bg.jpg') top center no-repeat;
@@ -1206,6 +1207,29 @@
   flex-direction: column;
   &__head {
     margin-bottom: 15px;
+    &-wrapper {
+      display: flex;
+    }
+    &-top {
+      flex-grow: 1;
+    }
+    &-btn {
+      background: var(--color-l-1);
+      border-radius: 50%;
+      border: 0;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      margin-left: 10px;
+      svg {
+        width: 20px;
+        height: 20px;
+        display: block;
+        margin: 0 auto;
+        fill: var(--color-d-7);
+      }
+    }
     &-title {
       color: var(--color-black-inverse);
       font-size: 17px;

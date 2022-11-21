@@ -1,0 +1,37 @@
+/* breadcrumb */
+.breadcrumbs {
+  $this: &;
+  margin: 0 0 -15px 0;
+  padding: 15px 20px 15px 15px;
+  font-size: 12px;
+  display: flex;
+  color: var(--color-d-7);
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  background: var(--block-bg-color);
+  position: relative;
+  z-index: 3;
+  font-weight: 400;
+  &__item {
+    list-style: none;
+    margin: 0;
+    &+#{$this}__item {
+      margin-left: 8px;
+    }
+    &>a,&>span {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      svg {
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
+        fill: var(--color-d-7);
+        &+span {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}
