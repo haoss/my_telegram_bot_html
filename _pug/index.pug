@@ -16,7 +16,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v65')
+    link(rel='stylesheet', href='./css/style.min.css?v66')
   
   body 
     #app.app
@@ -39,7 +39,7 @@ html(lang="uk")
           span г. Харьков, просп. Гагарина, 722
       #section1.section.section1(style="display: none")
         .search.--search-main
-          button(type="button" placeholder="Поиск").search__input.j_test_07
+          button(type="button").search__input.j_test_07 Поиск
           .search__btn-search
             svg.icon
               use(xlink:href='#search')
@@ -71,7 +71,7 @@ html(lang="uk")
               span Каталог товаров
             button(type="button").section1__navigation-btn.--favorites#j_test_44
               svg.icon
-                use(xlink:href='#heart')
+                use(xlink:href='#favorites')
               span Избранные товары
             button(type="button").section1__navigation-btn.--settings#j_test_05
               svg.icon
@@ -224,7 +224,7 @@ html(lang="uk")
               +breadcrumbs-item('Главная')(class="j_test_47")
             .category-head
               .category-head__title Каталог товаров
-              button(type="button").category-head__btn#j_test_23
+              button(type="button").category-head__btn.j_test_23
                 svg.icon
                   use(xlink:href='#search')
             .category-list__item
@@ -296,7 +296,7 @@ html(lang="uk")
               +breadcrumbs-item('Каталог товаров')(class="j_test_48")
             .category-head
               .category-head__title Лекарственные препараты
-              button(type="button").category-head__btn#j_test_23
+              button(type="button").category-head__btn.j_test_23
                 svg.icon
                   use(xlink:href='#search')
             .category-list__item2
@@ -424,7 +424,7 @@ html(lang="uk")
               +breadcrumbs-item('Лекарственные препараты')(class="j_test_49")
             .category-head
               .category-head__title Простуда и грипп
-              button(type="button").category-head__btn#j_test_23
+              button(type="button").category-head__btn.j_test_23
                 svg.icon
                   use(xlink:href='#search')
             .category-list__item2
@@ -464,17 +464,10 @@ html(lang="uk")
                   use(xlink:href='#arrow_right')
       #section4.section.section4(style="display: none")
         .catalog-head
-          .div1
-            .catalog-head__title «Расторопша»
-            .catalog-head__count Товаров: 6
-          .div2
-            .catalog-view
-              button(type='button').catalog-view__btn#j_test_17
-                svg.icon
-                  use(xlink:href='#view1')
-              button(type='button').catalog-view__btn.active#j_test_18
-                svg.icon
-                  use(xlink:href='#view2')
+          .catalog-head__title «Расторопша»
+          button(type="button").category-head__btn.j_test_23
+            svg.icon
+              use(xlink:href='#search')
         .filter-head
           .div1
             button(type="button").filter-head__btn#j_test_38
@@ -495,6 +488,16 @@ html(lang="uk")
                   span От дешевых
                 button(type="button").sort__dropdown-btn
                   span От дорогих
+        .sort-head
+          .catalog-head__count Товаров: 6
+          .div2
+            .catalog-view
+              button(type='button').catalog-view__btn#j_test_52
+                svg.icon
+                  use(xlink:href='#view1')
+              button(type='button').catalog-view__btn.active#j_test_53
+                svg.icon
+                  use(xlink:href='#view2')
         #catalog1(style="display: none")
           include ./_include/_catalog_view_1
         #catalog2
@@ -519,17 +522,10 @@ html(lang="uk")
         +breadcrumbs()
           +breadcrumbs-item('Лекарственные препараты')(class="j_test_50")
         .catalog-head
-          .div1
-            .catalog-head__title Экстракт расторопши пятнистой
-            .catalog-head__count Товаров: 6
-          .div2
-            .catalog-view
-              button(type='button').catalog-view__btn#j_test_20
-                svg.icon
-                  use(xlink:href='#view1')
-              button(type='button').catalog-view__btn.active#j_test_21
-                svg.icon
-                  use(xlink:href='#view2')
+          .catalog-head__title Экстракт расторопши пятнистой
+          button(type="button").category-head__btn.j_test_23
+            svg.icon
+              use(xlink:href='#search')
         .filter-head
           .div1
             button(type="button").filter-head__btn#j_test_36
@@ -550,6 +546,16 @@ html(lang="uk")
                   span От дешевых
                 button(type="button").sort__dropdown-btn
                   span От дорогих
+        .sort-head
+          .catalog-head__count Товаров: 6
+          .div2
+            .catalog-view
+              button(type='button').catalog-view__btn#j_test_20
+                svg.icon
+                  use(xlink:href='#view1')
+              button(type='button').catalog-view__btn.active#j_test_21
+                svg.icon
+                  use(xlink:href='#view2')
         #catalog3(style="display: none")
           include ./_include/_catalog_view_1
         #catalog4
@@ -1044,6 +1050,9 @@ html(lang="uk")
               .app-modal__content-wrapper 
                 // Review form
                 .review-form
+                  .mssg-alert.--info(style="display: none") Спасибо за ваш отзыв! После модерации сообщение будет размещено на сайте
+                  .mssg-alert.--warning(style="display: none") Спасибо за ваш отзыв! После модерации сообщение будет размещено на сайте
+                  .mssg-alert.--error(style="display: none") Спасибо за ваш отзыв! После модерации сообщение будет размещено на сайте
                   #mssgSuccess.mssg-alert.--success(style="display: none") Спасибо за ваш отзыв! После модерации сообщение будет размещено на сайте
                   button(type="button").btn#j_test_30
                     span Написать отзыв
@@ -1169,11 +1178,17 @@ html(lang="uk")
                           span 0
                   - }
       #section7.section.section7(style="display: none")
-        .checkout-head
-          .checkout-head__title Корзина
-          button(type="button").checkout-head__btn#j_test_41
+        .search
+          button(type="button").search__input.j_test_07 Поиск
+          .search__btn-search
             svg.icon
               use(xlink:href='#search')
+          .search__btn-microphone
+            svg.icon
+              use(xlink:href='#microphone')
+          .search__btn-barcode
+            svg.icon
+              use(xlink:href='#barcode')
         .checkout-list
           - for (var i=0; i<=3; i++) {
           .checkout-list__item
@@ -1182,7 +1197,7 @@ html(lang="uk")
                 use(xlink:href='#trash')
             .checkout-list__item-thumb
               img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
-            .checkout-list__item-text Расторопши плоды 200г
+            .checkout-list__item-text.j_test_22 Расторопши плоды 200г
               small Дарниця | Украина
             .checkout-list__item-bottom
               .checkout-list__item-count
@@ -1201,7 +1216,7 @@ html(lang="uk")
                 use(xlink:href='#trash')
             .checkout-list__item-thumb
               img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
-            .checkout-list__item-text Расторопши плоды 200г Solution Pharm
+            .checkout-list__item-text.j_test_22 Расторопши плоды 200г Solution Pharm
               small Дарниця | Украина
             .checkout-list__item-bottom
               .checkout-list__item-count
@@ -1228,7 +1243,7 @@ html(lang="uk")
                 use(xlink:href='#trash')
             .checkout-list__item-thumb
               img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
-            .checkout-list__item-text Расторопши плоды 200г Банка
+            .checkout-list__item-text.j_test_22 Расторопши плоды 200г Банка
               small Дарниця | Украина
             .checkout-list__item-bottom
               .checkout-list__item-count
@@ -1253,7 +1268,7 @@ html(lang="uk")
                 span Не сохранять
       #section8.section.section8(style="display: none")
         .search
-          button(type="button" placeholder="Поиск").search__input.j_test_07
+          button(type="button").search__input.j_test_07 Поиск
           .search__btn-search
             svg.icon
               use(xlink:href='#search')
@@ -1280,7 +1295,7 @@ html(lang="uk")
                 span В корзину
               button(type="button" style="display: none").favorites-list__item-btn.--is-active.j_test_45
                 svg.icon
-                  use(xlink:href='#cart-check')
+                  use(xlink:href='#cart_check')
                 span В корзине
               .favorites-list__item-price от 62,68 ₴
           .favorites-list__item
@@ -1298,7 +1313,7 @@ html(lang="uk")
                 span В корзину
               button(type="button").favorites-list__item-btn.--is-active.j_test_45
                 svg.icon
-                  use(xlink:href='#cart-check')
+                  use(xlink:href='#cart_check')
                 span В корзине
               .favorites-list__item-price от 62,68 ₴
           .favorites-list__item
@@ -1316,7 +1331,7 @@ html(lang="uk")
                 span В корзину
               button(type="button").favorites-list__item-btn.--is-active.j_test_45
                 svg.icon
-                  use(xlink:href='#cart-check')
+                  use(xlink:href='#cart_check')
                 span В корзине
               .favorites-list__item-price от 62,68 ₴
           - }
@@ -1335,6 +1350,6 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v43")
+    script(src="./js/common.js?v44")
 
     include ./_include/_svg

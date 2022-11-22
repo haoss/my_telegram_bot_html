@@ -16,8 +16,11 @@
     border-radius: 150px;
     border: 0;
     padding: 0 80px 0 38px;
-    color: var(--color-black);
+    color: var(--color-d-7);
     display: block;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
   }
   [class*="__btn-"] {
     position: absolute;

@@ -13,7 +13,7 @@
             Telegram.WebApp.onEvent('themeChanged', setThemeClass);
             setThemeClass();
         </script>
-        <link rel="stylesheet" href="./css/style.min.css?v65">
+        <link rel="stylesheet" href="./css/style.min.css?v66">
     </head>
     <body> 
         <div class="app" id="app">
@@ -37,7 +37,7 @@
             </div>
             <div class="section section1" id="section1" style="display: none">
                 <div class="search --search-main">
-                    <button class="search__input j_test_07" type="button" placeholder="Поиск"></button>
+                    <button class="search__input j_test_07" type="button">Поиск</button>
                     <div class="search__btn-search">
                         <svg class="icon">
                             <use xlink:href="#search"></use>
@@ -79,7 +79,7 @@
                         </button>
                         <button class="section1__navigation-btn --favorites" type="button" id="j_test_44">
                             <svg class="icon">
-                                <use xlink:href="#heart"></use>
+                                <use xlink:href="#favorites"></use>
                             </svg><span>Избранные товары</span>
                         </button>
                         <button class="section1__navigation-btn --settings" type="button" id="j_test_05">
@@ -356,7 +356,7 @@
                         </ol>
                         <div class="category-head">
                             <div class="category-head__title">Каталог товаров</div>
-                            <button class="category-head__btn" type="button" id="j_test_23">
+                            <button class="category-head__btn j_test_23" type="button">
                                 <svg class="icon">
                                     <use xlink:href="#search"></use>
                                 </svg>
@@ -477,7 +477,7 @@
                         </ol>
                         <div class="category-head">
                             <div class="category-head__title">Лекарственные препараты</div>
-                            <button class="category-head__btn" type="button" id="j_test_23">
+                            <button class="category-head__btn j_test_23" type="button">
                                 <svg class="icon">
                                     <use xlink:href="#search"></use>
                                 </svg>
@@ -686,7 +686,7 @@
                         </ol>
                         <div class="category-head">
                             <div class="category-head__title">Простуда и грипп</div>
-                            <button class="category-head__btn" type="button" id="j_test_23">
+                            <button class="category-head__btn j_test_23" type="button">
                                 <svg class="icon">
                                     <use xlink:href="#search"></use>
                                 </svg>
@@ -753,24 +753,12 @@
             </div>
             <div class="section section4" id="section4" style="display: none">
                 <div class="catalog-head">
-                    <div class="div1">
-                        <div class="catalog-head__title">«Расторопша»</div>
-                        <div class="catalog-head__count">Товаров: 6</div>
-                    </div>
-                    <div class="div2">
-                        <div class="catalog-view">
-                            <button class="catalog-view__btn" type="button" id="j_test_17">
-                                <svg class="icon">
-                                    <use xlink:href="#view1"></use>
-                                </svg>
-                            </button>
-                            <button class="catalog-view__btn active" type="button" id="j_test_18">
-                                <svg class="icon">
-                                    <use xlink:href="#view2"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
+                    <div class="catalog-head__title">«Расторопша»</div>
+                    <button class="category-head__btn j_test_23" type="button">
+                        <svg class="icon">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </button>
                 </div>
                 <div class="filter-head">
                     <div class="div1">
@@ -792,6 +780,23 @@
                                 <button class="sort__dropdown-btn" type="button"><span>От дешевых</span></button>
                                 <button class="sort__dropdown-btn" type="button"><span>От дорогих</span></button>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sort-head">
+                    <div class="catalog-head__count">Товаров: 6</div>
+                    <div class="div2">
+                        <div class="catalog-view">
+                            <button class="catalog-view__btn" type="button" id="j_test_52">
+                                <svg class="icon">
+                                    <use xlink:href="#view1"></use>
+                                </svg>
+                            </button>
+                            <button class="catalog-view__btn active" type="button" id="j_test_53">
+                                <svg class="icon">
+                                    <use xlink:href="#view2"></use>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1163,24 +1168,12 @@
                     </li>
                 </ol>
                 <div class="catalog-head">
-                    <div class="div1">
-                        <div class="catalog-head__title">Экстракт расторопши пятнистой</div>
-                        <div class="catalog-head__count">Товаров: 6</div>
-                    </div>
-                    <div class="div2">
-                        <div class="catalog-view">
-                            <button class="catalog-view__btn" type="button" id="j_test_20">
-                                <svg class="icon">
-                                    <use xlink:href="#view1"></use>
-                                </svg>
-                            </button>
-                            <button class="catalog-view__btn active" type="button" id="j_test_21">
-                                <svg class="icon">
-                                    <use xlink:href="#view2"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
+                    <div class="catalog-head__title">Экстракт расторопши пятнистой</div>
+                    <button class="category-head__btn j_test_23" type="button">
+                        <svg class="icon">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </button>
                 </div>
                 <div class="filter-head">
                     <div class="div1">
@@ -1202,6 +1195,23 @@
                                 <button class="sort__dropdown-btn" type="button"><span>От дешевых</span></button>
                                 <button class="sort__dropdown-btn" type="button"><span>От дорогих</span></button>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sort-head">
+                    <div class="catalog-head__count">Товаров: 6</div>
+                    <div class="div2">
+                        <div class="catalog-view">
+                            <button class="catalog-view__btn" type="button" id="j_test_20">
+                                <svg class="icon">
+                                    <use xlink:href="#view1"></use>
+                                </svg>
+                            </button>
+                            <button class="catalog-view__btn active" type="button" id="j_test_21">
+                                <svg class="icon">
+                                    <use xlink:href="#view2"></use>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -2153,6 +2163,9 @@
                             <div class="app-modal__content-wrapper"> 
                                 <!-- Review form-->
                                 <div class="review-form">
+                                    <div class="mssg-alert --info" style="display: none">Спасибо за ваш отзыв! После модерации сообщение будет размещено на сайте</div>
+                                    <div class="mssg-alert --warning" style="display: none">Спасибо за ваш отзыв! После модерации сообщение будет размещено на сайте</div>
+                                    <div class="mssg-alert --error" style="display: none">Спасибо за ваш отзыв! После модерации сообщение будет размещено на сайте</div>
                                     <div class="mssg-alert --success" id="mssgSuccess" style="display: none">Спасибо за ваш отзыв! После модерации сообщение будет размещено на сайте</div>
                                     <button class="btn" type="button" id="j_test_30"><span>Написать отзыв</span></button>
                                     <div class="review-form__form" id="reviewForm" style="display: none">
@@ -2650,13 +2663,23 @@
                 </div>
             </div>
             <div class="section section7" id="section7" style="display: none">
-                <div class="checkout-head">
-                    <div class="checkout-head__title">Корзина</div>
-                    <button class="checkout-head__btn" type="button" id="j_test_41">
+                <div class="search">
+                    <button class="search__input j_test_07" type="button">Поиск</button>
+                    <div class="search__btn-search">
                         <svg class="icon">
                             <use xlink:href="#search"></use>
                         </svg>
-                    </button>
+                    </div>
+                    <div class="search__btn-microphone">
+                        <svg class="icon">
+                            <use xlink:href="#microphone"></use>
+                        </svg>
+                    </div>
+                    <div class="search__btn-barcode">
+                        <svg class="icon">
+                            <use xlink:href="#barcode"></use>
+                        </svg>
+                    </div>
                 </div>
                 <div class="checkout-list">
                     <div class="checkout-list__item">
@@ -2666,7 +2689,7 @@
                             </svg>
                         </button>
                         <div class="checkout-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
-                        <div class="checkout-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                        <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
                         <div class="checkout-list__item-bottom">
                             <div class="checkout-list__item-count">
                                 <div class="block-count j-cart-count">
@@ -2693,7 +2716,7 @@
                             </svg>
                         </button>
                         <div class="checkout-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
-                        <div class="checkout-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                        <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
                         <div class="checkout-list__item-bottom">
                             <div class="checkout-list__item-count">
                                 <div class="block-count j-cart-count">
@@ -2733,7 +2756,7 @@
                             </svg>
                         </button>
                         <div class="checkout-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
-                        <div class="checkout-list__item-text">Расторопши плоды 200г Банка<small>Дарниця | Украина</small></div>
+                        <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г Банка<small>Дарниця | Украина</small></div>
                         <div class="checkout-list__item-bottom">
                             <div class="checkout-list__item-count">
                                 <div class="block-count j-cart-count">
@@ -2760,7 +2783,7 @@
                             </svg>
                         </button>
                         <div class="checkout-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
-                        <div class="checkout-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                        <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
                         <div class="checkout-list__item-bottom">
                             <div class="checkout-list__item-count">
                                 <div class="block-count j-cart-count">
@@ -2787,7 +2810,7 @@
                             </svg>
                         </button>
                         <div class="checkout-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
-                        <div class="checkout-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                        <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
                         <div class="checkout-list__item-bottom">
                             <div class="checkout-list__item-count">
                                 <div class="block-count j-cart-count">
@@ -2827,7 +2850,7 @@
                             </svg>
                         </button>
                         <div class="checkout-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
-                        <div class="checkout-list__item-text">Расторопши плоды 200г Банка<small>Дарниця | Украина</small></div>
+                        <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г Банка<small>Дарниця | Украина</small></div>
                         <div class="checkout-list__item-bottom">
                             <div class="checkout-list__item-count">
                                 <div class="block-count j-cart-count">
@@ -2854,7 +2877,7 @@
                             </svg>
                         </button>
                         <div class="checkout-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
-                        <div class="checkout-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                        <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
                         <div class="checkout-list__item-bottom">
                             <div class="checkout-list__item-count">
                                 <div class="block-count j-cart-count">
@@ -2881,7 +2904,7 @@
                             </svg>
                         </button>
                         <div class="checkout-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
-                        <div class="checkout-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                        <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
                         <div class="checkout-list__item-bottom">
                             <div class="checkout-list__item-count">
                                 <div class="block-count j-cart-count">
@@ -2921,7 +2944,7 @@
                             </svg>
                         </button>
                         <div class="checkout-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
-                        <div class="checkout-list__item-text">Расторопши плоды 200г Банка<small>Дарниця | Украина</small></div>
+                        <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г Банка<small>Дарниця | Украина</small></div>
                         <div class="checkout-list__item-bottom">
                             <div class="checkout-list__item-count">
                                 <div class="block-count j-cart-count">
@@ -2948,7 +2971,7 @@
                             </svg>
                         </button>
                         <div class="checkout-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
-                        <div class="checkout-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                        <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
                         <div class="checkout-list__item-bottom">
                             <div class="checkout-list__item-count">
                                 <div class="block-count j-cart-count">
@@ -2975,7 +2998,7 @@
                             </svg>
                         </button>
                         <div class="checkout-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
-                        <div class="checkout-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                        <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
                         <div class="checkout-list__item-bottom">
                             <div class="checkout-list__item-count">
                                 <div class="block-count j-cart-count">
@@ -3015,7 +3038,7 @@
                             </svg>
                         </button>
                         <div class="checkout-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
-                        <div class="checkout-list__item-text">Расторопши плоды 200г Банка<small>Дарниця | Украина</small></div>
+                        <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г Банка<small>Дарниця | Украина</small></div>
                         <div class="checkout-list__item-bottom">
                             <div class="checkout-list__item-count">
                                 <div class="block-count j-cart-count">
@@ -3049,7 +3072,7 @@
             </div>
             <div class="section section8" id="section8" style="display: none">
                 <div class="search">
-                    <button class="search__input j_test_07" type="button" placeholder="Поиск"></button>
+                    <button class="search__input j_test_07" type="button">Поиск</button>
                     <div class="search__btn-search">
                         <svg class="icon">
                             <use xlink:href="#search"></use>
@@ -3083,7 +3106,7 @@
                             </button>
                             <button class="favorites-list__item-btn --is-active j_test_45" type="button" style="display: none">
                                 <svg class="icon">
-                                    <use xlink:href="#cart-check"></use>
+                                    <use xlink:href="#cart_check"></use>
                                 </svg><span>В корзине</span>
                             </button>
                             <div class="favorites-list__item-price">от 62,68 ₴</div>
@@ -3105,7 +3128,7 @@
                             </button>
                             <button class="favorites-list__item-btn --is-active j_test_45" type="button">
                                 <svg class="icon">
-                                    <use xlink:href="#cart-check"></use>
+                                    <use xlink:href="#cart_check"></use>
                                 </svg><span>В корзине</span>
                             </button>
                             <div class="favorites-list__item-price">от 62,68 ₴</div>
@@ -3127,7 +3150,7 @@
                             </button>
                             <button class="favorites-list__item-btn --is-active j_test_45" type="button">
                                 <svg class="icon">
-                                    <use xlink:href="#cart-check"></use>
+                                    <use xlink:href="#cart_check"></use>
                                 </svg><span>В корзине</span>
                             </button>
                             <div class="favorites-list__item-price">от 62,68 ₴</div>
@@ -3149,7 +3172,7 @@
                             </button>
                             <button class="favorites-list__item-btn --is-active j_test_45" type="button" style="display: none">
                                 <svg class="icon">
-                                    <use xlink:href="#cart-check"></use>
+                                    <use xlink:href="#cart_check"></use>
                                 </svg><span>В корзине</span>
                             </button>
                             <div class="favorites-list__item-price">от 62,68 ₴</div>
@@ -3171,7 +3194,7 @@
                             </button>
                             <button class="favorites-list__item-btn --is-active j_test_45" type="button">
                                 <svg class="icon">
-                                    <use xlink:href="#cart-check"></use>
+                                    <use xlink:href="#cart_check"></use>
                                 </svg><span>В корзине</span>
                             </button>
                             <div class="favorites-list__item-price">от 62,68 ₴</div>
@@ -3193,7 +3216,7 @@
                             </button>
                             <button class="favorites-list__item-btn --is-active j_test_45" type="button">
                                 <svg class="icon">
-                                    <use xlink:href="#cart-check"></use>
+                                    <use xlink:href="#cart_check"></use>
                                 </svg><span>В корзине</span>
                             </button>
                             <div class="favorites-list__item-price">от 62,68 ₴</div>
@@ -3215,7 +3238,7 @@
                             </button>
                             <button class="favorites-list__item-btn --is-active j_test_45" type="button" style="display: none">
                                 <svg class="icon">
-                                    <use xlink:href="#cart-check"></use>
+                                    <use xlink:href="#cart_check"></use>
                                 </svg><span>В корзине</span>
                             </button>
                             <div class="favorites-list__item-price">от 62,68 ₴</div>
@@ -3237,7 +3260,7 @@
                             </button>
                             <button class="favorites-list__item-btn --is-active j_test_45" type="button">
                                 <svg class="icon">
-                                    <use xlink:href="#cart-check"></use>
+                                    <use xlink:href="#cart_check"></use>
                                 </svg><span>В корзине</span>
                             </button>
                             <div class="favorites-list__item-price">от 62,68 ₴</div>
@@ -3259,7 +3282,7 @@
                             </button>
                             <button class="favorites-list__item-btn --is-active j_test_45" type="button">
                                 <svg class="icon">
-                                    <use xlink:href="#cart-check"></use>
+                                    <use xlink:href="#cart_check"></use>
                                 </svg><span>В корзине</span>
                             </button>
                             <div class="favorites-list__item-price">от 62,68 ₴</div>
@@ -3281,7 +3304,7 @@
                             </button>
                             <button class="favorites-list__item-btn --is-active j_test_45" type="button" style="display: none">
                                 <svg class="icon">
-                                    <use xlink:href="#cart-check"></use>
+                                    <use xlink:href="#cart_check"></use>
                                 </svg><span>В корзине</span>
                             </button>
                             <div class="favorites-list__item-price">от 62,68 ₴</div>
@@ -3303,7 +3326,7 @@
                             </button>
                             <button class="favorites-list__item-btn --is-active j_test_45" type="button">
                                 <svg class="icon">
-                                    <use xlink:href="#cart-check"></use>
+                                    <use xlink:href="#cart_check"></use>
                                 </svg><span>В корзине</span>
                             </button>
                             <div class="favorites-list__item-price">от 62,68 ₴</div>
@@ -3325,7 +3348,7 @@
                             </button>
                             <button class="favorites-list__item-btn --is-active j_test_45" type="button">
                                 <svg class="icon">
-                                    <use xlink:href="#cart-check"></use>
+                                    <use xlink:href="#cart_check"></use>
                                 </svg><span>В корзине</span>
                             </button>
                             <div class="favorites-list__item-price">от 62,68 ₴</div>
@@ -3342,7 +3365,7 @@
         <script src="./js/ion.rangeSlider/ion.rangeSlider.js"></script>
         <script src="./js/autosize/autosize.js"></script>
         <script src="./js/gsap.min.js"></script>
-        <script src="./js/common.js?v43"></script>
+        <script src="./js/common.js?v44"></script>
         <svg width="0" height="0" style="display: none">
             <symbol id="settings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2337 7.125H3.75C3.33579 7.125 3 7.46079 3 7.875C3 8.28921 3.33579 8.625 3.75 8.625H7.2337C7.55641 9.70931 8.56087 10.5 9.75 10.5C10.9391 10.5 11.9436 9.70931 12.2663 8.625H20.25C20.6642 8.625 21 8.28921 21 7.875C21 7.46079 20.6642 7.125 20.25 7.125H12.2663C11.9436 6.04069 10.9391 5.25 9.75 5.25C8.56087 5.25 7.55641 6.04069 7.2337 7.125ZM8.625 7.875C8.625 7.25368 9.12868 6.75 9.75 6.75C10.3713 6.75 10.875 7.25368 10.875 7.875C10.875 8.49632 10.3713 9 9.75 9C9.12868 9 8.625 8.49632 8.625 7.875Z"></path>
@@ -3414,10 +3437,10 @@
                 <path d="M0 0h24v24H0z" fill="none"></path>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.993 17.523C2.688 10.503 4.18 6.588 7.69 4.641c1.728-.958 3.881-1.397 6.392-1.56 2.514-.164 5.443-.055 8.751.123a.6.6 0 0 1 .547.754l-.58-.154.58.154-.002.008-.006.021-.021.08c-.02.069-.048.17-.086.298a46.36 46.36 0 0 1-1.636 4.62c-1.129 2.71-2.823 5.976-5.038 7.874-2.284 1.958-5.637 2.271-8.294 2.146a25.58 25.58 0 0 1-4.45-.618 72.68 72.68 0 0 0-2.143 3.143.6.6 0 0 1-1.007-.652 72.922 72.922 0 0 1 2.295-3.355Zm19.022-13.16c-2.993-.153-5.607-.232-7.854-.085-2.437.159-4.385.58-5.888 1.413-2.654 1.472-4.13 4.365-4.12 10.178 3.629-4.875 8.693-8.578 15.459-10.834a.6.6 0 1 1 .38 1.138c-6.884 2.295-11.9 6.117-15.405 11.148a24.394 24.394 0 0 0 3.768.486c2.594.122 5.54-.216 7.456-1.859 1.985-1.701 3.591-4.736 4.712-7.425a45.135 45.135 0 0 0 1.492-4.16Z"></path>
             </symbol>
-            <symbol id="category3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <symbol id="category3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#category3-a)">
                     <path fill="none" d="M0 0h24v24H0z"></path>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.64 8.16C23.28 7.08 22.56 6 21.6 5.04 19.68 3 16.92 1.2 13.68 1.2a.66.66 0 0 0-.6.36l-2.76 8.64H4.08l-1.2-3.24c-.12-.48-.36-.84-.84-1.08-.36-.24-.84-.36-1.32-.48-.36 0-.6.12-.72.48 0 .36.12.6.48.72.48.12.72.12.96.24.12.12.24.24.36.48l2.4 6.6c.36.96.72 1.68 1.32 2.16.6.6 1.32.72 2.16.72h2.28l-.6 1.2h-.48C7.32 18 6 19.32 6 21s1.32 3 2.88 3c1.56 0 3-1.32 3-3 0-1.08-.6-2.04-1.32-2.52l.72-1.44v-.24h3.6l.12.24.72 1.44c-.84.48-1.32 1.44-1.32 2.52 0 1.68 1.32 3 3 3s3-1.32 3-3-1.32-3-3-3h-.48l-.6-1.2h2.64c.96 0 1.8-.12 2.4-.6.6-.48 1.08-1.2 1.44-2.16l1.2-3c.12-.84 0-1.92-.36-2.88ZM10.68 21c0 .96-.84 1.8-1.8 1.8-.96 0-1.68-.84-1.68-1.8 0-.96.72-1.8 1.68-1.8s1.8.84 1.8 1.8Zm6.6-1.8c.96 0 1.8.84 1.8 1.8 0 .96-.84 1.8-1.8 1.8-.96 0-1.8-.84-1.8-1.8 0-.96.84-1.8 1.8-1.8Zm4.2-5.64c-.36.84-.6 1.32-.96 1.56s-.84.36-1.68.36H7.8c-.72 0-1.2-.12-1.44-.36-.36-.24-.6-.72-.96-1.68l-.84-2.04h17.76l-.84 2.16Zm1.32-3.36H11.52l2.64-7.8c2.64.12 4.92 1.68 6.6 3.36.84.96 1.44 1.92 1.8 2.76.24.72.24 1.32.24 1.68Z" fill="#9CCC65"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.64 8.16C23.28 7.08 22.56 6 21.6 5.04 19.68 3 16.92 1.2 13.68 1.2a.66.66 0 0 0-.6.36l-2.76 8.64H4.08l-1.2-3.24c-.12-.48-.36-.84-.84-1.08-.36-.24-.84-.36-1.32-.48-.36 0-.6.12-.72.48 0 .36.12.6.48.72.48.12.72.12.96.24.12.12.24.24.36.48l2.4 6.6c.36.96.72 1.68 1.32 2.16.6.6 1.32.72 2.16.72h2.28l-.6 1.2h-.48C7.32 18 6 19.32 6 21s1.32 3 2.88 3c1.56 0 3-1.32 3-3 0-1.08-.6-2.04-1.32-2.52l.72-1.44v-.24h3.6l.12.24.72 1.44c-.84.48-1.32 1.44-1.32 2.52 0 1.68 1.32 3 3 3s3-1.32 3-3-1.32-3-3-3h-.48l-.6-1.2h2.64c.96 0 1.8-.12 2.4-.6.6-.48 1.08-1.2 1.44-2.16l1.2-3c.12-.84 0-1.92-.36-2.88ZM10.68 21c0 .96-.84 1.8-1.8 1.8-.96 0-1.68-.84-1.68-1.8 0-.96.72-1.8 1.68-1.8s1.8.84 1.8 1.8Zm6.6-1.8c.96 0 1.8.84 1.8 1.8 0 .96-.84 1.8-1.8 1.8-.96 0-1.8-.84-1.8-1.8 0-.96.84-1.8 1.8-1.8Zm4.2-5.64c-.36.84-.6 1.32-.96 1.56s-.84.36-1.68.36H7.8c-.72 0-1.2-.12-1.44-.36-.36-.24-.6-.72-.96-1.68l-.84-2.04h17.76l-.84 2.16Zm1.32-3.36H11.52l2.64-7.8c2.64.12 4.92 1.68 6.6 3.36.84.96 1.44 1.92 1.8 2.76.24.72.24 1.32.24 1.68Z"></path>
                 </g>
                 <defs>
                     <clipPath id="category3-a">
@@ -3553,7 +3576,7 @@
             <symbol id="cart" viewBox="0 0 30 28" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.866 27.067a2.333 2.333 0 1 0 0-4.667 2.333 2.333 0 0 0 0 4.667ZM22.066 27.067a2.333 2.333 0 1 0 0-4.667 2.333 2.333 0 0 0 0 4.667ZM26.985 7.467a.933.933 0 0 0-.719-.345H7.6l-.933-5.404a.933.933 0 0 0-.933-.784H1.066a.933.933 0 1 0 0 1.866H4.94l2.296 13.786A3.733 3.733 0 0 0 10.97 19.6h11.107a3.678 3.678 0 0 0 3.677-2.986l1.447-8.4a.933.933 0 0 0-.215-.747Zm-3.117 8.83A1.811 1.811 0 0 1 22 17.742H10.922a1.867 1.867 0 0 1-1.867-1.456L7.87 8.988h17.285l-1.288 7.308Z"></path>
             </symbol>
-            <symbol id="cart-check" viewBox="0 0 19 18" xmlns="http://www.w3.org/2000/svg">
+            <symbol id="cart_check" viewBox="0 0 19 18" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.7 17.4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM14.9 17.4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path>
                 <path fill-rule="evenodd" d="M.57 1.19c0-.33.27-.6.6-.6h3.01c.29 0 .53.2.59.47l.8 3.85a.6.6 0 1 1-1.18.25l-.7-3.37H1.17a.6.6 0 0 1-.6-.6Z" clip-rule="evenodd"></path>
                 <path fill-rule="evenodd" d="M4.89 4.47a.6.6 0 0 1 .68.5l.02.1 1.12 5.65c.15.7.72 1.15 1.34 1.15h6.5c.7 0 1.25-.46 1.4-1.15L17.01 5a.6.6 0 1 1 1.18.22l-1.06 5.73v.01a2.61 2.61 0 0 1-2.58 2.11h-6.5a2.6 2.6 0 0 1-2.51-2.1v-.01L4.4 5.28l-.02-.12a.6.6 0 0 1 .5-.69Z" clip-rule="evenodd"></path>
@@ -3606,12 +3629,12 @@
                     </clipPath>
                 </defs>
             </symbol>
-            <symbol id="heart" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#heart-a)">
+            <symbol id="favorites" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#favorites-a)">
                     <path d="M17.209 2.506a5.16 5.16 0 0 1 3.89 1.726 6.466 6.466 0 0 1 1.575 4.363 7.954 7.954 0 0 1-2.088 5.155 51.316 51.316 0 0 1-5.8 5.514l-2.72 2.397a.178.178 0 0 1-.132 0 .202.202 0 0 1-.131 0c-.967-.863-1.897-1.666-2.72-2.398a51.066 51.066 0 0 1-5.788-5.501 7.978 7.978 0 0 1-2.1-5.167A6.478 6.478 0 0 1 2.78 4.232a5.18 5.18 0 0 1 3.89-1.726 4.76 4.76 0 0 1 3.02 1.091c.483.384.912.832 1.277 1.33 0 0 .549.78.966.78.418 0 .979-.78.979-.78a6.915 6.915 0 0 1 1.277-1.33 4.76 4.76 0 0 1 3.019-1.067v-.024Zm0-1.174a5.95 5.95 0 0 0-3.76 1.318c-.57.46-1.08.991-1.515 1.582a7.776 7.776 0 0 0-1.515-1.606 5.95 5.95 0 0 0-3.747-1.318 6.372 6.372 0 0 0-4.774 2.121A7.644 7.644 0 0 0 .001 8.595a9.047 9.047 0 0 0 2.387 5.91 51.168 51.168 0 0 0 5.966 5.658c.824.707 1.754 1.51 2.721 2.397a1.404 1.404 0 0 0 1.85 0c.966-.863 1.897-1.666 2.72-2.397a51.16 51.16 0 0 0 5.967-5.658A9.095 9.095 0 0 0 24 8.595a7.632 7.632 0 0 0-1.886-5.166 6.397 6.397 0 0 0-4.773-2.121l-.131.024Z"></path>
                 </g>
                 <defs>
-                    <clipPath id="heart-a">
+                    <clipPath id="favorites-a">
                         <path fill="none" d="M0 0h24v24H0z"></path>
                     </clipPath>
                 </defs>
