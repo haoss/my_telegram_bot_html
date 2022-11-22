@@ -321,24 +321,26 @@ textarea.field-text__input {
   background: transparent;
   $this: &;
   width: 100%;
-  padding: 14px 20px;
+  padding: 10px 20px;
+  &:hover, &:focus {
+    text-decoration: none;
+  }
   &__span-input {
     position: relative;
     left: 0;
     top: 0;
-    width: 17px;
-    height: 17px;
-    border: 1px solid var(--color-d-8);
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--color-d-8);
     border-radius: 3px;
     flex-shrink: 0;
-    margin-right: 10px;
     background: transparent;
     svg.icon {
       position: absolute;
-      width: 17px;
-      height: 17px;
-      left: -1px;
-      top: -1px;
+      width: 22px;
+      height: 22px;
+      left: -2px;
+      top: -2px;
       fill: var(--color-d-1);
       opacity: 0;
     }
@@ -353,7 +355,7 @@ textarea.field-text__input {
     transition: color 0.5s;
     text-align: left;
     font-weight: 400;
-    margin: 0;
+    margin: 2px 0 0 10px;
   }
   &__input {
     display: none;
@@ -417,39 +419,50 @@ textarea.field-text__input {
   $this: &;
   &__span-input {
     border-radius: 50%;
-    &::before {
-      width: 14px;
-      height: 14px;
-      content: '';
-      border-radius: 50%;
-      background: var(--color-disabled)
-    }
   }
   &__input {
     &:checked {
-      &~#{$this} {
-        &__span-input {
-          &::before {
-            background: var(--color-gray);
-          }
+      &+* {
+        border-color: var(--color-d-1);
+        background: transparent;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          background: var(--color-d-1);
+          transition: all .2s;
         }
       }
     }
     &:disabled {
-      &~#{$this} {
-        &__span-input, 
-        &__label {
-          opacity: 0.5;
-          cursor: default;
-        }
+      cursor: default;
+      &~* {
+        opacity: 0.5;
+        cursor: default;
       }
     }
   }
   &.checked {
     #{$this} {
       &__span-input {
+        border-color: var(--color-d-1);
+        background: transparent;
         &::before {
-          background: var(--color-gray);
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          background: var(--color-d-1);
+          transition: all .2s;
         }
       }
     }

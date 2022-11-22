@@ -1,0 +1,159 @@
+/* buttons */
+.btn {
+  $this: &;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 15px;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: top;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid currentColor;
+  background: transparent;
+  border-radius: 7px;
+  text-decoration: none;
+  position: relative;
+  min-width: auto;
+  background-position: center;
+  vertical-align: middle;
+  line-height: 1;
+  overflow: hidden;
+  transition: background 0.5s;
+  background-size: 0%;
+  &>span, &>i, &>svg {
+    position: relative;
+    z-index: 1;
+  }
+  .icon {
+    margin: 0 10px;
+    font-size: 18px;
+  }
+  * {
+    &:first-child {
+      margin-left: 0 !important;
+    }
+    &:last-child {
+      margin-right: 0 !important;
+    }
+  }
+  &.--xl {
+    padding-top: 20.5px;
+    padding-bottom: 20.5px;
+  }
+  &.--lg {
+    padding-top: 17.5px;
+    padding-bottom: 17.5px;
+  }
+  &.--sm {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+  &.--xs {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &.--primary {
+    background-color: var(--color-d-6);
+    border-color: var(--color-d-6);
+    color: var(--color-white);
+  }
+  &.--secondary {
+    background-color: var(--color-d-1);
+    border-color: var(--color-d-1);
+    color: var(--color-white);
+  }
+  &.--secondary-alt {
+    background-color: var(--color-l-4);
+    border-color: var(--color-l-4);
+    color: var(--color-d-1);
+  }
+  &.--accent {
+    background-color: var(--color-d-3);
+    border-color: var(--color-d-3);
+    color: var(--color-white);
+  }
+  &.--contrast {
+    background-color: var(--color-d-5);
+    border-color: var(--color-d-5);
+    color: var(--color-white);
+  }
+  &.--outline {
+    background-color: var(--color-white);
+    color: currentColor;
+    &.--secondary {
+      color: var(--color-d-1);
+    }
+    &.--secondary-alt {
+      color: var(--color-d-1);
+    }
+    &.--accent {
+      color: var(--color-d-3);
+    }
+    &.--contrast {
+      color: var(--color-d-5);
+    }
+  }
+  &.--ghost {
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+    color: currentColor;
+    &.--secondary {
+      color: var(--color-d-1);
+    }
+    &.--secondary-alt {
+      color: var(--color-d-1);
+    }
+    &.--accent {
+      color: var(--color-d-3);
+    }
+    &.--contrast {
+      color: var(--color-d-5);
+    }
+  }
+  &.--link {
+    padding-left: 0;
+    padding-right: 0;
+    border-color: transparent;
+    color: var(--color-d-1);
+    &>span {
+      border-bottom: 1px solid currentColor;
+      line-height: 21px;
+      margin: -6px 0;
+    }
+    &.--xl {
+      &>span {
+        line-height: 24px;
+      }
+    }
+    &.--xs {
+      &>span {
+        line-height: 18px;
+      }
+    }
+  }
+  &.--r0 {
+    border-radius: 0;
+  }
+  &.--r35 {
+    border-radius: 35px;
+  }
+  &.--r50 {
+    border-radius: 50%;
+  }
+  &.disabled, &.--disabled, &[disabled] {
+    opacity: 0.5 !important;
+    cursor: default !important;
+    pointer-events: none !important;
+  }
+  &.--block {
+    width: 100%;
+  }
+}

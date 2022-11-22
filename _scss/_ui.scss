@@ -1,0 +1,33 @@
+.icons-pack {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  .div {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    .icon {
+      width: 100px;
+      height: 100px;
+      padding-right: 10px;
+    }
+  }
+}
+.body-ui {
+  padding: 20px;
+}
+.buttons-pack {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  .btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .br {
+    width: 100%;
+    flex-grow: 1;
+    height: 15px;
+  }
+}

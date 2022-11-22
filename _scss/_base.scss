@@ -34,10 +34,12 @@ body {
   --color-d-3: #55BE61;
   --color-d-4: #F3C04B;
   --color-d-5: #EB6161;
+  --color-d-6: var(--text-color);
   --color-d-7: #97A0A7;
   --color-d-8: #C4C4C4;
   --color-l-1: #F6F6F6;
   --color-l-3: #E0E0E0;
+  --color-l-4: #D9ECFA;
   --color-red: #CE494A;
   --color-white: #fff;
   --color-black: #000;
@@ -88,31 +90,6 @@ button {
   font-weight: 500;
   &:hover, &:focus, &:active {
     outline: none;
-  }
-}
-
-.btn {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: 1px solid var(--color-d-3);
-  border-radius: 7px;
-  font-size: 13px;
-  padding: 10px 15px;
-  text-align: center;
-  font-weight: 500;
-  text-decoration: none;
-  color: var(--color-d-3);
-  &:hover, &:focus, &:active {
-    color: var(--color-d-3);
-    border-color: var(--color-d-3);
-    text-decoration: none;
-  }
-  &.--accent {
-    color: var(--tg-theme-bg-color);
-    background: var(--color-d-3);
   }
 }
 

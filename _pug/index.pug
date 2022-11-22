@@ -1,5 +1,6 @@
 include ./_include/_mixin_field-text
 include ./_include/_mixin_field-checkbox
+include ./_include/_mixin_field-radio
 include ./_include/_mixin_breadcrumbs
 
 doctype html
@@ -16,7 +17,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v66')
+    link(rel='stylesheet', href='./css/style.min.css?v67')
   
   body 
     #app.app
@@ -104,7 +105,7 @@ html(lang="uk")
                       .you-pharmacy__item-row Аптечная сеть 911
                         small г. Харьков, ул. Энергетическая, 1 (метро Турбоатом)
                   .you-pharmacy__bottom
-                    a(href="javascript:void(0)").btn#j_test_12
+                    a(href="javascript:void(0)").btn.--accent.--outline.--block#j_test_12
                       span Добавить аптеку
         #appModal2.app-modal(style="display: none")
           .app-modal__wrapper
@@ -500,24 +501,30 @@ html(lang="uk")
                   use(xlink:href='#view2')
         #catalog1(style="display: none")
           include ./_include/_catalog_view_1
+          .catalog-more
+            button(type="button").btn
+              span Загрузить еще
         #catalog2
           include ./_include/_catalog_view_2
-        #appFilter2.app-filter(style="display: none")
+          .catalog-more
+            button(type="button").btn
+              span Загрузить еще
+        #appFilter2.app-filter
           .app-filter__wrapper
-            .app-filter__head
-              .app-filter__head-title Фильтр
-              button(type="button").app-filter__head-btn#j_test_37
-                svg.icon
-                  use(xlink:href='#close')
+            //- .app-filter__head
+            //-   .app-filter__head-title Фильтр
+            //-   button(type="button").app-filter__head-btn#j_test_37
+            //-     svg.icon
+            //-       use(xlink:href='#close')
             .app-filter__body
               .app-filter__body-wrapper
                 include ./_include/_filter
             .app-filter__foot
+              button(type="button").btn.--accent.--ghost#j_test_34
+                span Сбросить
               button(type="button").btn.--accent
                 span Применить
                 span.app-filter__foot-count 117
-              button(type="button").btn#j_test_34
-                span Сбросить
       #section5.section.section5(style="display: none")
         +breadcrumbs()
           +breadcrumbs-item('Лекарственные препараты')(class="j_test_50")
@@ -562,20 +569,20 @@ html(lang="uk")
           include ./_include/_catalog_view_2
         #appFilter.app-filter(style="display: none")
           .app-filter__wrapper
-            .app-filter__head
-              .app-filter__head-title Фильтр
-              button(type="button").app-filter__head-btn#j_test_35
-                svg.icon
-                  use(xlink:href='#close')
+            //- .app-filter__head
+            //-   .app-filter__head-title Фильтр
+            //-   button(type="button").app-filter__head-btn#j_test_35
+            //-     svg.icon
+            //-       use(xlink:href='#close')
             .app-filter__body
               .app-filter__body-wrapper
                 include ./_include/_filter
             .app-filter__foot
+              button(type="button").btn.--accent.--ghost#j_test_34
+                span Сбросить
               button(type="button").btn.--accent
                 span Применить
                 span.app-filter__foot-count 117
-              button(type="button").btn#j_test_34
-                span Сбросить
       #section6.section.section6(style="display: none")
         +breadcrumbs()
           +breadcrumbs-item('Лекарственные препараты')(class="j_test_50")
@@ -1054,7 +1061,7 @@ html(lang="uk")
                   .mssg-alert.--warning(style="display: none") Спасибо за ваш отзыв! После модерации сообщение будет размещено на сайте
                   .mssg-alert.--error(style="display: none") Спасибо за ваш отзыв! После модерации сообщение будет размещено на сайте
                   #mssgSuccess.mssg-alert.--success(style="display: none") Спасибо за ваш отзыв! После модерации сообщение будет размещено на сайте
-                  button(type="button").btn#j_test_30
+                  button(type="button").btn.--accent.--outline.--block#j_test_30
                     span Написать отзыв
                   #reviewForm.review-form__form(style="display: none")
                     form(action="#!")
@@ -1104,7 +1111,7 @@ html(lang="uk")
                               sup *
                             span.field-text__help-text(style='display: none') Текст ошибки или подсказка
                       .review-form__btn
-                        button(type="button").btn#j_test_31
+                        button(type="button").btn.--accent.--outline#j_test_31
                           span Отмена
                         button(type="button").btn.--accent#j_test_32
                           span Отправить
@@ -1350,6 +1357,6 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v44")
+    script(src="./js/common.js?v45")
 
     include ./_include/_svg

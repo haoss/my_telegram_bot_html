@@ -10,6 +10,26 @@
           .filter__block-group
             +field-checkbox({
               title: 'Взрослым',
+              isLink: false,
+              mods: '',
+              attrs: {
+                name: 'checkbox1',
+                checked: true,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: 'Взрослым',
+              isLink: false,
+              mods: '',
+              attrs: {
+                name: 'checkbox1',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-checkbox({
+              title: 'Взрослым',
               isLink: true,
               mods: '',
               attrs: {
@@ -58,6 +78,17 @@
                 disabled: true
               }
             })
+          .filter__block-group
+            +field-checkbox({
+              title: 'Диабетикам 1212',
+              isLink: false,
+              mods: '',
+              attrs: {
+                name: 'checkbox4',
+                checked: false,
+                disabled: true
+              }
+            })
     .filter__block.j-filter
       .filter__block-head 
         span Срок годности
@@ -66,62 +97,104 @@
       .filter__block-wrapper
         .filter__block-container
           .filter__block-group
-            +field-checkbox({
+            +field-radio({
+              title: '1 год',
+              isLink: false,
+              mods: '',
+              attrs: {
+                name: 'radio',
+                checked: true,
+              }
+            })
+          .filter__block-group
+            +field-radio({
+              title: '2 год',
+              isLink: false,
+              mods: '',
+              attrs: {
+                name: 'radio',
+                checked: false,
+                disabled: true
+              }
+            })
+          .filter__block-group
+            +field-radio({
+              title: '3 год',
+              isLink: false,
+              mods: '',
+              attrs: {
+                name: 'radio',
+                checked: false,
+              }
+            })
+          .filter__block-group
+            +field-radio({
+              title: '3 год',
+              isLink: false,
+              mods: '',
+              attrs: {
+                name: 'radio',
+                checked: false,
+                disabled: true
+              }
+            })
+          .filter__block-group
+            +field-radio({
               title: '1 год',
               isLink: true,
               mods: '',
               attrs: {
-                name: 'checkbox',
-                checked: false,
+                name: 'radio',
+                checked: true,
               }
             })
           .filter__block-group
-            +field-checkbox({
+            +field-radio({
               title: '1 год и 6 месяцев',
               isLink: true,
               mods: '',
               attrs: {
-                name: 'checkbox',
+                name: 'radio',
                 checked: false,
               }
             })
           .filter__block-group
-            +field-checkbox({
+            +field-radio({
               title: '2 года',
               isLink: true,
               mods: '',
               attrs: {
-                name: 'checkbox',
+                name: 'radio',
                 checked: false,
               }
             })
           .filter__block-group
-            +field-checkbox({
+            +field-radio({
               title: '4 года',
               isLink: true,
               mods: '',
               attrs: {
-                name: 'checkbox',
+                name: 'radio',
                 checked: false,
               }
             })
           .filter__block-group
-            +field-checkbox({
+            +field-radio({
               title: '5 лет',
               isLink: true,
               mods: '',
               attrs: {
-                name: 'checkbox',
+                name: 'radio',
                 checked: false,
               }
             })
           .filter__block-group
-            +field-checkbox({
+            +field-radio({
               title: '6 лет',
               isLink: true,
               mods: '',
               attrs: {
-                name: 'checkbox',
+                name: 'radio',
                 checked: false,
               }
             })
