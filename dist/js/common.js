@@ -86,6 +86,7 @@ $(document).on('ready', function(){
   $('.j_test_49').on('click', function(e){ e.stopPropagation(); $('#categoryList2').show(); $('#categoryList3').hide(); });
   $('.j_test_50').on('click', function(e){ e.stopPropagation(); $('#section3').show(); $('#categoryList1').hide(); $('#categoryList2').hide(); $('#categoryList3').show(); $('#section5').hide(); $('#section6').hide(); });
   $('#j_test_51').on('click', function(){ $('#section6').hide(); $('#section2').show(); })
+  $('.j_test_55').on('click', function(){ $(this).parents('.app-filter').hide(); })
 
   $(document).on('click', '.collapsible-heading', function(e){
     e.preventDefault();
