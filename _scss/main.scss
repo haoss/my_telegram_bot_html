@@ -1928,6 +1928,7 @@
   }
   &__btns {
     display: flex;
+    justify-content: flex-end;
   }
   &__btn {
     flex-grow: 1;
