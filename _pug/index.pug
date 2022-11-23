@@ -203,26 +203,56 @@ html(lang="uk")
                   small Дарниця | Украина
                 .search-list__item2-price от 62,68 ₴
               .search-list__item2-btns
-                button(type="button").btn.--accent.--xs
+                button(type="button").btn.--accent.--xs.j_test_45
                   svg.icon
                     use(xlink:href='#cart')
                   span В корзину
+                button(type="button" style="display: none").btn.--accent.--ghost.--xs.--is-active.j_test_45
+                  svg.icon
+                    use(xlink:href='#cart_check')
+                  span В корзине
+                button(type="button").btn.--secondary-alt.--xs
+                  span В аптеках
             .search-list__item2
               .search-list__item2-thumb
                 img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
-              .search-list__item2-text 
-                strong.color Рас
-                | торопши плоды 200г Solution Pharm
-                small Дарниця | Украина
-              .search-list__item2-price от 175,60 ₴
+              .search-list__item2-wrapper
+                .search-list__item2-text 
+                  strong.color Рас
+                  | торопши плоды 200г Solution Pharm
+                  small Дарниця | Украина
+                .search-list__item2-price от 175,60 ₴
+              .search-list__item2-btns
+                button(type="button" style="display: none").btn.--accent.--xs.j_test_45
+                  svg.icon
+                    use(xlink:href='#cart')
+                  span В корзину
+                button(type="button").btn.--accent.--ghost.--xs.--is-active.j_test_45
+                  svg.icon
+                    use(xlink:href='#cart_check')
+                  span В корзине
+                button(type="button").btn.--secondary-alt.--xs
+                  span В аптеках
             .search-list__item2
               .search-list__item2-thumb
                 img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
-              .search-list__item2-text 
-                strong.color Рас
-                | торопши плоды 200г
-                small Дарниця | Украина
-              .search-list__item2-price от 28,90 ₴
+              .search-list__item2-wrapper
+                .search-list__item2-text 
+                  strong.color Рас
+                  | торопши плоды 200г
+                  small Дарниця | Украина
+                .search-list__item2-price от 28,90 ₴
+              .search-list__item2-btns
+                button(type="button").btn.--accent.--xs.j_test_45
+                  svg.icon
+                    use(xlink:href='#cart')
+                  span В корзину
+                button(type="button" style="display: none").btn.--accent.--ghost.--xs.--is-active.j_test_45
+                  svg.icon
+                    use(xlink:href='#cart_check')
+                  span В корзине
+                button(type="button").btn.--secondary-alt.--xs
+                  span В аптеках
             - }
         #appModal3.app-modal(style="display: none")
           .app-modal__wrapper
@@ -538,12 +568,12 @@ html(lang="uk")
         #catalog1(style="display: none")
           include ./_include/_catalog_view_1
           .catalog-more
-            button(type="button").btn
+            button(type="button").btn.--accent.--outline.--block
               span Загрузить еще
         #catalog2
           include ./_include/_catalog_view_2
           .catalog-more
-            button(type="button").btn
+            button(type="button").btn.--accent.--outline.--block
               span Загрузить еще
         #appFilter2.app-filter(style="display: none")
           .app-filter__wrapper

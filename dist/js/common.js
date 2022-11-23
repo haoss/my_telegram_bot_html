@@ -54,7 +54,8 @@ $(document).on('ready', function(){
   $('.j_test_42').on('click', function(){ $(this).prev().removeClass('--more'); $(this).hide(); })
   $('#j_test_43').on('click', function(){ $('#appSaveCart').hide(); });
   $('#j_test_44').on('click', function(){ $('#section1').hide(); $('#section8').show(); });
-  $('.j_test_45').on('click', function(){
+  $('.j_test_45').on('click', function(e){
+    e.stopPropagation();
     var _this = $(this);
     if (_this.hasClass('--is-active')) {
       _this.hide().prev().show();

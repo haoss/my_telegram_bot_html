@@ -31,7 +31,7 @@
     z-index: 1;
   }
   .icon {
-    margin: 0 10px;
+    margin: 0 5px;
     width: 18px;
     height: 18px;
   }
@@ -127,15 +127,27 @@
     color: currentColor;
     &.--secondary {
       color: var(--color-d-1);
+      .icon {
+        fill: var(--color-d-1);
+      }
     }
     &.--secondary-alt {
       color: var(--color-d-1);
+      .icon {
+        fill: var(--color-d-1);
+      }
     }
     &.--accent {
       color: var(--color-d-3);
+      .icon {
+        fill: var(--color-d-3);
+      }
     }
     &.--contrast {
       color: var(--color-d-5);
+      .icon {
+        fill: var(--color-d-5);
+      }
     }
   }
   &.--link {
