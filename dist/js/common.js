@@ -4,7 +4,7 @@
 $(document).on('ready', function(){
 
   $('#j_test_01').on('click', function(){ $('#appButtonStatus').toggle(); $('#checkoutButtonStatus').hide(); })
-  $('#j_test_02').on('click', function(){ $('#youPharmacyLine').show(); $('#appModal1').show(); })
+  $('#j_test_02').on('click', function(){ $('#youPharmacyLine').show(); $('#appModal1').show(); $('.j_test_56').show(); })
   $('.j-app-modal-close-03').on('click', function(){ $(this).parents('.app-modal').hide(); })
   $('#j_test_04').on('click', function(){ $('#appModal1').show(); })
   $('#j_test_05').on('click', function(){ $('#appModal2').show(); })
@@ -68,14 +68,14 @@ $(document).on('ready', function(){
   
   $('.j_test_46').on('click', function(){
     var _this = $(this);
-    var dataCount = parseFloat(_this.data('count'));
+    var dataCount = parseFloat(_this.data('count-test'));
     var count = parseFloat($('.j_test_46').length);
     $('.j_test_46').hide();
       
     if (dataCount < count) {
       _this.next().show();
     } else {
-      $('.j_test_46').filter('[data-count="1"]').show();
+      $('.j_test_46').filter('[data-count-test="1"]').show();
     }
 
     // console.log('кол-во - ' + count + "; " + "текущий " + dataCount);

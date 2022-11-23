@@ -169,14 +169,19 @@
       flex-shrink: 0;
       margin-left: 10px;
     }
+    .color {
+      color: var(--color-d-3);
+    }
   }
   &__item2 {
-    display: flex;
     padding: 20px 20px 20px 100px;
     width: 100%;
     position: relative;
     min-height: 80px;
     font-weight: 500;
+    &-wrapper {
+      display: flex;
+    }
     &-text {
       flex-grow: 1;
       line-height: 1.1;
@@ -201,6 +206,7 @@
       color: var(--color-d-3);
       flex-shrink: 0;
       margin-left: 10px;
+      margin-top: -1px;
     }
     &-thumb {
       width: 60px;
@@ -214,6 +220,20 @@
         height: 60px;
         object-fit: contain;
       }
+    }
+    &-btns {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      .btn {
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    .color {
+      color: var(--color-d-3);
     }
   }
 }
