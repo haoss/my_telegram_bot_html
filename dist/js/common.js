@@ -5,7 +5,6 @@ $(document).on('ready', function(){
 
   $('#j_test_01').on('click', function(){ $('#appButtonStatus').toggle(); $('#checkoutButtonStatus').hide(); })
   $('#j_test_02').on('click', function(){ $('#youPharmacyLine').show(); $('#appModal1').show(); $('.j_test_56').show(); })
-  $('.j-app-modal-close-03').on('click', function(){ $(this).parents('.app-modal').hide(); })
   $('#j_test_04').on('click', function(){ $('#appModal1').show(); })
   $('#j_test_05').on('click', function(){ $('#appModal2').show(); })
   $('#j_test_09').on('click', function(){ $('#appModal3').show(); })
@@ -17,7 +16,12 @@ $(document).on('ready', function(){
   $('#j_test_27').on('click', function(){ $('#appModal8').show(); })
   $('#j_test_28').on('click', function(){ $('#appModal9').show(); })
   
-  $('.j_test_07').on('click', function(){ $('.section').hide(); $('#section2').show(); $('#j_test_14').focus(); })
+  $('.j_test_07').on('click', function(){ 
+    $('.section').hide(); $('#section2').show(); $('#j_test_14').focus(); 
+    setTimeout(function(){
+      $('#appSearchNo').show();
+    }, 400);
+  })
   
   $('#j_test_14').on('click', function(){ $(this).val('Рас').next('.search2__btn-microphone').hide().next('.search2__btn-barcode').hide().next('.search2__btn-close').show(); $('#searchListItem1').hide(); $('#searchListItem2').hide(); $('#searchListItem3').hide(); $('#searchListItem4').show(); $('#searchListItem5').show(); $('#searchListHead').hide(); })
   $('#j_test_15').on('click', function(){ $(this).hide().prev('.search2__btn-barcode').show().prev('.search2__btn-microphone').show().prev().val('').focus(); $('#searchListItem1').show(); $('#searchListItem2').show(); $('#searchListItem3').show(); $('#searchListItem4').hide(); $('#searchListItem5').hide(); $('#searchListHead').show(); $('#section1').show(); $('#section2').hide(); setTimeout(function(){ swiper2 = new Swiper(".j-main-slider", swiper2options); }, 400); })
@@ -52,7 +56,7 @@ $(document).on('ready', function(){
   $('.j_test_39').on('click', function(){ $(this).next().toggle(); })
   $('.j_test_40').on('click', function(){ $(this).hide(); })
   $('.j_test_42').on('click', function(){ $(this).prev().removeClass('--more'); $(this).hide(); })
-  $('#j_test_43').on('click', function(){ $('#appSaveCart').hide(); });
+  $('.j_test_43').on('click', function(){ $(this).parents('.app-modal').hide(); });
   $('#j_test_44').on('click', function(){ $('#section1').hide(); $('#section8').show(); });
   $('.j_test_45').on('click', function(e){
     e.stopPropagation();
@@ -173,7 +177,9 @@ $(document).on('ready', function(){
   $('.test-navigation__btn').on('click', function(){ 
     var _this = $(this);
     var _attr7 = $(this).is("[data-section='section7']");
+    var _attr8 = $(this).is("[data-section='section8']");
     var _attr1 = $(this).is("[data-section='section1']");
+    var _attr2 = $(this).is("[data-section='section2']");
     $('.section').hide(); $('#' + $(this).data('section')).show(); 
     $('.test-navigation__btn').removeClass('active'); 
     $(this).addClass('active'); 
@@ -183,19 +189,24 @@ $(document).on('ready', function(){
       setTimeout(function(){
         $('#appSaveCart').show();
       }, 400);
-    }
-    if (_attr1) {
+      $('#appButtonStatus').hide(); 
+      $('#checkoutButtonStatus').show();
+    } else if (_attr8) {
+      $('#appButtonStatus').show(); 
+      $('#checkoutButtonStatus').hide();
+    } else if (_attr1) {
       setTimeout(function(){
         swiper2 = new Swiper(".j-main-slider", swiper2options);
         // console.log('click');
       }, 400);
-      
+    } else if (_attr2) {
+      setTimeout(function(){
+        $('#appSearchNo').show();
+      }, 400);
     }
   });
 
-  $('.test-navigation__btn[data-section="section7"]').on('click', function(){ $('#appButtonStatus').hide(); $('#checkoutButtonStatus').show(); });
   $('.test-navigation__hide').on('click', function(){ $(this).parent().toggleClass('show'); });
-  $('.test-navigation__btn[data-section="section8"]').on('click', function(){ $('#appButtonStatus').show(); $('#checkoutButtonStatus').hide(); });
   
 });
 
