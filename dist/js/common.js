@@ -198,7 +198,12 @@ $(document).on('ready', function(){
       setTimeout(function(){
         swiper2 = new Swiper(".j-main-slider", swiper2options);
         // console.log('click');
-      }, 400);
+        $('#appPreloader').show(function(){
+          setTimeout(function(){
+            $('#appPreloader').hide();
+          }, 2000);
+        });
+      }, 3000);
     } else if (_attr2) {
       setTimeout(function(){
         $('#appSearchNo').show();

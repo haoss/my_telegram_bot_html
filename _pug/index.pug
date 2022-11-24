@@ -17,7 +17,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v68')
+    link(rel='stylesheet', href='./css/style.min.css?v69')
   
   body 
     #app.app
@@ -38,7 +38,7 @@ html(lang="uk")
         .you-pharmacy-line__text Ваша аптека:
         button(type="button").you-pharmacy-line__btn#j_test_04
           span г. Харьков, просп. Гагарина, 722
-      #section1.section.section1(style="display: none")
+      #section1.section.section1
         .search.--search-main
           button(type="button").search__input.j_test_07 Поиск
           .search__btn-search
@@ -151,7 +151,11 @@ html(lang="uk")
                 .app-modal__head-span Обработка клика
               .app-modal__content-wrapper 
                 p Клик по кнопку Добавить аптеку
-      #section2.section.section2
+        #appPreloader.app-modal(style="display: none")
+          .app-preloader
+            .loader
+            p Подождите...
+      #section2.section.section2(style="display: none")
         form(action="#").search2
           input(type="text" placeholder="Поиск").search2__input#j_test_14
           button(type="button").search2__btn-microphone#j_test_09
@@ -276,14 +280,15 @@ html(lang="uk")
                 p Клик по сканеру штрихкода
         #appSearchNo.app-modal(style="display: none")
           .app-modal-info
-            .app-modal-info__img
+            .app-modal-info__search-img
+              img(src="./tmp/image-search.svg", width="298" height="134" alt="")
             .app-modal-info__content
               p На жаль, ми не змогли знайти - 
                 b.color «Віваіап»
                 | . Перевірте, будь ласка, уважно та спробуйте ще раз ввести Ваш запит
             .app-modal-info__btns
-              button(type="button").btn.--secondary.--ghost.--sm.j_test_43
-                span Ок
+              button(type="button").btn.--secondary.--ghost.--block.--sm.j_test_43
+                span ОК
       #section3.section.section3(style="display: none")
         // Breadcrumbs
         .category-list
@@ -557,15 +562,19 @@ html(lang="uk")
                 button(type="button").sort__dropdown-btn
                   span От дорогих
         .sort-head
-          .catalog-head__count Товаров: 6
-          .div2
-            .catalog-view
-              button(type='button').catalog-view__btn#j_test_52
-                svg.icon
-                  use(xlink:href='#view1')
-              button(type='button').catalog-view__btn.active#j_test_53
-                svg.icon
-                  use(xlink:href='#view2')
+          .sort-head__wrapper
+            .catalog-head__count Товаров: 6
+            .div2
+              .catalog-view
+                button(type='button').catalog-view__btn#j_test_52
+                  svg.icon
+                    use(xlink:href='#view1')
+                button(type='button').catalog-view__btn.active#j_test_53
+                  svg.icon
+                    use(xlink:href='#view2')
+          .sort-head__bottom
+            button(type="button").btn.--block.--secondary-alt
+              span Найти все в аптеках
         #catalog1(style="display: none")
           include ./_include/_catalog_view_1
           .catalog-more
@@ -621,15 +630,19 @@ html(lang="uk")
                 button(type="button").sort__dropdown-btn
                   span От дорогих
         .sort-head
-          .catalog-head__count Товаров: 6
-          .div2
-            .catalog-view
-              button(type='button').catalog-view__btn#j_test_20
-                svg.icon
-                  use(xlink:href='#view1')
-              button(type='button').catalog-view__btn.active#j_test_21
-                svg.icon
-                  use(xlink:href='#view2')
+          .sort-head__wrapper
+            .catalog-head__count Товаров: 6
+            .div2
+              .catalog-view
+                button(type='button').catalog-view__btn#j_test_20
+                  svg.icon
+                    use(xlink:href='#view1')
+                button(type='button').catalog-view__btn.active#j_test_21
+                  svg.icon
+                    use(xlink:href='#view2')
+          .sort-head__bottom
+            button(type="button").btn.--block.--secondary-alt
+              span Найти все в аптеках
         #catalog3(style="display: none")
           include ./_include/_catalog_view_1
         #catalog4
@@ -1381,16 +1394,18 @@ html(lang="uk")
               img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
             .favorites-list__item-text.j_test_22 Расторопши плоды 200г
               small Дарниця | Украина
-            .favorites-list__item-bottom
-              button(type="button").favorites-list__item-btn.j_test_45
+            .favorites-list__item-price от 62,68 ₴
+            .favorites-list__item-btns
+              button(type="button").btn.--accent.--xs.j_test_45
                 svg.icon
                   use(xlink:href='#cart')
                 span В корзину
-              button(type="button" style="display: none").favorites-list__item-btn.--is-active.j_test_45
+              button(type="button" style="display: none").btn.--accent.--ghost.--xs.--is-active.j_test_45
                 svg.icon
                   use(xlink:href='#cart_check')
                 span В корзине
-              .favorites-list__item-price от 62,68 ₴
+              button(type="button").btn.--secondary-alt.--xs
+                span В аптеках
           .favorites-list__item
             button(type="button").favorites-list__item-delete
               svg.icon
@@ -1399,16 +1414,18 @@ html(lang="uk")
               img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
             .favorites-list__item-text.j_test_22 Расторопши плоды 200г Solution Pharm
               small Дарниця | Украина
-            .favorites-list__item-bottom
-              button(type="button" style="display: none").favorites-list__item-btn.j_test_45
+            .favorites-list__item-price от 62,68 ₴
+            .favorites-list__item-btns
+              button(type="button").btn.--accent.--xs.j_test_45
                 svg.icon
                   use(xlink:href='#cart')
                 span В корзину
-              button(type="button").favorites-list__item-btn.--is-active.j_test_45
+              button(type="button" style="display: none").btn.--accent.--ghost.--xs.--is-active.j_test_45
                 svg.icon
                   use(xlink:href='#cart_check')
                 span В корзине
-              .favorites-list__item-price от 62,68 ₴
+              button(type="button").btn.--secondary-alt.--xs
+                span В аптеках
           .favorites-list__item
             button(type="button").favorites-list__item-delete
               svg.icon
@@ -1417,16 +1434,18 @@ html(lang="uk")
               img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
             .favorites-list__item-text.j_test_22 Расторопши плоды 200г Банка
               small Дарниця | Украина
-            .favorites-list__item-bottom
-              button(type="button" style="display: none").favorites-list__item-btn.j_test_45
+            .favorites-list__item-price от 62,68 ₴
+            .favorites-list__item-btns
+              button(type="button").btn.--accent.--xs.j_test_45
                 svg.icon
                   use(xlink:href='#cart')
                 span В корзину
-              button(type="button").favorites-list__item-btn.--is-active.j_test_45
+              button(type="button" style="display: none").btn.--accent.--ghost.--xs.--is-active.j_test_45
                 svg.icon
                   use(xlink:href='#cart_check')
                 span В корзине
-              .favorites-list__item-price от 62,68 ₴
+              button(type="button").btn.--secondary-alt.--xs
+                span В аптеках
           - }
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner
@@ -1443,6 +1462,6 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v47")
+    script(src="./js/common.js?v48")
 
     include ./_include/_svg
