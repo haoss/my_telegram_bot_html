@@ -10,14 +10,14 @@ html(lang="uk")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Telegram bot apteka911
-    script(src='https://tg.dev/js/telegram-web-app.js?1')
+    //- script(src='https://tg.dev/js/telegram-web-app.js?1')
     script.
       function setThemeClass() {
         document.documentElement.className = Telegram.WebApp.colorScheme;
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v69')
+    link(rel='stylesheet', href='./css/style.min.css?v70')
   
   body 
     #app.app
@@ -601,6 +601,7 @@ html(lang="uk")
               button(type="button").btn.--accent
                 span Применить
                 span.app-filter__foot-count 117
+        include ./_include/_back
       #section5.section.section5(style="display: none")
         +breadcrumbs()
           +breadcrumbs-item('Лекарственные препараты')(class="j_test_50")
@@ -663,6 +664,7 @@ html(lang="uk")
               button(type="button").btn.--accent
                 span Применить
                 span.app-filter__foot-count 117
+        include ./_include/_back
       #section6.section.section6(style="display: none")
         +breadcrumbs()
           +breadcrumbs-item('Лекарственные препараты')(class="j_test_50")
@@ -1462,6 +1464,6 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v48")
+    script(src="./js/common.js?v49")
 
     include ./_include/_svg

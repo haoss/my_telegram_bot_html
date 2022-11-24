@@ -215,10 +215,6 @@ $(document).on('ready', function(){
   
 });
 
-// $(window).on('load', function(){
-//   $(".loader").delay(400).fadeOut("slow");
-// });
-
 function inputFocus() {
   var jinput = $(".css-input");
 
