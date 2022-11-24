@@ -195,15 +195,12 @@ $(document).on('ready', function(){
       $('#appButtonStatus').show(); 
       $('#checkoutButtonStatus').hide();
     } else if (_attr1) {
+      $('#appPreloader').show();
       setTimeout(function(){
         swiper2 = new Swiper(".j-main-slider", swiper2options);
         // console.log('click');
-        $('#appPreloader').show(function(){
-          setTimeout(function(){
-            $('#appPreloader').hide();
-          }, 2000);
-        });
-      }, 3000);
+        $('#appPreloader').hide();
+      }, 1000);
     } else if (_attr2) {
       setTimeout(function(){
         $('#appSearchNo').show();
@@ -212,6 +209,12 @@ $(document).on('ready', function(){
   });
 
   $('.test-navigation__hide').on('click', function(){ $(this).parent().toggleClass('show'); });
+
+  $('#backTop').on('click', function(e) {
+    e.preventDefault();
+    $('body, html').animate({ scrollTop: 0 }, 800);
+    return false;
+  });
   
 });
 
