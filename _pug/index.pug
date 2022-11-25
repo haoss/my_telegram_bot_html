@@ -17,7 +17,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v70')
+    link(rel='stylesheet', href='./css/style.min.css?v71')
   
   body 
     #app.app
@@ -32,6 +32,7 @@ html(lang="uk")
         button(type="button" data-section="section6").test-navigation__btn 6
         button(type="button" data-section="section7").test-navigation__btn 7
         button(type="button" data-section="section8").test-navigation__btn 8
+        button(type="button" data-section="section9").test-navigation__btn 9
       #youPharmacyLine.you-pharmacy-line(style="display: none")
         svg.icon
           use(href='#vasha_apteka')
@@ -1096,35 +1097,95 @@ html(lang="uk")
                     .analogs-list__item
                       .analogs-list__item-thumb
                         img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
-                      .analogs-list__item-text Расторопши плоды 200г
-                        small Дарниця | Украина
-                      .analogs-list__item-price от 62,68 ₴
+                      .analogs-list__item-wrapper
+                        .analogs-list__item-text Расторопши плоды 200г
+                          small Дарниця | Украина
+                        .analogs-list__item-price от 62,68 ₴
+                      .analogs-list__item-btns
+                        button(type="button").btn.--accent.--xs.j_test_45
+                          svg.icon
+                            use(xlink:href='#cart')
+                          span В корзину
+                        button(type="button" style="display: none").btn.--accent.--ghost.--xs.--is-active.j_test_45
+                          svg.icon
+                            use(xlink:href='#cart_check')
+                          span В корзине
+                        button(type="button").btn.--secondary-alt.--xs
+                          span В аптеках
                     .analogs-list__item
                       .analogs-list__item-thumb
                         img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
-                      .analogs-list__item-text Расторопши плоды 200г Solution Pharm
-                        small Дарниця | Украина
-                      .analogs-list__item-price от 175,60 ₴
+                      .analogs-list__item-wrapper
+                        .analogs-list__item-text Расторопши плоды 200г Solution Pharm
+                          small Дарниця | Украина
+                        .analogs-list__item-price от 175,60 ₴
+                      .analogs-list__item-btns
+                        button(type="button").btn.--accent.--xs.j_test_45
+                          svg.icon
+                            use(xlink:href='#cart')
+                          span В корзину
+                        button(type="button" style="display: none").btn.--accent.--ghost.--xs.--is-active.j_test_45
+                          svg.icon
+                            use(xlink:href='#cart_check')
+                          span В корзине
+                        button(type="button").btn.--secondary-alt.--xs
+                          span В аптеках
                     .analogs-list__item
                       .analogs-list__item-thumb
                         img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
-                      .analogs-list__item-text Расторопши плоды 200г
-                        small Дарниця | Украина
-                      .analogs-list__item-price от 28,90 ₴
+                      .analogs-list__item-wrapper
+                        .analogs-list__item-text Расторопши плоды 200г
+                          small Дарниця | Украина
+                        .analogs-list__item-price от 28,90 ₴
+                      .analogs-list__item-btns
+                        button(type="button").btn.--accent.--xs.j_test_45
+                          svg.icon
+                            use(xlink:href='#cart')
+                          span В корзину
+                        button(type="button" style="display: none").btn.--accent.--ghost.--xs.--is-active.j_test_45
+                          svg.icon
+                            use(xlink:href='#cart_check')
+                          span В корзине
+                        button(type="button").btn.--secondary-alt.--xs
+                          span В аптеках
                   .analogs-list__head Аналог в других формах выпуска
                   .analogs-list__wrapper
                     .analogs-list__item
                       .analogs-list__item-thumb
                         img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
-                      .analogs-list__item-text Расторопши плоды 200г
-                        small Дарниця | Украина
-                      .analogs-list__item-price от 28,90 ₴
+                      .analogs-list__item-wrapper
+                        .analogs-list__item-text Расторопши плоды 200г
+                          small Дарниця | Украина
+                        .analogs-list__item-price от 28,90 ₴
+                      .analogs-list__item-btns
+                        button(type="button").btn.--accent.--xs.j_test_45
+                          svg.icon
+                            use(xlink:href='#cart')
+                          span В корзину
+                        button(type="button" style="display: none").btn.--accent.--ghost.--xs.--is-active.j_test_45
+                          svg.icon
+                            use(xlink:href='#cart_check')
+                          span В корзине
+                        button(type="button").btn.--secondary-alt.--xs
+                          span В аптеках
                     .analogs-list__item
                       .analogs-list__item-thumb
                         img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
-                      .analogs-list__item-text Расторопши плоды 200г
-                        small Дарниця | Украина
-                      .analogs-list__item-price от 62,68 ₴
+                      .analogs-list__item-wrapper
+                        .analogs-list__item-text Расторопши плоды 200г
+                          small Дарниця | Украина
+                        .analogs-list__item-price от 62,68 ₴
+                      .analogs-list__item-btns
+                        button(type="button").btn.--accent.--xs.j_test_45
+                          svg.icon
+                            use(xlink:href='#cart')
+                          span В корзину
+                        button(type="button" style="display: none").btn.--accent.--ghost.--xs.--is-active.j_test_45
+                          svg.icon
+                            use(xlink:href='#cart_check')
+                          span В корзине
+                        button(type="button").btn.--secondary-alt.--xs
+                          span В аптеках
         #appModal9.app-modal(style="display: none")
           .app-modal__wrapper
             button(type="button").app-modal__close.j_test_43
@@ -1449,6 +1510,97 @@ html(lang="uk")
               button(type="button").btn.--secondary-alt.--xs
                 span В аптеках
           - }
+      #section9.section.section9(style="display: none")
+        +breadcrumbs()
+          +breadcrumbs-item('Экстракт расторопши пятнистой')
+        .pharmacies
+          .catalog-head
+            .catalog-head__title Экстракт расторопши пятнистой. Цена в Харькве
+            button(type="button").category-head__btn.j_test_23
+              svg.icon
+                use(xlink:href='#search_2')
+          .pharmacies__search
+            .search
+              button(type="button").search__input.j_test_07 Ваш адрес, район
+              .search__btn-search
+                svg.icon
+                  use(xlink:href='#target')
+            .pharmacies__search-filter
+              button(type="button").btn.--accent.--xs.j_test_57
+                span По наличию
+              button(type="button").btn.--accent.--outline.--xs.j_test_57
+                span По удаленности
+              button(type="button").btn.--accent.--outline.--xs.j_test_57
+                span По цене
+              button(type="button").btn.--accent.--outline.--xs.j_test_57
+                span Открыто сейчас
+              button(type="button").btn.--accent.--outline.--xs.j_test_57
+                span 24/7
+          .pharmacies-group
+            .pharmacies-list__item
+              .pharmacies-list__item-thumb
+                svg.icon
+                  use(href='#pharmacy_logo_1')
+              .pharmacies-list__item-wrapper
+                .pharmacies-list__item-text Солнышко
+                .pharmacies-list__item-p г. Харьков, просп. Юбилейный, 89
+                .pharmacies-list__item-p Пн-Вс: 8:00-21:00
+            include ./_include/_catalog_view_3
+          .pharmacies-group
+            .pharmacies-list__item
+              .pharmacies-list__item-thumb
+                svg.icon
+                  use(href='#pharmacy_logo_2')
+              .pharmacies-list__item-wrapper
+                .pharmacies-list__item-text Новые дома
+                .pharmacies-list__item-p г. Харьков, просп. Юбилейный, 89
+                .pharmacies-list__item-p Пн-Вс: 8:00-21:00
+            include ./_include/_catalog_view_3
+          .pharmacies-group
+            .pharmacies-list__item
+              .pharmacies-list__item-thumb
+                svg.icon
+                  use(href='#pharmacy_logo_3')
+              .pharmacies-list__item-wrapper
+                .pharmacies-list__item-text Центральная №2
+                .pharmacies-list__item-p г. Харьков, просп. Юбилейный, 89
+                .pharmacies-list__item-p Пн-Вс: 8:00-21:00
+            include ./_include/_catalog_view_3
+          .pharmacies-group
+            .pharmacies-list__item
+              .pharmacies-list__item-thumb
+                svg.icon
+                  use(href='#pharmacy_logo_4')
+              .pharmacies-list__item-wrapper
+                .pharmacies-list__item-text Центральная №3
+                .pharmacies-list__item-p г. Харьков, ул. Валентиновская, 21
+                .pharmacies-list__item-p Пн-Пт: 08:00-19:00; Сб-Вс: 08:00-18:00
+            include ./_include/_catalog_view_3
+        include ./_include/_back
+        .menu
+          button(type="button").menu__btn
+            svg.icon
+              use(href='#menu_color')
+            //- svg.icon
+            //-   use(href='#menu_color_2')
+            span Меню
+          .menu__wrapper
+            button(type="button").menu__btn.--your-pharmacy#j_test_02
+              svg.icon
+                use(xlink:href='#vasha_apteka')
+              span Ваша аптека
+            button(type="button").menu__btn.--catalog#j_test_19
+              svg.icon
+                use(xlink:href='#catalog')
+              span Каталог товаров
+            button(type="button").menu__btn.--favorites#j_test_44
+              svg.icon
+                use(xlink:href='#favorites')
+              span Избранные товары
+            button(type="button").menu__btn.--settings#j_test_05
+              svg.icon
+                use(xlink:href='#settings')
+              span Настройки
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner
           span.app-button-status__count 5
@@ -1464,6 +1616,6 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v50")
+    script(src="./js/common.js?v51")
 
     include ./_include/_svg

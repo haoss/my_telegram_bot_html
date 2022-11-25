@@ -9,6 +9,7 @@
     width: 100%;
     position: relative;
     min-height: 80px;
+    margin-bottom: -1px;
     &-wrapper {
       display: flex;
     }
@@ -30,6 +31,11 @@
       height: 1px;
       left: 100px;
       background: var(--color-l-3);
+    }
+    &:last-child {
+      &::before {
+        display: none;
+      }
     }
     &-price {
       font-size: 13px;
@@ -214,6 +220,79 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+  }
+}
+
+.pharmacies {
+  .catalog-head {
+    box-shadow: none;
+    border-bottom: 1px solid var(--color-l-3);
+  }
+  .search {
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+  }
+  &__search {
+    padding: 15px 20px;
+    border-bottom: 10px solid var(--color-l-2);
+    &-filter {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -10px;
+      .btn {
+        margin-top: 10px;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+.pharmacies-group {
+  border-bottom: 10px solid var(--color-l-2);
+}
+.pharmacies-list {
+  &__item {
+    padding: 20px 20px 20px 100px;
+    width: 100%;
+    position: relative;
+    min-height: 80px;
+    &-text {
+      flex-grow: 1;
+      line-height: 1.2;
+    }
+    &-p {
+      color: var(--color-d-7);
+      font-weight: 400;
+      font-size: 13px;
+      margin-top: 8px;
+      line-height: 1.1;
+      &+[class*="-p"] {
+        margin-top: 4px;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      left: 0px;
+      background: var(--color-l-3);
+    }
+    &-thumb {
+      width: 60px;
+      flex-shrink: 0;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      overflow: hidden;
+      .icon, img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+      }
     }
   }
 }

@@ -497,9 +497,9 @@
 
 .analogs-list {
   margin: -30px -20px;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
   &__wrapper {
-    padding-bottom: 5px;
+    padding-bottom: 0px;
   }
   &__head {
     font-size: 14px;
@@ -508,12 +508,14 @@
     font-weight: 500;
   }
   &__item {
-    display: flex;
     padding: 20px 20px 20px 100px;
     width: 100%;
     position: relative;
     min-height: 80px;
     font-weight: 500;
+    &-wrapper {
+      display: flex;
+    }
     &-text {
       flex-grow: 1;
       line-height: 1.1;
@@ -538,6 +540,7 @@
       color: var(--color-d-3);
       flex-shrink: 0;
       margin-left: 10px;
+      margin-top: -1px;
     }
     &-thumb {
       width: 60px;
@@ -550,6 +553,18 @@
         width: 60px;
         height: 60px;
         object-fit: contain;
+      }
+    }
+    &-btns {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .btn {
+        margin-top: 10px;
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }
@@ -1711,14 +1726,14 @@
       border-radius: 7px;
       font-size: 12px;
       background: var(--color-d-3);
-      color: var(--block-bg-color);
+      color: var(--tg-theme-bg-color);
       font-weight: normal;
       .icon {
         flex-shrink: 0;
         width: 18px;
         height: 18px;
         margin-right: 10px;
-        fill: var(--block-bg-color);
+        fill: var(--tg-theme-bg-color);
       }
     }
     &-price {
@@ -1904,11 +1919,10 @@
   width: 40px;
   border-radius: 50%;
   overflow: hidden;
-  color: var(--color-d-6);
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
   right: 20px;
   bottom: 67px;
-  z-index: 10;
+  z-index: 3;
   text-align: center;
   padding: 0;
   border: 0;
@@ -1918,7 +1932,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-white);
+  background: var(--tg-theme-bg-color);
   .icon {
     transform-origin: 50%;
     width: 18px;
@@ -1935,4 +1949,79 @@
 .back-top.is-visible {
   opacity: 1;
   visibility: visible
+}
+
+.menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  z-index: 3;
+  background: var(--tg-theme-bg-color);
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__btn {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 11px;
+    text-align: center;
+    position: relative;
+    font-weight: 700;
+    &::before {
+      content: '';
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+    svg {
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      position: relative;
+      z-index: 4;
+      margin: 10px;
+      fill: var(--color-white);
+      &+span {
+        margin-top: 7px;
+        line-height: 1.2;
+        width: 70px;
+      }
+    }
+    &.--your-pharmacy {
+      &::before {
+        background: var(--color-d-3);
+      }
+    }
+    &.--catalog {
+      &::before {
+        background: var(--color-d-2);
+      }
+    }
+    &.--settings {
+      &::before {
+        background: var(--color-d-4);
+      }
+    }
+    &.--favorites {
+      &::before {
+        background: var(--color-d-5);
+      }
+    }
+  }
 }

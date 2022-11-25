@@ -121,7 +121,7 @@
       left: 2px;
       right: 2px;
       height: 20px;
-      background: linear-gradient(to top, rgba(255,255,255,0) 5px, var(--tg-theme-bg-color) 17px);
+      background: linear-gradient(to top, rgba(var(--tg-theme-bg-color-rgb),0) 5px, var(--tg-theme-bg-color) 17px);
       border-radius: 25px 25px 0 0;
       z-index: 2;
     }

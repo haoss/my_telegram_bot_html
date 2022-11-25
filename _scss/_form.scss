@@ -98,7 +98,7 @@
   display: block;
   $this: &;
   &:has(.field-text__input:focus) {
-    color: var(--color-red);
+    color: var(--color-black-reverse);
   }
   &__name {
     color: var(--color-d-7);
@@ -302,7 +302,7 @@ textarea.field-text__input {
   }
   &.--warning {
     background: var(--color-d-4);
-    color: var(--block-bg-color);
+    color: var(--tg-theme-bg-color);
   }
   &.--success {
     background: #C4E8C8;
