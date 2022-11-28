@@ -17,7 +17,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v71')
+    link(rel='stylesheet', href='./css/style.min.css?v72')
   
   body 
     #app.app
@@ -63,19 +63,19 @@ html(lang="uk")
         .section1__navigation
           .section1__navigation-round
           .section1__navigation-wrapper
-            button(type="button").section1__navigation-btn.--your-pharmacy#j_test_02
+            button(type="button").section1__navigation-btn.--your-pharmacy.j_test_02
               svg.icon
                 use(xlink:href='#vasha_apteka')
               span Ваша аптека
-            button(type="button").section1__navigation-btn.--catalog#j_test_19
+            button(type="button").section1__navigation-btn.--catalog.j_test_19
               svg.icon
                 use(xlink:href='#catalog')
               span Каталог товаров
-            button(type="button").section1__navigation-btn.--favorites#j_test_44
+            button(type="button").section1__navigation-btn.--favorites.j_test_44
               svg.icon
                 use(xlink:href='#favorites')
               span Избранные товары
-            button(type="button").section1__navigation-btn.--settings#j_test_05
+            button(type="button").section1__navigation-btn.--settings.j_test_05
               svg.icon
                 use(xlink:href='#settings')
               span Настройки
@@ -1576,31 +1576,38 @@ html(lang="uk")
                 .pharmacies-list__item-p г. Харьков, ул. Валентиновская, 21
                 .pharmacies-list__item-p Пн-Пт: 08:00-19:00; Сб-Вс: 08:00-18:00
             include ./_include/_catalog_view_3
-        include ./_include/_back
-        .menu
-          button(type="button").menu__btn
-            svg.icon
-              use(href='#menu_color')
-            //- svg.icon
-            //-   use(href='#menu_color_2')
-            span Меню
-          .menu__wrapper
-            button(type="button").menu__btn.--your-pharmacy#j_test_02
+        .section-bottom
+          include ./_include/_back
+          .menu
+            button(type="button").menu__btn-top.j_test_58
               svg.icon
-                use(xlink:href='#vasha_apteka')
-              span Ваша аптека
-            button(type="button").menu__btn.--catalog#j_test_19
+                use(href='#menu_color')
+              span Меню
+            button(type="button" style="display: none").menu__btn-top.j_test_59
               svg.icon
-                use(xlink:href='#catalog')
-              span Каталог товаров
-            button(type="button").menu__btn.--favorites#j_test_44
-              svg.icon
-                use(xlink:href='#favorites')
-              span Избранные товары
-            button(type="button").menu__btn.--settings#j_test_05
-              svg.icon
-                use(xlink:href='#settings')
-              span Настройки
+                use(href='#menu_color_2')
+              span Закрыть меню
+            .menu__wrapper(style="display: none")
+              button(type="button").menu__btn.--home.j_test_60
+                svg.icon
+                  use(xlink:href='#home')
+                span Главная
+              button(type="button").menu__btn.--your-pharmacy.j_test_02
+                svg.icon
+                  use(xlink:href='#vasha_apteka')
+                span Ваша аптека
+              button(type="button").menu__btn.--catalog.j_test_19
+                svg.icon
+                  use(xlink:href='#catalog')
+                span Каталог товаров
+              button(type="button").menu__btn.--favorites.j_test_44
+                svg.icon
+                  use(xlink:href='#favorites')
+                span Избранные товары
+              button(type="button").menu__btn.--settings.j_test_05
+                svg.icon
+                  use(xlink:href='#settings')
+                span Настройки
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner
           span.app-button-status__count 5
@@ -1616,6 +1623,6 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v51")
+    script(src="./js/common.js?v52")
 
     include ./_include/_svg

@@ -13,7 +13,7 @@
             Telegram.WebApp.onEvent('themeChanged', setThemeClass);
             setThemeClass();
         </script>
-        <link rel="stylesheet" href="./css/style.min.css?v71">
+        <link rel="stylesheet" href="./css/style.min.css?v72">
     </head>
     <body> 
         <div class="app" id="app">
@@ -68,22 +68,22 @@
                 <div class="section1__navigation">
                     <div class="section1__navigation-round"></div>
                     <div class="section1__navigation-wrapper">
-                        <button class="section1__navigation-btn --your-pharmacy" type="button" id="j_test_02">
+                        <button class="section1__navigation-btn --your-pharmacy j_test_02" type="button">
                             <svg class="icon">
                                 <use xlink:href="#vasha_apteka"></use>
                             </svg><span>Ваша аптека</span>
                         </button>
-                        <button class="section1__navigation-btn --catalog" type="button" id="j_test_19">
+                        <button class="section1__navigation-btn --catalog j_test_19" type="button">
                             <svg class="icon">
                                 <use xlink:href="#catalog"></use>
                             </svg><span>Каталог товаров</span>
                         </button>
-                        <button class="section1__navigation-btn --favorites" type="button" id="j_test_44">
+                        <button class="section1__navigation-btn --favorites j_test_44" type="button">
                             <svg class="icon">
                                 <use xlink:href="#favorites"></use>
                             </svg><span>Избранные товары</span>
                         </button>
-                        <button class="section1__navigation-btn --settings" type="button" id="j_test_05">
+                        <button class="section1__navigation-btn --settings j_test_05" type="button">
                             <svg class="icon">
                                 <use xlink:href="#settings"></use>
                             </svg><span>Настройки</span>
@@ -4914,38 +4914,50 @@
                         </div>
                     </div>
                 </div>
-                <button class="back-top is-visible" id="backTop" type="button" role="button">
-                    <svg class="icon">
-                        <use xlink:href="#arrow_right"></use>
-                    </svg>
-                </button>
-                <div class="menu">
-                    <button class="menu__btn" type="button">
+                <div class="section-bottom">
+                    <button class="back-top is-visible" id="backTop" type="button" role="button">
                         <svg class="icon">
-                            <use href="#menu_color"></use>
-                        </svg><span>Меню</span>
+                            <use xlink:href="#arrow_right"></use>
+                        </svg>
                     </button>
-                    <div class="menu__wrapper">
-                        <button class="menu__btn --your-pharmacy" type="button" id="j_test_02">
+                    <div class="menu">
+                        <button class="menu__btn-top j_test_58" type="button">
                             <svg class="icon">
-                                <use xlink:href="#vasha_apteka"></use>
-                            </svg><span>Ваша аптека</span>
+                                <use href="#menu_color"></use>
+                            </svg><span>Меню</span>
                         </button>
-                        <button class="menu__btn --catalog" type="button" id="j_test_19">
+                        <button class="menu__btn-top j_test_59" type="button" style="display: none">
                             <svg class="icon">
-                                <use xlink:href="#catalog"></use>
-                            </svg><span>Каталог товаров</span>
+                                <use href="#menu_color_2"></use>
+                            </svg><span>Закрыть меню</span>
                         </button>
-                        <button class="menu__btn --favorites" type="button" id="j_test_44">
-                            <svg class="icon">
-                                <use xlink:href="#favorites"></use>
-                            </svg><span>Избранные товары</span>
-                        </button>
-                        <button class="menu__btn --settings" type="button" id="j_test_05">
-                            <svg class="icon">
-                                <use xlink:href="#settings"></use>
-                            </svg><span>Настройки</span>
-                        </button>
+                        <div class="menu__wrapper" style="display: none">
+                            <button class="menu__btn --home j_test_60" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#home"></use>
+                                </svg><span>Главная</span>
+                            </button>
+                            <button class="menu__btn --your-pharmacy j_test_02" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#vasha_apteka"></use>
+                                </svg><span>Ваша аптека</span>
+                            </button>
+                            <button class="menu__btn --catalog j_test_19" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#catalog"></use>
+                                </svg><span>Каталог товаров</span>
+                            </button>
+                            <button class="menu__btn --favorites j_test_44" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#favorites"></use>
+                                </svg><span>Избранные товары</span>
+                            </button>
+                            <button class="menu__btn --settings j_test_05" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#settings"></use>
+                                </svg><span>Настройки</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -4958,7 +4970,7 @@
         <script src="./js/ion.rangeSlider/ion.rangeSlider.js"></script>
         <script src="./js/autosize/autosize.js"></script>
         <script src="./js/gsap.min.js"></script>
-        <script src="./js/common.js?v51"></script>
+        <script src="./js/common.js?v52"></script>
         <svg width="0" height="0" style="display: none">
             <symbol id="settings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2337 7.125H3.75C3.33579 7.125 3 7.46079 3 7.875C3 8.28921 3.33579 8.625 3.75 8.625H7.2337C7.55641 9.70931 8.56087 10.5 9.75 10.5C10.9391 10.5 11.9436 9.70931 12.2663 8.625H20.25C20.6642 8.625 21 8.28921 21 7.875C21 7.46079 20.6642 7.125 20.25 7.125H12.2663C11.9436 6.04069 10.9391 5.25 9.75 5.25C8.56087 5.25 7.55641 6.04069 7.2337 7.125ZM8.625 7.875C8.625 7.25368 9.12868 6.75 9.75 6.75C10.3713 6.75 10.875 7.25368 10.875 7.875C10.875 8.49632 10.3713 9 9.75 9C9.12868 9 8.625 8.49632 8.625 7.875Z"></path>
@@ -5305,6 +5317,9 @@
                         <path d="M0 0h16v16H0z"></path>
                     </clipPath>
                 </defs>
+            </symbol>
+            <symbol id="home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M20.4 19.97v-9.49c0-.46-.2-.9-.51-1.2L13.03 2.8a1.48 1.48 0 0 0-2.06 0L4.12 9.27c-.33.3-.52.75-.52 1.21v9.5c0 .93.72 1.62 1.54 1.62H8.4v-6.68c0-.99.8-1.8 1.8-1.8h3.6c1 0 1.8.81 1.8 1.8v6.68h3.26c.82 0 1.54-.7 1.54-1.63ZM3.3 8.4c-.58.53-.9 1.29-.9 2.08v9.5a2.79 2.79 0 0 0 2.74 2.82h4.1c.2 0 .36-.16.36-.36v-7.52c0-.33.27-.6.6-.6h3.6c.33 0 .6.27.6.6v7.52c0 .2.16.36.36.36h4.1a2.79 2.79 0 0 0 2.74-2.83v-9.49c0-.79-.32-1.55-.9-2.08l-6.85-6.46a2.68 2.68 0 0 0-3.7 0L3.29 8.4Z" clip-rule="evenodd"></path>
             </symbol>
         </svg>
     </body>
