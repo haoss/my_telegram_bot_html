@@ -68,17 +68,17 @@
   &.--primary {
     background-color: var(--color-d-6);
     border-color: var(--color-d-6);
-    color: var(--color-white);
+    color: var(--tg-theme-bg-color);
     .icon {
-      fill: var(--color-white);
+      fill: var(--tg-theme-bg-color);
     }
   }
   &.--secondary {
     background-color: var(--color-d-1);
     border-color: var(--color-d-1);
-    color: var(--color-white);
+    color: var(--tg-theme-bg-color);
     .icon {
-      fill: var(--color-white);
+      fill: var(--tg-theme-bg-color);
     }
   }
   &.--secondary-alt {
@@ -92,21 +92,21 @@
   &.--accent {
     background-color: var(--color-d-3);
     border-color: var(--color-d-3);
-    color: var(--color-white);
+    color: var(--tg-theme-bg-color);
     .icon {
-      fill: var(--color-white);
+      fill: var(--tg-theme-bg-color);
     }
   }
   &.--contrast {
     background-color: var(--color-d-5);
     border-color: var(--color-d-5);
-    color: var(--color-white);
+    color: var(--tg-theme-bg-color);
     .icon {
-      fill: var(--color-white);
+      fill: var(--tg-theme-bg-color);
     }
   }
   &.--outline {
-    background-color: var(--color-white);
+    background-color: var(--tg-theme-bg-color);
     color: currentColor;
     &.--secondary {
       color: var(--color-d-1);
@@ -122,8 +122,8 @@
     }
   }
   &.--ghost {
-    background-color: var(--color-white);
-    border-color: var(--color-white);
+    background-color: var(--tg-theme-bg-color);
+    border-color: var(--tg-theme-bg-color);
     color: currentColor;
     &.--secondary {
       color: var(--color-d-1);
