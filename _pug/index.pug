@@ -17,7 +17,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v86')
+    link(rel='stylesheet', href='./css/style.min.css?v87')
   
   body 
     #app.app
@@ -630,6 +630,11 @@ html(lang="uk")
                 svg.icon
                   use(xlink:href='#document')
               span Инструкция
+            button(type="button").product-menu__btn
+              .product-menu__btn-icon.--availability
+                svg.icon
+                  use(xlink:href='#map')
+              span Наличие в аптеках (107)
             button(type="button").product-menu__btn#j_test_27
               .product-menu__btn-icon.--analogs
                 svg.icon
@@ -638,7 +643,7 @@ html(lang="uk")
             button(type="button").product-menu__btn#j_test_28
               .product-menu__btn-icon.--comment
                 svg.icon
-                  use(xlink:href='#vasha_apteka')
+                  use(xlink:href='#chat')
               span Отзывы
         #appModal6.app-modal(style="display: none")
           .app-modal__wrapper
@@ -1070,7 +1075,7 @@ html(lang="uk")
               .app-modal__head
                 .app-modal__head-icon.--your-pharmacy
                   svg.icon
-                    use(xlink:href='#vasha_apteka')
+                    use(xlink:href='#chat')
                 .app-modal__head-span Отзывы
               .app-modal__content-wrapper 
                 // Review form
@@ -1302,7 +1307,6 @@ html(lang="uk")
               span 
                 span.color.--warning Нет товара
           - }
-        
       #section8.section.section8(style="display: none")
         .search
           button(type="button").search__input.j_test_07 Поиск

@@ -977,8 +977,7 @@
 }
 
 .product-menu {
-  box-shadow: 0px 5px 10px rgba(var(--color-black-rgba), 0.14), 0px 1px 18px rgba(var(--color-black-rgba), 0.12), 0px 3px 5px rgba(var(--color-black-rgba), 0.2);
-  border-radius: 20px 20px 0px 0px;
+  border-top: 1px solid var(--color-l-3);
   padding: 10px 0;
   margin: 0 -20px -20px -20px;
   flex-grow: 1;
@@ -1007,6 +1006,9 @@
       }
       &.--document {
         background: var(--color-d-5);
+      }
+      &.--availability {
+        background: var(--color-d-1);
       }
       &.--basic {
         background: var(--color-d-2);
