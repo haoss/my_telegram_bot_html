@@ -536,6 +536,8 @@ html(lang="uk")
               .category-list__item2-arrow
                 svg.icon
                   use(xlink:href='#arrow_right')
+        .section-bottom
+          include ./_include/_menu
       #section4.section.section4(style="display: none")
         .catalog-head
           .catalog-head__title «Расторопша»
@@ -574,7 +576,7 @@ html(lang="uk")
                   svg.icon
                     use(xlink:href='#view2')
           .sort-head__bottom
-            button(type="button").btn.--block.--secondary-alt
+            button(type="button").btn.--block.--secondary-alt.j_test_61
               span Найти все в аптеках
         #catalog1(style="display: none")
           include ./_include/_catalog_view_1
@@ -602,7 +604,9 @@ html(lang="uk")
               button(type="button").btn.--accent
                 span Применить
                 span.app-filter__foot-count 117
-        include ./_include/_back
+        .section-bottom
+          include ./_include/_back
+          include ./_include/_menu
       #section5.section.section5(style="display: none")
         +breadcrumbs()
           +breadcrumbs-item('Лекарственные препараты')(class="j_test_50")
@@ -643,7 +647,7 @@ html(lang="uk")
                   svg.icon
                     use(xlink:href='#view2')
           .sort-head__bottom
-            button(type="button").btn.--block.--secondary-alt
+            button(type="button").btn.--block.--secondary-alt.j_test_61
               span Найти все в аптеках
         #catalog3(style="display: none")
           include ./_include/_catalog_view_1
@@ -1578,36 +1582,7 @@ html(lang="uk")
             include ./_include/_catalog_view_3
         .section-bottom
           include ./_include/_back
-          .menu
-            button(type="button").menu__btn-top.j_test_58
-              svg.icon
-                use(href='#menu_color')
-              span Меню
-            button(type="button" style="display: none").menu__btn-top.j_test_59
-              svg.icon
-                use(href='#menu_color_2')
-              span Закрыть меню
-            .menu__wrapper(style="display: none")
-              button(type="button").menu__btn.--home.j_test_60
-                svg.icon
-                  use(xlink:href='#home')
-                span Главная
-              button(type="button").menu__btn.--your-pharmacy.j_test_02
-                svg.icon
-                  use(xlink:href='#vasha_apteka')
-                span Ваша аптека
-              button(type="button").menu__btn.--catalog.j_test_19
-                svg.icon
-                  use(xlink:href='#catalog')
-                span Каталог товаров
-              button(type="button").menu__btn.--favorites.j_test_44
-                svg.icon
-                  use(xlink:href='#favorites')
-                span Избранные товары
-              button(type="button").menu__btn.--settings.j_test_05
-                svg.icon
-                  use(xlink:href='#settings')
-                span Настройки
+          include ./_include/_menu
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner
           span.app-button-status__count 5

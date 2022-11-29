@@ -41,7 +41,7 @@ $(document).on('ready', function(){
   $('#j_test_41').on('click', function(){ $('.section').hide(); $('#section2').show(); })
   $('#categoryList1').on('click', function(){ $(this).hide(); $('#categoryList2').show(); })
   $('#categoryList2').on('click', function(){ $(this).hide(); $('#categoryList3').show(); })
-  $('#categoryList3').on('click', function(){ $(this).hide(); $('#categoryList1').show(); $('#section3').hide(); $('#section5').show(); })
+  $('#categoryList3').on('click', function(){ $(this).hide(); $('#categoryList1').show(); $('.section').hide(); $('#section5').show(); })
 
   $('.j_test_24 > *:not(.disabled)').on('click', function(){ $(this).parent().children().removeClass('active'); $(this).addClass('active'); })
   $('#j_test_29').on('click', function(){ $(this).toggleClass('active'); $('#appButtonStatus').show(); $('#checkoutButtonStatus').hide(); })
@@ -90,7 +90,7 @@ $(document).on('ready', function(){
   $('.j_test_48').on('click', function(e){ e.stopPropagation(); $('#categoryList1').show(); $('#categoryList2').hide(); });
   $('.j_test_49').on('click', function(e){ e.stopPropagation(); $('#categoryList2').show(); $('#categoryList3').hide(); });
   $('.j_test_50').on('click', function(e){ e.stopPropagation(); $('#section3').show(); $('#categoryList1').hide(); $('#categoryList2').hide(); $('#categoryList3').show(); $('#section5').hide(); $('#section6').hide(); });
-  $('#j_test_51').on('click', function(){ $('#section6').hide(); $('#section2').show(); })
+  $('#j_test_51').on('click', function(){ $('.section').hide(); $('#section2').show(); })
   $('.j_test_55').on('click', function(){ $(this).parents('.app-filter').hide(); })
   $('.j_test_57').on('click', function(){ 
     $(this).parent().find('.btn').addClass('--outline');
@@ -111,6 +111,7 @@ $(document).on('ready', function(){
     $('.j_test_58').show();
     $('.j_test_59').hide();
   });
+  $('.j_test_61').on('click', function(){ $('.section').hide(); $('#section9').show(); });
 
   $(document).on('click', '.collapsible-heading', function(e){
     e.preventDefault();

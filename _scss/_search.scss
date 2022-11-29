@@ -73,7 +73,7 @@
 }
 
 .search2 {
-  position: fixed;
+  position: sticky;
   z-index: 25;
   top: 0;
   left: 0;
@@ -120,7 +120,7 @@
 }
 
 .search-list {
-  padding-top: 70px;
+  padding-top: 0px;
   padding-bottom: 10px;
   &__head {
     font-size: 14px;
