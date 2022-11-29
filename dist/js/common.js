@@ -70,7 +70,7 @@ $(document).on('ready', function(){
     $('#appButtonStatus').show();
     $('.section-bottom').css('bottom', '47px');
   });
-  $('#appButtonStatus').on('click', function(){ $(this).hide(); $('.section').hide(); $('#section7').show(); });
+  $('#appButtonStatus').on('click', function(){ $(this).hide(); $('.section').hide(); $('#section7').show(); $('.section-bottom').css('bottom', '0px'); });
   
   $('.j_test_46').on('click', function(){
     var _this = $(this);
