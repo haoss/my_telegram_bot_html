@@ -3,7 +3,7 @@
 // Document ready
 $(document).on('ready', function(){
 
-  $('#j_test_01').on('click', function(){ $('#appButtonStatus').toggle(); $('#checkoutButtonStatus').hide(); })
+  // $('#j_test_01').on('click', function(){ $('#appButtonStatus').toggle(); $('#checkoutButtonStatus').hide(); })
   $('.j_test_02').on('click', function(){ $('#youPharmacyLine').show(); $('#appModal1').show(); $('.j_test_56').show(); })
   $('#j_test_04').on('click', function(){ $('#appModal1').show(); })
   $('.j_test_05').on('click', function(){ $('#appModal2').show(); })
@@ -21,7 +21,7 @@ $(document).on('ready', function(){
     setTimeout(function(){
       $('#appSearchNo').show();
     }, 400);
-  })
+  });
   
   $('#j_test_14').on('click', function(){ $(this).val('Рас').next('.search2__btn-microphone').hide().next('.search2__btn-barcode').hide().next('.search2__btn-close').show(); $('#searchListItem1').hide(); $('#searchListItem2').hide(); $('#searchListItem3').hide(); $('#searchListItem4').show(); $('#searchListItem5').show(); $('#searchListHead').hide(); })
   $('#j_test_15').on('click', function(){ $(this).hide().prev('.search2__btn-barcode').show().prev('.search2__btn-microphone').show().prev().val('').focus(); $('#searchListItem1').show(); $('#searchListItem2').show(); $('#searchListItem3').show(); $('#searchListItem4').hide(); $('#searchListItem5').hide(); $('#searchListHead').show(); $('#section1').show(); $('#section2').hide(); setTimeout(function(){ swiper2 = new Swiper(".j-main-slider", swiper2options); }, 400); })
@@ -44,7 +44,7 @@ $(document).on('ready', function(){
   $('#categoryList3').on('click', function(){ $(this).hide(); $('#categoryList1').show(); $('.section').hide(); $('#section5').show(); })
 
   $('.j_test_24 > *:not(.disabled)').on('click', function(){ $(this).parent().children().removeClass('active'); $(this).addClass('active'); })
-  $('#j_test_29').on('click', function(){ $(this).toggleClass('active'); $('#appButtonStatus').show(); $('#checkoutButtonStatus').hide(); })
+  $('#j_test_29').on('click', function(){ $(this).toggleClass('active'); $('#appButtonStatus').show(); $('#checkoutButtonStatus').hide(); $('.section-bottom').css('bottom', '47px'); })
   $('#j_test_30').on('click', function(){ $(this).hide(); $('#reviewForm').show(); })
   $('#j_test_31').on('click', function(){ $('#j_test_30').show(); $('#reviewForm').hide(); })
   $('#j_test_32').on('click', function(){ $('#mssgSuccess').show(); $('#j_test_30').show(); $('#reviewForm').hide(); })
@@ -68,6 +68,7 @@ $(document).on('ready', function(){
     }
     $('#checkoutButtonStatus').hide();
     $('#appButtonStatus').show();
+    $('.section-bottom').css('bottom', '47px');
   });
   $('#appButtonStatus').on('click', function(){ $(this).hide(); $('.section').hide(); $('#section7').show(); });
   
@@ -211,9 +212,11 @@ $(document).on('ready', function(){
       }, 400);
       $('#appButtonStatus').hide(); 
       $('#checkoutButtonStatus').show();
+      $('.section-bottom').css('bottom', '47px');
     } else if (_attr8) {
       $('#appButtonStatus').show(); 
       $('#checkoutButtonStatus').hide();
+      $('.section-bottom').css('bottom', '47px');
     } else if (_attr1) {
       $('#appPreloader').show();
       setTimeout(function(){

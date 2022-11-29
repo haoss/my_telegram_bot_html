@@ -17,7 +17,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v73')
+    link(rel='stylesheet', href='./css/style.min.css?v74')
   
   body 
     #app.app
@@ -52,8 +52,6 @@ html(lang="uk")
             svg.icon
               use(xlink:href='#barcode')
         .section1__wrapper
-          //- button(type="button").btn-buy#j_test_01
-          //-   span Купить
           .section1__slider.j-main-slider
             .swiper-wrapper
               .swiper-slide(data-img="./tmp/img-slider-1-ua.svg")
@@ -1380,7 +1378,7 @@ html(lang="uk")
               button(type="button").btn.--secondary-alt.--xs
                 span В аптеках
           - }
-      #section9.section.section9(style="display: none")
+      #section9.section.section9(style="padding-bottom: 47px; display: none")
         +breadcrumbs()
           +breadcrumbs-item('Экстракт расторопши пятнистой')
         .pharmacies
@@ -1598,6 +1596,6 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v53")
+    script(src="./js/common.js?v54")
 
     include ./_include/_svg
