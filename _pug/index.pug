@@ -17,7 +17,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v87')
+    link(rel='stylesheet', href='./css/style.min.css?v88')
   
   body 
     #app.app
@@ -33,6 +33,7 @@ html(lang="uk")
         button(type="button" data-section="section7").test-navigation__btn 7
         button(type="button" data-section="section8").test-navigation__btn 8
         button(type="button" data-section="section9").test-navigation__btn 9
+        button(type="button" data-section="section10").test-navigation__btn 10
       #youPharmacyLine.you-pharmacy-line(style="display: none")
         svg.icon
           use(href='#vasha_apteka')
@@ -1451,6 +1452,26 @@ html(lang="uk")
         .section-bottom
           include ./_include/_back
           include ./_include/_menu
+      #section10.section.section10(style="display: none")
+        form(action="#").search2
+          input(type="text" placeholder="Название города или улицы" value="Харьк").search2__input
+          button(type="button").search2__btn-close
+            svg.icon
+              use(xlink:href='#close')
+        .search-list
+          .search-list__wrapper
+            .search-list__item3
+              .search-list__item3-text Харьков
+                small Харьков, Харьковская обл.
+            .search-list__item3
+              .search-list__item3-text Харьково
+                small Запорожская обл., Токмакский р-н
+            .search-list__item3
+              .search-list__item3-text Харьково
+                small Чергниговская обл., Талалаевский р-н
+            .search-list__item3
+              .search-list__item3-text Харьковка
+                small Сумская обл., Глуховский р-н
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner
           span.app-button-status__count 5
@@ -1600,6 +1621,6 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v55")
+    script(src="./js/common.js?v56")
 
     include ./_include/_svg
