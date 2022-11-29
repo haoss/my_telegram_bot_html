@@ -17,7 +17,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v72')
+    link(rel='stylesheet', href='./css/style.min.css?v73')
   
   body 
     #app.app
@@ -39,7 +39,7 @@ html(lang="uk")
         .you-pharmacy-line__text Ваша аптека:
         button(type="button").you-pharmacy-line__btn#j_test_04
           span г. Харьков, просп. Гагарина, 722
-      #section1.section.section1
+      #section1.section.section1(style="display: none")
         .search.--search-main
           button(type="button").search__input.j_test_07 Поиск
           .search__btn-search
@@ -79,83 +79,6 @@ html(lang="uk")
               svg.icon
                 use(xlink:href='#settings')
               span Настройки
-        #appModal1.app-modal(style="display: none")
-          .app-modal__wrapper
-            button(type="button").app-modal__close.j_test_43
-              svg.icon
-                use(xlink:href='#close')
-            .app-modal__content
-              .app-modal__head
-                .app-modal__head-icon.--your-pharmacy
-                  svg.icon
-                    use(xlink:href='#vasha_apteka')
-                .app-modal__head-span Ваша аптека
-              .app-modal__content-wrapper 
-                .you-pharmacy
-                  .you-pharmacy__wrapper
-                    label(for="switch1").you-pharmacy__item
-                      .form-switch
-                        input#switch1(type="radio" name="your_pharmacy" checked).form-switch__input
-                        span.form-switch__div
-                      .you-pharmacy__item-row Аптека оптовых цен
-                        small г. Харьков, просп. Гагарина, 72
-                    label(for="switch2").you-pharmacy__item
-                      .form-switch
-                        input#switch2(type="radio" name="your_pharmacy").form-switch__input
-                        span.form-switch__div
-                      .you-pharmacy__item-row Аптечная сеть 911
-                        small г. Харьков, ул. Энергетическая, 1 (метро Турбоатом)
-                  .you-pharmacy__bottom
-                    a(href="javascript:void(0)").btn.--accent.--outline.--block#j_test_12
-                      span Добавить аптеку
-        #appModal2.app-modal(style="display: none")
-          .app-modal__wrapper
-            button(type="button").app-modal__close.j_test_43
-              svg.icon
-                use(xlink:href='#close')
-            .app-modal__content
-              .app-modal__head
-                .app-modal__head-icon.--settings
-                  svg.icon
-                    use(xlink:href='#settings')
-                .app-modal__head-span Настройки
-              .app-modal__content-wrapper 
-                .app-settings
-                  .app-settings__wrapper
-                    .app-settings__head Ваш город
-                    .app-settings__city
-                      .app-settings__city-title г. Харьков
-                        small Харьковская обл.
-                      button(type="button").btn.--secondary-alt.--xs.--r35
-                        svg.icon
-                          use(href='#edit')
-                        span Изменить
-                  .app-settings__wrapper
-                    .app-settings__head Язык
-                    label(for="radio1").app-settings__item
-                      .field-radio
-                        input#radio1.field-radio__input(type='radio' name='app_settings' checked)
-                        span.field-radio__span-input
-                      .app-settings__item-row Украинский
-                    label(for="radio2").app-settings__item
-                      .field-radio
-                        input#radio2.field-radio__input(type='radio' name='app_settings')
-                        span.field-radio__span-input
-                      .you-pharmacy__item-row Русский
-        #appModal5.app-modal(style="display: none")
-          .app-modal__wrapper
-            button(type="button").app-modal__close.j_test_43
-              svg.icon
-                use(xlink:href='#close')
-            .app-modal__content
-              .app-modal__head
-                .app-modal__head-span Обработка клика
-              .app-modal__content-wrapper 
-                p Клик по кнопку Добавить аптеку
-        #appPreloader.app-modal(style="display: none")
-          .app-preloader
-            .loader
-            p Подождите...
       #section2.section.section2(style="display: none")
         form(action="#").search2
           input(type="text" placeholder="Поиск").search2__input#j_test_14
@@ -259,38 +182,7 @@ html(lang="uk")
                 button(type="button").btn.--secondary-alt.--xs
                   span В аптеках
             - }
-        #appModal3.app-modal(style="display: none")
-          .app-modal__wrapper
-            button(type="button").app-modal__close.j_test_43
-              svg.icon
-                use(xlink:href='#close')
-            .app-modal__content
-              .app-modal__head
-                .app-modal__head-span Обработка клика
-              .app-modal__content-wrapper 
-                p Клик по микрофону
-        #appModal4.app-modal(style="display: none")
-          .app-modal__wrapper
-            button(type="button").app-modal__close.j_test_43
-              svg.icon
-                use(xlink:href='#close')
-            .app-modal__content
-              .app-modal__head
-                .app-modal__head-span Обработка клика
-              .app-modal__content-wrapper 
-                p Клик по сканеру штрихкода
-        #appSearchNo.app-modal(style="display: none")
-          .app-modal-info
-            .app-modal-info__search-img
-              img(src="./tmp/image-search.svg", width="298" height="134" alt="")
-            .app-modal-info__content
-              p На жаль, ми не змогли знайти - 
-                b.color «Віваіап»
-                | . Перевірте, будь ласка, уважно та спробуйте ще раз ввести Ваш запит
-            .app-modal-info__btns
-              button(type="button").btn.--secondary.--ghost.--block.--sm.j_test_43
-                span ОК
-      #section3.section.section3(style="display: none")
+      #section3.section.section3(style="padding-bottom: 47px; display: none")
         // Breadcrumbs
         .category-list
           .category-list__wrapper#categoryList1
@@ -538,7 +430,7 @@ html(lang="uk")
                   use(xlink:href='#arrow_right')
         .section-bottom
           include ./_include/_menu
-      #section4.section.section4(style="display: none")
+      #section4.section.section4(style="padding-bottom: 47px; display: none")
         .catalog-head
           .catalog-head__title «Расторопша»
           button(type="button").category-head__btn.j_test_23
@@ -588,26 +480,10 @@ html(lang="uk")
           .catalog-more
             button(type="button").btn.--accent.--outline.--block
               span Загрузить еще
-        #appFilter2.app-filter(style="display: none")
-          .app-filter__wrapper
-            //- .app-filter__head
-            //-   .app-filter__head-title Фильтр
-            //-   button(type="button").app-filter__head-btn#j_test_37
-            //-     svg.icon
-            //-       use(xlink:href='#close')
-            .app-filter__body
-              .app-filter__body-wrapper
-                include ./_include/_filter
-            .app-filter__foot
-              button(type="button").btn.--accent.--ghost.j_test_55
-                span Сбросить
-              button(type="button").btn.--accent
-                span Применить
-                span.app-filter__foot-count 117
         .section-bottom
           include ./_include/_back
           include ./_include/_menu
-      #section5.section.section5(style="display: none")
+      #section5.section.section5(style="padding-bottom: 47px; display: none")
         +breadcrumbs()
           +breadcrumbs-item('Лекарственные препараты')(class="j_test_50")
         .catalog-head
@@ -655,11 +531,6 @@ html(lang="uk")
           include ./_include/_catalog_view_2
         #appFilter.app-filter(style="display: none")
           .app-filter__wrapper
-            //- .app-filter__head
-            //-   .app-filter__head-title Фильтр
-            //-   button(type="button").app-filter__head-btn#j_test_35
-            //-     svg.icon
-            //-       use(xlink:href='#close')
             .app-filter__body
               .app-filter__body-wrapper
                 include ./_include/_filter
@@ -669,8 +540,10 @@ html(lang="uk")
               button(type="button").btn.--accent
                 span Применить
                 span.app-filter__foot-count 117
-        include ./_include/_back
-      #section6.section.section6(style="display: none")
+        .section-bottom
+          include ./_include/_back
+          include ./_include/_menu
+      #section6.section.section6(style="padding-bottom: 47px; ")
         +breadcrumbs()
           +breadcrumbs-item('Лекарственные препараты')(class="j_test_50")
         .product
@@ -1331,6 +1204,8 @@ html(lang="uk")
                             use(xlink:href='#dislike')
                           span 0
                   - }
+        .section-bottom
+          include ./_include/_menu
       #section7.section.section7(style="display: none")
         .search
           button(type="button").search__input.j_test_07 Поиск
@@ -1429,16 +1304,7 @@ html(lang="uk")
               span 
                 span.color.--warning Нет товара
           - }
-        #appSaveCart.app-modal(style="display: none")
-          .app-modal-info
-            .app-modal-info__title Сохранить корзину?
-            .app-modal-info__content
-              p Если вы сохраните товары в корзине, тогда вы сможете продолжить оформление при следующем посещении
-            .app-modal-info__btns.--right.j_test_43
-              button(type="button").btn.--contrast.--ghost.--sm
-                span Сохранить
-              button(type="button").btn.--secondary.--ghost.--sm
-                span Не сохранять
+        
       #section8.section.section8(style="display: none")
         .search
           button(type="button").search__input.j_test_07 Поиск
@@ -1591,6 +1457,140 @@ html(lang="uk")
         span.app-button-status__inner
           span.app-button-status__count от 149,67 ₴ 
           span Оформить
+      #appModal1.app-modal(style="display: none")
+        .app-modal__wrapper
+          button(type="button").app-modal__close.j_test_43
+            svg.icon
+              use(xlink:href='#close')
+          .app-modal__content
+            .app-modal__head
+              .app-modal__head-icon.--your-pharmacy
+                svg.icon
+                  use(xlink:href='#vasha_apteka')
+              .app-modal__head-span Ваша аптека
+            .app-modal__content-wrapper 
+              .you-pharmacy
+                .you-pharmacy__wrapper
+                  label(for="switch1").you-pharmacy__item
+                    .form-switch
+                      input#switch1(type="radio" name="your_pharmacy" checked).form-switch__input
+                      span.form-switch__div
+                    .you-pharmacy__item-row Аптека оптовых цен
+                      small г. Харьков, просп. Гагарина, 72
+                  label(for="switch2").you-pharmacy__item
+                    .form-switch
+                      input#switch2(type="radio" name="your_pharmacy").form-switch__input
+                      span.form-switch__div
+                    .you-pharmacy__item-row Аптечная сеть 911
+                      small г. Харьков, ул. Энергетическая, 1 (метро Турбоатом)
+                .you-pharmacy__bottom
+                  a(href="javascript:void(0)").btn.--accent.--outline.--block#j_test_12
+                    span Добавить аптеку
+      #appModal5.app-modal(style="display: none")
+        .app-modal__wrapper
+          button(type="button").app-modal__close.j_test_43
+            svg.icon
+              use(xlink:href='#close')
+          .app-modal__content
+            .app-modal__head
+              .app-modal__head-span Обработка клика
+            .app-modal__content-wrapper 
+              p Клик по кнопку Добавить аптеку
+      #appPreloader.app-modal(style="display: none")
+        .app-preloader
+          .loader
+          p Подождите...
+      #appModal2.app-modal(style="display: none")
+        .app-modal__wrapper
+          button(type="button").app-modal__close.j_test_43
+            svg.icon
+              use(xlink:href='#close')
+          .app-modal__content
+            .app-modal__head
+              .app-modal__head-icon.--settings
+                svg.icon
+                  use(xlink:href='#settings')
+              .app-modal__head-span Настройки
+            .app-modal__content-wrapper 
+              .app-settings
+                .app-settings__wrapper
+                  .app-settings__head Ваш город
+                  .app-settings__city
+                    .app-settings__city-title г. Харьков
+                      small Харьковская обл.
+                    button(type="button").btn.--secondary-alt.--xs.--r35
+                      svg.icon
+                        use(href='#edit')
+                      span Изменить
+                .app-settings__wrapper
+                  .app-settings__head Язык
+                  label(for="radio1").app-settings__item
+                    .field-radio
+                      input#radio1.field-radio__input(type='radio' name='app_settings' checked)
+                      span.field-radio__span-input
+                    .app-settings__item-row Украинский
+                  label(for="radio2").app-settings__item
+                    .field-radio
+                      input#radio2.field-radio__input(type='radio' name='app_settings')
+                      span.field-radio__span-input
+                    .you-pharmacy__item-row Русский
+      #appFilter2.app-filter(style="display: none")
+        .app-filter__wrapper
+          //- .app-filter__head
+          //-   .app-filter__head-title Фильтр
+          //-   button(type="button").app-filter__head-btn#j_test_37
+          //-     svg.icon
+          //-       use(xlink:href='#close')
+          .app-filter__body
+            .app-filter__body-wrapper
+              include ./_include/_filter
+          .app-filter__foot
+            button(type="button").btn.--accent.--ghost.j_test_55
+              span Сбросить
+            button(type="button").btn.--accent
+              span Применить
+              span.app-filter__foot-count 117
+      #appModal3.app-modal(style="display: none")
+        .app-modal__wrapper
+          button(type="button").app-modal__close.j_test_43
+            svg.icon
+              use(xlink:href='#close')
+          .app-modal__content
+            .app-modal__head
+              .app-modal__head-span Обработка клика
+            .app-modal__content-wrapper 
+              p Клик по микрофону
+      #appModal4.app-modal(style="display: none")
+        .app-modal__wrapper
+          button(type="button").app-modal__close.j_test_43
+            svg.icon
+              use(xlink:href='#close')
+          .app-modal__content
+            .app-modal__head
+              .app-modal__head-span Обработка клика
+            .app-modal__content-wrapper 
+              p Клик по сканеру штрихкода
+      #appSearchNo.app-modal(style="display: none")
+        .app-modal-info
+          .app-modal-info__search-img
+            img(src="./tmp/image-search.svg", width="298" height="134" alt="")
+          .app-modal-info__content
+            p На жаль, ми не змогли знайти - 
+              b.color «Віваіап»
+              | . Перевірте, будь ласка, уважно та спробуйте ще раз ввести Ваш запит
+          .app-modal-info__btns
+            button(type="button").btn.--secondary.--ghost.--block.--sm.j_test_43
+              span ОК
+      #appSaveCart.app-modal(style="display: none")
+        .app-modal-info
+          .app-modal-info__title Сохранить корзину?
+          .app-modal-info__content
+            p Если вы сохраните товары в корзине, тогда вы сможете продолжить оформление при следующем посещении
+          .app-modal-info__btns.--right.j_test_43
+            button(type="button").btn.--contrast.--ghost.--sm
+              span Сохранить
+            button(type="button").btn.--secondary.--ghost.--sm
+              span Не сохранять
 
     script(src="./js/jquery/jquery-3.3.1.min.js")
     script(src="./js/jquery/jquery-migrate-3.0.1.min.js")
@@ -1598,6 +1598,6 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v52")
+    script(src="./js/common.js?v53")
 
     include ./_include/_svg

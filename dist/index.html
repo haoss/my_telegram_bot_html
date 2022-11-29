@@ -13,7 +13,7 @@
             Telegram.WebApp.onEvent('themeChanged', setThemeClass);
             setThemeClass();
         </script>
-        <link rel="stylesheet" href="./css/style.min.css?v72">
+        <link rel="stylesheet" href="./css/style.min.css?v73">
     </head>
     <body> 
         <div class="app" id="app">
@@ -36,7 +36,7 @@
                 <div class="you-pharmacy-line__text">Ваша аптека:</div>
                 <button class="you-pharmacy-line__btn" type="button" id="j_test_04"><span>г. Харьков, просп. Гагарина, 722</span></button>
             </div>
-            <div class="section section1" id="section1">
+            <div class="section section1" id="section1" style="display: none">
                 <div class="search --search-main">
                     <button class="search__input j_test_07" type="button">Поиск</button>
                     <div class="search__btn-search">
@@ -88,116 +88,6 @@
                                 <use xlink:href="#settings"></use>
                             </svg><span>Настройки</span>
                         </button>
-                    </div>
-                </div>
-                <div class="app-modal" id="appModal1" style="display: none">
-                    <div class="app-modal__wrapper">
-                        <button class="app-modal__close j_test_43" type="button">
-                            <svg class="icon">
-                                <use xlink:href="#close"></use>
-                            </svg>
-                        </button>
-                        <div class="app-modal__content">
-                            <div class="app-modal__head">
-                                <div class="app-modal__head-icon --your-pharmacy">
-                                    <svg class="icon">
-                                        <use xlink:href="#vasha_apteka"></use>
-                                    </svg>
-                                </div>
-                                <div class="app-modal__head-span">Ваша аптека</div>
-                            </div>
-                            <div class="app-modal__content-wrapper"> 
-                                <div class="you-pharmacy">
-                                    <div class="you-pharmacy__wrapper">
-                                        <label class="you-pharmacy__item" for="switch1">
-                                            <div class="form-switch">
-                                                <input class="form-switch__input" id="switch1" type="radio" name="your_pharmacy" checked><span class="form-switch__div"></span>
-                                            </div>
-                                            <div class="you-pharmacy__item-row">Аптека оптовых цен<small>г. Харьков, просп. Гагарина, 72</small></div>
-                                        </label>
-                                        <label class="you-pharmacy__item" for="switch2">
-                                            <div class="form-switch">
-                                                <input class="form-switch__input" id="switch2" type="radio" name="your_pharmacy"><span class="form-switch__div"></span>
-                                            </div>
-                                            <div class="you-pharmacy__item-row">Аптечная сеть 911<small>г. Харьков, ул. Энергетическая, 1 (метро Турбоатом)</small></div>
-                                        </label>
-                                    </div>
-                                    <div class="you-pharmacy__bottom"><a class="btn --accent --outline --block" href="javascript:void(0)" id="j_test_12"><span>Добавить аптеку</span></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="app-modal" id="appModal2" style="display: none">
-                    <div class="app-modal__wrapper">
-                        <button class="app-modal__close j_test_43" type="button">
-                            <svg class="icon">
-                                <use xlink:href="#close"></use>
-                            </svg>
-                        </button>
-                        <div class="app-modal__content">
-                            <div class="app-modal__head">
-                                <div class="app-modal__head-icon --settings">
-                                    <svg class="icon">
-                                        <use xlink:href="#settings"></use>
-                                    </svg>
-                                </div>
-                                <div class="app-modal__head-span">Настройки</div>
-                            </div>
-                            <div class="app-modal__content-wrapper"> 
-                                <div class="app-settings">
-                                    <div class="app-settings__wrapper">
-                                        <div class="app-settings__head">Ваш город</div>
-                                        <div class="app-settings__city">
-                                            <div class="app-settings__city-title">г. Харьков<small>Харьковская обл.</small></div>
-                                            <button class="btn --secondary-alt --xs --r35" type="button">
-                                                <svg class="icon">
-                                                    <use href="#edit"></use>
-                                                </svg><span>Изменить</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="app-settings__wrapper">
-                                        <div class="app-settings__head">Язык</div>
-                                        <label class="app-settings__item" for="radio1">
-                                            <div class="field-radio">
-                                                <input class="field-radio__input" id="radio1" type="radio" name="app_settings" checked><span class="field-radio__span-input"></span>
-                                            </div>
-                                            <div class="app-settings__item-row">Украинский</div>
-                                        </label>
-                                        <label class="app-settings__item" for="radio2">
-                                            <div class="field-radio">
-                                                <input class="field-radio__input" id="radio2" type="radio" name="app_settings"><span class="field-radio__span-input"></span>
-                                            </div>
-                                            <div class="you-pharmacy__item-row">Русский</div>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="app-modal" id="appModal5" style="display: none">
-                    <div class="app-modal__wrapper">
-                        <button class="app-modal__close j_test_43" type="button">
-                            <svg class="icon">
-                                <use xlink:href="#close"></use>
-                            </svg>
-                        </button>
-                        <div class="app-modal__content">
-                            <div class="app-modal__head">
-                                <div class="app-modal__head-span">Обработка клика</div>
-                            </div>
-                            <div class="app-modal__content-wrapper"> 
-                                <p>Клик по кнопку Добавить аптеку</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="app-modal" id="appPreloader" style="display: none">
-                    <div class="app-preloader">
-                        <div class="loader"></div>
-                        <p>Подождите...</p>
                     </div>
                 </div>
             </div>
@@ -551,53 +441,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="app-modal" id="appModal3" style="display: none">
-                    <div class="app-modal__wrapper">
-                        <button class="app-modal__close j_test_43" type="button">
-                            <svg class="icon">
-                                <use xlink:href="#close"></use>
-                            </svg>
-                        </button>
-                        <div class="app-modal__content">
-                            <div class="app-modal__head">
-                                <div class="app-modal__head-span">Обработка клика</div>
-                            </div>
-                            <div class="app-modal__content-wrapper"> 
-                                <p>Клик по микрофону</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="app-modal" id="appModal4" style="display: none">
-                    <div class="app-modal__wrapper">
-                        <button class="app-modal__close j_test_43" type="button">
-                            <svg class="icon">
-                                <use xlink:href="#close"></use>
-                            </svg>
-                        </button>
-                        <div class="app-modal__content">
-                            <div class="app-modal__head">
-                                <div class="app-modal__head-span">Обработка клика</div>
-                            </div>
-                            <div class="app-modal__content-wrapper"> 
-                                <p>Клик по сканеру штрихкода</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="app-modal" id="appSearchNo" style="display: none">
-                    <div class="app-modal-info">
-                        <div class="app-modal-info__search-img"><img src="./tmp/image-search.svg" width="298" height="134" alt=""></div>
-                        <div class="app-modal-info__content">
-                            <p>На жаль, ми не змогли знайти - <b class="color">«Віваіап»</b>. Перевірте, будь ласка, уважно та спробуйте ще раз ввести Ваш запит</p>
-                        </div>
-                        <div class="app-modal-info__btns">
-                            <button class="btn --secondary --ghost --block --sm j_test_43" type="button"><span>ОК</span></button>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <div class="section section3" id="section3" style="display: none">
+            <div class="section section3" id="section3" style="padding-bottom: 47px; display: none">
                 <!-- Breadcrumbs-->
                 <div class="category-list">
                     <div class="category-list__wrapper" id="categoryList1">
@@ -1046,7 +891,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section section4" id="section4" style="display: none">
+            <div class="section section4" id="section4" style="padding-bottom: 47px; display: none">
                 <div class="catalog-head">
                     <div class="catalog-head__title">«Расторопша»</div>
                     <button class="category-head__btn j_test_23" type="button">
@@ -1714,227 +1559,6 @@
                         <button class="btn --accent --outline --block" type="button"><span>Загрузить еще</span></button>
                     </div>
                 </div>
-                <div class="app-filter" id="appFilter2" style="display: none">
-                    <div class="app-filter__wrapper">
-                        <div class="app-filter__body">
-                            <div class="app-filter__body-wrapper">
-                                <div class="filter">
-                                    <div class="filter__wrapper">
-                                        <div class="filter__block j-filter is-active">
-                                            <div class="filter__block-head"> <span>Кому можно</span>
-                                                <svg class="icon">
-                                                    <use xlink:href="#arrow_right"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="filter__block-wrapper">
-                                                <div class="filter__block-container">
-                                                    <div class="filter__block-group">
-                                                        <label class="field-checkbox">
-                                                            <input class="field-checkbox__input" type="checkbox" name="checkbox1" checked="checked"/><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Взрослым</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <label class="field-checkbox">
-                                                            <input class="field-checkbox__input" type="checkbox" name="checkbox1"/><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Взрослым</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <button class="field-checkbox j-checked checked" type="button"><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Взрослым</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Детям</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Беременным</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Кормящим</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <button class="field-checkbox j-checked disabled" type="button"><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Диабетикам</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <label class="field-checkbox">
-                                                            <input class="field-checkbox__input" type="checkbox" name="checkbox4" disabled="disabled"/><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Диабетикам 1212</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="filter__block j-filter">
-                                            <div class="filter__block-head"> <span>Срок годности</span>
-                                                <svg class="icon">
-                                                    <use xlink:href="#arrow_right"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="filter__block-wrapper">
-                                                <div class="filter__block-container">
-                                                    <div class="filter__block-group">
-                                                        <label class="field-radio">
-                                                            <input class="field-radio__input" type="radio" name="radio" checked="checked"/><span class="field-radio__span-input"></span><span class="field-radio__label">1 год</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <label class="field-radio">
-                                                            <input class="field-radio__input" type="radio" name="radio" disabled="disabled"/><span class="field-radio__span-input"></span><span class="field-radio__label">2 год</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <label class="field-radio">
-                                                            <input class="field-radio__input" type="radio" name="radio"/><span class="field-radio__span-input"></span><span class="field-radio__label">3 год</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <label class="field-radio">
-                                                            <input class="field-radio__input" type="radio" name="radio" disabled="disabled"/><span class="field-radio__span-input"></span><span class="field-radio__label">3 год</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="filter__block-group"><a class="field-radio j-checked checked" href="javascript:void(0)"><span class="field-radio__span-input"></span><span class="field-radio__label">1 год</span></a>
-                                                    </div>
-                                                    <div class="filter__block-group"><a class="field-radio j-checked" href="javascript:void(0)"><span class="field-radio__span-input"></span><span class="field-radio__label">1 год и 6 месяцев</span></a>
-                                                    </div>
-                                                    <div class="filter__block-group"><a class="field-radio j-checked" href="javascript:void(0)"><span class="field-radio__span-input"></span><span class="field-radio__label">2 года</span></a>
-                                                    </div>
-                                                    <div class="filter__block-group"><a class="field-radio j-checked" href="javascript:void(0)"><span class="field-radio__span-input"></span><span class="field-radio__label">4 года</span></a>
-                                                    </div>
-                                                    <div class="filter__block-group"><a class="field-radio j-checked" href="javascript:void(0)"><span class="field-radio__span-input"></span><span class="field-radio__label">5 лет</span></a>
-                                                    </div>
-                                                    <div class="filter__block-group"><a class="field-radio j-checked" href="javascript:void(0)"><span class="field-radio__span-input"></span><span class="field-radio__label">6 лет</span></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="filter__block j-filter">
-                                            <div class="filter__block-head"> <span>Вид продукции</span>
-                                                <svg class="icon">
-                                                    <use xlink:href="#arrow_right"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="filter__block-wrapper">
-                                                <div class="filter__block-container">
-                                                    <div class="filter__block-group">
-                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Для новорождённых</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Подгузники</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Для новорождённых</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Трусики-подгузники</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Трусики для плавания</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="filter__block j-filter">
-                                            <div class="filter__block-head"> <span>Торговое наименование</span>
-                                                <svg class="icon">
-                                                    <use xlink:href="#arrow_right"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="filter__block-wrapper">
-                                                <div class="filter__block-container">
-                                                    <div class="filter__block-group">
-                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Айдринк</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Амицитрон</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Амицитрон без Сахара</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Амицитрон Екстраб</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="filter__block-group">
-                                                        <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
-                                                                <svg class="icon">
-                                                                    <use xlink:href="#checkbox"></use>
-                                                                </svg></span><span class="field-checkbox__label">Амицитрон Плюс</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="app-filter__foot">
-                            <button class="btn --accent --ghost j_test_55" type="button"><span>Сбросить</span></button>
-                            <button class="btn --accent" type="button"><span>Применить</span><span class="app-filter__foot-count">117</span></button>
-                        </div>
-                    </div>
-                </div>
                 <div class="section-bottom">
                     <button class="back-top is-visible" id="backTop" type="button" role="button">
                         <svg class="icon">
@@ -1982,7 +1606,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section section5" id="section5" style="display: none">
+            <div class="section section5" id="section5" style="padding-bottom: 47px; display: none">
                 <ol class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
                     <li class="breadcrumbs__item j_test_50" role="list"><span>
                             <svg class="icon">
@@ -2872,13 +2496,54 @@
                         </div>
                     </div>
                 </div>
-                <button class="back-top is-visible" id="backTop" type="button" role="button">
-                    <svg class="icon">
-                        <use xlink:href="#arrow_right"></use>
-                    </svg>
-                </button>
+                <div class="section-bottom">
+                    <button class="back-top is-visible" id="backTop" type="button" role="button">
+                        <svg class="icon">
+                            <use xlink:href="#arrow_right"></use>
+                        </svg>
+                    </button>
+                    <div class="menu">
+                        <button class="menu__btn-top j_test_58" type="button">
+                            <svg class="icon">
+                                <use href="#menu_color"></use>
+                            </svg><span>Меню</span>
+                        </button>
+                        <button class="menu__btn-top j_test_59" type="button" style="display: none">
+                            <svg class="icon">
+                                <use href="#menu_color_2"></use>
+                            </svg><span>Закрыть меню</span>
+                        </button>
+                        <div class="menu__wrapper" style="display: none">
+                            <button class="menu__btn --home j_test_60" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#home"></use>
+                                </svg><span>Главная</span>
+                            </button>
+                            <button class="menu__btn --your-pharmacy j_test_02" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#vasha_apteka"></use>
+                                </svg><span>Ваша аптека</span>
+                            </button>
+                            <button class="menu__btn --catalog j_test_19" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#catalog"></use>
+                                </svg><span>Каталог товаров</span>
+                            </button>
+                            <button class="menu__btn --favorites j_test_44" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#favorites"></use>
+                                </svg><span>Избранные товары</span>
+                            </button>
+                            <button class="menu__btn --settings j_test_05" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#settings"></use>
+                                </svg><span>Настройки</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="section section6" id="section6" style="display: none">
+            <div class="section section6" id="section6" style="padding-bottom: 47px; ">
                 <ol class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
                     <li class="breadcrumbs__item j_test_50" role="list"><span>
                             <svg class="icon">
@@ -4040,6 +3705,47 @@
                         </div>
                     </div>
                 </div>
+                <div class="section-bottom">
+                    <div class="menu">
+                        <button class="menu__btn-top j_test_58" type="button">
+                            <svg class="icon">
+                                <use href="#menu_color"></use>
+                            </svg><span>Меню</span>
+                        </button>
+                        <button class="menu__btn-top j_test_59" type="button" style="display: none">
+                            <svg class="icon">
+                                <use href="#menu_color_2"></use>
+                            </svg><span>Закрыть меню</span>
+                        </button>
+                        <div class="menu__wrapper" style="display: none">
+                            <button class="menu__btn --home j_test_60" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#home"></use>
+                                </svg><span>Главная</span>
+                            </button>
+                            <button class="menu__btn --your-pharmacy j_test_02" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#vasha_apteka"></use>
+                                </svg><span>Ваша аптека</span>
+                            </button>
+                            <button class="menu__btn --catalog j_test_19" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#catalog"></use>
+                                </svg><span>Каталог товаров</span>
+                            </button>
+                            <button class="menu__btn --favorites j_test_44" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#favorites"></use>
+                                </svg><span>Избранные товары</span>
+                            </button>
+                            <button class="menu__btn --settings j_test_05" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#settings"></use>
+                                </svg><span>Настройки</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="section section7" id="section7" style="display: none">
                 <div class="search">
@@ -4463,18 +4169,6 @@
                             <svg class="icon --warning">
                                 <use xlink:href="#check_success"></use>
                             </svg><span> <span class="color --warning">Нет товара</span></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="app-modal" id="appSaveCart" style="display: none">
-                    <div class="app-modal-info">
-                        <div class="app-modal-info__title">Сохранить корзину?</div>
-                        <div class="app-modal-info__content">
-                            <p>Если вы сохраните товары в корзине, тогда вы сможете продолжить оформление при следующем посещении</p>
-                        </div>
-                        <div class="app-modal-info__btns --right j_test_43">
-                            <button class="btn --contrast --ghost --sm" type="button"><span>Сохранить</span></button>
-                            <button class="btn --secondary --ghost --sm" type="button"><span>Не сохранять</span></button>
                         </div>
                     </div>
                 </div>
@@ -5045,6 +4739,394 @@
             </div>
             <button class="app-button-status" type="button" style="display: none" id="appButtonStatus"><span class="app-button-status__inner"><span class="app-button-status__count">5</span><span>товаров. Оформить</span></span></button>
             <button class="app-button-status" type="button" style="display: none" id="checkoutButtonStatus"><span class="app-button-status__inner"><span class="app-button-status__count">от 149,67 ₴ </span><span>Оформить</span></span></button>
+            <div class="app-modal" id="appModal1" style="display: none">
+                <div class="app-modal__wrapper">
+                    <button class="app-modal__close j_test_43" type="button">
+                        <svg class="icon">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                    <div class="app-modal__content">
+                        <div class="app-modal__head">
+                            <div class="app-modal__head-icon --your-pharmacy">
+                                <svg class="icon">
+                                    <use xlink:href="#vasha_apteka"></use>
+                                </svg>
+                            </div>
+                            <div class="app-modal__head-span">Ваша аптека</div>
+                        </div>
+                        <div class="app-modal__content-wrapper"> 
+                            <div class="you-pharmacy">
+                                <div class="you-pharmacy__wrapper">
+                                    <label class="you-pharmacy__item" for="switch1">
+                                        <div class="form-switch">
+                                            <input class="form-switch__input" id="switch1" type="radio" name="your_pharmacy" checked><span class="form-switch__div"></span>
+                                        </div>
+                                        <div class="you-pharmacy__item-row">Аптека оптовых цен<small>г. Харьков, просп. Гагарина, 72</small></div>
+                                    </label>
+                                    <label class="you-pharmacy__item" for="switch2">
+                                        <div class="form-switch">
+                                            <input class="form-switch__input" id="switch2" type="radio" name="your_pharmacy"><span class="form-switch__div"></span>
+                                        </div>
+                                        <div class="you-pharmacy__item-row">Аптечная сеть 911<small>г. Харьков, ул. Энергетическая, 1 (метро Турбоатом)</small></div>
+                                    </label>
+                                </div>
+                                <div class="you-pharmacy__bottom"><a class="btn --accent --outline --block" href="javascript:void(0)" id="j_test_12"><span>Добавить аптеку</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-modal" id="appModal5" style="display: none">
+                <div class="app-modal__wrapper">
+                    <button class="app-modal__close j_test_43" type="button">
+                        <svg class="icon">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                    <div class="app-modal__content">
+                        <div class="app-modal__head">
+                            <div class="app-modal__head-span">Обработка клика</div>
+                        </div>
+                        <div class="app-modal__content-wrapper"> 
+                            <p>Клик по кнопку Добавить аптеку</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-modal" id="appPreloader" style="display: none">
+                <div class="app-preloader">
+                    <div class="loader"></div>
+                    <p>Подождите...</p>
+                </div>
+            </div>
+            <div class="app-modal" id="appModal2" style="display: none">
+                <div class="app-modal__wrapper">
+                    <button class="app-modal__close j_test_43" type="button">
+                        <svg class="icon">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                    <div class="app-modal__content">
+                        <div class="app-modal__head">
+                            <div class="app-modal__head-icon --settings">
+                                <svg class="icon">
+                                    <use xlink:href="#settings"></use>
+                                </svg>
+                            </div>
+                            <div class="app-modal__head-span">Настройки</div>
+                        </div>
+                        <div class="app-modal__content-wrapper"> 
+                            <div class="app-settings">
+                                <div class="app-settings__wrapper">
+                                    <div class="app-settings__head">Ваш город</div>
+                                    <div class="app-settings__city">
+                                        <div class="app-settings__city-title">г. Харьков<small>Харьковская обл.</small></div>
+                                        <button class="btn --secondary-alt --xs --r35" type="button">
+                                            <svg class="icon">
+                                                <use href="#edit"></use>
+                                            </svg><span>Изменить</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="app-settings__wrapper">
+                                    <div class="app-settings__head">Язык</div>
+                                    <label class="app-settings__item" for="radio1">
+                                        <div class="field-radio">
+                                            <input class="field-radio__input" id="radio1" type="radio" name="app_settings" checked><span class="field-radio__span-input"></span>
+                                        </div>
+                                        <div class="app-settings__item-row">Украинский</div>
+                                    </label>
+                                    <label class="app-settings__item" for="radio2">
+                                        <div class="field-radio">
+                                            <input class="field-radio__input" id="radio2" type="radio" name="app_settings"><span class="field-radio__span-input"></span>
+                                        </div>
+                                        <div class="you-pharmacy__item-row">Русский</div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-filter" id="appFilter2" style="display: none">
+                <div class="app-filter__wrapper">
+                    <div class="app-filter__body">
+                        <div class="app-filter__body-wrapper">
+                            <div class="filter">
+                                <div class="filter__wrapper">
+                                    <div class="filter__block j-filter is-active">
+                                        <div class="filter__block-head"> <span>Кому можно</span>
+                                            <svg class="icon">
+                                                <use xlink:href="#arrow_right"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="filter__block-wrapper">
+                                            <div class="filter__block-container">
+                                                <div class="filter__block-group">
+                                                    <label class="field-checkbox">
+                                                        <input class="field-checkbox__input" type="checkbox" name="checkbox1" checked="checked"/><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Взрослым</span>
+                                                    </label>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <label class="field-checkbox">
+                                                        <input class="field-checkbox__input" type="checkbox" name="checkbox1"/><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Взрослым</span>
+                                                    </label>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <button class="field-checkbox j-checked checked" type="button"><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Взрослым</span>
+                                                    </button>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Детям</span>
+                                                    </button>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Беременным</span>
+                                                    </button>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Кормящим</span>
+                                                    </button>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <button class="field-checkbox j-checked disabled" type="button"><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Диабетикам</span>
+                                                    </button>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <label class="field-checkbox">
+                                                        <input class="field-checkbox__input" type="checkbox" name="checkbox4" disabled="disabled"/><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Диабетикам 1212</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__block j-filter">
+                                        <div class="filter__block-head"> <span>Срок годности</span>
+                                            <svg class="icon">
+                                                <use xlink:href="#arrow_right"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="filter__block-wrapper">
+                                            <div class="filter__block-container">
+                                                <div class="filter__block-group">
+                                                    <label class="field-radio">
+                                                        <input class="field-radio__input" type="radio" name="radio" checked="checked"/><span class="field-radio__span-input"></span><span class="field-radio__label">1 год</span>
+                                                    </label>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <label class="field-radio">
+                                                        <input class="field-radio__input" type="radio" name="radio" disabled="disabled"/><span class="field-radio__span-input"></span><span class="field-radio__label">2 год</span>
+                                                    </label>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <label class="field-radio">
+                                                        <input class="field-radio__input" type="radio" name="radio"/><span class="field-radio__span-input"></span><span class="field-radio__label">3 год</span>
+                                                    </label>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <label class="field-radio">
+                                                        <input class="field-radio__input" type="radio" name="radio" disabled="disabled"/><span class="field-radio__span-input"></span><span class="field-radio__label">3 год</span>
+                                                    </label>
+                                                </div>
+                                                <div class="filter__block-group"><a class="field-radio j-checked checked" href="javascript:void(0)"><span class="field-radio__span-input"></span><span class="field-radio__label">1 год</span></a>
+                                                </div>
+                                                <div class="filter__block-group"><a class="field-radio j-checked" href="javascript:void(0)"><span class="field-radio__span-input"></span><span class="field-radio__label">1 год и 6 месяцев</span></a>
+                                                </div>
+                                                <div class="filter__block-group"><a class="field-radio j-checked" href="javascript:void(0)"><span class="field-radio__span-input"></span><span class="field-radio__label">2 года</span></a>
+                                                </div>
+                                                <div class="filter__block-group"><a class="field-radio j-checked" href="javascript:void(0)"><span class="field-radio__span-input"></span><span class="field-radio__label">4 года</span></a>
+                                                </div>
+                                                <div class="filter__block-group"><a class="field-radio j-checked" href="javascript:void(0)"><span class="field-radio__span-input"></span><span class="field-radio__label">5 лет</span></a>
+                                                </div>
+                                                <div class="filter__block-group"><a class="field-radio j-checked" href="javascript:void(0)"><span class="field-radio__span-input"></span><span class="field-radio__label">6 лет</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__block j-filter">
+                                        <div class="filter__block-head"> <span>Вид продукции</span>
+                                            <svg class="icon">
+                                                <use xlink:href="#arrow_right"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="filter__block-wrapper">
+                                            <div class="filter__block-container">
+                                                <div class="filter__block-group">
+                                                    <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Для новорождённых</span>
+                                                    </button>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Подгузники</span>
+                                                    </button>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Для новорождённых</span>
+                                                    </button>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Трусики-подгузники</span>
+                                                    </button>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Трусики для плавания</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__block j-filter">
+                                        <div class="filter__block-head"> <span>Торговое наименование</span>
+                                            <svg class="icon">
+                                                <use xlink:href="#arrow_right"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="filter__block-wrapper">
+                                            <div class="filter__block-container">
+                                                <div class="filter__block-group">
+                                                    <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Айдринк</span>
+                                                    </button>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Амицитрон</span>
+                                                    </button>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Амицитрон без Сахара</span>
+                                                    </button>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Амицитрон Екстраб</span>
+                                                    </button>
+                                                </div>
+                                                <div class="filter__block-group">
+                                                    <button class="field-checkbox j-checked" type="button"><span class="field-checkbox__span-input">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#checkbox"></use>
+                                                            </svg></span><span class="field-checkbox__label">Амицитрон Плюс</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-filter__foot">
+                        <button class="btn --accent --ghost j_test_55" type="button"><span>Сбросить</span></button>
+                        <button class="btn --accent" type="button"><span>Применить</span><span class="app-filter__foot-count">117</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="app-modal" id="appModal3" style="display: none">
+                <div class="app-modal__wrapper">
+                    <button class="app-modal__close j_test_43" type="button">
+                        <svg class="icon">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                    <div class="app-modal__content">
+                        <div class="app-modal__head">
+                            <div class="app-modal__head-span">Обработка клика</div>
+                        </div>
+                        <div class="app-modal__content-wrapper"> 
+                            <p>Клик по микрофону</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-modal" id="appModal4" style="display: none">
+                <div class="app-modal__wrapper">
+                    <button class="app-modal__close j_test_43" type="button">
+                        <svg class="icon">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                    <div class="app-modal__content">
+                        <div class="app-modal__head">
+                            <div class="app-modal__head-span">Обработка клика</div>
+                        </div>
+                        <div class="app-modal__content-wrapper"> 
+                            <p>Клик по сканеру штрихкода</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-modal" id="appSearchNo" style="display: none">
+                <div class="app-modal-info">
+                    <div class="app-modal-info__search-img"><img src="./tmp/image-search.svg" width="298" height="134" alt=""></div>
+                    <div class="app-modal-info__content">
+                        <p>На жаль, ми не змогли знайти - <b class="color">«Віваіап»</b>. Перевірте, будь ласка, уважно та спробуйте ще раз ввести Ваш запит</p>
+                    </div>
+                    <div class="app-modal-info__btns">
+                        <button class="btn --secondary --ghost --block --sm j_test_43" type="button"><span>ОК</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="app-modal" id="appSaveCart" style="display: none">
+                <div class="app-modal-info">
+                    <div class="app-modal-info__title">Сохранить корзину?</div>
+                    <div class="app-modal-info__content">
+                        <p>Если вы сохраните товары в корзине, тогда вы сможете продолжить оформление при следующем посещении</p>
+                    </div>
+                    <div class="app-modal-info__btns --right j_test_43">
+                        <button class="btn --contrast --ghost --sm" type="button"><span>Сохранить</span></button>
+                        <button class="btn --secondary --ghost --sm" type="button"><span>Не сохранять</span></button>
+                    </div>
+                </div>
+            </div>
         </div>
         <script src="./js/jquery/jquery-3.3.1.min.js"></script>
         <script src="./js/jquery/jquery-migrate-3.0.1.min.js"></script>
@@ -5052,7 +5134,7 @@
         <script src="./js/ion.rangeSlider/ion.rangeSlider.js"></script>
         <script src="./js/autosize/autosize.js"></script>
         <script src="./js/gsap.min.js"></script>
-        <script src="./js/common.js?v52"></script>
+        <script src="./js/common.js?v53"></script>
         <svg width="0" height="0" style="display: none">
             <symbol id="settings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2337 7.125H3.75C3.33579 7.125 3 7.46079 3 7.875C3 8.28921 3.33579 8.625 3.75 8.625H7.2337C7.55641 9.70931 8.56087 10.5 9.75 10.5C10.9391 10.5 11.9436 9.70931 12.2663 8.625H20.25C20.6642 8.625 21 8.28921 21 7.875C21 7.46079 20.6642 7.125 20.25 7.125H12.2663C11.9436 6.04069 10.9391 5.25 9.75 5.25C8.56087 5.25 7.55641 6.04069 7.2337 7.125ZM8.625 7.875C8.625 7.25368 9.12868 6.75 9.75 6.75C10.3713 6.75 10.875 7.25368 10.875 7.875C10.875 8.49632 10.3713 9 9.75 9C9.12868 9 8.625 8.49632 8.625 7.875Z"></path>
