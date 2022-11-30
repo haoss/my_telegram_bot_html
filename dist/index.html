@@ -37,7 +37,7 @@
                 <div class="you-pharmacy-line__text">Ваша аптека:</div>
                 <button class="you-pharmacy-line__btn" type="button" id="j_test_04"><span>г. Харьков, просп. Гагарина, 722</span></button>
             </div>
-            <div class="section section1" id="section1">
+            <div class="section section1" id="section1" style="display: none">
                 <div class="search --search-main">
                     <button class="search__input j_test_07" type="button">Поиск</button>
                     <div class="search__btn-search">
@@ -4479,7 +4479,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section section9" id="section9" style="padding-bottom: 47px; display: none">
+            <div class="section section9" id="section9" style="padding-bottom: 47px; ">
                 <ol class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
                     <li class="breadcrumbs__item" role="list"><span>
                             <svg class="icon">
@@ -4498,7 +4498,7 @@
                     </div>
                     <div class="pharmacies__search">
                         <div class="search">
-                            <button class="search__input j_test_07" type="button">Ваш адрес, район</button>
+                            <button class="search__input pr20 j_test_07" type="button">Ваш адрес, район</button>
                             <div class="search__btn-search">
                                 <svg class="icon">
                                     <use xlink:href="#target"></use>
@@ -4506,11 +4506,35 @@
                             </div>
                         </div>
                         <div class="pharmacies__search-filter">
-                            <button class="btn --accent --xs j_test_57" type="button"><span>По наличию</span></button>
-                            <button class="btn --accent --outline --xs j_test_57" type="button"><span>По удаленности</span></button>
-                            <button class="btn --accent --outline --xs j_test_57" type="button"><span>По цене</span></button>
-                            <button class="btn --accent --outline --xs j_test_57" type="button"><span>Открыто сейчас</span></button>
-                            <button class="btn --accent --outline --xs j_test_57" type="button"><span>24/7</span></button>
+                            <label class="btn-radio" for="radio1_section9">
+                                <input class="btn-radio__input" id="radio1_section9" type="radio" name="radio1_section9"><span class="btn-radio__label"><span>По наличию</span></span>
+                            </label>
+                            <label class="btn-radio" for="radio2_section9">
+                                <input class="btn-radio__input" id="radio2_section9" type="radio" name="radio1_section9" checked><span class="btn-radio__label"><span>По удаленности</span></span>
+                            </label>
+                            <label class="btn-radio" for="radio3_section9">
+                                <input class="btn-radio__input" id="radio3_section9" type="radio" name="radio1_section9"><span class="btn-radio__label"><span>По цене</span></span>
+                            </label>
+                            <label class="btn-radio" for="radio4_section9">
+                                <input class="btn-radio__input" id="radio4_section9" type="radio" name="radio1_section9"><span class="btn-radio__label"><span>Открыто сейчас</span></span>
+                            </label>
+                            <label class="btn-radio" for="radio5_section9">
+                                <input class="btn-radio__input" id="radio5_section9" type="radio" name="radio1_section9"><span class="btn-radio__label"><span>24/7</span></span>
+                            </label>
+                        </div><br><br>
+                        <div class="pharmacies__search-filter">
+                            <label class="btn-checkbox" for="checkbox1_section9">
+                                <input class="btn-checkbox__input" id="checkbox1_section9" type="checkbox" name="checkbox1_section9" checked><span class="btn-checkbox__label"> <span>Открыто сейчас</span>
+                                    <svg class="icon">
+                                        <use xlink:href="#close"></use>
+                                    </svg></span>
+                            </label>
+                            <label class="btn-checkbox" for="checkbox2_section9">
+                                <input class="btn-checkbox__input" id="checkbox2_section9" type="checkbox" name="checkbox2_section9"><span class="btn-checkbox__label"><span>Круглосуточные</span>
+                                    <svg class="icon">
+                                        <use xlink:href="#close"></use>
+                                    </svg></span>
+                            </label>
                         </div>
                     </div>
                     <div class="pharmacies-group">

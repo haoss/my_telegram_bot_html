@@ -40,7 +40,7 @@ html(lang="uk")
         .you-pharmacy-line__text Ваша аптека:
         button(type="button").you-pharmacy-line__btn#j_test_04
           span г. Харьков, просп. Гагарина, 722
-      #section1.section.section1
+      #section1.section.section1(style="display: none")
         .search.--search-main
           button(type="button").search__input.j_test_07 Поиск
           .search__btn-search
@@ -1383,7 +1383,7 @@ html(lang="uk")
               button(type="button").btn.--secondary-alt.--xs
                 span В аптеках
           - }
-      #section9.section.section9(style="padding-bottom: 47px; display: none")
+      #section9.section.section9(style="padding-bottom: 47px; ")
         +breadcrumbs()
           +breadcrumbs-item('Экстракт расторопши пятнистой')
         .pharmacies
@@ -1394,11 +1394,11 @@ html(lang="uk")
                 use(xlink:href='#search_2')
           .pharmacies__search
             .search
-              button(type="button").search__input.j_test_07 Ваш адрес, район
+              button(type="button").search__input.pr20.j_test_07 Ваш адрес, район
               .search__btn-search
                 svg.icon
                   use(xlink:href='#target')
-            .pharmacies__search-filter
+            //-.pharmacies__search-filter
               button(type="button").btn.--accent.--xs.j_test_57
                 span По наличию
               button(type="button").btn.--accent.--outline.--xs.j_test_57
@@ -1409,6 +1409,43 @@ html(lang="uk")
                 span Открыто сейчас
               button(type="button").btn.--accent.--outline.--xs.j_test_57
                 span 24/7
+
+            .pharmacies__search-filter
+              label(for="radio1_section9").btn-radio
+                input#radio1_section9(type="radio" name="radio1_section9").btn-radio__input
+                span.btn-radio__label
+                  span По наличию
+              label(for="radio2_section9").btn-radio
+                input#radio2_section9(type="radio" name="radio1_section9" checked).btn-radio__input
+                span.btn-radio__label
+                  span По удаленности
+              label(for="radio3_section9").btn-radio
+                input#radio3_section9(type="radio" name="radio1_section9").btn-radio__input
+                span.btn-radio__label
+                  span По цене
+              label(for="radio4_section9").btn-radio
+                input#radio4_section9(type="radio" name="radio1_section9").btn-radio__input
+                span.btn-radio__label
+                  span Открыто сейчас
+              label(for="radio5_section9").btn-radio
+                input#radio5_section9(type="radio" name="radio1_section9").btn-radio__input
+                span.btn-radio__label
+                  span 24/7
+            br
+            br
+            .pharmacies__search-filter
+              label(for="checkbox1_section9").btn-checkbox
+                input#checkbox1_section9(type="checkbox" name="checkbox1_section9" checked).btn-checkbox__input
+                span.btn-checkbox__label 
+                  span Открыто сейчас
+                  svg.icon
+                    use(xlink:href='#close')
+              label(for="checkbox2_section9").btn-checkbox
+                input#checkbox2_section9(type="checkbox" name="checkbox2_section9").btn-checkbox__input
+                span.btn-checkbox__label
+                  span Круглосуточные
+                  svg.icon
+                    use(xlink:href='#close')
           .pharmacies-group
             .pharmacies-list__item
               .pharmacies-list__item-thumb

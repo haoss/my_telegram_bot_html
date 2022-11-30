@@ -21,6 +21,9 @@
     text-align: left;
     font-size: 16px;
     font-weight: 400;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   [class*="__btn-"] {
     position: absolute;

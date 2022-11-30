@@ -4,7 +4,11 @@
 $(document).on('ready', function(){
 
   // $('#j_test_01').on('click', function(){ $('#appButtonStatus').toggle(); $('#checkoutButtonStatus').hide(); })
-  $('.j_test_02').on('click', function(){ $('#youPharmacyLine').show(); $('#appModal1').show(); $('.j_test_56').show(); })
+  $('.j_test_02').on('click', function(){ 
+    $('#youPharmacyLine').show(); 
+    $('#appModal1').show(); 
+    $('.j_test_56').show(); 
+  })
   $('#j_test_04').on('click', function(){ $('#appModal1').show(); })
   $('.j_test_05').on('click', function(){ $('#appModal2').show(); })
   $('#j_test_09').on('click', function(){ $('#appModal3').show(); })
@@ -111,6 +115,12 @@ $(document).on('ready', function(){
     $('.menu__wrapper').hide();
     $('.j_test_58').show();
     $('.j_test_59').hide();
+    swiper2.destroy();
+    setTimeout(function(){
+      swiper2 = new Swiper(".j-main-slider", swiper2options);
+      // console.log('click');
+      $('#appPreloader').hide();
+    }, 1000);
   });
   $('.j_test_61').on('click', function(){ $('.section').hide(); $('#section9').show(); });
 
