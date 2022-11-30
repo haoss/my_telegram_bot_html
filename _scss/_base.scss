@@ -125,6 +125,18 @@ input {
 }
 
 @for $i from 0 through 100 {
+  .bb#{$i} {
+    border-bottom-width: #{$i}px !important;
+  }
+  .bt#{$i} {
+    border-top-wiidth: #{$i}px !important;
+  }
+  .bl#{$i} {
+    border-left-width: #{$i}px !important;
+  }
+  .br#{$i} {
+    border-right-width: #{$i}px !important;
+  }
   .mb#{$i} {
     margin-bottom: #{$i}px !important;
   }

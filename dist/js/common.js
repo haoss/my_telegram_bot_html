@@ -210,13 +210,16 @@ $(document).on('ready', function(){
     var _attr7 = $(this).is("[data-section='section7']");
     var _attr8 = $(this).is("[data-section='section8']");
     var _attr1 = $(this).is("[data-section='section1']");
+    var _attr12 = $(this).is("[data-section='section12']");
     var _attr2 = $(this).is("[data-section='section2']");
     $('.section').hide(); $('#' + $(this).data('section')).show(); 
     $('.test-navigation__btn').removeClass('active'); 
     $(this).addClass('active'); 
     swiper2.destroy();
 
-    if (_attr7) {
+    if (_attr12) {
+      $('#section12ButtonStatus').show();
+    } else if (_attr7) {
       setTimeout(function(){
         $('#appSaveCart').show();
       }, 400);

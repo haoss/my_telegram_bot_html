@@ -29,6 +29,21 @@
         line-height: 20px;
       }
     }
+    .icon {
+      width: 24px;
+      height: 24px;
+      fill: var(--tg-theme-bg-color);
+      flex-shrink: 0;
+      &:first-child {
+        margin-right: 10px;
+      }
+      &:last-child {
+        margin-left: 10px;
+      }
+    }
+  }
+  &.--error {
+    background: var(--color-d-5);
   }
 }
 
@@ -169,7 +184,13 @@
       line-height: 1.2;
     }
     .color {
-      color: var(--color-d-5);
+      color: var(--color-d-3);
+      &.--error {
+        color: var(--color-d-5);
+      }
+      &.--warning {
+        color: var(--color-d-4);
+      }
     }
   }
   &__title {

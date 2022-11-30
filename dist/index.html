@@ -13,7 +13,7 @@
             Telegram.WebApp.onEvent('themeChanged', setThemeClass);
             setThemeClass();
         </script>
-        <link rel="stylesheet" href="./css/style.min.css?v88">
+        <link rel="stylesheet" href="./css/style.min.css?v89">
     </head>
     <body> 
         <div class="app" id="app">
@@ -39,7 +39,7 @@
                 <div class="you-pharmacy-line__text">Ваша аптека:</div>
                 <button class="you-pharmacy-line__btn" type="button" id="j_test_04"><span>г. Харьков, просп. Гагарина, 722</span></button>
             </div>
-            <div class="section section1" id="section1" style="display: none">
+            <div class="section section1" id="section1">
                 <div class="search --search-main">
                     <button class="search__input j_test_07" type="button">Поиск</button>
                     <div class="search__btn-search">
@@ -4786,9 +4786,9 @@
             <div class="section section11" id="section11" style="display: none">
                 <p>Способы доставки</p>
             </div>
-            <div class="section section12" id="section12">
+            <div class="section section12" id="section12" style="display: none">
                 <div class="pharmacies">
-                    <div class="pharmacies__search">
+                    <div class="pharmacies__search bb1">
                         <div class="search">
                             <button class="search__input pr20 j_test_07" type="button">Ваш адрес, район</button>
                             <div class="search__btn-search">
@@ -4823,48 +4823,173 @@
                             </label>
                         </div>
                     </div>
-                    <div class="pharmacies-group">
-                        <div class="pharmacies-list__item">
-                            <div class="pharmacies-list__item-thumb">
+                    <div class="pharmacies-group2">
+                        <div class="pharmacies-list__item2">
+                            <div class="pharmacies-list__item2-arrow">
+                                <svg class="icon">
+                                    <use xlink:href="#arrow_right"></use>
+                                </svg>
+                            </div>
+                            <div class="pharmacies-list__item2-thumb">
                                 <svg class="icon">
                                     <use href="#pharmacy_logo_1"></use>
                                 </svg>
                             </div>
-                            <div class="pharmacies-list__item-wrapper">
-                                <div class="pharmacies-list__item-text">Солнышко</div>
-                                <div class="pharmacies-list__item-p">г. Харьков, просп. Юбилейный, 89</div>
-                                <div class="pharmacies-list__item-p">Пн-Вс: 8:00-21:00</div>
+                            <div class="pharmacies-list__item2-wrapper">
+                                <div class="pharmacies-list__item2-text">Солнышко</div>
+                                <div class="pharmacies-list__item2-p">г. Харьков, просп. Юбилейный, 89</div>
+                                <div class="pharmacies-list__item2-p">Пн-Вс: 8:00-21:00</div>
+                                <div class="pharmacies-list__item2-location">
+                                    <svg class="icon">
+                                        <use href="#location"></use>
+                                    </svg><span>0,6 км</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="catalog-list j_test_22">
-                            <div class="catalog-list__item">
-                                <div class="catalog-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
-                                <div class="catalog-list__item-wrapper">
-                                    <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
-                                    <div class="catalog-list__item-price">62,68 ₴</div>
-                                </div>
-                                <div class="catalog-list__item-btns">
-                                    <button class="btn --accent --xs" type="button"><span>Забронировать</span></button>
+                        <div class="pharmacies-list__item2">
+                            <div class="pharmacies-list__item2-arrow">
+                                <svg class="icon">
+                                    <use xlink:href="#arrow_right"></use>
+                                </svg>
+                            </div>
+                            <div class="pharmacies-list__item2-thumb">
+                                <svg class="icon">
+                                    <use href="#pharmacy_logo_2"></use>
+                                </svg>
+                            </div>
+                            <div class="pharmacies-list__item2-wrapper">
+                                <div class="pharmacies-list__item2-text">Новые дома</div>
+                                <div class="pharmacies-list__item2-p">г. Харьков, проезд Стадионный, 11/2</div>
+                                <div class="pharmacies-list__item2-p">Пн-Вс: 8:00-21:00</div>
+                                <div class="pharmacies-list__item2-location">
+                                    <svg class="icon">
+                                        <use href="#location"></use>
+                                    </svg><span>0,6 км</span>
                                 </div>
                             </div>
-                            <div class="catalog-list__item">
-                                <div class="catalog-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
-                                <div class="catalog-list__item-wrapper">
-                                    <div class="catalog-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
-                                    <div class="catalog-list__item-price">175,60 ₴</div>
+                        </div>
+                        <div class="pharmacies-list__item2">
+                            <div class="pharmacies-list__item2-arrow">
+                                <svg class="icon">
+                                    <use xlink:href="#arrow_right"></use>
+                                </svg>
+                            </div>
+                            <div class="pharmacies-list__item2-thumb">
+                                <svg class="icon">
+                                    <use href="#pharmacy_logo_3"></use>
+                                </svg>
+                            </div>
+                            <div class="pharmacies-list__item2-wrapper">
+                                <div class="pharmacies-list__item2-text">Центральная №2</div>
+                                <div class="pharmacies-list__item2-p">г. Харьков, просп. Науки, 9</div>
+                                <div class="pharmacies-list__item2-p">Пн-Пт: 08:00-19:00; Сб-Вс: 08:00-18:00</div>
+                                <div class="pharmacies-list__item2-info">
+                                    <svg class="icon color --warning">
+                                        <use href="#info_alert"></use>
+                                    </svg><span class="color --warning">Доступно товаров: 3 из 5</span>
                                 </div>
-                                <div class="catalog-list__item-btns">
-                                    <button class="btn --accent --xs" type="button"><span>Забронировать</span></button>
+                                <div class="pharmacies-list__item2-location">
+                                    <svg class="icon">
+                                        <use href="#location"></use>
+                                    </svg><span>1,6 км</span>
                                 </div>
                             </div>
-                            <div class="catalog-list__item">
-                                <div class="catalog-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
-                                <div class="catalog-list__item-wrapper">
-                                    <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
-                                    <div class="catalog-list__item-price">28,90 ₴</div>
+                        </div>
+                        <div class="pharmacies-list__item2">
+                            <div class="pharmacies-list__item2-arrow">
+                                <svg class="icon">
+                                    <use xlink:href="#arrow_right"></use>
+                                </svg>
+                            </div>
+                            <div class="pharmacies-list__item2-thumb">
+                                <svg class="icon">
+                                    <use href="#pharmacy_logo_4"></use>
+                                </svg>
+                            </div>
+                            <div class="pharmacies-list__item2-wrapper">
+                                <div class="pharmacies-list__item2-text">Центральная №3</div>
+                                <div class="pharmacies-list__item2-p">г. Харьков, ул. Валентиновская, 21</div>
+                                <div class="pharmacies-list__item2-p">Пн-Вс: 8:00-21:00</div>
+                                <div class="pharmacies-list__item2-info">
+                                    <svg class="icon color --error">
+                                        <use href="#offline"></use>
+                                    </svg><span class="color --error">Аптека offline</span>
                                 </div>
-                                <div class="catalog-list__item-btns">
-                                    <button class="btn --accent --xs" type="button"><span>Забронировать</span></button>
+                                <div class="pharmacies-list__item2-location">
+                                    <svg class="icon">
+                                        <use href="#location"></use>
+                                    </svg><span>2,2 км</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pharmacies-list__item2">
+                            <div class="pharmacies-list__item2-arrow">
+                                <svg class="icon">
+                                    <use xlink:href="#arrow_right"></use>
+                                </svg>
+                            </div>
+                            <div class="pharmacies-list__item2-thumb">
+                                <svg class="icon">
+                                    <use href="#pharmacy_logo_5"></use>
+                                </svg>
+                            </div>
+                            <div class="pharmacies-list__item2-wrapper">
+                                <div class="pharmacies-list__item2-text">Солнышко</div>
+                                <div class="pharmacies-list__item2-p">г. Харьков, просп. Юбилейный, 89</div>
+                                <div class="pharmacies-list__item2-p">Пн-Вс: 8:00-21:00</div>
+                                <div class="pharmacies-list__item2-info">
+                                    <svg class="icon color --error">
+                                        <use href="#info_alert"></use>
+                                    </svg><span class="color --error">Нет товара</span>
+                                </div>
+                                <div class="pharmacies-list__item2-location">
+                                    <svg class="icon">
+                                        <use href="#location"></use>
+                                    </svg><span>7,6 км</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pharmacies-list__item2">
+                            <div class="pharmacies-list__item2-arrow">
+                                <svg class="icon">
+                                    <use xlink:href="#arrow_right"></use>
+                                </svg>
+                            </div>
+                            <div class="pharmacies-list__item2-thumb">
+                                <svg class="icon">
+                                    <use href="#pharmacy_logo_6"></use>
+                                </svg>
+                            </div>
+                            <div class="pharmacies-list__item2-wrapper">
+                                <div class="pharmacies-list__item2-text">Солнышко</div>
+                                <div class="pharmacies-list__item2-p">г. Харьков, просп. Юбилейный, 89</div>
+                                <div class="pharmacies-list__item2-p">Пн-Вс: 8:00-21:00</div>
+                                <div class="pharmacies-list__item2-location">
+                                    <svg class="icon">
+                                        <use href="#location"></use>
+                                    </svg><span>11,6 км</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pharmacies-list__item2">
+                            <div class="pharmacies-list__item2-arrow">
+                                <svg class="icon">
+                                    <use xlink:href="#arrow_right"></use>
+                                </svg>
+                            </div>
+                            <div class="pharmacies-list__item2-thumb">
+                                <svg class="icon">
+                                    <use href="#pharmacy_logo_7"></use>
+                                </svg>
+                            </div>
+                            <div class="pharmacies-list__item2-wrapper">
+                                <div class="pharmacies-list__item2-text">Солнышко</div>
+                                <div class="pharmacies-list__item2-p">г. Харьков, просп. Юбилейный, 89</div>
+                                <div class="pharmacies-list__item2-p">Пн-Вс: 8:00-21:00</div>
+                                <div class="pharmacies-list__item2-location">
+                                    <svg class="icon">
+                                        <use href="#location"></use>
+                                    </svg><span>22,6 км</span>
                                 </div>
                             </div>
                         </div>
@@ -4873,6 +4998,10 @@
             </div>
             <button class="app-button-status" type="button" style="display: none" id="appButtonStatus"><span class="app-button-status__inner"><span class="app-button-status__count">5</span><span>товаров. Оформить</span></span></button>
             <button class="app-button-status" type="button" style="display: none" id="checkoutButtonStatus"><span class="app-button-status__inner"><span class="app-button-status__count">от 149,67 ₴ </span><span>Оформить</span></span></button>
+            <button class="app-button-status --error" type="button" style="display: none" id="section12ButtonStatus"><span class="app-button-status__inner"><span>Показать аптеки на карте</span>
+                    <svg class="icon">
+                        <use href="#arrow_right"></use>
+                    </svg></span></button>
             <div class="app-modal" id="appModal1" style="display: none">
                 <div class="app-modal__wrapper">
                     <button class="app-modal__close j_test_43" type="button">
@@ -5242,7 +5371,7 @@
                 <div class="app-modal-info">
                     <div class="app-modal-info__search-img"><img src="./tmp/image-search.svg" width="298" height="134" alt=""></div>
                     <div class="app-modal-info__content">
-                        <p>На жаль, ми не змогли знайти - <b class="color">«Віваіап»</b>. Перевірте, будь ласка, уважно та спробуйте ще раз ввести Ваш запит</p>
+                        <p>На жаль, ми не змогли знайти - <b class="color --error">«Віваіап»</b>. Перевірте, будь ласка, уважно та спробуйте ще раз ввести Ваш запит</p>
                     </div>
                     <div class="app-modal-info__btns">
                         <button class="btn --secondary --ghost --block --sm j_test_43" type="button"><span>ОК</span></button>
@@ -5268,7 +5397,7 @@
         <script src="./js/ion.rangeSlider/ion.rangeSlider.js"></script>
         <script src="./js/autosize/autosize.js"></script>
         <script src="./js/gsap.min.js"></script>
-        <script src="./js/common.js?v56"></script>
+        <script src="./js/common.js?v57"></script>
         <svg width="0" height="0" style="display: none">
             <symbol id="settings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2337 7.125H3.75C3.33579 7.125 3 7.46079 3 7.875C3 8.28921 3.33579 8.625 3.75 8.625H7.2337C7.55641 9.70931 8.56087 10.5 9.75 10.5C10.9391 10.5 11.9436 9.70931 12.2663 8.625H20.25C20.6642 8.625 21 8.28921 21 7.875C21 7.46079 20.6642 7.125 20.25 7.125H12.2663C11.9436 6.04069 10.9391 5.25 9.75 5.25C8.56087 5.25 7.55641 6.04069 7.2337 7.125ZM8.625 7.875C8.625 7.25368 9.12868 6.75 9.75 6.75C10.3713 6.75 10.875 7.25368 10.875 7.875C10.875 8.49632 10.3713 9 9.75 9C9.12868 9 8.625 8.49632 8.625 7.875Z"></path>
@@ -5624,6 +5753,12 @@
             </symbol>
             <symbol id="chat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" d="M13.08 19.68h8.64c.6 0 1.08-.48 1.08-1.08V3.48c0-.6-.48-1.08-1.08-1.08H2.28c-.6 0-1.08.48-1.08 1.08V18.6c0 .6.48 1.08 1.08 1.08h5.4V24l5.4-4.32Zm-4.2 1.82 3.45-2.76c.21-.17.48-.26.75-.26h8.52V3.6H2.4v14.88h5.28c.66 0 1.2.54 1.2 1.2v1.82Z" clip-rule="evenodd"></path>
+            </symbol>
+            <symbol id="offline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+                <path d="M7.5 10.92c.68 0 1.23.55 1.23 1.2a1.23 1.23 0 0 1-2.46 0c0-.65.55-1.2 1.24-1.2Zm-5.65 1.15L4.3 9.68l-.73-.73.32-.35a5.1 5.1 0 0 1 2.97-1.43l2.5-2.45a7.8 7.8 0 0 0-7.7 2.36l-.91-.87.34-.36a9.12 9.12 0 0 1 9.3-2.14l1.89-1.85.9.9-10.42 10.2-.91-.89Zm10-6.27a6.9 6.9 0 0 1 1.5 1.29l.9-.88a9.39 9.39 0 0 0-1.49-1.32l-.91.9ZM8.93 8.66c.48.18.91.47 1.28.81l.33.38.9-.9A5.29 5.29 0 0 0 9.9 7.71l-.96.95Z"></path>
+            </symbol>
+            <symbol id="location" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+                <path d="M13.44 1.53a.36.36 0 0 0-.27 0L1.73 6.05a.36.36 0 0 0-.01.67L6.38 8.8l2.07 4.67c.06.13.19.21.33.21h.01c.15 0 .28-.1.33-.23L13.64 2a.36.36 0 0 0-.2-.47ZM8.76 12.37l-1.78-4a.36.36 0 0 0-.18-.18l-4-1.78 9.86-3.9-3.9 9.86Z"></path>
             </symbol>
         </svg>
     </body>

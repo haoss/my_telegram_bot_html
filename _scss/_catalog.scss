@@ -286,6 +286,106 @@
         width: 60px;
         height: 60px;
         object-fit: contain;
+        display: block;
+      }
+    }
+  }
+  &__item2 {
+    padding: 20px 48px 20px 80px;
+    width: 100%;
+    position: relative;
+    min-height: 80px;
+    &-arrow {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      .icon {
+        width: 18px;
+        height: 18px;
+        fill: var(--color-d-7);
+      }
+    }
+    &-text {
+      flex-grow: 1;
+      line-height: 1.2;
+    }
+    &-p {
+      color: var(--color-d-7);
+      font-weight: 400;
+      font-size: 13px;
+      margin-top: 8px;
+      line-height: 1.1;
+      &+* {
+        margin-top: 4px;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      left: 80px;
+      background: var(--color-l-3);
+    }
+    &-thumb {
+      width: 60px;
+      flex-shrink: 0;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      overflow: hidden;
+      .icon, img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        display: block;
+      }
+    }
+    &-info {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      .icon {
+        flex-shrink: 0;
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+        &.color {
+          fill: var(--color-d-3);
+          &.--error {
+            fill: var(--color-d-5);
+          }
+          &.--warning {
+            fill: var(--color-d-4);
+          }
+        }
+      }
+      .color {
+        color: var(--color-d-3);
+        &.--error {
+          color: var(--color-d-5);
+        }
+        &.--warning {
+          color: var(--color-d-4);
+        }
+      }
+    }
+    &-location {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      color: var(--color-d-3);
+      .icon {
+        flex-shrink: 0;
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+        fill: var(--color-d-3);
       }
     }
   }
