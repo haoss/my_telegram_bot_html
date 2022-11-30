@@ -435,8 +435,65 @@ textarea.field-text__input {
 }
 
 .btn-radio, .btn-checkbox {
-  $this: &;
   margin: 0;
+  &__label {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: top;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid var(--color-d-3);
+    background: transparent;
+    background-color: var(--tg-theme-bg-color);
+    border-radius: 7px;
+    text-decoration: none;
+    position: relative;
+    min-width: auto;
+    background-position: center;
+    vertical-align: middle;
+    line-height: 1;
+    overflow: hidden;
+    background-size: 0%;
+    padding: 7px 6px;
+    color: var(--color-d-3);
+    transition: background 0.5s;
+    .icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin: -12px -5px -12px 5px;
+      fill: var(--tg-theme-bg-color);
+      display: none;
+    }
+  }
+}
+.btn-radio {
+  $this: &;
+  &__input {
+    display: none;
+    &:checked {
+      &~#{$this} {
+        &__label {
+          background-color: var(--color-d-3);
+          border-color: var(--color-d-3);
+          color: var(--tg-theme-bg-color);
+          .icon {
+            fill: var(--tg-theme-bg-color);
+          }
+        }
+      }
+    }
+  }
+}
+.btn-checkbox {
+  $this: &;
   &__input {
     display: none;
     &:checked {
@@ -451,44 +508,6 @@ textarea.field-text__input {
           }
         }
       }
-    }
-  }
-  &__label {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0;
-    font-size: 13px;
-    font-weight: 500;
-    text-align: center;
-    vertical-align: top;
-    touch-action: manipulation;
-    cursor: pointer;
-    user-select: none;
-    border: 1px solid currentColor;
-    background: transparent;
-    border-radius: 7px;
-    text-decoration: none;
-    position: relative;
-    min-width: auto;
-    background-position: center;
-    vertical-align: middle;
-    line-height: 1;
-    overflow: hidden;
-    transition: background 0.5s;
-    background-size: 0%;
-    padding: 6.5px 6px;
-    border-color: var(--color-d-3);
-    background-color: var(--tg-theme-bg-color);
-    color: var(--color-d-3);
-    .icon {
-      width: 20px;
-      height: 20px;
-      flex-shrink: 0;
-      margin: -12px -5px -12px 5px;
-      fill: var(--tg-theme-bg-color);
-      display: none;
     }
   }
 }

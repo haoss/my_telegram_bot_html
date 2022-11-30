@@ -238,13 +238,7 @@
     padding: 15px 20px;
     border-bottom: 10px solid var(--color-l-2);
     &-filter {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: -10px;
-      .btn, .btn-radio, .btn-checkbox {
-        margin-top: 10px;
-        margin-right: 8px;
-      }
+      margin-bottom: -10px;
     }
   }
 }
@@ -294,5 +288,17 @@
         object-fit: contain;
       }
     }
+  }
+}
+
+.btns-filter {
+  display: flex;
+  flex-wrap: wrap;
+  &>* {
+    margin-bottom: 10px;
+    margin-right: 8px;
+  }
+  &+.btns-filter {
+    margin-top: 10px;
   }
 }

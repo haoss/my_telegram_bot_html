@@ -34,6 +34,8 @@ html(lang="uk")
         button(type="button" data-section="section8").test-navigation__btn 8
         button(type="button" data-section="section9").test-navigation__btn 9
         button(type="button" data-section="section10").test-navigation__btn 10
+        button(type="button" data-section="section11").test-navigation__btn 11
+        button(type="button" data-section="section12").test-navigation__btn 12
       #youPharmacyLine.you-pharmacy-line(style="display: none")
         svg.icon
           use(href='#vasha_apteka')
@@ -1383,7 +1385,7 @@ html(lang="uk")
               button(type="button").btn.--secondary-alt.--xs
                 span В аптеках
           - }
-      #section9.section.section9(style="padding-bottom: 47px; ")
+      #section9.section.section9(style="padding-bottom: 47px; display: none")
         +breadcrumbs()
           +breadcrumbs-item('Экстракт расторопши пятнистой')
         .pharmacies
@@ -1398,7 +1400,7 @@ html(lang="uk")
               .search__btn-search
                 svg.icon
                   use(xlink:href='#target')
-            //-.pharmacies__search-filter
+            //-.btns-filter.pharmacies__search-filter
               button(type="button").btn.--accent.--xs.j_test_57
                 span По наличию
               button(type="button").btn.--accent.--outline.--xs.j_test_57
@@ -1409,8 +1411,20 @@ html(lang="uk")
                 span Открыто сейчас
               button(type="button").btn.--accent.--outline.--xs.j_test_57
                 span 24/7
-
-            .pharmacies__search-filter
+            //-.btns-filter.pharmacies__search-filter
+              label(for="checkbox1_section9").btn-checkbox
+                input#checkbox1_section9(type="checkbox" name="checkbox1_section9" checked).btn-checkbox__input
+                span.btn-checkbox__label 
+                  span Открыто сейчас
+                  svg.icon
+                    use(xlink:href='#close')
+              label(for="checkbox2_section9").btn-checkbox
+                input#checkbox2_section9(type="checkbox" name="checkbox2_section9").btn-checkbox__input
+                span.btn-checkbox__label
+                  span Круглосуточные
+                  svg.icon
+                    use(xlink:href='#close')
+            .btns-filter.pharmacies__search-filter
               label(for="radio1_section9").btn-radio
                 input#radio1_section9(type="radio" name="radio1_section9").btn-radio__input
                 span.btn-radio__label
@@ -1431,21 +1445,6 @@ html(lang="uk")
                 input#radio5_section9(type="radio" name="radio1_section9").btn-radio__input
                 span.btn-radio__label
                   span 24/7
-            br
-            br
-            .pharmacies__search-filter
-              label(for="checkbox1_section9").btn-checkbox
-                input#checkbox1_section9(type="checkbox" name="checkbox1_section9" checked).btn-checkbox__input
-                span.btn-checkbox__label 
-                  span Открыто сейчас
-                  svg.icon
-                    use(xlink:href='#close')
-              label(for="checkbox2_section9").btn-checkbox
-                input#checkbox2_section9(type="checkbox" name="checkbox2_section9").btn-checkbox__input
-                span.btn-checkbox__label
-                  span Круглосуточные
-                  svg.icon
-                    use(xlink:href='#close')
           .pharmacies-group
             .pharmacies-list__item
               .pharmacies-list__item-thumb
@@ -1509,6 +1508,63 @@ html(lang="uk")
             .search-list__item3
               .search-list__item3-text Харьковка
                 small Сумская обл., Глуховский р-н
+      #section11.section.section11(style="display: none")
+        p Способы доставки
+      #section12.section.section12
+        .pharmacies
+          .pharmacies__search
+            .search
+              button(type="button").search__input.pr20.j_test_07 Ваш адрес, район
+              .search__btn-search
+                svg.icon
+                  use(xlink:href='#target')
+            //-.btns-filter.pharmacies__search-filter
+              button(type="button").btn.--accent.--xs.j_test_57
+                span По наличию
+              button(type="button").btn.--accent.--outline.--xs.j_test_57
+                span По удаленности
+              button(type="button").btn.--accent.--outline.--xs.j_test_57
+                span По цене
+              button(type="button").btn.--accent.--outline.--xs.j_test_57
+                span Открыто сейчас
+              button(type="button").btn.--accent.--outline.--xs.j_test_57
+                span 24/7
+            .btns-filter.pharmacies__search-filter
+              label(for="radio1_section12").btn-radio
+                input#radio1_section12(type="radio" name="radio1_section12").btn-radio__input
+                span.btn-radio__label
+                  span По наличию
+              label(for="radio2_section12").btn-radio
+                input#radio2_section12(type="radio" name="radio1_section12" checked).btn-radio__input
+                span.btn-radio__label
+                  span По удаленности
+              label(for="radio3_section12").btn-radio
+                input#radio3_section12(type="radio" name="radio1_section12").btn-radio__input
+                span.btn-radio__label
+                  span По цене
+            .btns-filter.pharmacies__search-filter
+              label(for="checkbox1_section12").btn-checkbox
+                input#checkbox1_section12(type="checkbox" name="checkbox1_section12").btn-checkbox__input
+                span.btn-checkbox__label 
+                  span Открыто сейчас
+                  svg.icon
+                    use(xlink:href='#close')
+              label(for="checkbox2_section12").btn-checkbox
+                input#checkbox2_section12(type="checkbox" name="checkbox2_section12").btn-checkbox__input
+                span.btn-checkbox__label
+                  span Круглосуточные
+                  svg.icon
+                    use(xlink:href='#close')
+          .pharmacies-group
+            .pharmacies-list__item
+              .pharmacies-list__item-thumb
+                svg.icon
+                  use(href='#pharmacy_logo_1')
+              .pharmacies-list__item-wrapper
+                .pharmacies-list__item-text Солнышко
+                .pharmacies-list__item-p г. Харьков, просп. Юбилейный, 89
+                .pharmacies-list__item-p Пн-Вс: 8:00-21:00
+            include ./_include/_catalog_view_3
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner
           span.app-button-status__count 5

@@ -29,6 +29,8 @@
                 <button class="test-navigation__btn" type="button" data-section="section8">8</button>
                 <button class="test-navigation__btn" type="button" data-section="section9">9</button>
                 <button class="test-navigation__btn" type="button" data-section="section10">10</button>
+                <button class="test-navigation__btn" type="button" data-section="section11">11</button>
+                <button class="test-navigation__btn" type="button" data-section="section12">12</button>
             </div>
             <div class="you-pharmacy-line" id="youPharmacyLine" style="display: none">
                 <svg class="icon">
@@ -4479,7 +4481,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section section9" id="section9" style="padding-bottom: 47px; ">
+            <div class="section section9" id="section9" style="padding-bottom: 47px; display: none">
                 <ol class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
                     <li class="breadcrumbs__item" role="list"><span>
                             <svg class="icon">
@@ -4505,7 +4507,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="pharmacies__search-filter">
+                        <div class="btns-filter pharmacies__search-filter">
                             <label class="btn-radio" for="radio1_section9">
                                 <input class="btn-radio__input" id="radio1_section9" type="radio" name="radio1_section9"><span class="btn-radio__label"><span>По наличию</span></span>
                             </label>
@@ -4520,20 +4522,6 @@
                             </label>
                             <label class="btn-radio" for="radio5_section9">
                                 <input class="btn-radio__input" id="radio5_section9" type="radio" name="radio1_section9"><span class="btn-radio__label"><span>24/7</span></span>
-                            </label>
-                        </div><br><br>
-                        <div class="pharmacies__search-filter">
-                            <label class="btn-checkbox" for="checkbox1_section9">
-                                <input class="btn-checkbox__input" id="checkbox1_section9" type="checkbox" name="checkbox1_section9" checked><span class="btn-checkbox__label"> <span>Открыто сейчас</span>
-                                    <svg class="icon">
-                                        <use xlink:href="#close"></use>
-                                    </svg></span>
-                            </label>
-                            <label class="btn-checkbox" for="checkbox2_section9">
-                                <input class="btn-checkbox__input" id="checkbox2_section9" type="checkbox" name="checkbox2_section9"><span class="btn-checkbox__label"><span>Круглосуточные</span>
-                                    <svg class="icon">
-                                        <use xlink:href="#close"></use>
-                                    </svg></span>
                             </label>
                         </div>
                     </div>
@@ -4791,6 +4779,94 @@
                         </div>
                         <div class="search-list__item3">
                             <div class="search-list__item3-text">Харьковка<small>Сумская обл., Глуховский р-н</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section11" id="section11" style="display: none">
+                <p>Способы доставки</p>
+            </div>
+            <div class="section section12" id="section12">
+                <div class="pharmacies">
+                    <div class="pharmacies__search">
+                        <div class="search">
+                            <button class="search__input pr20 j_test_07" type="button">Ваш адрес, район</button>
+                            <div class="search__btn-search">
+                                <svg class="icon">
+                                    <use xlink:href="#target"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="btns-filter pharmacies__search-filter">
+                            <label class="btn-radio" for="radio1_section12">
+                                <input class="btn-radio__input" id="radio1_section12" type="radio" name="radio1_section12"><span class="btn-radio__label"><span>По наличию</span></span>
+                            </label>
+                            <label class="btn-radio" for="radio2_section12">
+                                <input class="btn-radio__input" id="radio2_section12" type="radio" name="radio1_section12" checked><span class="btn-radio__label"><span>По удаленности</span></span>
+                            </label>
+                            <label class="btn-radio" for="radio3_section12">
+                                <input class="btn-radio__input" id="radio3_section12" type="radio" name="radio1_section12"><span class="btn-radio__label"><span>По цене</span></span>
+                            </label>
+                        </div>
+                        <div class="btns-filter pharmacies__search-filter">
+                            <label class="btn-checkbox" for="checkbox1_section12">
+                                <input class="btn-checkbox__input" id="checkbox1_section12" type="checkbox" name="checkbox1_section12"><span class="btn-checkbox__label"> <span>Открыто сейчас</span>
+                                    <svg class="icon">
+                                        <use xlink:href="#close"></use>
+                                    </svg></span>
+                            </label>
+                            <label class="btn-checkbox" for="checkbox2_section12">
+                                <input class="btn-checkbox__input" id="checkbox2_section12" type="checkbox" name="checkbox2_section12"><span class="btn-checkbox__label"><span>Круглосуточные</span>
+                                    <svg class="icon">
+                                        <use xlink:href="#close"></use>
+                                    </svg></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="pharmacies-group">
+                        <div class="pharmacies-list__item">
+                            <div class="pharmacies-list__item-thumb">
+                                <svg class="icon">
+                                    <use href="#pharmacy_logo_1"></use>
+                                </svg>
+                            </div>
+                            <div class="pharmacies-list__item-wrapper">
+                                <div class="pharmacies-list__item-text">Солнышко</div>
+                                <div class="pharmacies-list__item-p">г. Харьков, просп. Юбилейный, 89</div>
+                                <div class="pharmacies-list__item-p">Пн-Вс: 8:00-21:00</div>
+                            </div>
+                        </div>
+                        <div class="catalog-list j_test_22">
+                            <div class="catalog-list__item">
+                                <div class="catalog-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                                <div class="catalog-list__item-wrapper">
+                                    <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                                    <div class="catalog-list__item-price">62,68 ₴</div>
+                                </div>
+                                <div class="catalog-list__item-btns">
+                                    <button class="btn --accent --xs" type="button"><span>Забронировать</span></button>
+                                </div>
+                            </div>
+                            <div class="catalog-list__item">
+                                <div class="catalog-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                                <div class="catalog-list__item-wrapper">
+                                    <div class="catalog-list__item-text">Расторопши плоды 200г Solution Pharm<small>Дарниця | Украина</small></div>
+                                    <div class="catalog-list__item-price">175,60 ₴</div>
+                                </div>
+                                <div class="catalog-list__item-btns">
+                                    <button class="btn --accent --xs" type="button"><span>Забронировать</span></button>
+                                </div>
+                            </div>
+                            <div class="catalog-list__item">
+                                <div class="catalog-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                                <div class="catalog-list__item-wrapper">
+                                    <div class="catalog-list__item-text">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                                    <div class="catalog-list__item-price">28,90 ₴</div>
+                                </div>
+                                <div class="catalog-list__item-btns">
+                                    <button class="btn --accent --xs" type="button"><span>Забронировать</span></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
