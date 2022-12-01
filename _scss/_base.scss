@@ -165,3 +165,46 @@ input {
     font-size: #{$i}px !important;
   }
 }
+
+/* no-padding, no-margin */
+.no {
+  &--p, &-padding {
+    padding: 0 !important;
+    &-top {
+      padding-top: 0 !important;
+    }
+    &-bottom {
+      padding-bottom: 0 !important;
+    }
+    &-left {
+      padding-left: 0 !important;
+    }
+    &-right {
+      padding-right: 0 !important;
+    }
+  }
+  &--m, &-margin {
+    margin: 0 !important;
+    &-top {
+      margin-top: 0 !important;
+    }
+    &-bottom {
+      margin-bottom: 0 !important;
+    }
+    &-left {
+      margin-left: 0 !important;
+    }
+    &-right {
+      margin-right: 0 !important;
+    }
+  }
+  &--b, &-background {
+    background: none !important;
+    &-image {
+      background-image: none !important;
+    }
+  }
+  &--border, &-border {
+    border: 0 !important;
+  }
+}

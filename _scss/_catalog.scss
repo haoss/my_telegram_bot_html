@@ -244,6 +244,20 @@
 }
 .pharmacies-group {
   border-bottom: 10px solid var(--color-l-2);
+  &__head {
+    border-bottom: 1px solid var(--color-l-2);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    &>.div1 {
+      flex-grow: 1;
+    }
+    .btn {
+      flex-shrink: 0;
+      margin-left: 10px;
+    }
+  }
 }
 .pharmacies-list {
   &__item {

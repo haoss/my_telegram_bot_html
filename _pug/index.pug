@@ -17,7 +17,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v89')
+    link(rel='stylesheet', href='./css/style.min.css?v90')
   
   body 
     #app.app
@@ -43,7 +43,7 @@ html(lang="uk")
         .you-pharmacy-line__text Ваша аптека:
         button(type="button").you-pharmacy-line__btn#j_test_04
           span г. Харьков, просп. Гагарина, 722
-      #section1.section.section1(style="display: none")
+      #section1.section.section1
         .search.--once
           button(type="button").search__input.j_test_07 Поиск
           .search__btn-search
@@ -1509,7 +1509,7 @@ html(lang="uk")
             .search-list__item3
               .search-list__item3-text Харьковка
                 small Сумская обл., Глуховский р-н
-      #section11.section.section11
+      #section11.section.section11(style="display: none")
         .tab
           .tab__block.is-active.j_test_64
             svg.icon
@@ -1520,53 +1520,59 @@ html(lang="uk")
               use(href='#world')
             span Международная
         #section11_block1
-          .pharmacies-list__item2
-            .pharmacies-list__item2-arrow
-              svg.icon
-                use(xlink:href='#arrow_right')
-            .pharmacies-list__item2-thumb
-              svg.icon
-                use(href='#logo_pickup')
-            .pharmacies-list__item2-wrapper
-              .pharmacies-list__item2-text Самовывоз из аптеки
-              .pharmacies-list__item2-p Бронь в любой аптеке сети
-              .pharmacies-list__item2-p Все в наличии в 120 из 191 аптек
-          .pharmacies-list__item2
-            .pharmacies-list__item2-arrow
-              svg.icon
-                use(xlink:href='#arrow_right')
-            .pharmacies-list__item2-thumb
-              svg.icon
-                use(href='#logo_courier')
-            .pharmacies-list__item2-wrapper
-              .pharmacies-list__item2-text Курьер
-              .pharmacies-list__item2-p Доставим в удобное время
-              .pharmacies-list__item2-info
-                span.color от 100 ₴
-          .pharmacies-list__item2
-            .pharmacies-list__item2-arrow
-              svg.icon
-                use(xlink:href='#arrow_right')
-            .pharmacies-list__item2-thumb
-              svg.icon
-                use(href='#logo_newposhta')
-            .pharmacies-list__item2-wrapper
-              .pharmacies-list__item2-text Новая Почта
-              .pharmacies-list__item2-p Отправим сегодня. Доставка 1-2 дня
-              .pharmacies-list__item2-info
-                span.color бесплатно*
-          .pharmacies-list__item2
-            .pharmacies-list__item2-arrow
-              svg.icon
-                use(xlink:href='#arrow_right')
-            .pharmacies-list__item2-thumb
-              svg.icon
-                use(href='#logo_ukrposhta')
-            .pharmacies-list__item2-wrapper
-              .pharmacies-list__item2-text Укрпошта
-              .pharmacies-list__item2-p Отправим сегодня. Доставка 2-4 дня
-              .pharmacies-list__item2-info
-                span.color бесплатно*
+          .pharmacies-group.no--border
+            .pharmacies-group__head
+              .div1 г. Харьков. Харьковская обл.
+              button(type="button").btn.--secondary-alt.--r50.--xs.j_test_66
+                svg.icon
+                  use(xlink:href='#edit')
+            .pharmacies-list__item2
+              .pharmacies-list__item2-arrow
+                svg.icon
+                  use(xlink:href='#arrow_right')
+              .pharmacies-list__item2-thumb
+                svg.icon
+                  use(href='#logo_pickup')
+              .pharmacies-list__item2-wrapper
+                .pharmacies-list__item2-text Самовывоз из аптеки
+                .pharmacies-list__item2-p Бронь в любой аптеке сети
+                .pharmacies-list__item2-p Все в наличии в 120 из 191 аптек
+            .pharmacies-list__item2
+              .pharmacies-list__item2-arrow
+                svg.icon
+                  use(xlink:href='#arrow_right')
+              .pharmacies-list__item2-thumb
+                svg.icon
+                  use(href='#logo_courier')
+              .pharmacies-list__item2-wrapper
+                .pharmacies-list__item2-text Курьер
+                .pharmacies-list__item2-p Доставим в удобное время
+                .pharmacies-list__item2-info
+                  span.color от 100 ₴
+            .pharmacies-list__item2
+              .pharmacies-list__item2-arrow
+                svg.icon
+                  use(xlink:href='#arrow_right')
+              .pharmacies-list__item2-thumb
+                svg.icon
+                  use(href='#logo_newposhta')
+              .pharmacies-list__item2-wrapper
+                .pharmacies-list__item2-text Новая Почта
+                .pharmacies-list__item2-p Отправим сегодня. Доставка 1-2 дня
+                .pharmacies-list__item2-info
+                  span.color бесплатно*
+            .pharmacies-list__item2
+              .pharmacies-list__item2-arrow
+                svg.icon
+                  use(xlink:href='#arrow_right')
+              .pharmacies-list__item2-thumb
+                svg.icon
+                  use(href='#logo_ukrposhta')
+              .pharmacies-list__item2-wrapper
+                .pharmacies-list__item2-text Укрпошта
+                .pharmacies-list__item2-p Отправим сегодня. Доставка 2-4 дня
+                .pharmacies-list__item2-info
+                  span.color бесплатно*
         #section11_block2(style="display: none")
           .pharmacies-list__item2
             .pharmacies-list__item2-arrow
@@ -1935,6 +1941,6 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v57")
+    script(src="./js/common.js?v58")
 
     include ./_include/_svg

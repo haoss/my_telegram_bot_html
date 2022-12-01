@@ -61,8 +61,10 @@
     padding-left: 10px;
     padding-right: 10px;
     .icon {
-      margin-top: -2.5px;
-      margin-bottom: -2.5px;
+      margin-top: -0.5px;
+      margin-bottom: -0.5px;
+      width: 14px;
+      height: 14px;
     }
   }
   &.--primary {
@@ -179,6 +181,10 @@
   }
   &.--r50 {
     border-radius: 50%;
+    &.--xs {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
   }
   &.disabled, &.--disabled, &[disabled] {
     opacity: 0.5 !important;
