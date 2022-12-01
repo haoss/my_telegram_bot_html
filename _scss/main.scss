@@ -2071,4 +2071,25 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
+  &__marker-test {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    img {
+      &:last-child {
+        display: none;
+      }
+    }
+    &.is-active {
+      img {
+        &:first-child {
+          display: none;
+        }
+        &:last-child {
+          display: block;
+        }
+      }
+    }
+  }
 }

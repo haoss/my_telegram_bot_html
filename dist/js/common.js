@@ -123,6 +123,8 @@ $(document).on('ready', function(){
     }, 1000);
   });
   $('.j_test_61').on('click', function(){ $('.section').hide(); $('#section9').show(); });
+  $('.j_test_62').on('click', function(){ $(this).html('ул. Сумская, 11, г. Харьков. Харьквоская').parent().addClass('--filled'); });
+  $('.j_test_63').on('click', function(){ $('.j_test_63').removeClass('is-active'); $(this).toggleClass('is-active'); });
 
   $(document).on('click', '.collapsible-heading', function(e){
     e.preventDefault();
@@ -207,18 +209,23 @@ $(document).on('ready', function(){
 
   $('.test-navigation__btn').on('click', function(){ 
     var _this = $(this);
+    var _attr1 = $(this).is("[data-section='section1']");
+    var _attr2 = $(this).is("[data-section='section2']");
     var _attr7 = $(this).is("[data-section='section7']");
     var _attr8 = $(this).is("[data-section='section8']");
-    var _attr1 = $(this).is("[data-section='section1']");
     var _attr12 = $(this).is("[data-section='section12']");
-    var _attr2 = $(this).is("[data-section='section2']");
+    var _attr13 = $(this).is("[data-section='section13']");
     $('.section').hide(); $('#' + $(this).data('section')).show(); 
     $('.test-navigation__btn').removeClass('active'); 
     $(this).addClass('active'); 
     swiper2.destroy();
 
-    if (_attr12) {
+    if (_attr13) {
+      $('#section13ButtonStatus').show();
+      $('#section12ButtonStatus').hide();
+    } else if (_attr12) {
       $('#section12ButtonStatus').show();
+      $('#section13ButtonStatus').hide();
     } else if (_attr7) {
       setTimeout(function(){
         $('#appSaveCart').show();

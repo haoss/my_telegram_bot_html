@@ -64,13 +64,23 @@
   &__btn-microphone {
     right: 40px;
   }
-  &.--search-main {
+  &.--once {
     margin-top: 20px;
     margin-bottom: 20px;
     #{$this}__input {
       box-shadow: 0px 5px 10px rgba(var(--color-black-rgba), 0.14), 0px 1px 18px rgba(var(--color-black-rgba), 0.12), 0px 3px 5px rgba(var(--color-black-rgba), 0.2);
       background: var(--tg-theme-bg-color);
       height: 54px;
+    }
+    &.--filled {
+      #{$this}__input {
+        color: var(--color-d-6);
+      }
+      [class*="__btn-"] {
+        .icon {
+          fill: var(--color-d-6);
+        }
+      }
     }
   }
 }

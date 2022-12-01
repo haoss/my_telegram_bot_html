@@ -44,7 +44,7 @@ html(lang="uk")
         button(type="button").you-pharmacy-line__btn#j_test_04
           span г. Харьков, просп. Гагарина, 722
       #section1.section.section1(style="display: none")
-        .search.--search-main
+        .search.--once
           button(type="button").search__input.j_test_07 Поиск
           .search__btn-search
             svg.icon
@@ -1509,8 +1509,24 @@ html(lang="uk")
             .search-list__item3
               .search-list__item3-text Харьковка
                 small Сумская обл., Глуховский р-н
-      #section11.section.section11(style="display: none")
-        p Способы доставки
+      #section11.section.section11
+        #section11_block1
+          .pharmacies-list__item2
+            .pharmacies-list__item2-arrow
+              svg.icon
+                use(xlink:href='#arrow_right')
+            .pharmacies-list__item2-thumb
+              svg.icon
+                use(href='#pharmacy_logo_1')
+            .pharmacies-list__item2-wrapper
+              .pharmacies-list__item2-text Солнышко
+              .pharmacies-list__item2-p г. Харьков, просп. Юбилейный, 89
+              .pharmacies-list__item2-p Пн-Вс: 8:00-21:00
+              .pharmacies-list__item2-location
+                svg.icon
+                  use(href='#location')
+                span 0,6 км
+        #section11_block2(style="display: none")
       #section12.section.section12(style="display: none")
         .pharmacies
           .pharmacies__search.bb1
@@ -1545,126 +1561,139 @@ html(lang="uk")
                   span Круглосуточные
                   svg.icon
                     use(xlink:href='#close')
-          .pharmacies-group2
-            .pharmacies-list__item2
-              .pharmacies-list__item2-arrow
+          .pharmacies-list__item2
+            .pharmacies-list__item2-arrow
+              svg.icon
+                use(xlink:href='#arrow_right')
+            .pharmacies-list__item2-thumb
+              svg.icon
+                use(href='#pharmacy_logo_1')
+            .pharmacies-list__item2-wrapper
+              .pharmacies-list__item2-text Солнышко
+              .pharmacies-list__item2-p г. Харьков, просп. Юбилейный, 89
+              .pharmacies-list__item2-p Пн-Вс: 8:00-21:00
+              .pharmacies-list__item2-location
                 svg.icon
-                  use(xlink:href='#arrow_right')
-              .pharmacies-list__item2-thumb
+                  use(href='#location')
+                span 0,6 км
+          .pharmacies-list__item2
+            .pharmacies-list__item2-arrow
+              svg.icon
+                use(xlink:href='#arrow_right')
+            .pharmacies-list__item2-thumb
+              svg.icon
+                use(href='#pharmacy_logo_2')
+            .pharmacies-list__item2-wrapper
+              .pharmacies-list__item2-text Новые дома
+              .pharmacies-list__item2-p г. Харьков, проезд Стадионный, 11/2
+              .pharmacies-list__item2-p Пн-Вс: 8:00-21:00
+              .pharmacies-list__item2-location
                 svg.icon
-                  use(href='#pharmacy_logo_1')
-              .pharmacies-list__item2-wrapper
-                .pharmacies-list__item2-text Солнышко
-                .pharmacies-list__item2-p г. Харьков, просп. Юбилейный, 89
-                .pharmacies-list__item2-p Пн-Вс: 8:00-21:00
-                .pharmacies-list__item2-location
-                  svg.icon
-                    use(href='#location')
-                  span 0,6 км
-            .pharmacies-list__item2
-              .pharmacies-list__item2-arrow
+                  use(href='#location')
+                span 0,6 км
+          .pharmacies-list__item2
+            .pharmacies-list__item2-arrow
+              svg.icon
+                use(xlink:href='#arrow_right')
+            .pharmacies-list__item2-thumb
+              svg.icon
+                use(href='#pharmacy_logo_3')
+            .pharmacies-list__item2-wrapper
+              .pharmacies-list__item2-text Центральная №2
+              .pharmacies-list__item2-p г. Харьков, просп. Науки, 9
+              .pharmacies-list__item2-p Пн-Пт: 08:00-19:00; Сб-Вс: 08:00-18:00
+              .pharmacies-list__item2-info
+                svg.icon.color.--warning
+                  use(href='#info_alert')
+                span.color.--warning Доступно товаров: 3 из 5
+              .pharmacies-list__item2-location
                 svg.icon
-                  use(xlink:href='#arrow_right')
-              .pharmacies-list__item2-thumb
+                  use(href='#location')
+                span 1,6 км
+          .pharmacies-list__item2
+            .pharmacies-list__item2-arrow
+              svg.icon
+                use(xlink:href='#arrow_right')
+            .pharmacies-list__item2-thumb
+              svg.icon
+                use(href='#pharmacy_logo_4')
+            .pharmacies-list__item2-wrapper
+              .pharmacies-list__item2-text Центральная №3
+              .pharmacies-list__item2-p г. Харьков, ул. Валентиновская, 21
+              .pharmacies-list__item2-p Пн-Вс: 8:00-21:00
+              .pharmacies-list__item2-info
+                svg.icon.color.--error
+                  use(href='#offline')
+                span.color.--error Аптека offline
+              .pharmacies-list__item2-location
                 svg.icon
-                  use(href='#pharmacy_logo_2')
-              .pharmacies-list__item2-wrapper
-                .pharmacies-list__item2-text Новые дома
-                .pharmacies-list__item2-p г. Харьков, проезд Стадионный, 11/2
-                .pharmacies-list__item2-p Пн-Вс: 8:00-21:00
-                .pharmacies-list__item2-location
-                  svg.icon
-                    use(href='#location')
-                  span 0,6 км
-            .pharmacies-list__item2
-              .pharmacies-list__item2-arrow
+                  use(href='#location')
+                span 2,2 км
+          .pharmacies-list__item2
+            .pharmacies-list__item2-arrow
+              svg.icon
+                use(xlink:href='#arrow_right')
+            .pharmacies-list__item2-thumb
+              svg.icon
+                use(href='#pharmacy_logo_5')
+            .pharmacies-list__item2-wrapper
+              .pharmacies-list__item2-text Солнышко
+              .pharmacies-list__item2-p г. Харьков, просп. Юбилейный, 89
+              .pharmacies-list__item2-p Пн-Вс: 8:00-21:00
+              .pharmacies-list__item2-info
+                svg.icon.color.--error
+                  use(href='#info_alert')
+                span.color.--error Нет товара
+              .pharmacies-list__item2-location
                 svg.icon
-                  use(xlink:href='#arrow_right')
-              .pharmacies-list__item2-thumb
+                  use(href='#location')
+                span 7,6 км
+          .pharmacies-list__item2
+            .pharmacies-list__item2-arrow
+              svg.icon
+                use(xlink:href='#arrow_right')
+            .pharmacies-list__item2-thumb
+              svg.icon
+                use(href='#pharmacy_logo_6')
+            .pharmacies-list__item2-wrapper
+              .pharmacies-list__item2-text Солнышко
+              .pharmacies-list__item2-p г. Харьков, просп. Юбилейный, 89
+              .pharmacies-list__item2-p Пн-Вс: 8:00-21:00
+              .pharmacies-list__item2-location
                 svg.icon
-                  use(href='#pharmacy_logo_3')
-              .pharmacies-list__item2-wrapper
-                .pharmacies-list__item2-text Центральная №2
-                .pharmacies-list__item2-p г. Харьков, просп. Науки, 9
-                .pharmacies-list__item2-p Пн-Пт: 08:00-19:00; Сб-Вс: 08:00-18:00
-                .pharmacies-list__item2-info
-                  svg.icon.color.--warning
-                    use(href='#info_alert')
-                  span.color.--warning Доступно товаров: 3 из 5
-                .pharmacies-list__item2-location
-                  svg.icon
-                    use(href='#location')
-                  span 1,6 км
-            .pharmacies-list__item2
-              .pharmacies-list__item2-arrow
+                  use(href='#location')
+                span 11,6 км
+          .pharmacies-list__item2
+            .pharmacies-list__item2-arrow
+              svg.icon
+                use(xlink:href='#arrow_right')
+            .pharmacies-list__item2-thumb
+              svg.icon
+                use(href='#pharmacy_logo_7')
+            .pharmacies-list__item2-wrapper
+              .pharmacies-list__item2-text Солнышко
+              .pharmacies-list__item2-p г. Харьков, просп. Юбилейный, 89
+              .pharmacies-list__item2-p Пн-Вс: 8:00-21:00
+              .pharmacies-list__item2-location
                 svg.icon
-                  use(xlink:href='#arrow_right')
-              .pharmacies-list__item2-thumb
-                svg.icon
-                  use(href='#pharmacy_logo_4')
-              .pharmacies-list__item2-wrapper
-                .pharmacies-list__item2-text Центральная №3
-                .pharmacies-list__item2-p г. Харьков, ул. Валентиновская, 21
-                .pharmacies-list__item2-p Пн-Вс: 8:00-21:00
-                .pharmacies-list__item2-info
-                  svg.icon.color.--error
-                    use(href='#offline')
-                  span.color.--error Аптека offline
-                .pharmacies-list__item2-location
-                  svg.icon
-                    use(href='#location')
-                  span 2,2 км
-            .pharmacies-list__item2
-              .pharmacies-list__item2-arrow
-                svg.icon
-                  use(xlink:href='#arrow_right')
-              .pharmacies-list__item2-thumb
-                svg.icon
-                  use(href='#pharmacy_logo_5')
-              .pharmacies-list__item2-wrapper
-                .pharmacies-list__item2-text Солнышко
-                .pharmacies-list__item2-p г. Харьков, просп. Юбилейный, 89
-                .pharmacies-list__item2-p Пн-Вс: 8:00-21:00
-                .pharmacies-list__item2-info
-                  svg.icon.color.--error
-                    use(href='#info_alert')
-                  span.color.--error Нет товара
-                .pharmacies-list__item2-location
-                  svg.icon
-                    use(href='#location')
-                  span 7,6 км
-            .pharmacies-list__item2
-              .pharmacies-list__item2-arrow
-                svg.icon
-                  use(xlink:href='#arrow_right')
-              .pharmacies-list__item2-thumb
-                svg.icon
-                  use(href='#pharmacy_logo_6')
-              .pharmacies-list__item2-wrapper
-                .pharmacies-list__item2-text Солнышко
-                .pharmacies-list__item2-p г. Харьков, просп. Юбилейный, 89
-                .pharmacies-list__item2-p Пн-Вс: 8:00-21:00
-                .pharmacies-list__item2-location
-                  svg.icon
-                    use(href='#location')
-                  span 11,6 км
-            .pharmacies-list__item2
-              .pharmacies-list__item2-arrow
-                svg.icon
-                  use(xlink:href='#arrow_right')
-              .pharmacies-list__item2-thumb
-                svg.icon
-                  use(href='#pharmacy_logo_7')
-              .pharmacies-list__item2-wrapper
-                .pharmacies-list__item2-text Солнышко
-                .pharmacies-list__item2-p г. Харьков, просп. Юбилейный, 89
-                .pharmacies-list__item2-p Пн-Вс: 8:00-21:00
-                .pharmacies-list__item2-location
-                  svg.icon
-                    use(href='#location')
-                  span 22,6 км
-      #section13.section.section13
+                  use(href='#location')
+                span 22,6 км
+      #section13.section.section13(style="display: none")
+        .search.--once
+          button(type="button").search__input.pr20.j_test_62 Ваш адрес, район
+          .search__btn-search
+            svg.icon
+              use(xlink:href='#target')
         .map-block(style="background-image: url(./tmp/map-block.jpg);")
+          .map-block__marker-test(style="top: 35%; left: 35%").j_test_63
+            img(src="./tmp/map-marker/icon_0000.png", width="64" height="64" alt="")
+            img(src="./tmp/map-marker/icon_ac.png", width="64" height="64" alt="")
+          .map-block__marker-test.j_test_63
+            img(src="./tmp/map-marker/icon_1_2.png", width="64" height="64" alt="")
+            img(src="./tmp/map-marker/icon_ac.png", width="64" height="64" alt="")
+          .map-block__marker-test(style="top: 65%; left: 65%").j_test_63
+            img(src="./tmp/map-marker/icon_1_14.png", width="64" height="64" alt="")
+            img(src="./tmp/map-marker/icon_ac.png", width="64" height="64" alt="")
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner
           span.app-button-status__count 5
@@ -1678,7 +1707,7 @@ html(lang="uk")
           span Показать аптеки на карте
           svg.icon
             use(href='#arrow_right')
-      button(type="button" style="")#section13ButtonStatus.app-button-status.--error
+      button(type="button" style="display: none")#section13ButtonStatus.app-button-status.--error
         span.app-button-status__inner
           svg.icon
             use(href='#arrow_left')
@@ -1826,6 +1855,14 @@ html(lang="uk")
               span Отмена
             button(type="button").btn.--secondary.--ghost.--sm
               span Разрешить
+      #appModal13_1.app-modal(style="display: none")
+        .app-modal__wrapper
+          button(type="button").app-modal__close.j_test_43
+            svg.icon
+              use(xlink:href='#close')
+          .app-modal__content
+            .app-modal__content-wrapper 
+              p test
 
     script(src="./js/jquery/jquery-3.3.1.min.js")
     script(src="./js/jquery/jquery-migrate-3.0.1.min.js")
