@@ -2093,3 +2093,34 @@
     }
   }
 }
+
+.tab {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: var(--color-d-6);
+  &__block {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 13px 10px 13px 15px;
+    background-color: var(--btn-background);
+    border-bottom: 1px solid var(--color-l-3);
+    .icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      margin-right: 10px;
+      &.--world {
+        fill: var(--color-d-1);
+      }
+    }
+    &.is-active {
+      background: var(--tg-theme-bg-color);
+      border-bottom-color: var(--tg-theme-bg-color);
+    }
+    &+* {
+      border-left: 1px solid var(--color-l-3);
+    }
+  }
+}

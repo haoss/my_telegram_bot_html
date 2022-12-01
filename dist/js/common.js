@@ -125,6 +125,8 @@ $(document).on('ready', function(){
   $('.j_test_61').on('click', function(){ $('.section').hide(); $('#section9').show(); });
   $('.j_test_62').on('click', function(){ $(this).html('ул. Сумская, 11, г. Харьков. Харьквоская').parent().addClass('--filled'); });
   $('.j_test_63').on('click', function(){ $('.j_test_63').removeClass('is-active'); $(this).toggleClass('is-active'); });
+  $('.j_test_64').on('click', function(){ $('.tab__block').removeClass('is-active'); $(this).toggleClass('is-active'); $('#section11_block1').show(); $('#section11_block2').hide(); });
+  $('.j_test_65').on('click', function(){ $('.tab__block').removeClass('is-active'); $(this).toggleClass('is-active'); $('#section11_block2').show(); $('#section11_block1').hide(); });
 
   $(document).on('click', '.collapsible-heading', function(e){
     e.preventDefault();
