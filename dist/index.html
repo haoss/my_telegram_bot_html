@@ -13,7 +13,7 @@
             Telegram.WebApp.onEvent('themeChanged', setThemeClass);
             setThemeClass();
         </script>
-        <link rel="stylesheet" href="./css/style.min.css?v90">
+        <link rel="stylesheet" href="./css/style.min.css?v91">
     </head>
     <body> 
         <div class="app" id="app">
@@ -5132,9 +5132,35 @@
                     </div>
                 </div>
                 <div class="map-block" style="background-image: url(./tmp/map-block.jpg);">
-                    <div class="map-block__marker-test j_test_63" style="top: 35%; left: 35%"><img src="./tmp/map-marker/icon_0000.png" width="64" height="64" alt=""><img src="./tmp/map-marker/icon_ac.png" width="64" height="64" alt=""></div>
+                    <div class="map-block__marker-test j_test_63" style="top: 45%; left: 25%"><img src="./tmp/map-marker/icon_0000.png" width="64" height="64" alt=""><img src="./tmp/map-marker/icon_ac.png" width="64" height="64" alt=""></div>
                     <div class="map-block__marker-test j_test_63"><img src="./tmp/map-marker/icon_1_2.png" width="64" height="64" alt=""><img src="./tmp/map-marker/icon_ac.png" width="64" height="64" alt=""></div>
-                    <div class="map-block__marker-test j_test_63" style="top: 65%; left: 65%"><img src="./tmp/map-marker/icon_1_14.png" width="64" height="64" alt=""><img src="./tmp/map-marker/icon_ac.png" width="64" height="64" alt=""></div>
+                    <div class="map-block__marker-test j_test_63" style="top: 61%; left: 75%"><img src="./tmp/map-marker/icon_1_14.png" width="64" height="64" alt=""><img src="./tmp/map-marker/icon_ac.png" width="64" height="64" alt=""></div>
+                </div>
+                <div class="map-modal" style="bottom: 47px">
+                    <div class="map-modal__holder">
+                        <button class="btn --primary --ghost --md --r35" type="button">
+                            <svg class="icon">
+                                <use href="#target"></use>
+                            </svg><span>Где я</span>
+                        </button>
+                        <button class="btn --primary --ghost --md --r35" type="button">
+                            <svg class="icon">
+                                <use href="#filter"></use>
+                            </svg><span>Фильтр</span><span>2</span>
+                        </button>
+                    </div>
+                    <div class="app-modal__wrapper" style="display: none">
+                        <button class="app-modal__close" type="button">
+                            <svg class="icon">
+                                <use href="#close"></use>
+                            </svg>
+                        </button>
+                        <div class="app-modal__content">
+                            <div class="app-modal__content-wrapper">
+                                <p>test</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <button class="app-button-status" type="button" style="display: none" id="appButtonStatus"><span class="app-button-status__inner"><span class="app-button-status__count">5</span><span>товаров. Оформить</span></span></button>
@@ -5143,7 +5169,7 @@
                     <svg class="icon">
                         <use href="#arrow_right"></use>
                     </svg></span></button>
-            <button class="app-button-status --error" type="button" style="display: none" id="section13ButtonStatus"><span class="app-button-status__inner">
+            <button class="app-button-status --error" type="button" id="section13ButtonStatus"><span class="app-button-status__inner">
                     <svg class="icon">
                         <use href="#arrow_left"></use>
                     </svg><span>Назад к списку аптек</span></span></button>
@@ -5567,7 +5593,7 @@
         <script src="./js/ion.rangeSlider/ion.rangeSlider.js"></script>
         <script src="./js/autosize/autosize.js"></script>
         <script src="./js/gsap.min.js"></script>
-        <script src="./js/common.js?v58"></script>
+        <script src="./js/common.js?v59"></script>
         <svg width="0" height="0" style="display: none">
             <symbol id="settings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2337 7.125H3.75C3.33579 7.125 3 7.46079 3 7.875C3 8.28921 3.33579 8.625 3.75 8.625H7.2337C7.55641 9.70931 8.56087 10.5 9.75 10.5C10.9391 10.5 11.9436 9.70931 12.2663 8.625H20.25C20.6642 8.625 21 8.28921 21 7.875C21 7.46079 20.6642 7.125 20.25 7.125H12.2663C11.9436 6.04069 10.9391 5.25 9.75 5.25C8.56087 5.25 7.55641 6.04069 7.2337 7.125ZM8.625 7.875C8.625 7.25368 9.12868 6.75 9.75 6.75C10.3713 6.75 10.875 7.25368 10.875 7.875C10.875 8.49632 10.3713 9 9.75 9C9.12868 9 8.625 8.49632 8.625 7.875Z"></path>

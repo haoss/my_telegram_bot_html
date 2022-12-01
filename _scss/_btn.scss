@@ -5,7 +5,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 12px 15px;
+  padding: 12px 10px;
   margin-bottom: 0;
   font-size: 13px;
   font-weight: 500;
@@ -31,9 +31,9 @@
     z-index: 1;
   }
   .icon {
-    margin: 0 5px;
-    width: 18px;
-    height: 18px;
+    margin: -5px 10px;
+    width: 24px;
+    height: 24px;
   }
   * {
     &:first-child {
@@ -46,14 +46,30 @@
   &.--xl {
     padding-top: 20.5px;
     padding-bottom: 20.5px;
+    .icon {
+      margin-top: -12.5px;
+      margin-bottom: -12.5px;
+      width: 28px;
+      height: 28px;
+    }
   }
   &.--lg {
     padding-top: 17.5px;
     padding-bottom: 17.5px;
+    .icon {
+      margin-top: -12.5px;
+      margin-bottom: -12.5px;
+    }
   }
   &.--sm {
     padding-top: 9px;
     padding-bottom: 9px;
+    .icon {
+      margin-top: -1px;
+      margin-bottom: -1px;
+      width: 16px;
+      height: 16px;
+    }
   }
   &.--xs {
     padding-top: 6.5px;
@@ -127,6 +143,11 @@
     background-color: var(--tg-theme-bg-color);
     border-color: var(--tg-theme-bg-color);
     color: currentColor;
+    &.--primary {
+      .icon {
+        fill: var(--color-d-6);
+      }
+    }
     &.--secondary {
       color: var(--color-d-1);
       .icon {

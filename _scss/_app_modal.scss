@@ -249,3 +249,23 @@
     margin-bottom: 0;
   }
 }
+
+.map-modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &__holder {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    .btn {
+      margin-right: 15px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
+    }
+  }
+  .app-modal__wrapper {
+    position: relative;
+  }
+}

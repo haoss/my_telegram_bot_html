@@ -17,7 +17,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v90')
+    link(rel='stylesheet', href='./css/style.min.css?v91')
   
   body 
     #app.app
@@ -1756,15 +1756,33 @@ html(lang="uk")
             svg.icon
               use(xlink:href='#target')
         .map-block(style="background-image: url(./tmp/map-block.jpg);")
-          .map-block__marker-test(style="top: 35%; left: 35%").j_test_63
+          .map-block__marker-test(style="top: 45%; left: 25%").j_test_63
             img(src="./tmp/map-marker/icon_0000.png", width="64" height="64" alt="")
             img(src="./tmp/map-marker/icon_ac.png", width="64" height="64" alt="")
           .map-block__marker-test.j_test_63
             img(src="./tmp/map-marker/icon_1_2.png", width="64" height="64" alt="")
             img(src="./tmp/map-marker/icon_ac.png", width="64" height="64" alt="")
-          .map-block__marker-test(style="top: 65%; left: 65%").j_test_63
+          .map-block__marker-test(style="top: 61%; left: 75%").j_test_63
             img(src="./tmp/map-marker/icon_1_14.png", width="64" height="64" alt="")
             img(src="./tmp/map-marker/icon_ac.png", width="64" height="64" alt="")
+        .map-modal(style="bottom: 47px")
+          .map-modal__holder
+            button(type="button").btn.--primary.--ghost.--md.--r35
+              svg.icon
+                use(href='#target')
+              span Где я
+            button(type="button").btn.--primary.--ghost.--md.--r35
+              svg.icon
+                use(href='#filter')
+              span Фильтр
+              span 2
+          .app-modal__wrapper(style="display: none")
+            button.app-modal__close(type='button')
+              svg.icon
+                use(href='#close')
+            .app-modal__content
+              .app-modal__content-wrapper
+                p test
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner
           span.app-button-status__count 5
@@ -1778,7 +1796,7 @@ html(lang="uk")
           span Показать аптеки на карте
           svg.icon
             use(href='#arrow_right')
-      button(type="button" style="display: none")#section13ButtonStatus.app-button-status.--error
+      button(type="button" style="")#section13ButtonStatus.app-button-status.--error
         span.app-button-status__inner
           svg.icon
             use(href='#arrow_left')
@@ -1941,6 +1959,6 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v58")
+    script(src="./js/common.js?v59")
 
     include ./_include/_svg
