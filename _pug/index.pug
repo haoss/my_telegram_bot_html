@@ -36,13 +36,14 @@ html(lang="uk")
         button(type="button" data-section="section10").test-navigation__btn 10
         button(type="button" data-section="section11").test-navigation__btn 11
         button(type="button" data-section="section12").test-navigation__btn 12
+        button(type="button" data-section="section13").test-navigation__btn 13
       #youPharmacyLine.you-pharmacy-line(style="display: none")
         svg.icon
           use(href='#vasha_apteka')
         .you-pharmacy-line__text Ваша аптека:
         button(type="button").you-pharmacy-line__btn#j_test_04
           span г. Харьков, просп. Гагарина, 722
-      #section1.section.section1
+      #section1.section.section1(style="display: none")
         .search.--search-main
           button(type="button").search__input.j_test_07 Поиск
           .search__btn-search
@@ -1662,6 +1663,8 @@ html(lang="uk")
                   svg.icon
                     use(href='#location')
                   span 22,6 км
+      #section13.section.section13
+        .map-block(style="background-image: url(./tmp/map-block.jpg);")
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner
           span.app-button-status__count 5
@@ -1675,6 +1678,11 @@ html(lang="uk")
           span Показать аптеки на карте
           svg.icon
             use(href='#arrow_right')
+      button(type="button" style="")#section13ButtonStatus.app-button-status.--error
+        span.app-button-status__inner
+          svg.icon
+            use(href='#arrow_left')
+          span Назад к списку аптек
       #appModal1.app-modal(style="display: none")
         .app-modal__wrapper
           button(type="button").app-modal__close.j_test_43
@@ -1809,6 +1817,15 @@ html(lang="uk")
               span Сохранить
             button(type="button").btn.--secondary.--ghost.--sm
               span Не сохранять
+      #appGeoSave.app-modal(style="display: none")
+        .app-modal-info
+          .app-modal-info__content
+            p Вы даете согласие на отправку  местоположения?
+          .app-modal-info__btns.--right
+            button(type="button").btn.--contrast.--ghost.--sm
+              span Отмена
+            button(type="button").btn.--secondary.--ghost.--sm
+              span Разрешить
 
     script(src="./js/jquery/jquery-3.3.1.min.js")
     script(src="./js/jquery/jquery-migrate-3.0.1.min.js")

@@ -2060,3 +2060,15 @@
   left: 0;
   right: 0;
 }
+
+.map-block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-l-1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}

@@ -31,6 +31,7 @@
                 <button class="test-navigation__btn" type="button" data-section="section10">10</button>
                 <button class="test-navigation__btn" type="button" data-section="section11">11</button>
                 <button class="test-navigation__btn" type="button" data-section="section12">12</button>
+                <button class="test-navigation__btn" type="button" data-section="section13">13</button>
             </div>
             <div class="you-pharmacy-line" id="youPharmacyLine" style="display: none">
                 <svg class="icon">
@@ -39,7 +40,7 @@
                 <div class="you-pharmacy-line__text">Ваша аптека:</div>
                 <button class="you-pharmacy-line__btn" type="button" id="j_test_04"><span>г. Харьков, просп. Гагарина, 722</span></button>
             </div>
-            <div class="section section1" id="section1">
+            <div class="section section1" id="section1" style="display: none">
                 <div class="search --search-main">
                     <button class="search__input j_test_07" type="button">Поиск</button>
                     <div class="search__btn-search">
@@ -4996,12 +4997,19 @@
                     </div>
                 </div>
             </div>
+            <div class="section section13" id="section13">
+                <div class="map-block" style="background-image: url(./tmp/map-block.jpg);"></div>
+            </div>
             <button class="app-button-status" type="button" style="display: none" id="appButtonStatus"><span class="app-button-status__inner"><span class="app-button-status__count">5</span><span>товаров. Оформить</span></span></button>
             <button class="app-button-status" type="button" style="display: none" id="checkoutButtonStatus"><span class="app-button-status__inner"><span class="app-button-status__count">от 149,67 ₴ </span><span>Оформить</span></span></button>
             <button class="app-button-status --error" type="button" style="display: none" id="section12ButtonStatus"><span class="app-button-status__inner"><span>Показать аптеки на карте</span>
                     <svg class="icon">
                         <use href="#arrow_right"></use>
                     </svg></span></button>
+            <button class="app-button-status --error" type="button" id="section13ButtonStatus"><span class="app-button-status__inner">
+                    <svg class="icon">
+                        <use href="#arrow_left"></use>
+                    </svg><span>Назад к списку аптек</span></span></button>
             <div class="app-modal" id="appModal1" style="display: none">
                 <div class="app-modal__wrapper">
                     <button class="app-modal__close j_test_43" type="button">
@@ -5387,6 +5395,17 @@
                     <div class="app-modal-info__btns --right j_test_43">
                         <button class="btn --contrast --ghost --sm" type="button"><span>Сохранить</span></button>
                         <button class="btn --secondary --ghost --sm" type="button"><span>Не сохранять</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="app-modal" id="appGeoSave" style="display: none">
+                <div class="app-modal-info">
+                    <div class="app-modal-info__content">
+                        <p>Вы даете согласие на отправку  местоположения?</p>
+                    </div>
+                    <div class="app-modal-info__btns --right">
+                        <button class="btn --contrast --ghost --sm" type="button"><span>Отмена</span></button>
+                        <button class="btn --secondary --ghost --sm" type="button"><span>Разрешить</span></button>
                     </div>
                 </div>
             </div>
