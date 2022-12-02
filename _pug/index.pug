@@ -1526,7 +1526,7 @@ html(lang="uk")
               button(type="button").btn.--secondary-alt.--r50.--xs.j_test_66
                 svg.icon
                   use(xlink:href='#edit')
-            .pharmacies-list__item2
+            .pharmacies-list__item2.j_test_71
               .pharmacies-list__item2-arrow
                 svg.icon
                   use(xlink:href='#arrow_right')
@@ -1765,24 +1765,56 @@ html(lang="uk")
           .map-block__marker-test(style="top: 61%; left: 75%").j_test_63
             img(src="./tmp/map-marker/icon_1_14.png", width="64" height="64" alt="")
             img(src="./tmp/map-marker/icon_ac.png", width="64" height="64" alt="")
-        .map-modal(style="bottom: 47px")
-          .map-modal__holder
-            button(type="button").btn.--primary.--ghost.--md.--r35
+        #section13_map_modal1.map-modal(style="bottom: 47px")
+          #section13_holder1.map-modal__holder
+            button(type="button").btn.--primary.--ghost.--md.--r35.j_test_67
               svg.icon
                 use(href='#target')
               span Где я
-            button(type="button").btn.--primary.--ghost.--md.--r35
+            button(type="button").btn.--primary.--ghost.--md.--r35.j_test_68
               svg.icon
                 use(href='#filter')
               span Фильтр
-              span 2
-          .app-modal__wrapper(style="display: none")
-            button.app-modal__close(type='button')
+              span.count 2
+          #section13_app_wrapper1.app-modal__wrapper(style="display: none")
+            button.app-modal__close.j_test_69(type='button')
               svg.icon
                 use(href='#close')
             .app-modal__content
-              .app-modal__content-wrapper
-                p test
+              .app-modal__content-wrapper.pt20.pb20
+                p
+                  b Фильтр
+                .btns-filter.pharmacies__search-filter
+                  label(for="checkbox1_section13").btn-checkbox
+                    input#checkbox1_section13(type="checkbox" name="checkbox1_section13" checked).btn-checkbox__input
+                    span.btn-checkbox__label 
+                      span Открыто сейчас
+                      svg.icon
+                        use(xlink:href='#close')
+                  label(for="checkbox2_section13").btn-checkbox
+                    input#checkbox2_section13(type="checkbox" name="checkbox2_section13").btn-checkbox__input
+                    span.btn-checkbox__label
+                      span Круглосуточные
+                      svg.icon
+                        use(xlink:href='#close')
+          #section13_app_wrapper2.app-modal__wrapper(style="display: none")
+            button.app-modal__close.j_test_70(type='button')
+              svg.icon
+                use(href='#close')
+            .app-modal__content
+              .app-modal__content-line
+              .app-modal__content-wrapper.pt15.pb20
+                .app-modal__pharmacy
+                  .app-modal__pharmacy-thumb
+                    svg.icon
+                      use(href='#pharmacy_logo_2')
+                  .app-modal__pharmacy-wrapper
+                    .app-modal__pharmacy-text Новые дома
+                    .app-modal__pharmacy-p г. Харьков, проезд Стадионный, 11/2
+                    .app-modal__pharmacy-p Пн-Вс: 08:00-19:00
+                button(type="button").btn.--accent.--block
+                  span Забрать здесь
+                
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner
           span.app-button-status__count 5
@@ -1939,12 +1971,12 @@ html(lang="uk")
         .app-modal-info
           .app-modal-info__content
             p Вы даете согласие на отправку  местоположения?
-          .app-modal-info__btns.--right
+          .app-modal-info__btns.--right.j_test_43
             button(type="button").btn.--contrast.--ghost.--sm
               span Отмена
             button(type="button").btn.--secondary.--ghost.--sm
               span Разрешить
-      #appModal13_1.app-modal(style="display: none")
+      #appModal13_111.app-modal(style="display: none")
         .app-modal__wrapper
           button(type="button").app-modal__close.j_test_43
             svg.icon

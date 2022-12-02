@@ -124,10 +124,24 @@ $(document).on('ready', function(){
   });
   $('.j_test_61').on('click', function(){ $('.section').hide(); $('#section9').show(); });
   $('.j_test_62').on('click', function(){ $(this).html('ул. Сумская, 11, г. Харьков. Харьквоская').parent().addClass('--filled'); });
-  $('.j_test_63').on('click', function(){ $('.j_test_63').removeClass('is-active'); $(this).toggleClass('is-active'); });
+  $('.j_test_63').on('click', function(){ 
+    $('.j_test_63').removeClass('is-active'); 
+    $(this).toggleClass('is-active'); 
+    $('#section13_holder1').hide();
+    $('#section13_app_wrapper2').show();
+    $('#section13_map_modal1').css('bottom', '0');
+    $('#section13ButtonStatus').hide();
+  });
   $('.j_test_64').on('click', function(){ $('.tab__block').removeClass('is-active'); $(this).toggleClass('is-active'); $('#section11_block1').show(); $('#section11_block2').hide(); });
   $('.j_test_65').on('click', function(){ $('.tab__block').removeClass('is-active'); $(this).toggleClass('is-active'); $('#section11_block2').show(); $('#section11_block1').hide(); });
   $('.j_test_66').on('click', function(){ $('.section').hide(); $('#section10').show(); });
+  $('.j_test_67').on('click', function(){ $('#appGeoSave').show(); });
+  $('.j_test_68').on('click', function(){ $('#section13_app_wrapper1').show(); $('#section13_holder1').hide(); $('#section13ButtonStatus').hide(); $('#section13_map_modal1').css('bottom', '0'); });
+  $('.j_test_69').on('click', function(){ $('#section13_app_wrapper1').hide(); $('#section13_holder1').show(); $('#section13ButtonStatus').show(); $('#section13_map_modal1').css('bottom', '47px'); });
+  $('.j_test_70').on('click', function(){ $('.map-block__marker-test').removeClass('is-active'); $('#section13_holder1').show(); $('#section13_app_wrapper2').hide(); $('#section13ButtonStatus').show(); $('#section13_map_modal1').css('bottom', '47px'); });
+  $('.j_test_71').on('click', function(){ $('.section').hide(); $('#section12').show(); $('#section12ButtonStatus').show(); });
+  $('#section12ButtonStatus').on('click', function(){ $('.section').hide(); $('#section13').show(); $(this).hide(); $('#section13ButtonStatus').show(); });
+  $('#section13ButtonStatus').on('click', function(){ $('.section').hide(); $('#section12').show(); $(this).hide(); $('#section12ButtonStatus').show(); });
 
   $(document).on('click', '.collapsible-heading', function(e){
     e.preventDefault();

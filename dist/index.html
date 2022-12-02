@@ -4807,7 +4807,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="pharmacies-list__item2">
+                        <div class="pharmacies-list__item2 j_test_71">
                             <div class="pharmacies-list__item2-arrow">
                                 <svg class="icon">
                                     <use xlink:href="#arrow_right"></use>
@@ -5136,28 +5136,67 @@
                     <div class="map-block__marker-test j_test_63"><img src="./tmp/map-marker/icon_1_2.png" width="64" height="64" alt=""><img src="./tmp/map-marker/icon_ac.png" width="64" height="64" alt=""></div>
                     <div class="map-block__marker-test j_test_63" style="top: 61%; left: 75%"><img src="./tmp/map-marker/icon_1_14.png" width="64" height="64" alt=""><img src="./tmp/map-marker/icon_ac.png" width="64" height="64" alt=""></div>
                 </div>
-                <div class="map-modal" style="bottom: 47px">
-                    <div class="map-modal__holder">
-                        <button class="btn --primary --ghost --md --r35" type="button">
+                <div class="map-modal" id="section13_map_modal1" style="bottom: 47px">
+                    <div class="map-modal__holder" id="section13_holder1">
+                        <button class="btn --primary --ghost --md --r35 j_test_67" type="button">
                             <svg class="icon">
                                 <use href="#target"></use>
                             </svg><span>Где я</span>
                         </button>
-                        <button class="btn --primary --ghost --md --r35" type="button">
+                        <button class="btn --primary --ghost --md --r35 j_test_68" type="button">
                             <svg class="icon">
                                 <use href="#filter"></use>
-                            </svg><span>Фильтр</span><span>2</span>
+                            </svg><span>Фильтр</span><span class="count">2</span>
                         </button>
                     </div>
-                    <div class="app-modal__wrapper" style="display: none">
-                        <button class="app-modal__close" type="button">
+                    <div class="app-modal__wrapper" id="section13_app_wrapper1" style="display: none">
+                        <button class="app-modal__close j_test_69" type="button">
                             <svg class="icon">
                                 <use href="#close"></use>
                             </svg>
                         </button>
                         <div class="app-modal__content">
-                            <div class="app-modal__content-wrapper">
-                                <p>test</p>
+                            <div class="app-modal__content-wrapper pt20 pb20">
+                                <p><b>Фильтр</b></p>
+                                <div class="btns-filter pharmacies__search-filter">
+                                    <label class="btn-checkbox" for="checkbox1_section13">
+                                        <input class="btn-checkbox__input" id="checkbox1_section13" type="checkbox" name="checkbox1_section13" checked><span class="btn-checkbox__label"> <span>Открыто сейчас</span>
+                                            <svg class="icon">
+                                                <use xlink:href="#close"></use>
+                                            </svg></span>
+                                    </label>
+                                    <label class="btn-checkbox" for="checkbox2_section13">
+                                        <input class="btn-checkbox__input" id="checkbox2_section13" type="checkbox" name="checkbox2_section13"><span class="btn-checkbox__label"><span>Круглосуточные</span>
+                                            <svg class="icon">
+                                                <use xlink:href="#close"></use>
+                                            </svg></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-modal__wrapper" id="section13_app_wrapper2" style="display: none">
+                        <button class="app-modal__close j_test_70" type="button">
+                            <svg class="icon">
+                                <use href="#close"></use>
+                            </svg>
+                        </button>
+                        <div class="app-modal__content">
+                            <div class="app-modal__content-line"></div>
+                            <div class="app-modal__content-wrapper pt15 pb20">
+                                <div class="app-modal__pharmacy">
+                                    <div class="app-modal__pharmacy-thumb">
+                                        <svg class="icon">
+                                            <use href="#pharmacy_logo_2"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="app-modal__pharmacy-wrapper">
+                                        <div class="app-modal__pharmacy-text">Новые дома</div>
+                                        <div class="app-modal__pharmacy-p">г. Харьков, проезд Стадионный, 11/2</div>
+                                        <div class="app-modal__pharmacy-p">Пн-Вс: 08:00-19:00</div>
+                                    </div>
+                                </div>
+                                <button class="btn --accent --block" type="button"><span>Забрать здесь</span></button>
                             </div>
                         </div>
                     </div>
@@ -5566,13 +5605,13 @@
                     <div class="app-modal-info__content">
                         <p>Вы даете согласие на отправку  местоположения?</p>
                     </div>
-                    <div class="app-modal-info__btns --right">
+                    <div class="app-modal-info__btns --right j_test_43">
                         <button class="btn --contrast --ghost --sm" type="button"><span>Отмена</span></button>
                         <button class="btn --secondary --ghost --sm" type="button"><span>Разрешить</span></button>
                     </div>
                 </div>
             </div>
-            <div class="app-modal" id="appModal13_1" style="display: none">
+            <div class="app-modal" id="appModal13_111" style="display: none">
                 <div class="app-modal__wrapper">
                     <button class="app-modal__close j_test_43" type="button">
                         <svg class="icon">

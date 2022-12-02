@@ -149,6 +149,16 @@
         }
       }
     }
+    &-line {
+      width: 40px;
+      height: 4px;
+      border-radius: 25px;
+      background: #D6D8E0;
+      position: absolute;
+      top: 11px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
     &::-webkit-scrollbar {
       width: 3px;
       background: var(--color-disabled)
@@ -162,6 +172,84 @@
     background: var(--color-l-3);
     clear: both;
     margin: 0 -20px 30px -20px;
+  }
+  &__pharmacy {
+    padding: 20px 0px 20px 60px;
+    width: 100%;
+    position: relative;
+    &-text {
+      flex-grow: 1;
+      line-height: 1.2;
+      font-weight: bold;
+    }
+    &-p {
+      color: var(--color-d-7);
+      font-weight: 400;
+      font-size: 13px;
+      margin-top: 8px;
+      line-height: 1.1;
+      &+* {
+        margin-top: 4px;
+      }
+    }
+    &-thumb {
+      width: 40px;
+      flex-shrink: 0;
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      overflow: hidden;
+      .icon, img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        display: block;
+      }
+    }
+    &-info {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      line-height: 1.1;
+      .icon {
+        flex-shrink: 0;
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+        &.color {
+          fill: var(--color-d-3);
+          &.--error {
+            fill: var(--color-d-5);
+          }
+          &.--warning {
+            fill: var(--color-d-4);
+          }
+        }
+      }
+      .color {
+        color: var(--color-d-3);
+        &.--error {
+          color: var(--color-d-5);
+        }
+        &.--warning {
+          color: var(--color-d-4);
+        }
+      }
+    }
+    &-location {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      color: var(--color-d-3);
+      .icon {
+        flex-shrink: 0;
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+        fill: var(--color-d-3);
+      }
+    }
   }
 }
 
