@@ -17,7 +17,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v91')
+    link(rel='stylesheet', href='./css/style.min.css?v92')
   
   body 
     #app.app
@@ -25,18 +25,19 @@ html(lang="uk")
       .test-navigation
         button(type="button").test-navigation__hide
         button(type="button" data-section="section1").test-navigation__btn 1
-        button(type="button" data-section="section2").test-navigation__btn 2
-        button(type="button" data-section="section3").test-navigation__btn 3
-        button(type="button" data-section="section4").test-navigation__btn 4
-        button(type="button" data-section="section5").test-navigation__btn 5
+        //- button(type="button" data-section="section2").test-navigation__btn 2
+        //- button(type="button" data-section="section3").test-navigation__btn 3
+        //- button(type="button" data-section="section4").test-navigation__btn 4
+        //- button(type="button" data-section="section5").test-navigation__btn 5
         button(type="button" data-section="section6").test-navigation__btn 6
         button(type="button" data-section="section7").test-navigation__btn 7
         button(type="button" data-section="section8").test-navigation__btn 8
         button(type="button" data-section="section9").test-navigation__btn 9
         button(type="button" data-section="section10").test-navigation__btn 10
         button(type="button" data-section="section11").test-navigation__btn 11
-        button(type="button" data-section="section12").test-navigation__btn 12
-        button(type="button" data-section="section13").test-navigation__btn 13
+        //- button(type="button" data-section="section12").test-navigation__btn 12
+        //- button(type="button" data-section="section13").test-navigation__btn 13
+        //- button(type="button" data-section="section14").test-navigation__btn 14
       #youPharmacyLine.you-pharmacy-line(style="display: none")
         svg.icon
           use(href='#vasha_apteka')
@@ -1199,7 +1200,7 @@ html(lang="uk")
                           span Ответить
                         button(type="button").btn
                           svg.icon
-                            use(xlink:href='#icon_info_o')
+                            use(xlink:href='#icon_warning_o')
                           span Пожаловаться
                       .comment__foot-response
                         button(type="button").btn.j_test_33
@@ -1537,7 +1538,7 @@ html(lang="uk")
                 .pharmacies-list__item2-text Самовывоз из аптеки
                 .pharmacies-list__item2-p Бронь в любой аптеке сети
                 .pharmacies-list__item2-p Все в наличии в 120 из 191 аптек
-            .pharmacies-list__item2
+            .pharmacies-list__item2.j_test_76
               .pharmacies-list__item2-arrow
                 svg.icon
                   use(xlink:href='#arrow_right')
@@ -1814,6 +1815,140 @@ html(lang="uk")
                     .app-modal__pharmacy-p Пн-Вс: 08:00-19:00
                 button(type="button").btn.--accent.--block
                   span Забрать здесь
+      #section14.section.section14(style="display: none")
+        .map-block(style="background-image: url(./tmp/map-block.jpg);")
+          .map-block__marker-test(style="top: 30%; left: 50%").j_test_72
+            img(src="./tmp/map-marker/icon_marker.png", width="64" height="64" alt="" style="display: block")
+        #section14_map_modal1.map-modal(style="bottom: 0")
+          #section14_holder1.map-modal__holder
+            button(type="button").btn.--primary.--ghost.--md.--r35.j_test_67.j_test_75
+              svg.icon
+                use(href='#target')
+              span Где я
+          #section14_app_wrapper2.app-modal__wrapper
+            .app-modal__content
+              .app-modal__content-wrapper.pt20.pb20
+                form(action="#!" autocomplete="off") 
+                  fieldset 
+                    .form-group
+                      +field-text({
+                        title: 'Улица',
+                        hasJs: true,
+                        isTextarea: false,
+                        isRequired: true,
+                        hasError: false,
+                        helpText: 'Текст ошибки или подсказка',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'section14_street',
+                          placeholder: '',
+                          id: 'section14_input1'
+                        }
+                      })
+                    .form-group
+                      +field-text({
+                        title: 'Дом',
+                        hasJs: true,
+                        isTextarea: false,
+                        isRequired: true,
+                        hasError: false,
+                        helpText: 'Текст ошибки или подсказка',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'section14_house',
+                          placeholder: '',
+                          id: 'section14_input2'
+                        }
+                      })
+                    .form-group
+                      +field-text({
+                        title: 'Квартира',
+                        hasJs: true,
+                        isTextarea: false,
+                        isRequired: true,
+                        hasError: false,
+                        helpText: 'Текст ошибки или подсказка',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'section14_apartment',
+                          placeholder: ''
+                        }
+                      })
+                  div(style="display: none")#section14_div1
+                    fieldset 
+                      .form-group
+                        +field-radio({
+                          title: 'Срочная доставка за 40 минут (150 грн.)',
+                          isLink: false,
+                          mods: '',
+                          attrs: {
+                            name: 'section14_radio1',
+                            checked: true,
+                          }
+                        }).no-padding
+                      .form-group
+                        +field-radio({
+                          title: 'Сегодня с 16:00 - 19:00 (19 грн.)',
+                          isLink: false,
+                          mods: '',
+                          attrs: {
+                            name: 'section14_radio1',
+                            checked: false,
+                          }
+                        }).no-padding
+                      .form-group
+                        +field-radio({
+                          title: 'Завта с 16:00 - 19:00 (19 грн.)',
+                          isLink: false,
+                          mods: '',
+                          attrs: {
+                            name: 'section14_radio1',
+                            checked: false,
+                          }
+                        }).no-padding
+                      .form-group
+                        +field-radio({
+                          title: 'Завта с 13:00 - 16:00 (19 грн.)',
+                          isLink: false,
+                          mods: '',
+                          attrs: {
+                            name: 'section14_radio1',
+                            checked: false,
+                          }
+                        }).no-padding
+                    fieldset 
+                      .form-group
+                        +field-text({
+                          title: 'Комментарий',
+                          hasJs: true,
+                          isTextarea: true,
+                          isRequired: false,
+                          hasError: false,
+                          helpText: 'Текст ошибки или подсказка',
+                          mods: '',
+                          val: '',
+                          attrs: {
+                            name: 'text',
+                            placeholder: ''
+                          }
+                        })
+                    .app-modal__delivery-info
+                      .div1 Доставка:
+                      .div2
+                        span.color 150,00 ₴
+                    .app-modal__delivery-info
+                      .div1 За товары:
+                      .div2 
+                        span.color 370,20 ₴
+                  .mssg-alert.--error(style="display: none")#section14_mssg_alert1
+                    svg.icon
+                      use(xlink:href='#icon_info_o')
+                    span Извините нет свободных курьеров!
+                  button(type="button" disabled).btn.--accent.--block#section14_btn1.j_test_73
+                    span Подтвердить
                 
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner
@@ -1833,6 +1968,9 @@ html(lang="uk")
           svg.icon
             use(href='#arrow_left')
           span Назад к списку аптек
+      button(type="button" style="display: none")#section14_greenBtn.app-button-status
+        span.app-button-status__inner
+          span Продолжить
       #appModal1.app-modal(style="display: none")
         .app-modal__wrapper
           button(type="button").app-modal__close.j_test_43
@@ -1991,6 +2129,6 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v59")
+    script(src="./js/common.js?v60")
 
     include ./_include/_svg

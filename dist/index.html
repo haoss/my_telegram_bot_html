@@ -13,25 +13,19 @@
             Telegram.WebApp.onEvent('themeChanged', setThemeClass);
             setThemeClass();
         </script>
-        <link rel="stylesheet" href="./css/style.min.css?v91">
+        <link rel="stylesheet" href="./css/style.min.css?v92">
     </head>
     <body> 
         <div class="app" id="app">
             <div class="test-navigation">
                 <button class="test-navigation__hide" type="button"></button>
                 <button class="test-navigation__btn" type="button" data-section="section1">1</button>
-                <button class="test-navigation__btn" type="button" data-section="section2">2</button>
-                <button class="test-navigation__btn" type="button" data-section="section3">3</button>
-                <button class="test-navigation__btn" type="button" data-section="section4">4</button>
-                <button class="test-navigation__btn" type="button" data-section="section5">5</button>
                 <button class="test-navigation__btn" type="button" data-section="section6">6</button>
                 <button class="test-navigation__btn" type="button" data-section="section7">7</button>
                 <button class="test-navigation__btn" type="button" data-section="section8">8</button>
                 <button class="test-navigation__btn" type="button" data-section="section9">9</button>
                 <button class="test-navigation__btn" type="button" data-section="section10">10</button>
                 <button class="test-navigation__btn" type="button" data-section="section11">11</button>
-                <button class="test-navigation__btn" type="button" data-section="section12">12</button>
-                <button class="test-navigation__btn" type="button" data-section="section13">13</button>
             </div>
             <div class="you-pharmacy-line" id="youPharmacyLine" style="display: none">
                 <svg class="icon">
@@ -3329,7 +3323,7 @@
                                                 </button>
                                                 <button class="btn" type="button">
                                                     <svg class="icon">
-                                                        <use xlink:href="#icon_info_o"></use>
+                                                        <use xlink:href="#icon_warning_o"></use>
                                                     </svg><span>Пожаловаться</span>
                                                 </button>
                                             </div>
@@ -3420,7 +3414,7 @@
                                                 </button>
                                                 <button class="btn" type="button">
                                                     <svg class="icon">
-                                                        <use xlink:href="#icon_info_o"></use>
+                                                        <use xlink:href="#icon_warning_o"></use>
                                                     </svg><span>Пожаловаться</span>
                                                 </button>
                                             </div>
@@ -3511,7 +3505,7 @@
                                                 </button>
                                                 <button class="btn" type="button">
                                                     <svg class="icon">
-                                                        <use xlink:href="#icon_info_o"></use>
+                                                        <use xlink:href="#icon_warning_o"></use>
                                                     </svg><span>Пожаловаться</span>
                                                 </button>
                                             </div>
@@ -3602,7 +3596,7 @@
                                                 </button>
                                                 <button class="btn" type="button">
                                                     <svg class="icon">
-                                                        <use xlink:href="#icon_info_o"></use>
+                                                        <use xlink:href="#icon_warning_o"></use>
                                                     </svg><span>Пожаловаться</span>
                                                 </button>
                                             </div>
@@ -3693,7 +3687,7 @@
                                                 </button>
                                                 <button class="btn" type="button">
                                                     <svg class="icon">
-                                                        <use xlink:href="#icon_info_o"></use>
+                                                        <use xlink:href="#icon_warning_o"></use>
                                                     </svg><span>Пожаловаться</span>
                                                 </button>
                                             </div>
@@ -4824,7 +4818,7 @@
                                 <div class="pharmacies-list__item2-p">Все в наличии в 120 из 191 аптек</div>
                             </div>
                         </div>
-                        <div class="pharmacies-list__item2">
+                        <div class="pharmacies-list__item2 j_test_76">
                             <div class="pharmacies-list__item2-arrow">
                                 <svg class="icon">
                                     <use xlink:href="#arrow_right"></use>
@@ -5202,6 +5196,90 @@
                     </div>
                 </div>
             </div>
+            <div class="section section14" id="section14" style="display: none">
+                <div class="map-block" style="background-image: url(./tmp/map-block.jpg);">
+                    <div class="map-block__marker-test j_test_72" style="top: 30%; left: 50%"><img src="./tmp/map-marker/icon_marker.png" width="64" height="64" alt="" style="display: block"></div>
+                </div>
+                <div class="map-modal" id="section14_map_modal1" style="bottom: 0">
+                    <div class="map-modal__holder" id="section14_holder1">
+                        <button class="btn --primary --ghost --md --r35 j_test_67 j_test_75" type="button">
+                            <svg class="icon">
+                                <use href="#target"></use>
+                            </svg><span>Где я</span>
+                        </button>
+                    </div>
+                    <div class="app-modal__wrapper" id="section14_app_wrapper2">
+                        <div class="app-modal__content">
+                            <div class="app-modal__content-wrapper pt20 pb20">
+                                <form action="#!" autocomplete="off"> 
+                                    <fieldset> 
+                                        <div class="form-group">
+                                            <label class="field-text j-field-text">
+                                                <input class="field-text__input css-input" type="text" value="" aria-invalid="false" name="section14_street" placeholder="" id="section14_input1"/><span class="field-text__name css-label">Улица<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="field-text j-field-text">
+                                                <input class="field-text__input css-input" type="text" value="" aria-invalid="false" name="section14_house" placeholder="" id="section14_input2"/><span class="field-text__name css-label">Дом<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="field-text j-field-text">
+                                                <input class="field-text__input css-input" type="text" value="" aria-invalid="false" name="section14_apartment" placeholder=""/><span class="field-text__name css-label">Квартира<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span>
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                    <div style="display: none" id="section14_div1">
+                                        <fieldset> 
+                                            <div class="form-group">
+                                                <label class="field-radio no-padding">
+                                                    <input class="field-radio__input" type="radio" name="section14_radio1" checked="checked"/><span class="field-radio__span-input"></span><span class="field-radio__label">Срочная доставка за 40 минут (150 грн.)</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="field-radio no-padding">
+                                                    <input class="field-radio__input" type="radio" name="section14_radio1"/><span class="field-radio__span-input"></span><span class="field-radio__label">Сегодня с 16:00 - 19:00 (19 грн.)</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="field-radio no-padding">
+                                                    <input class="field-radio__input" type="radio" name="section14_radio1"/><span class="field-radio__span-input"></span><span class="field-radio__label">Завта с 16:00 - 19:00 (19 грн.)</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="field-radio no-padding">
+                                                    <input class="field-radio__input" type="radio" name="section14_radio1"/><span class="field-radio__span-input"></span><span class="field-radio__label">Завта с 13:00 - 16:00 (19 грн.)</span>
+                                                </label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset> 
+                                            <div class="form-group">
+                                                <label class="field-text j-field-text">
+                                                    <textarea class="field-text__input css-input" aria-invalid="false" name="text" placeholder=""></textarea><span class="field-text__name css-label">Комментарий</span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span>
+                                                </label>
+                                            </div>
+                                        </fieldset>
+                                        <div class="app-modal__delivery-info">
+                                            <div class="div1">Доставка:</div>
+                                            <div class="div2"><span class="color">150,00 ₴</span></div>
+                                        </div>
+                                        <div class="app-modal__delivery-info">
+                                            <div class="div1">За товары:</div>
+                                            <div class="div2"> <span class="color">370,20 ₴</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="mssg-alert --error" style="display: none" id="section14_mssg_alert1">
+                                        <svg class="icon">
+                                            <use xlink:href="#icon_info_o"></use>
+                                        </svg><span>Извините нет свободных курьеров!</span>
+                                    </div>
+                                    <button class="btn --accent --block j_test_73" type="button" disabled id="section14_btn1"><span>Подтвердить</span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <button class="app-button-status" type="button" style="display: none" id="appButtonStatus"><span class="app-button-status__inner"><span class="app-button-status__count">5</span><span>товаров. Оформить</span></span></button>
             <button class="app-button-status" type="button" style="display: none" id="checkoutButtonStatus"><span class="app-button-status__inner"><span class="app-button-status__count">от 149,67 ₴ </span><span>Оформить</span></span></button>
             <button class="app-button-status --error" type="button" style="display: none" id="section12ButtonStatus"><span class="app-button-status__inner"><span>Показать аптеки на карте</span>
@@ -5212,6 +5290,7 @@
                     <svg class="icon">
                         <use href="#arrow_left"></use>
                     </svg><span>Назад к списку аптек</span></span></button>
+            <button class="app-button-status" type="button" style="display: none" id="section14_greenBtn"><span class="app-button-status__inner"><span>Продолжить</span></span></button>
             <div class="app-modal" id="appModal1" style="display: none">
                 <div class="app-modal__wrapper">
                     <button class="app-modal__close j_test_43" type="button">
@@ -5632,7 +5711,7 @@
         <script src="./js/ion.rangeSlider/ion.rangeSlider.js"></script>
         <script src="./js/autosize/autosize.js"></script>
         <script src="./js/gsap.min.js"></script>
-        <script src="./js/common.js?v59"></script>
+        <script src="./js/common.js?v60"></script>
         <svg width="0" height="0" style="display: none">
             <symbol id="settings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2337 7.125H3.75C3.33579 7.125 3 7.46079 3 7.875C3 8.28921 3.33579 8.625 3.75 8.625H7.2337C7.55641 9.70931 8.56087 10.5 9.75 10.5C10.9391 10.5 11.9436 9.70931 12.2663 8.625H20.25C20.6642 8.625 21 8.28921 21 7.875C21 7.46079 20.6642 7.125 20.25 7.125H12.2663C11.9436 6.04069 10.9391 5.25 9.75 5.25C8.56087 5.25 7.55641 6.04069 7.2337 7.125ZM8.625 7.875C8.625 7.25368 9.12868 6.75 9.75 6.75C10.3713 6.75 10.875 7.25368 10.875 7.875C10.875 8.49632 10.3713 9 9.75 9C9.12868 9 8.625 8.49632 8.625 7.875Z"></path>
@@ -5814,7 +5893,11 @@
                 <rect width="14" height="14" rx="7" fill="#fff"></rect>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 7A6 6 0 1 1 1 7a6 6 0 0 1 12 0ZM7 3c.358 0 .75.252.75.675v4.15c0 .423-.392.675-.75.675s-.75-.252-.75-.675v-4.15C6.25 3.252 6.642 3 7 3Zm.75 6.977c0-.424-.359-.727-.75-.727s-.75.303-.75.727v.046c0 .424.359.727.75.727s.75-.303.75-.727v-.046Z"></path>
             </symbol>
-            <symbol id="icon_info_o" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon_info_o" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 14.85a.75.75 0 0 1-.75-.75V7.72a.75.75 0 0 1 1.5 0v6.38c0 .41-.34.75-.75.75zm0-9a.75.75 0 0 1-.75-.75V5a.75.75 0 0 1 1.5 0v.1c0 .41-.34.75-.75.75z" clip-rule="evenodd"></path>
+                <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0 1a9 9 0 1 0 0-18 9 9 0 0 0 0 18z" clip-rule="evenodd"></path>
+            </symbol>
+            <symbol id="icon_warning_o" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 4.25a.75.75 0 0 1 .75.75v6.375a.75.75 0 0 1-1.5 0V5a.75.75 0 0 1 .75-.75Zm0 9a.75.75 0 0 1 .75.75v.1a.75.75 0 0 1-1.5 0V14a.75.75 0 0 1 .75-.75Z"></path>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm0 1a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path>
             </symbol>

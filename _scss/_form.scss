@@ -119,7 +119,7 @@
     }
     &:focus {
       &~.field-text__name {
-        color: currentColor;
+        color: var(--color-d-1);
       }
       &~[class*="__label"] {
         opacity: 0;
@@ -175,21 +175,21 @@
   &.active-full {
     #{$this} {
       &__name {
-        color: var(--color-d-1);
+        // color: var(--color-d-1);
         &.css-label {
           top: 2px;
           font-size: 11px;
           display: block;
           opacity: 1;
           z-index: 9;
-          sup {
-            color: var(--color-d-1);
-          }
+          // sup {
+          //   color: var(--color-d-1);
+          // }
         }
       }
       &__input {
         border-width: 2px;
-        border-color: var(--color-d-1);
+        // border-color: var(--color-d-1);
       }
     }
   }
@@ -247,21 +247,42 @@ textarea.field-text__input {
   line-height: 1.3;
   font-weight: 500;
   border-radius: 7px;
+  display: flex;
   &.--info {
     background: #D9ECFA;
     color: var(--color-d-2);
+    .info {
+      fill: var(--color-d-2);
+    }
   }
   &.--error {
     background: #FCE9E9;
     color: var(--color-d-5);
+    .icon {
+      fill: var(--color-d-5);
+    }
   }
   &.--warning {
     background: var(--color-d-4);
     color: var(--tg-theme-bg-color);
+    .icon {
+      fill: var(--tg-theme-bg-color);
+    }
   }
   &.--success {
     background: #C4E8C8;
     color: var(--color-d-3);
+    .icon {
+      fill: var(--color-d-3);
+    }
+  }
+  .icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    margin-top: -1px;
+    fill: var(--tg-theme-bg-color);
   }
 }
 

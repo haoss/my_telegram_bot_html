@@ -1012,10 +1012,6 @@
       }
       &.--basic {
         background: var(--color-d-2);
-        svg {
-          transform-origin: 50%;
-          transform: rotate(-180deg);
-        }
       }
       &.--comment {
         background: var(--color-d-3);

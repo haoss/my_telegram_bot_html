@@ -107,10 +107,6 @@
       }
       &.--basic {
         background: var(--color-d-2);
-        svg {
-          transform-origin: 50%;
-          transform: rotate(-180deg);
-        }
       }
       svg {
         margin: 8px;
@@ -249,6 +245,20 @@
         margin-right: 10px;
         fill: var(--color-d-3);
       }
+    }
+  }
+  &__delivery-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-d-7);
+    font-size: 14px;
+    line-height: 1;
+    &+[class*='__delivery-info'] {
+      margin-top: 10px;
+    }
+    .color {
+      color: var(--color-d-3);
     }
   }
 }
