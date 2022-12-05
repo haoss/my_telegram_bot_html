@@ -26,6 +26,7 @@
                 <button class="test-navigation__btn" type="button" data-section="section9">9</button>
                 <button class="test-navigation__btn" type="button" data-section="section10">10</button>
                 <button class="test-navigation__btn" type="button" data-section="section11">11</button>
+                <button class="test-navigation__btn" type="button" data-section="section15">15</button>
             </div>
             <div class="you-pharmacy-line" id="youPharmacyLine" style="display: none">
                 <svg class="icon">
@@ -34,7 +35,7 @@
                 <div class="you-pharmacy-line__text">Ваша аптека:</div>
                 <button class="you-pharmacy-line__btn" type="button" id="j_test_04"><span>г. Харьков, просп. Гагарина, 722</span></button>
             </div>
-            <div class="section section1" id="section1">
+            <div class="section section1" id="section1" style="display: none">
                 <div class="search --once">
                     <button class="search__input j_test_07" type="button">Поиск</button>
                     <div class="search__btn-search">
@@ -5268,7 +5269,7 @@
                                             <div class="div2"> <span class="color">370,20 ₴</span></div>
                                         </div>
                                     </div>
-                                    <div class="mssg-alert --error" style="display: none" id="section14_mssg_alert1">
+                                    <div class="mssg-alert --error mb0" style="display: none" id="section14_mssg_alert1">
                                         <svg class="icon">
                                             <use xlink:href="#icon_info_o"></use>
                                         </svg><span>Извините нет свободных курьеров!</span>
@@ -5276,6 +5277,66 @@
                                     <button class="btn --accent --block j_test_73" type="button" disabled id="section14_btn1"><span>Подтвердить</span></button>
                                 </form>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section15" id="section15">
+                <div class="delivery">
+                    <div class="delivery__head">
+                        <div class="delivery__tab">
+                            <button class="delivery__tab" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#icon_info_o"></use>
+                                </svg>
+                                <div class="delivery__tab-title">Отделение</div>
+                                <div class="delivery__tab-desc">бесплатно*</div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="delivery__wrapper">
+                        <div id="section15_tabContent1">
+                            <form action="#!" autocomplete="off">
+                                <div class="form-group">
+                                    <label class="field-text j-field-text">
+                                        <input class="field-text__input css-input" type="text" value="№1: провулок Спартака, 7а" aria-invalid="false" name="text" placeholder=""/><span class="field-text__name css-label">Отделение<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="section15_tabContent2" style="display: none">
+                            <form action="#!" autocomplete="off">
+                                <div class="form-group">
+                                    <label class="field-text j-field-text">
+                                        <input class="field-text__input css-input" type="text" value="Героев Харькова" aria-invalid="false" name="text" placeholder=""/><span class="field-text__name css-label">Улица<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="field-text j-field-text">
+                                        <input class="field-text__input css-input" type="text" value="" aria-invalid="false" name="text" placeholder=""/><span class="field-text__name css-label">Дом<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="field-text j-field-text">
+                                        <input class="field-text__input css-input" type="text" value="" aria-invalid="false" name="text" placeholder=""/><span class="field-text__name css-label">Квартира</span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="section15_tabContent3" style="display: none">
+                            <form action="#!" autocomplete="off">
+                                <div class="form-group">
+                                    <label class="field-text j-field-text">
+                                        <input class="field-text__input css-input" type="text" value="№1: провулок Спартака, 7а" aria-invalid="false" name="text" placeholder=""/><span class="field-text__name css-label">Почтомат<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="delivery__foot">
+                        <div class="app-modal__delivery-info">
+                            <div class="div1">5 товаров</div>
+                            <div class="div2 fs23"><span class="color">370,20 ₴</span></div>
                         </div>
                     </div>
                 </div>
@@ -5290,7 +5351,7 @@
                     <svg class="icon">
                         <use href="#arrow_left"></use>
                     </svg><span>Назад к списку аптек</span></span></button>
-            <button class="app-button-status" type="button" style="display: none" id="section14_greenBtn"><span class="app-button-status__inner"><span>Продолжить</span></span></button>
+            <button class="app-button-status" type="button" id="section14_greenBtn"><span class="app-button-status__inner"><span>Продолжить</span></span></button>
             <div class="app-modal" id="appModal1" style="display: none">
                 <div class="app-modal__wrapper">
                     <button class="app-modal__close j_test_43" type="button">
@@ -6103,6 +6164,9 @@
             <symbol id="world" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <rect width="24" height="24" rx="12"></rect>
                 <path fill="#fff" fill-rule="evenodd" d="M12 7.13h.21a17 17 0 0 0 4.22-.52c-.24-.67-.51-1.28-.82-1.83-1.04-1.83-2.35-2.73-3.6-2.73V1.2A10.8 10.8 0 0 1 22.8 11.79v.85h-.02a10.8 10.8 0 0 1-21.56 0H1.2v-.85A10.8 10.8 0 0 1 12 1.2v.85c-1.26 0-2.57.9-3.6 2.73-.32.55-.6 1.16-.83 1.83a17 17 0 0 0 4.43.52Zm0 14.82c1.26 0 2.56-.9 3.6-2.73.32-.55.6-1.16.83-1.83a17 17 0 0 0-4.43-.52h-.21a17 17 0 0 0-4.22.52c.24.67.51 1.28.82 1.83 1.04 1.83 2.35 2.73 3.6 2.73Zm0-5.93h.21c1.59 0 3.1.2 4.47.56.34-1.2.55-2.52.6-3.94H6.72c.05 1.42.26 2.75.6 3.94a17.84 17.84 0 0 1 4.68-.56Zm0-4.23h5.3a16.82 16.82 0 0 0-.62-4.37 17.84 17.84 0 0 1-4.68.56h-.21c-1.59 0-3.1-.2-4.48-.56-.37 1.3-.59 2.79-.6 4.37H12Zm-5.5-4.6c-.4 1.39-.62 2.95-.64 4.6H2.05a9.9 9.9 0 0 1 1.94-5.7c.75.43 1.59.8 2.51 1.1Zm-.63 5.45h-3.8a9.9 9.9 0 0 0 1.92 5.27c.75-.43 1.59-.8 2.51-1.1a17.5 17.5 0 0 1-.63-4.17Zm-1.34 5.94c.66-.37 1.4-.7 2.22-.96.57 1.64 1.39 3 2.35 3.9a9.96 9.96 0 0 1-4.57-2.94Zm0-13.16c.66.37 1.4.7 2.22.96.57-1.64 1.39-3 2.35-3.9a9.96 9.96 0 0 0-4.57 2.94ZM17.5 7.2c.4 1.39.62 2.95.64 4.6h3.81a9.9 9.9 0 0 0-1.94-5.7c-.75.43-1.6.8-2.51 1.1Zm.63 5.45h3.8a9.9 9.9 0 0 1-1.92 5.27 12.7 12.7 0 0 0-2.51-1.1c.36-1.27.58-2.68.63-4.17Zm1.34 5.94c-.66-.37-1.4-.7-2.23-.96a9.75 9.75 0 0 1-2.34 3.9 9.96 9.96 0 0 0 4.57-2.94Zm0-13.16c-.66.37-1.4.7-2.23.96a9.75 9.75 0 0 0-2.34-3.9 9.96 9.96 0 0 1 4.57 2.94Z" clip-rule="evenodd"></path>
+            </symbol>
+            <symbol id="delivery_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                <path fill-rule="evenodd" d="M12.88 2.12a3 3 0 0 1 4.24 0L21.6 6.6h-3.8v5.45h-5.7V6.6H8.4l4.48-4.48Zm10.6 6.36 4.4 4.4a3 3 0 0 1 0 4.24l-4.4 4.41V8.48ZM21.8 23.19l-4.69 4.69a3 3 0 0 1-4.24 0l-4.69-4.69h3.9v-5.44h5.7v5.44h4.02ZM6.4 21.41l-4.29-4.29a3 3 0 0 1 0-4.24l4.29-4.29v12.82Z" clip-rule="evenodd"></path>
             </symbol>
         </svg>
     </body>
