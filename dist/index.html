@@ -13,7 +13,7 @@
             Telegram.WebApp.onEvent('themeChanged', setThemeClass);
             setThemeClass();
         </script>
-        <link rel="stylesheet" href="./css/style.min.css?v92">
+        <link rel="stylesheet" href="./css/style.min.css?v93">
     </head>
     <body> 
         <div class="app" id="app">
@@ -27,6 +27,7 @@
                 <button class="test-navigation__btn" type="button" data-section="section10">10</button>
                 <button class="test-navigation__btn" type="button" data-section="section11">11</button>
                 <button class="test-navigation__btn" type="button" data-section="section15">15</button>
+                <button class="test-navigation__btn" type="button" data-section="section16">16</button>
             </div>
             <div class="you-pharmacy-line" id="youPharmacyLine" style="display: none">
                 <svg class="icon">
@@ -35,7 +36,7 @@
                 <div class="you-pharmacy-line__text">Ваша аптека:</div>
                 <button class="you-pharmacy-line__btn" type="button" id="j_test_04"><span>г. Харьков, просп. Гагарина, 722</span></button>
             </div>
-            <div class="section section1" id="section1" style="display: none">
+            <div class="section section1" id="section1">
                 <div class="search --once">
                     <button class="search__input j_test_07" type="button">Поиск</button>
                     <div class="search__btn-search">
@@ -4780,6 +4781,12 @@
                 </div>
             </div>
             <div class="section section11" id="section11" style="display: none">
+                <div class="test-navigation --inside show">
+                    <button class="test-navigation__btn" type="button" data-section="section11">1</button>
+                    <button class="test-navigation__btn" type="button" data-section="section12">2</button>
+                    <button class="test-navigation__btn" type="button" data-section="section13">3</button>
+                    <button class="test-navigation__btn" type="button" data-section="section14">4</button>
+                </div>
                 <div class="tab">
                     <div class="tab__block is-active j_test_64">
                         <svg class="icon">
@@ -4910,6 +4917,12 @@
                 </div>
             </div>
             <div class="section section12" id="section12" style="display: none">
+                <div class="test-navigation --inside show">
+                    <button class="test-navigation__btn" type="button" data-section="section11">1</button>
+                    <button class="test-navigation__btn" type="button" data-section="section12">2</button>
+                    <button class="test-navigation__btn" type="button" data-section="section13">3</button>
+                    <button class="test-navigation__btn" type="button" data-section="section14">4</button>
+                </div>
                 <div class="pharmacies">
                     <div class="pharmacies__search bb1">
                         <div class="search">
@@ -5118,6 +5131,12 @@
                 </div>
             </div>
             <div class="section section13" id="section13" style="display: none">
+                <div class="test-navigation --inside show">
+                    <button class="test-navigation__btn" type="button" data-section="section11">1</button>
+                    <button class="test-navigation__btn" type="button" data-section="section12">2</button>
+                    <button class="test-navigation__btn" type="button" data-section="section13">3</button>
+                    <button class="test-navigation__btn" type="button" data-section="section14">4</button>
+                </div>
                 <div class="search --once">
                     <button class="search__input pr20 j_test_62" type="button">Ваш адрес, район</button>
                     <div class="search__btn-search">
@@ -5198,6 +5217,12 @@
                 </div>
             </div>
             <div class="section section14" id="section14" style="display: none">
+                <div class="test-navigation --inside show">
+                    <button class="test-navigation__btn" type="button" data-section="section11">1</button>
+                    <button class="test-navigation__btn" type="button" data-section="section12">2</button>
+                    <button class="test-navigation__btn" type="button" data-section="section13">3</button>
+                    <button class="test-navigation__btn" type="button" data-section="section14">4</button>
+                </div>
                 <div class="map-block" style="background-image: url(./tmp/map-block.jpg);">
                     <div class="map-block__marker-test j_test_72" style="top: 30%; left: 50%"><img src="./tmp/map-marker/icon_marker.png" width="64" height="64" alt="" style="display: block"></div>
                 </div>
@@ -5281,7 +5306,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section section15" id="section15">
+            <div class="section section15" id="section15" style="display: none">
                 <div class="delivery">
                     <div class="delivery__head">
                         <div class="delivery__tab">
@@ -5355,6 +5380,90 @@
                     </div>
                 </div>
             </div>
+            <div class="section section16" id="section16" style="display: none">
+                <div class="test-navigation --inside show">
+                    <button class="test-navigation__btn" type="button" data-section="section16">1</button>
+                    <button class="test-navigation__btn" type="button" data-section="section17">2</button>
+                    <button class="test-navigation__btn" type="button" data-section="section18">3</button>
+                </div>
+                <div class="success">
+                    <div class="success__img"><img src="./tmp/success_img_1.svg" alt="" width="290" heigh="109"></div>
+                    <div class="success__content">
+                        <p>В течении 30 минут, на телефон <span class="d-inline-block">+38 (093) 111-35-17</span>, ожидайте сообщениес результатом обработки заказаи дальнейшими инструкциями по его получению.</p>
+                        <p>Номер заказа: <span class="color">748614</span><br>К оплате: <b class="color fs16">370,20 ₴</b></p>
+                        <p>
+                            <button class="btn --link --sm" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#document"></use>
+                                </svg><span>Детали заказа</span>
+                            </button>
+                        </p>
+                        <p>
+                            <button class="btn --accent --block" type="button"><span>Новый заказ</span></button>
+                        </p>
+                        <p>
+                            <button class="btn --contrast --block" type="button"><span>Завершить покупки</span></button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="section section17" id="section17" style="display: none">
+                <div class="test-navigation --inside show">
+                    <button class="test-navigation__btn" type="button" data-section="section16">1</button>
+                    <button class="test-navigation__btn" type="button" data-section="section17">2</button>
+                    <button class="test-navigation__btn" type="button" data-section="section18">3</button>
+                </div>
+                <div class="success">
+                    <div class="success__img"><img src="./tmp/success_img_1.svg" alt="" width="290" heigh="109"></div>
+                    <div class="success__content">
+                        <p>В течении 30 минут, на телефон <span class="d-inline-block">+38 (093) 111-35-17</span>, ожидайте сообщениес результатом обработки заказаи дальнейшими инструкциями по его получению.</p>
+                        <p>Номер заказа: <span class="color">748614</span><br>Доставка: <span class="color">50,00 ₴</span><br>За товары: <span class="color">320,20 ₴</span><br>К оплате: <b class="color fs16">370,20 ₴</b></p>
+                        <p>
+                            <button class="btn --link --sm" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#document"></use>
+                                </svg><span>Детали заказа</span>
+                            </button>
+                        </p>
+                        <p>
+                            <button class="btn --accent --block" type="button"><span>Новый заказ</span></button>
+                        </p>
+                        <p>
+                            <button class="btn --contrast --block" type="button"><span>Завершить покупки</span></button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="section section18" id="section18" style="display: none">
+                <div class="test-navigation --inside show">
+                    <button class="test-navigation__btn" type="button" data-section="section16">1</button>
+                    <button class="test-navigation__btn" type="button" data-section="section17">2</button>
+                    <button class="test-navigation__btn" type="button" data-section="section18">3</button>
+                </div>
+                <div class="success">
+                    <div class="success__img"><img src="./tmp/success_img_2.svg" alt="" width="290" heigh="109"></div>
+                    <div class="success__content">
+                        <p><b>Возможные причины:</b></p>
+                        <ul>
+                            <li>Недостаточно средств на счету</li>
+                            <li>Превышен допустимый лимит интернет-оплаты</li>
+                            <li>Заблокированы on-line платежи</li>
+                        </ul>
+                        <p>Точную причину Вы можете узнать в банке, который обслуживает Вашу карту.</p>
+                        <p><b>Рекомендуемые действия:</b></p>
+                        <ul>
+                            <li>Устраните причину отклонения платежа</li>
+                            <li>При оформлении заказа выберите другой способ оплаты</li>
+                        </ul>
+                        <p>
+                            <button class="btn --accent --block" type="button"><span>Новый заказ</span></button>
+                        </p>
+                        <p>
+                            <button class="btn --contrast --block" type="button"><span>Завершить покупки</span></button>
+                        </p>
+                    </div>
+                </div>
+            </div>
             <button class="app-button-status" type="button" style="display: none" id="appButtonStatus"><span class="app-button-status__inner"><span class="app-button-status__count">5</span><span>товаров. Оформить</span></span></button>
             <button class="app-button-status" type="button" style="display: none" id="checkoutButtonStatus"><span class="app-button-status__inner"><span class="app-button-status__count">от 149,67 ₴ </span><span>Оформить</span></span></button>
             <button class="app-button-status --error" type="button" style="display: none" id="section12ButtonStatus"><span class="app-button-status__inner"><span>Показать аптеки на карте</span>
@@ -5365,7 +5474,7 @@
                     <svg class="icon">
                         <use href="#arrow_left"></use>
                     </svg><span>Назад к списку аптек</span></span></button>
-            <button class="app-button-status" type="button" id="section14_greenBtn"><span class="app-button-status__inner"><span>Продолжить</span></span></button>
+            <button class="app-button-status" type="button" style="display: none" id="section14_greenBtn"><span class="app-button-status__inner"><span>Продолжить</span></span></button>
             <div class="app-modal" id="appModal1" style="display: none">
                 <div class="app-modal__wrapper">
                     <button class="app-modal__close j_test_43" type="button">
@@ -5786,7 +5895,7 @@
         <script src="./js/ion.rangeSlider/ion.rangeSlider.js"></script>
         <script src="./js/autosize/autosize.js"></script>
         <script src="./js/gsap.min.js"></script>
-        <script src="./js/common.js?v60"></script>
+        <script src="./js/common.js?v61"></script>
         <svg width="0" height="0" style="display: none">
             <symbol id="settings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2337 7.125H3.75C3.33579 7.125 3 7.46079 3 7.875C3 8.28921 3.33579 8.625 3.75 8.625H7.2337C7.55641 9.70931 8.56087 10.5 9.75 10.5C10.9391 10.5 11.9436 9.70931 12.2663 8.625H20.25C20.6642 8.625 21 8.28921 21 7.875C21 7.46079 20.6642 7.125 20.25 7.125H12.2663C11.9436 6.04069 10.9391 5.25 9.75 5.25C8.56087 5.25 7.55641 6.04069 7.2337 7.125ZM8.625 7.875C8.625 7.25368 9.12868 6.75 9.75 6.75C10.3713 6.75 10.875 7.25368 10.875 7.875C10.875 8.49632 10.3713 9 9.75 9C9.12868 9 8.625 8.49632 8.625 7.875Z"></path>

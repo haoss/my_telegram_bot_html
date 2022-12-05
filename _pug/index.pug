@@ -17,7 +17,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v92')
+    link(rel='stylesheet', href='./css/style.min.css?v93')
   
   body 
     #app.app
@@ -39,13 +39,14 @@ html(lang="uk")
         //- button(type="button" data-section="section13").test-navigation__btn 13
         //- button(type="button" data-section="section14").test-navigation__btn 14
         button(type="button" data-section="section15").test-navigation__btn 15
+        button(type="button" data-section="section16").test-navigation__btn 16
       #youPharmacyLine.you-pharmacy-line(style="display: none")
         svg.icon
           use(href='#vasha_apteka')
         .you-pharmacy-line__text Ваша аптека:
         button(type="button").you-pharmacy-line__btn#j_test_04
           span г. Харьков, просп. Гагарина, 722
-      #section1.section.section1(style="display: none")
+      #section1.section.section1
         .search.--once
           button(type="button").search__input.j_test_07 Поиск
           .search__btn-search
@@ -1512,6 +1513,13 @@ html(lang="uk")
               .search-list__item3-text Харьковка
                 small Сумская обл., Глуховский р-н
       #section11.section.section11(style="display: none")
+        .test-navigation.--inside.show
+          //- button(type="button").test-navigation__hide
+          button(type="button" data-section="section11").test-navigation__btn 1
+          button(type="button" data-section="section12").test-navigation__btn 2
+          button(type="button" data-section="section13").test-navigation__btn 3
+          button(type="button" data-section="section14").test-navigation__btn 4
+
         .tab
           .tab__block.is-active.j_test_64
             svg.icon
@@ -1601,6 +1609,13 @@ html(lang="uk")
               .pharmacies-list__item2-info
                 span.color от 850 ₴
       #section12.section.section12(style="display: none")
+        .test-navigation.--inside.show
+          //- button(type="button").test-navigation__hide
+          button(type="button" data-section="section11").test-navigation__btn 1
+          button(type="button" data-section="section12").test-navigation__btn 2
+          button(type="button" data-section="section13").test-navigation__btn 3
+          button(type="button" data-section="section14").test-navigation__btn 4
+
         .pharmacies
           .pharmacies__search.bb1
             .search
@@ -1752,6 +1767,13 @@ html(lang="uk")
                   use(href='#location')
                 span 22,6 км
       #section13.section.section13(style="display: none")
+        .test-navigation.--inside.show
+          //- button(type="button").test-navigation__hide
+          button(type="button" data-section="section11").test-navigation__btn 1
+          button(type="button" data-section="section12").test-navigation__btn 2
+          button(type="button" data-section="section13").test-navigation__btn 3
+          button(type="button" data-section="section14").test-navigation__btn 4
+
         .search.--once
           button(type="button").search__input.pr20.j_test_62 Ваш адрес, район
           .search__btn-search
@@ -1817,6 +1839,13 @@ html(lang="uk")
                 button(type="button").btn.--accent.--block
                   span Забрать здесь
       #section14.section.section14(style="display: none")
+        .test-navigation.--inside.show
+          //- button(type="button").test-navigation__hide
+          button(type="button" data-section="section11").test-navigation__btn 1
+          button(type="button" data-section="section12").test-navigation__btn 2
+          button(type="button" data-section="section13").test-navigation__btn 3
+          button(type="button" data-section="section14").test-navigation__btn 4
+
         .map-block(style="background-image: url(./tmp/map-block.jpg);")
           .map-block__marker-test(style="top: 30%; left: 50%").j_test_72
             img(src="./tmp/map-marker/icon_marker.png", width="64" height="64" alt="" style="display: block")
@@ -1950,7 +1979,7 @@ html(lang="uk")
                     span Извините нет свободных курьеров!
                   button(type="button" disabled).btn.--accent.--block#section14_btn1.j_test_73
                     span Подтвердить
-      #section15.section.section15
+      #section15.section.section15(style="display: none")
         .delivery
           .delivery__head
             .delivery__tab
@@ -2061,6 +2090,105 @@ html(lang="uk")
               .div1 5 товаров
               .div2.fs23
                 span.color 370,20 ₴
+      #section16.section.section16(style="display: none")
+        //- .loader
+        .test-navigation.--inside.show
+          //- button(type="button").test-navigation__hide
+          button(type="button" data-section="section16").test-navigation__btn 1
+          button(type="button" data-section="section17").test-navigation__btn 2
+          button(type="button" data-section="section18").test-navigation__btn 3
+
+        .success
+          .success__img
+            img(src="./tmp/success_img_1.svg", alt="" width="290" heigh="109")
+          .success__content
+            p В течении 30 минут, на телефон 
+              span.d-inline-block +38 (093) 111-35-17
+              | , ожидайте сообщениес результатом обработки заказаи дальнейшими инструкциями по его получению.
+            p Номер заказа: 
+              span.color 748614
+              br
+              | К оплате: 
+              b.color.fs16 370,20 ₴
+            p
+              button(type="button").btn.--link.--sm
+                svg.icon
+                  use(xlink:href='#document')
+                span Детали заказа
+            p
+              button(type="button").btn.--accent.--block
+                span Новый заказ
+            p
+              button(type="button").btn.--contrast.--block
+                span Завершить покупки
+      #section17.section.section17(style="display: none")
+        //- .loader
+        .test-navigation.--inside.show
+          //- button(type="button").test-navigation__hide
+          button(type="button" data-section="section16").test-navigation__btn 1
+          button(type="button" data-section="section17").test-navigation__btn 2
+          button(type="button" data-section="section18").test-navigation__btn 3
+        
+        .success
+          .success__img
+            img(src="./tmp/success_img_1.svg", alt="" width="290" heigh="109")
+          .success__content
+            p В течении 30 минут, на телефон 
+              span.d-inline-block +38 (093) 111-35-17
+              | , ожидайте сообщениес результатом обработки заказаи дальнейшими инструкциями по его получению.
+            p Номер заказа: 
+              span.color 748614
+              br
+              | Доставка: 
+              span.color 50,00 ₴
+              br
+              | За товары: 
+              span.color 320,20 ₴
+              br
+              | К оплате: 
+              b.color.fs16 370,20 ₴
+            p
+              button(type="button").btn.--link.--sm
+                svg.icon
+                  use(xlink:href='#document')
+                span Детали заказа
+            p
+              button(type="button").btn.--accent.--block
+                span Новый заказ
+            p
+              button(type="button").btn.--contrast.--block
+                span Завершить покупки
+      #section18.section.section18(style="display: none")
+        //- .loader
+        .test-navigation.--inside.show
+          //- button(type="button").test-navigation__hide
+          button(type="button" data-section="section16").test-navigation__btn 1
+          button(type="button" data-section="section17").test-navigation__btn 2
+          button(type="button" data-section="section18").test-navigation__btn 3
+
+        .success
+          .success__img
+            img(src="./tmp/success_img_2.svg", alt="" width="290" heigh="109")
+          .success__content
+            p
+              b Возможные причины:
+            ul
+              li Недостаточно средств на счету
+              li Превышен допустимый лимит интернет-оплаты
+              li Заблокированы on-line платежи
+            p Точную причину Вы можете узнать в банке, который обслуживает Вашу карту.
+            p
+              b Рекомендуемые действия:
+            ul
+              li Устраните причину отклонения платежа
+              li При оформлении заказа выберите другой способ оплаты
+            p
+              button(type="button").btn.--accent.--block
+                span Новый заказ
+            p
+              button(type="button").btn.--contrast.--block
+                span Завершить покупки
+
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner
           span.app-button-status__count 5
@@ -2079,7 +2207,7 @@ html(lang="uk")
           svg.icon
             use(href='#arrow_left')
           span Назад к списку аптек
-      button(type="button" style="")#section14_greenBtn.app-button-status
+      button(type="button" style="display: none")#section14_greenBtn.app-button-status
         span.app-button-status__inner
           span Продолжить
       #appModal1.app-modal(style="display: none")
@@ -2240,6 +2368,6 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v60")
+    script(src="./js/common.js?v61")
 
     include ./_include/_svg
