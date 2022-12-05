@@ -40,13 +40,16 @@ html(lang="uk")
         //- button(type="button" data-section="section14").test-navigation__btn 14
         button(type="button" data-section="section15").test-navigation__btn 15
         button(type="button" data-section="section16").test-navigation__btn 16
+        //- button(type="button" data-section="section17").test-navigation__btn 17
+        //- button(type="button" data-section="section18").test-navigation__btn 18
+        button(type="button" data-section="section19").test-navigation__btn 19
       #youPharmacyLine.you-pharmacy-line(style="display: none")
         svg.icon
           use(href='#vasha_apteka')
         .you-pharmacy-line__text Ваша аптека:
         button(type="button").you-pharmacy-line__btn#j_test_04
           span г. Харьков, просп. Гагарина, 722
-      #section1.section.section1
+      #section1.section.section1(style="display: none")
         .search.--once
           button(type="button").search__input.j_test_07 Поиск
           .search__btn-search
@@ -2188,6 +2191,104 @@ html(lang="uk")
             p
               button(type="button").btn.--contrast.--block
                 span Завершить покупки
+      #section19.section.section19
+        //- .loader
+        .test-navigation.--inside.show
+          //- button(type="button").test-navigation__hide
+          button(type="button" data-section="section19").test-navigation__btn 1
+          //- button(type="button" data-section="section20").test-navigation__btn 2
+          //- button(type="button" data-section="section21").test-navigation__btn 3
+
+        .confirmation
+          .confirmation__block
+            .confirmation__block-head
+              .div1 Получатель
+            .confirmation__block-wrapper
+              +field-text({
+                title: 'Телефон',
+                hasJs: true,
+                isTextarea: false,
+                isRequired: true,
+                hasError: false,
+                helpText: 'Текст ошибки или подсказка',
+                mods: '',
+                val: '',
+                attrs: {
+                  name: 'confirmation-name-1',
+                  placeholder: '',
+                  value: '+38 (093) 111-35-17'
+                }
+              }) 
+
+          .confirmation__block
+            .confirmation__block-head
+              .div1 Доставка
+              button(type='button').btn.--secondary-alt.--r50.--xs
+                svg.icon
+                  use(xlink:href='#edit')
+            .confirmation__block-wrapper
+              .confirmation__pharmacy
+                .confirmation__pharmacy-thumb
+                  svg.icon
+                    use(href='#pharmacy_logo_2')
+                .confirmation__pharmacy-wrapper
+                  .confirmation__pharmacy-text Новые дома
+                  .confirmation__pharmacy-p г. Харьков, проезд Стадионный, 11/2
+                  .confirmation__pharmacy-p Пн-Вс: 08:00-19:00
+
+          .confirmation__block
+            .confirmation__block-head
+              .div1 Корзина
+              button(type='button').btn.--secondary-alt.--r50.--xs
+                svg.icon
+                  use(xlink:href='#edit')
+            .confirmation__block-wrapper
+              p 1
+
+          .confirmation__block
+            .confirmation__block-head
+              .div1 Промокод
+            .confirmation__block-wrapper
+              #section19_promo_1
+                button(type="button").btn.--secondary-alt.--block.j_test_78
+                  svg.icon
+                    use(xlink:href='#promocode')
+                  span Ввести промокод
+              #section19_promo_2(style="display: none")
+                +field-text({
+                  title: 'Промокод',
+                  hasJs: true,
+                  isTextarea: false,
+                  isRequired: true,
+                  hasError: false,
+                  helpText: 'Текст ошибки или подсказка',
+                  mods: '',
+                  val: '',
+                  attrs: {
+                    name: 'confirmation-promocode-1',
+                    placeholder: '',
+                    value: '9311-9124-1611-2222'
+                  }
+                }) 
+              #section19_promo_3(style="display: none")
+                .promo-success
+                  .div1
+                    .promo-success__title
+                      div Промокод применен!
+                      span.color Скидка 22,20 ₴
+                  button(type="button").btn.--accent.--outline.--r35.--xs
+                    span Отмена
+            #section19_foot_1.confirmation__block-foot.--right(style="display: none")
+              button(type="button").btn.--accent.--ghost.j_test_79
+                span Отмена
+              button(type="button").btn.--accent
+                span Применить
+
+          .confirmation__block
+            .confirmation__block-head
+              .div1 Оплата
+            .confirmation__block-wrapper
+              p 1
 
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner

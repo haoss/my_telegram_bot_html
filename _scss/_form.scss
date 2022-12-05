@@ -53,7 +53,7 @@
   display: block;
   $this: &;
   &:has(.field-text__input:focus) {
-    color: var(--color-black-reverse);
+    color: var(--color-black-inverse);
   }
   &__name {
     color: var(--color-d-7);
@@ -89,7 +89,7 @@
     padding: 0;
     font-size: 16px;
     line-height: 1;
-    color: var(--color-black-reverse);
+    color: var(--color-black-inverse);
     background: var(--tg-theme-bg-color);
     border: 0;
     border-bottom: 1px solid var(--color-l-3);

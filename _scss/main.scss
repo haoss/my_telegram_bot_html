@@ -2211,8 +2211,102 @@
   }
 }
 
-.d-block { display: block !important; }
-.d-flex { display: flex !important; }
-.d-inline-block { display: inline-block !important; }
-.d-inline-flex { display: inline-flex !important; }
-.d-inline { display: inline !important; }
+.confirmation {
+  &__block {
+    border-bottom: 10px solid var(--color-l-2);
+    &-head {
+      border-bottom: 1px solid var(--color-l-2);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      &>.div1 {
+        flex-grow: 1;
+        line-height: 28px;
+      }
+      .btn {
+        flex-shrink: 0;
+      }
+    }
+    &-wrapper {
+      padding: 20px;
+    }
+    &-foot {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      border-top: 1px solid var(--color-l-2);
+      &.--right {
+        justify-content: flex-end;
+      }
+      .btn {
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  &__pharmacy {
+    padding: 0px 0px 0px 80px;
+    width: 100%;
+    position: relative;
+    font-size: 15px;
+    &-text {
+      flex-grow: 1;
+      line-height: 1.2;
+      font-weight: bold;
+    }
+    &-p {
+      color: var(--color-d-7);
+      font-weight: 400;
+      font-size: 13px;
+      margin-top: 8px;
+      line-height: 1.1;
+      &+* {
+        margin-top: 4px;
+      }
+    }
+    &-thumb {
+      width: 60px;
+      flex-shrink: 0;
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      overflow: hidden;
+      .icon, img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        display: block;
+      }
+    }
+  }
+}
+
+.promo-success {
+  background: rgba(85, 190, 97, 0.15);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  padding: 10px;
+  font-weight: 400;
+  &>.div1 {
+    flex-grow: 1;
+  }
+  .btn {
+    flex-shrink: 0;
+    margin-left: 5px;
+  }
+  .color {
+    color: var(--color-d-3);
+    &.--error {
+      color: var(--color-d-5);
+    }
+    &.--warning {
+      color: var(--color-d-4);
+    }
+  }
+}
