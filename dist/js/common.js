@@ -170,6 +170,7 @@ $(document).on('ready', function(){
     $('#section14_map_modal1').css('bottom', '0px');
   });
   $('.j_test_76').on('click', function(){ $('.section').hide(); $('#section14').show(); });
+  $('.j_test_77').on('click', function(){  });
 
   $(document).on('click', '.collapsible-heading', function(e){
     e.preventDefault();
