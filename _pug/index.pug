@@ -1954,23 +1954,23 @@ html(lang="uk")
         .delivery
           .delivery__head
             .delivery__tab
-              button(type="button").delivery__tab-btn.is-active.j_test_77
+              button(type="button" data-tab="section15_tabContent1").delivery__tab-btn.is-active.j_test_77
                 svg.icon
                   use(xlink:href='#delivery_1')
                 .delivery__tab-title Отделение
                 .delivery__tab-desc бесплатно*
-              button(type="button").delivery__tab-btn.j_test_77
+              button(type="button" data-tab="section15_tabContent2").delivery__tab-btn.j_test_77
                 svg.icon
                   use(xlink:href='#delivery_2')
                 .delivery__tab-title Курьер
                 .delivery__tab-desc от 60 грн.
-              button(type="button").delivery__tab-btn.j_test_77
+              button(type="button" data-tab="section15_tabContent3").delivery__tab-btn.j_test_77
                 svg.icon
                   use(xlink:href='#delivery_3')
                 .delivery__tab-title Почтомат
                 .delivery__tab-desc бесплатно*
           .delivery__wrapper
-            #section15_tabContent1
+            #section15_tabContent1.delivery__wrapper-content
               form(action="#!" autocomplete="off")
                 .form-group
                   +field-text({
@@ -1988,7 +1988,7 @@ html(lang="uk")
                       value: '№1: провулок Спартака, 7а'
                     }
                   })
-            #section15_tabContent2(style="display: none")
+            #section15_tabContent2.delivery__wrapper-content(style="display: none")
               form(action="#!" autocomplete="off")
                 .form-group
                   +field-text({
@@ -2038,7 +2038,7 @@ html(lang="uk")
                       value: ''
                     }
                   })
-            #section15_tabContent3(style="display: none")
+            #section15_tabContent3.delivery__wrapper-content(style="display: none")
               form(action="#!" autocomplete="off")
                 .form-group
                   +field-text({

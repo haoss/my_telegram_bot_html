@@ -170,7 +170,13 @@ $(document).on('ready', function(){
     $('#section14_map_modal1').css('bottom', '0px');
   });
   $('.j_test_76').on('click', function(){ $('.section').hide(); $('#section14').show(); });
-  $('.j_test_77').on('click', function(){  });
+  $('.j_test_77').on('click', function(){
+    var _this = $(this);
+    _this.parent().find('.j_test_77').removeClass('is-active');
+    _this.addClass('is-active');
+    _this.parents('.delivery').find('.delivery__wrapper-content').hide();
+    $('#' + _this.data('tab')).show();
+  });
 
   $(document).on('click', '.collapsible-heading', function(e){
     e.preventDefault();
