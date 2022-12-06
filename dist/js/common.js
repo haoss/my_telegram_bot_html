@@ -278,6 +278,7 @@ $(document).on('ready', function(){
     var _attr19 = $(this).is("[data-section='section19']");
     var _attr20 = $(this).is("[data-section='section20']");
     var _attr21 = $(this).is("[data-section='section21']");
+    var _attr22 = $(this).is("[data-section='section22']");
     $('.section').hide(); $('#' + $(this).data('section')).show(); 
     $('.test-navigation__btn').removeClass('active'); 
     $(this).addClass('active'); 
@@ -286,7 +287,7 @@ $(document).on('ready', function(){
     $('#section13ButtonStatus').hide();
     $('#section19_greenBtn').hide();
 
-    if (_attr19 || _attr20 || _attr21 ) {
+    if (_attr19 || _attr20 || _attr21 || _attr22 ) {
       $('#section19_greenBtn').show();
       $('#section19_redBtn').hide();
     } else if (_attr13) {
