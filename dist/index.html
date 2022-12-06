@@ -13,7 +13,7 @@
             Telegram.WebApp.onEvent('themeChanged', setThemeClass);
             setThemeClass();
         </script>
-        <link rel="stylesheet" href="./css/style.min.css?v93">
+        <link rel="stylesheet" href="./css/style.min.css?v94">
     </head>
     <body> 
         <div class="app" id="app">
@@ -36,7 +36,7 @@
                 <div class="you-pharmacy-line__text">Ваша аптека:</div>
                 <button class="you-pharmacy-line__btn" type="button" id="j_test_04"><span>г. Харьков, просп. Гагарина, 722</span></button>
             </div>
-            <div class="section section1" id="section1" style="display: none">
+            <div class="section section1" id="section1">
                 <div class="search --once">
                     <button class="search__input j_test_07" type="button">Поиск</button>
                     <div class="search__btn-search">
@@ -5475,9 +5475,11 @@
                     </div>
                 </div>
             </div>
-            <div class="section section19" id="section19">
+            <div class="section section19" id="section19" style="display: none">
                 <div class="test-navigation --inside show">
                     <button class="test-navigation__btn" type="button" data-section="section19">1</button>
+                    <button class="test-navigation__btn" type="button" data-section="section20">2</button>
+                    <button class="test-navigation__btn" type="button" data-section="section21">3</button>
                 </div>
                 <div class="confirmation">
                     <div class="confirmation__block">
@@ -5485,19 +5487,28 @@
                             <div class="div1">Получатель</div>
                         </div>
                         <div class="confirmation__block-wrapper">
-                            <label class="field-text j-field-text">
-                                <input class="field-text__input css-input" type="text" value="+38 (093) 111-35-17" aria-invalid="false" name="confirmation-name-1" placeholder=""/><span class="field-text__name css-label">Телефон<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
-                            </label>
+                            <div class="form-group mb0">
+                                <label class="field-text j-field-text">
+                                    <input class="field-text__input css-input j-mask-local" type="text" value="+38 (093) 111-35-17" aria-invalid="false" name="confirmation-phone-1" placeholder=""/><span class="field-text__name css-label">Телефон<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
+                                </label>
+                            </div>
                         </div>
                     </div>
                     <div class="confirmation__block">
                         <div class="confirmation__block-head">
                             <div class="div1">Доставка</div>
-                            <button class="btn --secondary-alt --r50 --xs" type="button">
-                                <svg class="icon">
-                                    <use xlink:href="#edit"></use>
-                                </svg>
-                            </button>
+                            <div class="sort">
+                                <button class="btn --secondary-alt --r50 --xs j_test_39" type="button">
+                                    <svg class="icon">
+                                        <use xlink:href="#edit"></use>
+                                    </svg>
+                                </button>
+                                <div class="sort__dropdown --right --delivery j_test_40" style="display: none">
+                                    <button class="sort__dropdown-btn" type="button"><span>Изменить Аптеку</span></button>
+                                    <button class="sort__dropdown-btn" type="button"><span>Изменить способ доставки</span></button>
+                                    <button class="sort__dropdown-btn" type="button"><span>Изменить город</span></button>
+                                </div>
+                            </div>
                         </div>
                         <div class="confirmation__block-wrapper">
                             <div class="confirmation__pharmacy">
@@ -5523,8 +5534,50 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="confirmation__block-wrapper">
-                            <p>1</p>
+                        <div class="confirmation__block-wrapper no-padding">
+                            <div class="checkout-list">
+                                <div class="checkout-list__item">
+                                    <div class="checkout-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                                    <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                                    <div class="checkout-list__item-bottom">
+                                        <div class="checkout-list__item-count">
+                                            <div class="count"><span class="color">1 </span>упак.</div>
+                                        </div>
+                                        <div class="checkout-list__item-price pt3">от 62,68 ₴</div>
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item">
+                                    <div class="checkout-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                                    <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                                    <div class="checkout-list__item-bottom">
+                                        <div class="checkout-list__item-count">
+                                            <div class="count"><span class="color">1 </span>упак.</div>
+                                            <div class="count"><span class="color">0 </span>блис.</div>
+                                        </div>
+                                        <div class="checkout-list__item-price pt3">от 62,68 ₴</div>
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item">
+                                    <div class="checkout-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                                    <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                                    <div class="checkout-list__item-bottom">
+                                        <div class="checkout-list__item-count"> 
+                                            <div class="count"><span class="color">1 </span>упак.</div>
+                                        </div>
+                                        <div class="checkout-list__item-price pt3">от 62,68 ₴</div>
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item">
+                                    <div class="checkout-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                                    <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                                    <div class="checkout-list__item-bottom">
+                                        <div class="checkout-list__item-count"> 
+                                            <div class="count"><span class="color">1 </span>упак.</div>
+                                        </div>
+                                        <div class="checkout-list__item-price pt3">от 62,68 ₴</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="confirmation__block">
@@ -5532,19 +5585,19 @@
                             <div class="div1">Промокод</div>
                         </div>
                         <div class="confirmation__block-wrapper">
-                            <div id="section19_promo_1">
+                            <div class="section19_promo_1">
                                 <button class="btn --secondary-alt --block j_test_78" type="button">
                                     <svg class="icon">
                                         <use xlink:href="#promocode"></use>
                                     </svg><span>Ввести промокод</span>
                                 </button>
                             </div>
-                            <div id="section19_promo_2" style="display: none">
+                            <div class="section19_promo_2" style="display: none">
                                 <label class="field-text j-field-text">
                                     <input class="field-text__input css-input" type="text" value="9311-9124-1611-2222" aria-invalid="false" name="confirmation-promocode-1" placeholder=""/><span class="field-text__name css-label">Промокод<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
                                 </label>
                             </div>
-                            <div id="section19_promo_3" style="display: none">
+                            <div class="section19_promo_3" style="display: none">
                                 <div class="promo-success">
                                     <div class="div1">
                                         <div class="promo-success__title">
@@ -5555,17 +5608,420 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="confirmation__block-foot --right" id="section19_foot_1" style="display: none">
+                        <div class="section19_foot_1 confirmation__block-foot --right" style="display: none">
                             <button class="btn --accent --ghost j_test_79" type="button"><span>Отмена</span></button>
                             <button class="btn --accent j_test_80" type="button"><span>Применить</span></button>
                         </div>
                     </div>
-                    <div class="confirmation__block">
+                    <div class="confirmation__block no-border">
                         <div class="confirmation__block-head">
                             <div class="div1">Оплата</div>
                         </div>
                         <div class="confirmation__block-wrapper">
-                            <p>1</p>
+                            <div class="form-group">
+                                <label class="field-radio no-padding j_test_82">
+                                    <input class="field-radio__input" type="radio" name="section19_radio1" checked="checked"/><span class="field-radio__span-input"></span><span class="field-radio__label">В аптеке (наличными/картой)</span>
+                                </label>
+                            </div>
+                            <div class="form-group mb25">
+                                <label class="field-radio no-padding j_test_83">
+                                    <input class="field-radio__input" type="radio" name="section19_radio1"/><span class="field-radio__span-input"></span><span class="field-radio__label">Онлайн (Visa/MasterCard)</span>
+                                </label>
+                            </div>
+                            <div class="app-modal__delivery-info">
+                                <div class="div1">Доставка:</div>
+                                <div class="div2"><span class="color">150,00 ₴</span></div>
+                            </div>
+                            <div class="app-modal__delivery-info">
+                                <div class="div1">За товары:</div>
+                                <div class="div2"><span class="color">370,20 ₴</span></div>
+                            </div>
+                            <div class="app-modal__delivery-info">
+                                <div class="div1">Доставка:</div>
+                                <div class="div2"><span class="color">100,00 ₴</span></div>
+                            </div>
+                            <div class="app-modal__delivery-info">
+                                <div class="div1">Скидка:</div>
+                                <div class="div2"><span class="color">-22,20 ₴</span></div>
+                            </div>
+                            <div class="app-modal__delivery-info">
+                                <div class="div1">К оплате:</div>
+                                <div class="div2"><span class="color fs20">370,20 ₴</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section20" id="section20" style="display: none">
+                <div class="test-navigation --inside show">
+                    <button class="test-navigation__btn" type="button" data-section="section19">1</button>
+                    <button class="test-navigation__btn" type="button" data-section="section20">2</button>
+                    <button class="test-navigation__btn" type="button" data-section="section21">3</button>
+                </div>
+                <div class="confirmation">
+                    <div class="confirmation__block">
+                        <div class="confirmation__block-head">
+                            <div class="div1">Получатель</div>
+                        </div>
+                        <div class="confirmation__block-wrapper">
+                            <div class="form-group mb15">
+                                <label class="field-text j-field-text">
+                                    <input class="field-text__input css-input j-mask-local" type="text" value="+38 (093) 111-35-17" aria-invalid="false" name="confirmation-phone-2" placeholder=""/><span class="field-text__name css-label">Телефон<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
+                                </label>
+                            </div>
+                            <div class="form-group mb15">
+                                <label class="field-text j-field-text">
+                                    <input class="field-text__input css-input" type="text" value="" aria-invalid="false" name="confirmation-name-2" placeholder=""/><span class="field-text__name css-label">Имя<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
+                                </label>
+                            </div>
+                            <div class="form-group mb0">
+                                <label class="field-text j-field-text">
+                                    <input class="field-text__input css-input" type="text" value="" aria-invalid="false" name="confirmation-lasname-2" placeholder=""/><span class="field-text__name css-label">Фамилия<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="confirmation__block">
+                        <div class="confirmation__block-head">
+                            <div class="div1">Доставка</div>
+                            <div class="sort">
+                                <button class="btn --secondary-alt --r50 --xs j_test_39" type="button">
+                                    <svg class="icon">
+                                        <use xlink:href="#edit"></use>
+                                    </svg>
+                                </button>
+                                <div class="sort__dropdown --right --delivery j_test_40" style="display: none">
+                                    <button class="sort__dropdown-btn" type="button"><span>Изменить Аптеку</span></button>
+                                    <button class="sort__dropdown-btn" type="button"><span>Изменить способ доставки</span></button>
+                                    <button class="sort__dropdown-btn" type="button"><span>Изменить город</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="confirmation__block-wrapper">
+                            <div class="confirmation__pharmacy">
+                                <div class="confirmation__pharmacy-thumb">
+                                    <svg class="icon">
+                                        <use href="#logo_courier"></use>
+                                    </svg>
+                                </div>
+                                <div class="confirmation__pharmacy-wrapper">
+                                    <div class="confirmation__pharmacy-text">Курьер</div>
+                                    <div class="confirmation__pharmacy-p">г. Харьков, Пушкинская, 74</div>
+                                    <div class="confirmation__pharmacy-p">Сегодня с 16:00 - 19:00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="confirmation__block">
+                        <div class="confirmation__block-head">
+                            <div class="div1">Корзина</div>
+                            <button class="btn --secondary-alt --r50 --xs" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#edit"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="confirmation__block-wrapper no-padding">
+                            <div class="checkout-list">
+                                <div class="checkout-list__item">
+                                    <div class="checkout-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                                    <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                                    <div class="checkout-list__item-bottom">
+                                        <div class="checkout-list__item-count">
+                                            <div class="count"><span class="color">1 </span>упак.</div>
+                                        </div>
+                                        <div class="checkout-list__item-price pt3">от 62,68 ₴</div>
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item">
+                                    <div class="checkout-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                                    <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                                    <div class="checkout-list__item-bottom">
+                                        <div class="checkout-list__item-count">
+                                            <div class="count"><span class="color">1 </span>упак.</div>
+                                            <div class="count"><span class="color">0 </span>блис.</div>
+                                        </div>
+                                        <div class="checkout-list__item-price pt3">от 62,68 ₴</div>
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item">
+                                    <div class="checkout-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                                    <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                                    <div class="checkout-list__item-bottom">
+                                        <div class="checkout-list__item-count"> 
+                                            <div class="count"><span class="color">1 </span>упак.</div>
+                                        </div>
+                                        <div class="checkout-list__item-price pt3">от 62,68 ₴</div>
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item">
+                                    <div class="checkout-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                                    <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                                    <div class="checkout-list__item-bottom">
+                                        <div class="checkout-list__item-count"> 
+                                            <div class="count"><span class="color">1 </span>упак.</div>
+                                        </div>
+                                        <div class="checkout-list__item-price pt3">от 62,68 ₴</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="confirmation__block">
+                        <div class="confirmation__block-head">
+                            <div class="div1">Промокод</div>
+                        </div>
+                        <div class="confirmation__block-wrapper">
+                            <div class="section19_promo_1">
+                                <button class="btn --secondary-alt --block j_test_78" type="button">
+                                    <svg class="icon">
+                                        <use xlink:href="#promocode"></use>
+                                    </svg><span>Ввести промокод</span>
+                                </button>
+                            </div>
+                            <div class="section19_promo_2" style="display: none">
+                                <label class="field-text j-field-text">
+                                    <input class="field-text__input css-input" type="text" value="9311-9124-1611-2222" aria-invalid="false" name="confirmation-promocode-1" placeholder=""/><span class="field-text__name css-label">Промокод<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
+                                </label>
+                            </div>
+                            <div class="section19_promo_3" style="display: none">
+                                <div class="promo-success">
+                                    <div class="div1">
+                                        <div class="promo-success__title">
+                                            <div>Промокод применен!</div><span class="color">Скидка 22,20 ₴</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn --accent --outline --r35 --xs j_test_81" type="button"><span>Отмена</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section19_foot_1 confirmation__block-foot --right" style="display: none">
+                            <button class="btn --accent --ghost j_test_79" type="button"><span>Отмена</span></button>
+                            <button class="btn --accent j_test_80" type="button"><span>Применить</span></button>
+                        </div>
+                    </div>
+                    <div class="confirmation__block no-border">
+                        <div class="confirmation__block-head">
+                            <div class="div1">Оплата</div>
+                        </div>
+                        <div class="confirmation__block-wrapper">
+                            <div class="form-group">
+                                <label class="field-radio no-padding j_test_82">
+                                    <input class="field-radio__input" type="radio" name="section20_radio1" checked="checked"/><span class="field-radio__span-input"></span><span class="field-radio__label">В аптеке (наличными/картой)</span>
+                                </label>
+                            </div>
+                            <div class="form-group mb25">
+                                <label class="field-radio no-padding j_test_83">
+                                    <input class="field-radio__input" type="radio" name="section20_radio1"/><span class="field-radio__span-input"></span><span class="field-radio__label">Онлайн (Visa/MasterCard)</span>
+                                </label>
+                            </div>
+                            <div class="app-modal__delivery-info">
+                                <div class="div1">Доставка:</div>
+                                <div class="div2"><span class="color">150,00 ₴</span></div>
+                            </div>
+                            <div class="app-modal__delivery-info">
+                                <div class="div1">За товары:</div>
+                                <div class="div2"><span class="color">370,20 ₴</span></div>
+                            </div>
+                            <div class="app-modal__delivery-info">
+                                <div class="div1">Доставка:</div>
+                                <div class="div2"><span class="color">100,00 ₴</span></div>
+                            </div>
+                            <div class="app-modal__delivery-info">
+                                <div class="div1">Скидка:</div>
+                                <div class="div2"><span class="color">-22,20 ₴</span></div>
+                            </div>
+                            <div class="app-modal__delivery-info">
+                                <div class="div1">К оплате:</div>
+                                <div class="div2"><span class="color fs20">370,20 ₴</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section21" id="section21" style="display: none">
+                <div class="test-navigation --inside show">
+                    <button class="test-navigation__btn" type="button" data-section="section19">1</button>
+                    <button class="test-navigation__btn" type="button" data-section="section20">2</button>
+                    <button class="test-navigation__btn" type="button" data-section="section21">3</button>
+                </div>
+                <div class="confirmation">
+                    <div class="confirmation__block">
+                        <div class="confirmation__block-head">
+                            <div class="div1">Получатель</div>
+                        </div>
+                        <div class="confirmation__block-wrapper">
+                            <div class="form-group mb15">
+                                <label class="field-text j-field-text">
+                                    <input class="field-text__input css-input j-mask-local" type="text" value="+38 (093) 111-35-17" aria-invalid="false" name="confirmation-phone-2" placeholder=""/><span class="field-text__name css-label">Телефон<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
+                                </label>
+                            </div>
+                            <div class="form-group mb15">
+                                <label class="field-text j-field-text">
+                                    <input class="field-text__input css-input" type="text" value="" aria-invalid="false" name="confirmation-name-2" placeholder=""/><span class="field-text__name css-label">Имя<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
+                                </label>
+                            </div>
+                            <div class="form-group mb0">
+                                <label class="field-text j-field-text">
+                                    <input class="field-text__input css-input" type="text" value="" aria-invalid="false" name="confirmation-lasname-2" placeholder=""/><span class="field-text__name css-label">Фамилия<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="confirmation__block">
+                        <div class="confirmation__block-head">
+                            <div class="div1">Доставка</div>
+                            <div class="sort">
+                                <button class="btn --secondary-alt --r50 --xs j_test_39" type="button">
+                                    <svg class="icon">
+                                        <use xlink:href="#edit"></use>
+                                    </svg>
+                                </button>
+                                <div class="sort__dropdown --right --delivery j_test_40" style="display: none">
+                                    <button class="sort__dropdown-btn" type="button"><span>Изменить Аптеку</span></button>
+                                    <button class="sort__dropdown-btn" type="button"><span>Изменить способ доставки</span></button>
+                                    <button class="sort__dropdown-btn" type="button"><span>Изменить город</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="confirmation__block-wrapper">
+                            <div class="confirmation__pharmacy">
+                                <div class="confirmation__pharmacy-thumb">
+                                    <svg class="icon">
+                                        <use href="#logo_newposhta"></use>
+                                    </svg>
+                                </div>
+                                <div class="confirmation__pharmacy-wrapper">
+                                    <div class="confirmation__pharmacy-text">Новая Почта</div>
+                                    <div class="confirmation__pharmacy-p">Отделение № 11</div>
+                                    <div class="confirmation__pharmacy-p">г. Харьков, ул. Пушкинская, 96</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="confirmation__block">
+                        <div class="confirmation__block-head">
+                            <div class="div1">Корзина</div>
+                            <button class="btn --secondary-alt --r50 --xs" type="button">
+                                <svg class="icon">
+                                    <use xlink:href="#edit"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="confirmation__block-wrapper no-padding">
+                            <div class="checkout-list">
+                                <div class="checkout-list__item">
+                                    <div class="checkout-list__item-thumb"><img src="./tmp/img-2.jpg" width="60" height="60" alt=""></div>
+                                    <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                                    <div class="checkout-list__item-bottom">
+                                        <div class="checkout-list__item-count">
+                                            <div class="count"><span class="color">1 </span>упак.</div>
+                                        </div>
+                                        <div class="checkout-list__item-price pt3">от 62,68 ₴</div>
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item">
+                                    <div class="checkout-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                                    <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                                    <div class="checkout-list__item-bottom">
+                                        <div class="checkout-list__item-count">
+                                            <div class="count"><span class="color">1 </span>упак.</div>
+                                            <div class="count"><span class="color">0 </span>блис.</div>
+                                        </div>
+                                        <div class="checkout-list__item-price pt3">от 62,68 ₴</div>
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item">
+                                    <div class="checkout-list__item-thumb"><img src="./tmp/img-3.jpg" width="60" height="60" alt=""></div>
+                                    <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                                    <div class="checkout-list__item-bottom">
+                                        <div class="checkout-list__item-count"> 
+                                            <div class="count"><span class="color">1 </span>упак.</div>
+                                        </div>
+                                        <div class="checkout-list__item-price pt3">от 62,68 ₴</div>
+                                    </div>
+                                </div>
+                                <div class="checkout-list__item">
+                                    <div class="checkout-list__item-thumb"><img src="./tmp/img-1.jpg" width="60" height="60" alt=""></div>
+                                    <div class="checkout-list__item-text j_test_22">Расторопши плоды 200г<small>Дарниця | Украина</small></div>
+                                    <div class="checkout-list__item-bottom">
+                                        <div class="checkout-list__item-count"> 
+                                            <div class="count"><span class="color">1 </span>упак.</div>
+                                        </div>
+                                        <div class="checkout-list__item-price pt3">от 62,68 ₴</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="confirmation__block">
+                        <div class="confirmation__block-head">
+                            <div class="div1">Промокод</div>
+                        </div>
+                        <div class="confirmation__block-wrapper">
+                            <div class="section19_promo_1">
+                                <button class="btn --secondary-alt --block j_test_78" type="button">
+                                    <svg class="icon">
+                                        <use xlink:href="#promocode"></use>
+                                    </svg><span>Ввести промокод</span>
+                                </button>
+                            </div>
+                            <div class="section19_promo_2" style="display: none">
+                                <label class="field-text j-field-text">
+                                    <input class="field-text__input css-input" type="text" value="9311-9124-1611-2222" aria-invalid="false" name="confirmation-promocode-1" placeholder=""/><span class="field-text__name css-label">Промокод<sup>*</sup></span><span class="field-text__help-text" style="display: none">Текст ошибки или подсказка</span> 
+                                </label>
+                            </div>
+                            <div class="section19_promo_3" style="display: none">
+                                <div class="promo-success">
+                                    <div class="div1">
+                                        <div class="promo-success__title">
+                                            <div>Промокод применен!</div><span class="color">Скидка 22,20 ₴</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn --accent --outline --r35 --xs j_test_81" type="button"><span>Отмена</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section19_foot_1 confirmation__block-foot --right" style="display: none">
+                            <button class="btn --accent --ghost j_test_79" type="button"><span>Отмена</span></button>
+                            <button class="btn --accent j_test_80" type="button"><span>Применить</span></button>
+                        </div>
+                    </div>
+                    <div class="confirmation__block no-border">
+                        <div class="confirmation__block-head">
+                            <div class="div1">Оплата</div>
+                        </div>
+                        <div class="confirmation__block-wrapper">
+                            <div class="form-group">
+                                <label class="field-radio no-padding j_test_82">
+                                    <input class="field-radio__input" type="radio" name="section20_radio1" checked="checked"/><span class="field-radio__span-input"></span><span class="field-radio__label">В аптеке (наличными/картой)</span>
+                                </label>
+                            </div>
+                            <div class="form-group mb25">
+                                <label class="field-radio no-padding j_test_83">
+                                    <input class="field-radio__input" type="radio" name="section20_radio1"/><span class="field-radio__span-input"></span><span class="field-radio__label">Онлайн (Visa/MasterCard)</span>
+                                </label>
+                            </div>
+                            <div class="app-modal__delivery-info">
+                                <div class="div1">Доставка:</div>
+                                <div class="div2"><span class="color">150,00 ₴</span></div>
+                            </div>
+                            <div class="app-modal__delivery-info">
+                                <div class="div1">За товары:</div>
+                                <div class="div2"><span class="color">370,20 ₴</span></div>
+                            </div>
+                            <div class="app-modal__delivery-info">
+                                <div class="div1">Доставка:</div>
+                                <div class="div2"><span class="color">100,00 ₴</span></div>
+                            </div>
+                            <div class="app-modal__delivery-info">
+                                <div class="div1">Скидка:</div>
+                                <div class="div2"><span class="color">-22,20 ₴</span></div>
+                            </div>
+                            <div class="app-modal__delivery-info">
+                                <div class="div1">К оплате:</div>
+                                <div class="div2"><span class="color fs20">370,20 ₴</span></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -5581,6 +6037,8 @@
                         <use href="#arrow_left"></use>
                     </svg><span>Назад к списку аптек</span></span></button>
             <button class="app-button-status" type="button" style="display: none" id="section14_greenBtn"><span class="app-button-status__inner"><span>Продолжить</span></span></button>
+            <button class="app-button-status" type="button" id="section19_greenBtn"><span class="app-button-status__inner"><span>Отправить заказ</span></span></button>
+            <button class="app-button-status --error" type="button" style="display: none" id="section19_redBtn"><span class="app-button-status__inner"><span>Перейти к оплате</span></span></button>
             <div class="app-modal" id="appModal1" style="display: none">
                 <div class="app-modal__wrapper">
                     <button class="app-modal__close j_test_43" type="button">
@@ -5969,6 +6427,18 @@
                     </div>
                 </div>
             </div>
+            <div class="app-modal" id="appOnlinePay" style="display: none">
+                <div class="app-modal-info">
+                    <div class="app-modal-info__title">Онлайн оплата</div>
+                    <div class="app-modal-info__content">
+                        <p>Для оплаты онлайн вам необходимо перейти на сайт платежного сервиса</p>
+                    </div>
+                    <div class="app-modal-info__btns --right j_test_43">
+                        <button class="btn --contrast --ghost --sm" type="button"><span>Отмена</span></button>
+                        <button class="btn --secondary --ghost --sm" type="button"><span>Перейти</span></button>
+                    </div>
+                </div>
+            </div>
             <div class="app-modal" id="appGeoSave" style="display: none">
                 <div class="app-modal-info">
                     <div class="app-modal-info__content">
@@ -6001,7 +6471,8 @@
         <script src="./js/ion.rangeSlider/ion.rangeSlider.js"></script>
         <script src="./js/autosize/autosize.js"></script>
         <script src="./js/gsap.min.js"></script>
-        <script src="./js/common.js?v61"></script>
+        <script src="./js/jquery.maskedinput/jquery.maskedinput.min.js"></script>
+        <script src="./js/common.js?v62"></script>
         <svg width="0" height="0" style="display: none">
             <symbol id="settings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2337 7.125H3.75C3.33579 7.125 3 7.46079 3 7.875C3 8.28921 3.33579 8.625 3.75 8.625H7.2337C7.55641 9.70931 8.56087 10.5 9.75 10.5C10.9391 10.5 11.9436 9.70931 12.2663 8.625H20.25C20.6642 8.625 21 8.28921 21 7.875C21 7.46079 20.6642 7.125 20.25 7.125H12.2663C11.9436 6.04069 10.9391 5.25 9.75 5.25C8.56087 5.25 7.55641 6.04069 7.2337 7.125ZM8.625 7.875C8.625 7.25368 9.12868 6.75 9.75 6.75C10.3713 6.75 10.875 7.25368 10.875 7.875C10.875 8.49632 10.3713 9 9.75 9C9.12868 9 8.625 8.49632 8.625 7.875Z"></path>

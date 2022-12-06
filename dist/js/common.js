@@ -177,10 +177,13 @@ $(document).on('ready', function(){
     _this.parents('.delivery').find('.delivery__wrapper-content').hide();
     $('#' + _this.data('tab')).show();
   });
-  $('.j_test_78').on('click', function(){ $('#section19_promo_1').hide(); $('#section19_promo_2').show(); $('#section19_foot_1').show(); });
-  $('.j_test_79').on('click', function(){ $('#section19_promo_2').hide(); $('#section19_promo_1').show(); $('#section19_foot_1').hide(); });
-  $('.j_test_80').on('click', function(){ $('#section19_promo_2').hide(); $('#section19_promo_3').show(); $('#section19_foot_1').hide(); });
-  $('.j_test_81').on('click', function(){ $('#section19_promo_3').hide(); $('#section19_promo_1').show(); });
+  $('.j_test_78').on('click', function(){ $('.section19_promo_1').hide(); $('.section19_promo_2').show(); $('.section19_foot_1').show(); });
+  $('.j_test_79').on('click', function(){ $('.section19_promo_2').hide(); $('.section19_promo_1').show(); $('.section19_foot_1').hide(); });
+  $('.j_test_80').on('click', function(){ $('.section19_promo_2').hide(); $('.section19_promo_3').show(); $('.section19_foot_1').hide(); });
+  $('.j_test_81').on('click', function(){ $('.section19_promo_3').hide(); $('.section19_promo_1').show(); });
+  $('.j_test_82').on('click', function(){ $('.app-button-status').hide(); $('#section19_greenBtn').show(); });
+  $('.j_test_83').on('click', function(){ $('.app-button-status').hide(); $('#section19_redBtn').show(); });
+  $('#section19_redBtn').on('click', function(){ $('#appOnlinePay').show(); });
 
   $(document).on('click', '.collapsible-heading', function(e){
     e.preventDefault();
@@ -259,7 +262,8 @@ $(document).on('ready', function(){
   inputFocus();
   autosize();
   filterBlock();
-
+  
+  inputMaskTest();
   formCheckedTest();
   cartCountTest();
 
@@ -423,4 +427,21 @@ function cartCountTest() {
       input.val(value + ' ' + input.data('label'));
     });
   })
+}
+
+function inputMaskTest() {
+  var intlMask = $('.j-mask-intl');
+  intlMask.each(function () {
+    $(this).mask("+9 999 999-99-99");
+  });
+
+  var localMask = $('.j-mask-local');
+  localMask.each(function () {
+    $(this).mask("+38 (099) 999-99-99");
+  });
+
+  var dateMask = $('.j-mask-date');
+  dateMask.each(function () {
+    $(this).mask("99.99.9999");
+  });
 }

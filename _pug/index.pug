@@ -17,7 +17,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v93')
+    link(rel='stylesheet', href='./css/style.min.css?v94')
   
   body 
     #app.app
@@ -49,7 +49,7 @@ html(lang="uk")
         .you-pharmacy-line__text Ваша аптека:
         button(type="button").you-pharmacy-line__btn#j_test_04
           span г. Харьков, просп. Гагарина, 722
-      #section1.section.section1(style="display: none")
+      #section1.section.section1
         .search.--once
           button(type="button").search__input.j_test_07 Поиск
           .search__btn-search
@@ -2203,41 +2203,51 @@ html(lang="uk")
             p
               button(type="button").btn.--contrast.--block
                 span Завершить покупки
-      #section19.section.section19
+      #section19.section.section19(style="display: none")
         //- .loader
         .test-navigation.--inside.show
           //- button(type="button").test-navigation__hide
           button(type="button" data-section="section19").test-navigation__btn 1
-          //- button(type="button" data-section="section20").test-navigation__btn 2
-          //- button(type="button" data-section="section21").test-navigation__btn 3
+          button(type="button" data-section="section20").test-navigation__btn 2
+          button(type="button" data-section="section21").test-navigation__btn 3
 
         .confirmation
           .confirmation__block
             .confirmation__block-head
               .div1 Получатель
             .confirmation__block-wrapper
-              +field-text({
-                title: 'Телефон',
-                hasJs: true,
-                isTextarea: false,
-                isRequired: true,
-                hasError: false,
-                helpText: 'Текст ошибки или подсказка',
-                mods: '',
-                val: '',
-                attrs: {
-                  name: 'confirmation-name-1',
-                  placeholder: '',
-                  value: '+38 (093) 111-35-17'
-                }
-              }) 
+              .form-group.mb0
+                +field-text({
+                  title: 'Телефон',
+                  hasJs: true,
+                  isTextarea: false,
+                  isRequired: true,
+                  hasError: false,
+                  helpText: 'Текст ошибки или подсказка',
+                  mods: '',
+                  val: '',
+                  attrs: {
+                    name: 'confirmation-phone-1',
+                    placeholder: '',
+                    value: '+38 (093) 111-35-17',
+                    class: 'j-mask-local'
+                  }
+                }) 
 
           .confirmation__block
             .confirmation__block-head
               .div1 Доставка
-              button(type='button').btn.--secondary-alt.--r50.--xs
-                svg.icon
-                  use(xlink:href='#edit')
+              .sort
+                button(type='button').btn.--secondary-alt.--r50.--xs.j_test_39
+                  svg.icon
+                    use(xlink:href='#edit')
+                .sort__dropdown.--right.--delivery.j_test_40(style="display: none")
+                  button(type="button").sort__dropdown-btn
+                    span Изменить Аптеку
+                  button(type="button").sort__dropdown-btn
+                    span Изменить способ доставки
+                  button(type="button").sort__dropdown-btn
+                    span Изменить город
             .confirmation__block-wrapper
               .confirmation__pharmacy
                 .confirmation__pharmacy-thumb
@@ -2254,19 +2264,66 @@ html(lang="uk")
               button(type='button').btn.--secondary-alt.--r50.--xs
                 svg.icon
                   use(xlink:href='#edit')
-            .confirmation__block-wrapper
-              p 1
+            .confirmation__block-wrapper.no-padding
+              .checkout-list
+                .checkout-list__item
+                  .checkout-list__item-thumb
+                    img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
+                  .checkout-list__item-text.j_test_22 Расторопши плоды 200г
+                    small Дарниця | Украина
+                  .checkout-list__item-bottom
+                    .checkout-list__item-count
+                      .count
+                        span.color 1 
+                        | упак.
+                    .checkout-list__item-price.pt3 от 62,68 ₴
+                .checkout-list__item
+                  .checkout-list__item-thumb
+                    img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
+                  .checkout-list__item-text.j_test_22 Расторопши плоды 200г
+                    small Дарниця | Украина
+                  .checkout-list__item-bottom
+                    .checkout-list__item-count
+                      .count
+                        span.color 1 
+                        | упак.
+                      .count
+                        span.color 0 
+                        | блис.
+                    .checkout-list__item-price.pt3 от 62,68 ₴
+                .checkout-list__item
+                  .checkout-list__item-thumb
+                    img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
+                  .checkout-list__item-text.j_test_22 Расторопши плоды 200г
+                    small Дарниця | Украина
+                  .checkout-list__item-bottom
+                    .checkout-list__item-count 
+                      .count
+                        span.color 1 
+                        | упак.
+                    .checkout-list__item-price.pt3 от 62,68 ₴
+                .checkout-list__item
+                  .checkout-list__item-thumb
+                    img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
+                  .checkout-list__item-text.j_test_22 Расторопши плоды 200г
+                    small Дарниця | Украина
+                  .checkout-list__item-bottom
+                    .checkout-list__item-count 
+                      .count
+                        span.color 1 
+                        | упак.
+                    .checkout-list__item-price.pt3 от 62,68 ₴
 
           .confirmation__block
             .confirmation__block-head
               .div1 Промокод
             .confirmation__block-wrapper
-              #section19_promo_1
+              .section19_promo_1
                 button(type="button").btn.--secondary-alt.--block.j_test_78
                   svg.icon
                     use(xlink:href='#promocode')
                   span Ввести промокод
-              #section19_promo_2(style="display: none")
+              .section19_promo_2(style="display: none")
                 +field-text({
                   title: 'Промокод',
                   hasJs: true,
@@ -2282,7 +2339,7 @@ html(lang="uk")
                     value: '9311-9124-1611-2222'
                   }
                 }) 
-              #section19_promo_3(style="display: none")
+              .section19_promo_3(style="display: none")
                 .promo-success
                   .div1
                     .promo-success__title
@@ -2290,17 +2347,512 @@ html(lang="uk")
                       span.color Скидка 22,20 ₴
                   button(type="button").btn.--accent.--outline.--r35.--xs.j_test_81
                     span Отмена
-            #section19_foot_1.confirmation__block-foot.--right(style="display: none")
+            .section19_foot_1.confirmation__block-foot.--right(style="display: none")
               button(type="button").btn.--accent.--ghost.j_test_79
                 span Отмена
               button(type="button").btn.--accent.j_test_80
                 span Применить
 
-          .confirmation__block
+          .confirmation__block.no-border
             .confirmation__block-head
               .div1 Оплата
             .confirmation__block-wrapper
-              p 1
+              .form-group
+                +field-radio({
+                  title: 'В аптеке (наличными/картой)',
+                  isLink: false,
+                  mods: '',
+                  attrs: {
+                    name: 'section19_radio1',
+                    checked: true,
+                  }
+                }).no-padding.j_test_82
+              .form-group.mb25
+                +field-radio({
+                  title: 'Онлайн (Visa/MasterCard)',
+                  isLink: false,
+                  mods: '',
+                  attrs: {
+                    name: 'section19_radio1',
+                    checked: false,
+                    class: ''
+                  }
+                }).no-padding.j_test_83
+              .app-modal__delivery-info
+                .div1 Доставка:
+                .div2
+                  span.color 150,00 ₴
+              .app-modal__delivery-info
+                .div1 За товары:
+                .div2
+                  span.color 370,20 ₴
+              .app-modal__delivery-info
+                .div1 Доставка:
+                .div2
+                  span.color 100,00 ₴
+              .app-modal__delivery-info
+                .div1 Скидка:
+                .div2
+                  span.color -22,20 ₴
+              .app-modal__delivery-info
+                .div1 К оплате:
+                .div2
+                  span.color.fs20 370,20 ₴
+      #section20.section.section20(style="display: none")
+        //- .loader
+        .test-navigation.--inside.show
+          //- button(type="button").test-navigation__hide
+          button(type="button" data-section="section19").test-navigation__btn 1
+          button(type="button" data-section="section20").test-navigation__btn 2
+          button(type="button" data-section="section21").test-navigation__btn 3
+
+        .confirmation
+          .confirmation__block
+            .confirmation__block-head
+              .div1 Получатель
+            .confirmation__block-wrapper
+              .form-group.mb15
+                +field-text({
+                title: 'Телефон',
+                hasJs: true,
+                isTextarea: false,
+                isRequired: true,
+                hasError: false,
+                helpText: 'Текст ошибки или подсказка',
+                mods: '',
+                val: '',
+                attrs: {
+                  name: 'confirmation-phone-2',
+                  placeholder: '',
+                  value: '+38 (093) 111-35-17',
+                  class: 'j-mask-local'
+                }
+              }) 
+              .form-group.mb15
+                +field-text({
+                title: 'Имя',
+                hasJs: true,
+                isTextarea: false,
+                isRequired: true,
+                hasError: false,
+                helpText: 'Текст ошибки или подсказка',
+                mods: '',
+                val: '',
+                attrs: {
+                  name: 'confirmation-name-2',
+                  placeholder: '',
+                  value: ''
+                }
+              }) 
+              .form-group.mb0
+                +field-text({
+                title: 'Фамилия',
+                hasJs: true,
+                isTextarea: false,
+                isRequired: true,
+                hasError: false,
+                helpText: 'Текст ошибки или подсказка',
+                mods: '',
+                val: '',
+                attrs: {
+                  name: 'confirmation-lasname-2',
+                  placeholder: '',
+                  value: ''
+                }
+              }) 
+
+          .confirmation__block
+            .confirmation__block-head
+              .div1 Доставка
+              .sort
+                button(type='button').btn.--secondary-alt.--r50.--xs.j_test_39
+                  svg.icon
+                    use(xlink:href='#edit')
+                .sort__dropdown.--right.--delivery.j_test_40(style="display: none")
+                  button(type="button").sort__dropdown-btn
+                    span Изменить Аптеку
+                  button(type="button").sort__dropdown-btn
+                    span Изменить способ доставки
+                  button(type="button").sort__dropdown-btn
+                    span Изменить город
+            .confirmation__block-wrapper
+              .confirmation__pharmacy
+                .confirmation__pharmacy-thumb
+                  svg.icon
+                    use(href='#logo_courier')
+                .confirmation__pharmacy-wrapper
+                  .confirmation__pharmacy-text Курьер
+                  .confirmation__pharmacy-p г. Харьков, Пушкинская, 74
+                  .confirmation__pharmacy-p Сегодня с 16:00 - 19:00
+
+          .confirmation__block
+            .confirmation__block-head
+              .div1 Корзина
+              button(type='button').btn.--secondary-alt.--r50.--xs
+                svg.icon
+                  use(xlink:href='#edit')
+            .confirmation__block-wrapper.no-padding
+              .checkout-list
+                .checkout-list__item
+                  .checkout-list__item-thumb
+                    img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
+                  .checkout-list__item-text.j_test_22 Расторопши плоды 200г
+                    small Дарниця | Украина
+                  .checkout-list__item-bottom
+                    .checkout-list__item-count
+                      .count
+                        span.color 1 
+                        | упак.
+                    .checkout-list__item-price.pt3 от 62,68 ₴
+                .checkout-list__item
+                  .checkout-list__item-thumb
+                    img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
+                  .checkout-list__item-text.j_test_22 Расторопши плоды 200г
+                    small Дарниця | Украина
+                  .checkout-list__item-bottom
+                    .checkout-list__item-count
+                      .count
+                        span.color 1 
+                        | упак.
+                      .count
+                        span.color 0 
+                        | блис.
+                    .checkout-list__item-price.pt3 от 62,68 ₴
+                .checkout-list__item
+                  .checkout-list__item-thumb
+                    img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
+                  .checkout-list__item-text.j_test_22 Расторопши плоды 200г
+                    small Дарниця | Украина
+                  .checkout-list__item-bottom
+                    .checkout-list__item-count 
+                      .count
+                        span.color 1 
+                        | упак.
+                    .checkout-list__item-price.pt3 от 62,68 ₴
+                .checkout-list__item
+                  .checkout-list__item-thumb
+                    img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
+                  .checkout-list__item-text.j_test_22 Расторопши плоды 200г
+                    small Дарниця | Украина
+                  .checkout-list__item-bottom
+                    .checkout-list__item-count 
+                      .count
+                        span.color 1 
+                        | упак.
+                    .checkout-list__item-price.pt3 от 62,68 ₴
+
+          .confirmation__block
+            .confirmation__block-head
+              .div1 Промокод
+            .confirmation__block-wrapper
+              .section19_promo_1
+                button(type="button").btn.--secondary-alt.--block.j_test_78
+                  svg.icon
+                    use(xlink:href='#promocode')
+                  span Ввести промокод
+              .section19_promo_2(style="display: none")
+                +field-text({
+                  title: 'Промокод',
+                  hasJs: true,
+                  isTextarea: false,
+                  isRequired: true,
+                  hasError: false,
+                  helpText: 'Текст ошибки или подсказка',
+                  mods: '',
+                  val: '',
+                  attrs: {
+                    name: 'confirmation-promocode-1',
+                    placeholder: '',
+                    value: '9311-9124-1611-2222'
+                  }
+                }) 
+              .section19_promo_3(style="display: none")
+                .promo-success
+                  .div1
+                    .promo-success__title
+                      div Промокод применен!
+                      span.color Скидка 22,20 ₴
+                  button(type="button").btn.--accent.--outline.--r35.--xs.j_test_81
+                    span Отмена
+            .section19_foot_1.confirmation__block-foot.--right(style="display: none")
+              button(type="button").btn.--accent.--ghost.j_test_79
+                span Отмена
+              button(type="button").btn.--accent.j_test_80
+                span Применить
+
+          .confirmation__block.no-border
+            .confirmation__block-head
+              .div1 Оплата
+            .confirmation__block-wrapper
+              .form-group
+                +field-radio({
+                  title: 'В аптеке (наличными/картой)',
+                  isLink: false,
+                  mods: '',
+                  attrs: {
+                    name: 'section20_radio1',
+                    checked: true,
+                  }
+                }).no-padding.j_test_82
+              .form-group.mb25
+                +field-radio({
+                  title: 'Онлайн (Visa/MasterCard)',
+                  isLink: false,
+                  mods: '',
+                  attrs: {
+                    name: 'section20_radio1',
+                    checked: false,
+                    class: ''
+                  }
+                }).no-padding.j_test_83
+              .app-modal__delivery-info
+                .div1 Доставка:
+                .div2
+                  span.color 150,00 ₴
+              .app-modal__delivery-info
+                .div1 За товары:
+                .div2
+                  span.color 370,20 ₴
+              .app-modal__delivery-info
+                .div1 Доставка:
+                .div2
+                  span.color 100,00 ₴
+              .app-modal__delivery-info
+                .div1 Скидка:
+                .div2
+                  span.color -22,20 ₴
+              .app-modal__delivery-info
+                .div1 К оплате:
+                .div2
+                  span.color.fs20 370,20 ₴
+
+      #section21.section.section21(style="display: none")
+        //- .loader
+        .test-navigation.--inside.show
+          //- button(type="button").test-navigation__hide
+          button(type="button" data-section="section19").test-navigation__btn 1
+          button(type="button" data-section="section20").test-navigation__btn 2
+          button(type="button" data-section="section21").test-navigation__btn 3
+
+        .confirmation
+          .confirmation__block
+            .confirmation__block-head
+              .div1 Получатель
+            .confirmation__block-wrapper
+              .form-group.mb15
+                +field-text({
+                title: 'Телефон',
+                hasJs: true,
+                isTextarea: false,
+                isRequired: true,
+                hasError: false,
+                helpText: 'Текст ошибки или подсказка',
+                mods: '',
+                val: '',
+                attrs: {
+                  name: 'confirmation-phone-2',
+                  placeholder: '',
+                  value: '+38 (093) 111-35-17',
+                  class: 'j-mask-local'
+                }
+              }) 
+              .form-group.mb15
+                +field-text({
+                title: 'Имя',
+                hasJs: true,
+                isTextarea: false,
+                isRequired: true,
+                hasError: false,
+                helpText: 'Текст ошибки или подсказка',
+                mods: '',
+                val: '',
+                attrs: {
+                  name: 'confirmation-name-2',
+                  placeholder: '',
+                  value: ''
+                }
+              }) 
+              .form-group.mb0
+                +field-text({
+                title: 'Фамилия',
+                hasJs: true,
+                isTextarea: false,
+                isRequired: true,
+                hasError: false,
+                helpText: 'Текст ошибки или подсказка',
+                mods: '',
+                val: '',
+                attrs: {
+                  name: 'confirmation-lasname-2',
+                  placeholder: '',
+                  value: ''
+                }
+              }) 
+
+          .confirmation__block
+            .confirmation__block-head
+              .div1 Доставка
+              .sort
+                button(type='button').btn.--secondary-alt.--r50.--xs.j_test_39
+                  svg.icon
+                    use(xlink:href='#edit')
+                .sort__dropdown.--right.--delivery.j_test_40(style="display: none")
+                  button(type="button").sort__dropdown-btn
+                    span Изменить Аптеку
+                  button(type="button").sort__dropdown-btn
+                    span Изменить способ доставки
+                  button(type="button").sort__dropdown-btn
+                    span Изменить город
+            .confirmation__block-wrapper
+              .confirmation__pharmacy
+                .confirmation__pharmacy-thumb
+                  svg.icon
+                    use(href='#logo_newposhta')
+                .confirmation__pharmacy-wrapper
+                  .confirmation__pharmacy-text Новая Почта
+                  .confirmation__pharmacy-p Отделение № 11
+                  .confirmation__pharmacy-p г. Харьков, ул. Пушкинская, 96
+
+          .confirmation__block
+            .confirmation__block-head
+              .div1 Корзина
+              button(type='button').btn.--secondary-alt.--r50.--xs
+                svg.icon
+                  use(xlink:href='#edit')
+            .confirmation__block-wrapper.no-padding
+              .checkout-list
+                .checkout-list__item
+                  .checkout-list__item-thumb
+                    img(src="./tmp/img-2.jpg", width="60" height="60" alt="")
+                  .checkout-list__item-text.j_test_22 Расторопши плоды 200г
+                    small Дарниця | Украина
+                  .checkout-list__item-bottom
+                    .checkout-list__item-count
+                      .count
+                        span.color 1 
+                        | упак.
+                    .checkout-list__item-price.pt3 от 62,68 ₴
+                .checkout-list__item
+                  .checkout-list__item-thumb
+                    img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
+                  .checkout-list__item-text.j_test_22 Расторопши плоды 200г
+                    small Дарниця | Украина
+                  .checkout-list__item-bottom
+                    .checkout-list__item-count
+                      .count
+                        span.color 1 
+                        | упак.
+                      .count
+                        span.color 0 
+                        | блис.
+                    .checkout-list__item-price.pt3 от 62,68 ₴
+                .checkout-list__item
+                  .checkout-list__item-thumb
+                    img(src="./tmp/img-3.jpg", width="60" height="60" alt="")
+                  .checkout-list__item-text.j_test_22 Расторопши плоды 200г
+                    small Дарниця | Украина
+                  .checkout-list__item-bottom
+                    .checkout-list__item-count 
+                      .count
+                        span.color 1 
+                        | упак.
+                    .checkout-list__item-price.pt3 от 62,68 ₴
+                .checkout-list__item
+                  .checkout-list__item-thumb
+                    img(src="./tmp/img-1.jpg", width="60" height="60" alt="")
+                  .checkout-list__item-text.j_test_22 Расторопши плоды 200г
+                    small Дарниця | Украина
+                  .checkout-list__item-bottom
+                    .checkout-list__item-count 
+                      .count
+                        span.color 1 
+                        | упак.
+                    .checkout-list__item-price.pt3 от 62,68 ₴
+
+          .confirmation__block
+            .confirmation__block-head
+              .div1 Промокод
+            .confirmation__block-wrapper
+              .section19_promo_1
+                button(type="button").btn.--secondary-alt.--block.j_test_78
+                  svg.icon
+                    use(xlink:href='#promocode')
+                  span Ввести промокод
+              .section19_promo_2(style="display: none")
+                +field-text({
+                  title: 'Промокод',
+                  hasJs: true,
+                  isTextarea: false,
+                  isRequired: true,
+                  hasError: false,
+                  helpText: 'Текст ошибки или подсказка',
+                  mods: '',
+                  val: '',
+                  attrs: {
+                    name: 'confirmation-promocode-1',
+                    placeholder: '',
+                    value: '9311-9124-1611-2222'
+                  }
+                }) 
+              .section19_promo_3(style="display: none")
+                .promo-success
+                  .div1
+                    .promo-success__title
+                      div Промокод применен!
+                      span.color Скидка 22,20 ₴
+                  button(type="button").btn.--accent.--outline.--r35.--xs.j_test_81
+                    span Отмена
+            .section19_foot_1.confirmation__block-foot.--right(style="display: none")
+              button(type="button").btn.--accent.--ghost.j_test_79
+                span Отмена
+              button(type="button").btn.--accent.j_test_80
+                span Применить
+
+          .confirmation__block.no-border
+            .confirmation__block-head
+              .div1 Оплата
+            .confirmation__block-wrapper
+              .form-group
+                +field-radio({
+                  title: 'В аптеке (наличными/картой)',
+                  isLink: false,
+                  mods: '',
+                  attrs: {
+                    name: 'section20_radio1',
+                    checked: true,
+                  }
+                }).no-padding.j_test_82
+              .form-group.mb25
+                +field-radio({
+                  title: 'Онлайн (Visa/MasterCard)',
+                  isLink: false,
+                  mods: '',
+                  attrs: {
+                    name: 'section20_radio1',
+                    checked: false,
+                    class: ''
+                  }
+                }).no-padding.j_test_83
+              .app-modal__delivery-info
+                .div1 Доставка:
+                .div2
+                  span.color 150,00 ₴
+              .app-modal__delivery-info
+                .div1 За товары:
+                .div2
+                  span.color 370,20 ₴
+              .app-modal__delivery-info
+                .div1 Доставка:
+                .div2
+                  span.color 100,00 ₴
+              .app-modal__delivery-info
+                .div1 Скидка:
+                .div2
+                  span.color -22,20 ₴
+              .app-modal__delivery-info
+                .div1 К оплате:
+                .div2
+                  span.color.fs20 370,20 ₴
 
       button(type="button" style="display: none")#appButtonStatus.app-button-status
         span.app-button-status__inner
@@ -2323,6 +2875,12 @@ html(lang="uk")
       button(type="button" style="display: none")#section14_greenBtn.app-button-status
         span.app-button-status__inner
           span Продолжить
+      button(type="button" style="")#section19_greenBtn.app-button-status
+        span.app-button-status__inner
+          span Отправить заказ
+      button(type="button" style="display: none")#section19_redBtn.app-button-status.--error
+        span.app-button-status__inner
+          span Перейти к оплате
       #appModal1.app-modal(style="display: none")
         .app-modal__wrapper
           button(type="button").app-modal__close.j_test_43
@@ -2457,6 +3015,16 @@ html(lang="uk")
               span Сохранить
             button(type="button").btn.--secondary.--ghost.--sm
               span Не сохранять
+      #appOnlinePay.app-modal(style="display: none")
+        .app-modal-info
+          .app-modal-info__title Онлайн оплата
+          .app-modal-info__content
+            p Для оплаты онлайн вам необходимо перейти на сайт платежного сервиса
+          .app-modal-info__btns.--right.j_test_43
+            button(type="button").btn.--contrast.--ghost.--sm
+              span Отмена
+            button(type="button").btn.--secondary.--ghost.--sm
+              span Перейти
       #appGeoSave.app-modal(style="display: none")
         .app-modal-info
           .app-modal-info__content
@@ -2481,6 +3049,7 @@ html(lang="uk")
     script(src="./js/ion.rangeSlider/ion.rangeSlider.js")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
-    script(src="./js/common.js?v61")
+    script(src="./js/jquery.maskedinput/jquery.maskedinput.min.js")
+    script(src="./js/common.js?v62")
 
     include ./_include/_svg
