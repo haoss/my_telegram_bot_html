@@ -275,14 +275,19 @@ $(document).on('ready', function(){
     var _attr8 = $(this).is("[data-section='section8']");
     var _attr12 = $(this).is("[data-section='section12']");
     var _attr13 = $(this).is("[data-section='section13']");
+    var _attr19 = $(this).is("[data-section='section19']");
     $('.section').hide(); $('#' + $(this).data('section')).show(); 
     $('.test-navigation__btn').removeClass('active'); 
     $(this).addClass('active'); 
     swiper2.destroy();
     $('#section12ButtonStatus').hide();
     $('#section13ButtonStatus').hide();
+    $('#section19_greenBtn').hide();
 
-    if (_attr13) {
+    if (_attr19) {
+      $('#section19_greenBtn').show();
+      $('#section19_redBtn').hide();
+    } else if (_attr13) {
       $('#section13ButtonStatus').show();
       $('#section12ButtonStatus').hide();
       $('#checkoutButtonStatus').hide();
