@@ -279,6 +279,7 @@ $(document).on('ready', function(){
     var _attr20 = $(this).is("[data-section='section20']");
     var _attr21 = $(this).is("[data-section='section21']");
     var _attr22 = $(this).is("[data-section='section22']");
+    var _attr23 = $(this).is("[data-section='section23']");
     $('.section').hide(); $('#' + $(this).data('section')).show(); 
     $('.test-navigation__btn').removeClass('active'); 
     $(this).addClass('active'); 
@@ -287,17 +288,22 @@ $(document).on('ready', function(){
     $('#section13ButtonStatus').hide();
     $('#section19_greenBtn').hide();
 
-    if (_attr19 || _attr20 || _attr21 || _attr22 ) {
+    if (_attr23 ) {
+      $('#section23_greenBtn').show();
+    } else if (_attr19 || _attr20 || _attr21 || _attr22 ) {
       $('#section19_greenBtn').show();
       $('#section19_redBtn').hide();
+      $('#section23_greenBtn').hide();
     } else if (_attr13) {
       $('#section13ButtonStatus').show();
       $('#section12ButtonStatus').hide();
       $('#checkoutButtonStatus').hide();
+      $('#section23_greenBtn').hide();
     } else if (_attr12) {
       $('#section12ButtonStatus').show();
       $('#section13ButtonStatus').hide();
       $('#checkoutButtonStatus').hide();
+      $('#section23_greenBtn').hide();
     } else if (_attr7) {
       setTimeout(function(){
         $('#appSaveCart').show();
@@ -305,21 +311,25 @@ $(document).on('ready', function(){
       $('#appButtonStatus').hide(); 
       $('#checkoutButtonStatus').show();
       $('.section-bottom').css('bottom', '47px');
+      $('#section23_greenBtn').hide();
     } else if (_attr8) {
       $('#appButtonStatus').show(); 
       $('#checkoutButtonStatus').hide();
       $('.section-bottom').css('bottom', '47px');
+      $('#section23_greenBtn').hide();
     } else if (_attr1) {
       $('#appPreloader').show();
       setTimeout(function(){
         swiper2 = new Swiper(".j-main-slider", swiper2options);
         // console.log('click');
         $('#appPreloader').hide();
+        $('#section23_greenBtn').hide();
       }, 1000);
     } else if (_attr2) {
       setTimeout(function(){
         $('#appSearchNo').show();
       }, 400);
+      $('#section23_greenBtn').hide();
     }
   });
 
