@@ -184,6 +184,8 @@ $(document).on('ready', function(){
   $('.j_test_82').on('click', function(){ $('.app-button-status').hide(); $('#section19_greenBtn').show(); });
   $('.j_test_83').on('click', function(){ $('.app-button-status').hide(); $('#section19_redBtn').show(); });
   $('#section19_redBtn').on('click', function(){ $('#appOnlinePay').show(); });
+  $('.j_test_84').on('click', function(){ $('.section').hide(); $('#section15').show(); });
+  $('.j_test_85').on('click', function(){ $('.section').hide(); $('#section15_2').show(); });
 
   $(document).on('click', '.collapsible-heading', function(e){
     e.preventDefault();
