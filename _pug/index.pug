@@ -17,7 +17,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v95')
+    link(rel='stylesheet', href='./css/style.min.css?v96')
   
   body 
     #app.app
@@ -26,7 +26,7 @@ html(lang="uk")
         button(type="button").test-navigation__hide
         button(type="button" data-section="section1").test-navigation__btn 1
         //- button(type="button" data-section="section2").test-navigation__btn 2
-        //- button(type="button" data-section="section3").test-navigation__btn 3
+        button(type="button" data-section="section3").test-navigation__btn 3
         //- button(type="button" data-section="section4").test-navigation__btn 4
         //- button(type="button" data-section="section5").test-navigation__btn 5
         button(type="button" data-section="section6").test-navigation__btn 6
@@ -52,7 +52,7 @@ html(lang="uk")
         .you-pharmacy-line__text Ваша аптека:
         button(type="button").you-pharmacy-line__btn#j_test_04
           span г. Харьков, просп. Гагарина, 722
-      #section1.section.section1(style="display: none")
+      #section1.section.section1
         .search.--once
           button(type="button").search__input.j_test_07 Поиск
           .search__btn-search
@@ -1526,6 +1526,7 @@ html(lang="uk")
           button(type="button" data-section="section13").test-navigation__btn 3
           button(type="button" data-section="section14").test-navigation__btn 4
           button(type="button" data-section="section15").test-navigation__btn 5
+          button(type="button" data-section="section15_2").test-navigation__btn 6
 
         .tab
           .tab__block.is-active.j_test_64
@@ -1623,6 +1624,7 @@ html(lang="uk")
           button(type="button" data-section="section13").test-navigation__btn 3
           button(type="button" data-section="section14").test-navigation__btn 4
           button(type="button" data-section="section15").test-navigation__btn 5
+          button(type="button" data-section="section15_2").test-navigation__btn 6
 
         .pharmacies
           .pharmacies__search.bb1
@@ -1782,6 +1784,7 @@ html(lang="uk")
           button(type="button" data-section="section13").test-navigation__btn 3
           button(type="button" data-section="section14").test-navigation__btn 4
           button(type="button" data-section="section15").test-navigation__btn 5
+          button(type="button" data-section="section15_2").test-navigation__btn 6
 
         .search.--once
           button(type="button").search__input.pr20.j_test_62 Ваш адрес, район
@@ -1855,6 +1858,7 @@ html(lang="uk")
           button(type="button" data-section="section13").test-navigation__btn 3
           button(type="button" data-section="section14").test-navigation__btn 4
           button(type="button" data-section="section15").test-navigation__btn 5
+          button(type="button" data-section="section15_2").test-navigation__btn 6
 
         .map-block(style="background-image: url(./tmp/map-block.jpg);")
           .map-block__marker-test(style="top: 30%; left: 50%").j_test_72
@@ -1997,6 +2001,7 @@ html(lang="uk")
           button(type="button" data-section="section13").test-navigation__btn 3
           button(type="button" data-section="section14").test-navigation__btn 4
           button(type="button" data-section="section15").test-navigation__btn 5
+          button(type="button" data-section="section15_2").test-navigation__btn 6
 
         .delivery
           .delivery__head
@@ -2108,7 +2113,7 @@ html(lang="uk")
               .div1 5 товаров
               .div2.fs23
                 span.color 370,20 ₴
-      #section15_2.section.section15
+      #section15_2.section.section15_2(style="display: none")
         .test-navigation.--inside.show
           //- button(type="button").test-navigation__hide
           button(type="button" data-section="section11").test-navigation__btn 1
@@ -2116,26 +2121,27 @@ html(lang="uk")
           button(type="button" data-section="section13").test-navigation__btn 3
           button(type="button" data-section="section14").test-navigation__btn 4
           button(type="button" data-section="section15").test-navigation__btn 5
+          button(type="button" data-section="section15_2").test-navigation__btn 6
 
         .delivery
           .delivery__head
             .delivery__tab
               button(type="button" data-tab="section15_2_tabContent1").delivery__tab-btn.is-active.j_test_77
-                svg.icon
-                  use(xlink:href='#delivery_1')
+                svg.icon.--color2
+                  use(xlink:href='#delivery_4')
                 .delivery__tab-title Отделение
                 .delivery__tab-desc бесплатно*
               button(type="button" data-tab="section15_2_tabContent2").delivery__tab-btn.j_test_77
-                svg.icon
+                svg.icon.--color2
                   use(xlink:href='#delivery_2')
                 .delivery__tab-title Курьер
                 .delivery__tab-desc от 60 грн.
           .delivery__wrapper
-            #section15_tabContent1.delivery__wrapper-content
+            #section15_2_tabContent1.delivery__wrapper-content
               form(action="#!" autocomplete="off")
                 .form-group
                   +field-text({
-                    title: 'Отделение',
+                    title: 'Почтовый индекс',
                     hasJs: true,
                     isTextarea: false,
                     isRequired: true,
@@ -2146,11 +2152,34 @@ html(lang="uk")
                     attrs: {
                       name: 'text',
                       placeholder: '',
-                      value: '№1: провулок Спартака, 7а'
+                      value: ''
                     }
                   })
-            #section15_tabContent2.delivery__wrapper-content(style="display: none")
+                .form-group
+                  p.font-weight-normal.fs14 Почтовый индекс не введён. Узнать индекс на сайте 
+                    a(href="#!") Укрпошта
+            #section15_2_tabContent2.delivery__wrapper-content(style="display: none")
               form(action="#!" autocomplete="off")
+                .form-group
+                  +field-text({
+                    title: 'Почтовый индекс',
+                    hasJs: true,
+                    isTextarea: false,
+                    isRequired: true,
+                    hasError: false,
+                    helpText: 'Текст ошибки или подсказка',
+                    mods: '',
+                    val: '',
+                    attrs: {
+                      name: 'text',
+                      placeholder: '',
+                      value: '61039'
+                    }
+                  })
+                .form-group
+                  p.font-weight-normal.fs14 Отделение: МВПЗ Харків 39
+                    br
+                    | Адрес отделения: Харківська область, Харківський район, м. Харків, вул. Доватора, 17
                 .form-group
                   +field-text({
                     title: 'Улица',
@@ -2197,24 +2226,6 @@ html(lang="uk")
                       name: 'text',
                       placeholder: '',
                       value: ''
-                    }
-                  })
-            #section15_tabContent3.delivery__wrapper-content(style="display: none")
-              form(action="#!" autocomplete="off")
-                .form-group
-                  +field-text({
-                    title: 'Почтомат',
-                    hasJs: true,
-                    isTextarea: false,
-                    isRequired: true,
-                    hasError: false,
-                    helpText: 'Текст ошибки или подсказка',
-                    mods: '',
-                    val: '',
-                    attrs: {
-                      name: 'text',
-                      placeholder: '',
-                      value: '№1: провулок Спартака, 7а'
                     }
                   })
           .delivery__foot
@@ -3498,6 +3509,6 @@ html(lang="uk")
     script(src="./js/autosize/autosize.js")
     script(src="./js/gsap.min.js")
     script(src="./js/jquery.maskedinput/jquery.maskedinput.min.js")
-    script(src="./js/common.js?v66")
+    script(src="./js/common.js?v67")
 
     include ./_include/_svg

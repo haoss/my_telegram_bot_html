@@ -209,6 +209,8 @@ input {
   }
 }
 
+a { color: var(--color-d-1); text-decoration: underline; }
+
 p { margin-bottom: 20px; }
 dl, ol, ul { padding-left: 22px; }
 
@@ -217,3 +219,6 @@ dl, ol, ul { padding-left: 22px; }
 .d-inline-block { display: inline-block !important; }
 .d-inline-flex { display: inline-flex !important; }
 .d-inline { display: inline !important; }
+
+.font-weight-normal { font-weight: normal !important; }
+.font-weight-bold { font-weight: bolds !important; }
