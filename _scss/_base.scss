@@ -222,3 +222,8 @@ dl, ol, ul { padding-left: 22px; }
 
 .font-weight-normal { font-weight: normal !important; }
 .font-weight-bold { font-weight: bolds !important; }
+
+.overflow-hidden { overflow: hidden !important; }
+.clickable { cursor: pointer; }
+.break-word { word-break: break-word; }
+[v-cloak] { display: none !important }

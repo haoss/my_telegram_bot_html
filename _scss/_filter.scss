@@ -45,6 +45,14 @@
         flex-shrink: 0;
         margin-left: 10px;
         transform: rotate(90deg);
+        &.reset {
+          fill: var(--color-red);
+          width: 25px;
+          height: 25px;
+          left: 10px;
+          right: auto;
+          position: absolute;
+        }
       }
       &>span {
         flex-grow: 1;
