@@ -17,7 +17,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v98')
+    link(rel='stylesheet', href='./css/style.min.css?v99')
   
   body 
     #app.app
@@ -542,6 +542,11 @@ html(lang="uk")
           include ./_include/_catalog_view_2
         #appFilter.app-filter(style="display: none")
           .app-filter__wrapper
+            .app-filter__head
+              .app-filter__head-title Фільтр
+              button.app-filter__head-btn(type='button')
+                svg.icon
+                  use(href='#close')
             .app-filter__body
               .app-filter__body-wrapper
                 include ./_include/_filter

@@ -13,7 +13,7 @@
             Telegram.WebApp.onEvent('themeChanged', setThemeClass);
             setThemeClass();
         </script>
-        <link rel="stylesheet" href="./css/style.min.css?v98">
+        <link rel="stylesheet" href="./css/style.min.css?v99">
     </head>
     <body> 
         <div class="app" id="app">
@@ -2279,6 +2279,14 @@
                 </div>
                 <div class="app-filter" id="appFilter" style="display: none">
                     <div class="app-filter__wrapper">
+                        <div class="app-filter__head">
+                            <div class="app-filter__head-title">Фільтр</div>
+                            <button class="app-filter__head-btn" type="button">
+                                <svg class="icon">
+                                    <use href="#close"></use>
+                                </svg>
+                            </button>
+                        </div>
                         <div class="app-filter__body">
                             <div class="app-filter__body-wrapper">
                                 <div class="filter">

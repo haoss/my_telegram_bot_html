@@ -92,7 +92,7 @@
           }
         }
         &-wrapper {
-          display: block;
+          display: none;
         }
       }
       &.is-active {
@@ -104,6 +104,9 @@
             svg.icon {
               transform: rotate(-90deg);
             }
+          }
+          &-wrapper {
+            display: block;
           }
         }
       }
