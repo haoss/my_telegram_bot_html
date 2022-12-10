@@ -684,6 +684,7 @@
                       margin-bottom: 10px;
                       &:last-child {
                         margin-bottom: 0;
+                        font-weight: bold;
                       }
                     }
                   }
@@ -1866,18 +1867,18 @@
     width: 32px;
     position: absolute;
     z-index: 5;
-    background: rgba(var(--color-black-rgba), 0.05);
+    background: rgba(var(--color-black-rgba), 0.06);
     text-decoration: none;
     color: rgba(17, 17, 17, 0.48);
     text-align: center;
-    border: 0;
+    border: 1px solid var(--color-d-8);
     cursor: pointer;
     padding: 0;
     border-radius: 50%;
     margin-top: 4px;
     &:disabled, 
     &.disabled {
-      opacity: 0.2;
+      opacity: 0.4;
       pointer-events: none;
       cursor: default;
     }
@@ -1891,6 +1892,15 @@
   }
   &__plus {
     right: 0;
+  }
+  &__measure {
+    text-align: center;
+    color: #999999;
+    font-size: 0.714rem;
+    line-height: 1.2;
+    &:first-letter {
+      text-transform: uppercase;
+    }
   }
 }
 
