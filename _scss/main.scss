@@ -1627,8 +1627,8 @@
       color: var(--text-color);
       line-height: 1.2;
       &.active {
-        border-left: 1px solid #304aff;
-        background: #ebfdff;
+        background: var(--text-color);
+        color: var(--tg-theme-bg-color);
       }
     }
   }

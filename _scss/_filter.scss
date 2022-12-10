@@ -47,11 +47,10 @@
         transform: rotate(90deg);
         &.reset {
           fill: var(--color-red);
+          margin-left: -6px;
+          margin-right: 10px;
           width: 25px;
           height: 25px;
-          left: 10px;
-          right: auto;
-          position: absolute;
         }
       }
       &>span {
