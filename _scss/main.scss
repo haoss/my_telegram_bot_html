@@ -1305,6 +1305,7 @@
   }
   &__content {
     p {
+      margin-bottom: 10px;
       &:last-child {
         margin-bottom: 0;
       }
@@ -1343,6 +1344,7 @@
         justify-content: flex-start;
         color: var(--color-d-7);
         font-weight: 400;
+        height: 20px;
         &+.btn {
           margin-top: 6px;
         }
@@ -1353,6 +1355,8 @@
           margin-right: 4px;
           fill: var(--color-d-7);
           flex-shrink: 0;
+          margin-top: -5px;
+          margin-bottom: -5px;
         }
         span {
           line-height: 1;
@@ -1369,6 +1373,7 @@
         align-items: center;
         color: var(--color-d-7);
         font-weight: 400;
+        height: 20px;
         &+.btn {
           margin-left: 10px;
         }
@@ -1379,6 +1384,8 @@
           margin-right: 4px;
           fill: var(--color-d-7);
           flex-shrink: 0;
+          margin-top: -5px;
+          margin-bottom: -5px;
         }
         span {
           line-height: 1;
