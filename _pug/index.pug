@@ -17,7 +17,7 @@ html(lang="uk")
       }
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
-    link(rel='stylesheet', href='./css/style.min.css?v98')
+    link(rel='stylesheet', href='./css/style.min.css?v101')
   
   body 
     #app.app
@@ -461,7 +461,7 @@ html(lang="uk")
                   use(xlink:href='#sort')
                 span.filter-head__btn-text Сортировка
               .sort__dropdown.j_test_40(style="display: none")
-                button(type="button").sort__dropdown-btn
+                button(type="button").sort__dropdown-btn.active
                   span По рейтингу
                 button(type="button").sort__dropdown-btn
                   span От дешевых
@@ -516,7 +516,7 @@ html(lang="uk")
                   use(xlink:href='#sort')
                 span.filter-head__btn-text Сортировка
               .sort__dropdown.j_test_40(style="display: none")
-                button(type="button").sort__dropdown-btn
+                button(type="button").sort__dropdown-btn.active
                   span По рейтингу
                 button(type="button").sort__dropdown-btn
                   span От дешевых
@@ -542,6 +542,11 @@ html(lang="uk")
           include ./_include/_catalog_view_2
         #appFilter.app-filter(style="display: none")
           .app-filter__wrapper
+            .app-filter__head
+              .app-filter__head-title Фільтр
+              button.app-filter__head-btn(type='button')
+                svg.icon
+                  use(href='#close')
             .app-filter__body
               .app-filter__body-wrapper
                 include ./_include/_filter
@@ -2371,7 +2376,7 @@ html(lang="uk")
                   svg.icon
                     use(xlink:href='#edit')
                 .sort__dropdown.--right.--delivery.j_test_40(style="display: none")
-                  button(type="button").sort__dropdown-btn
+                  button(type="button").sort__dropdown-btn.active
                     span Изменить Аптеку
                   button(type="button").sort__dropdown-btn
                     span Изменить способ доставки
@@ -2599,7 +2604,7 @@ html(lang="uk")
                   svg.icon
                     use(xlink:href='#edit')
                 .sort__dropdown.--right.--delivery.j_test_40(style="display: none")
-                  button(type="button").sort__dropdown-btn
+                  button(type="button").sort__dropdown-btn.active
                     span Изменить Аптеку
                   button(type="button").sort__dropdown-btn
                     span Изменить способ доставки
@@ -2827,7 +2832,7 @@ html(lang="uk")
                   svg.icon
                     use(xlink:href='#edit')
                 .sort__dropdown.--right.--delivery.j_test_40(style="display: none")
-                  button(type="button").sort__dropdown-btn
+                  button(type="button").sort__dropdown-btn.active
                     span Изменить Аптеку
                   button(type="button").sort__dropdown-btn
                     span Изменить способ доставки
@@ -3055,7 +3060,7 @@ html(lang="uk")
                   svg.icon
                     use(xlink:href='#edit')
                 .sort__dropdown.--right.--delivery.j_test_40(style="display: none")
-                  button(type="button").sort__dropdown-btn
+                  button(type="button").sort__dropdown-btn.active
                     span Изменить Аптеку
                   button(type="button").sort__dropdown-btn
                     span Изменить способ доставки

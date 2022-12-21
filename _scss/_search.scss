@@ -63,6 +63,9 @@
   }
   &__btn-microphone {
     right: 40px;
+    &.active {
+      fill: var(--color-d-3);
+    }
   }
   &.--once {
     margin-top: 20px;
@@ -126,6 +129,9 @@
   }
   &__btn-microphone {
     right: 40px;
+    &.active {
+      fill: var(--color-d-3);
+    }
   }
   &__btn-close {
     right: 10px;
@@ -158,6 +164,10 @@
       fill: var(--color-d-7);
       flex-shrink: 0;
       margin-left: 10px;
+      &.big {
+        width: 25px;
+        height: 25px;
+      }
     }
     &-text {
       flex-grow: 1;
@@ -277,5 +287,13 @@
       left: 20px;
       background: var(--color-l-3);
     }
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  strong {
+    color: var(--color-d-3);
   }
 }

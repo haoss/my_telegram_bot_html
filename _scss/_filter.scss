@@ -45,6 +45,13 @@
         flex-shrink: 0;
         margin-left: 10px;
         transform: rotate(90deg);
+        &.reset {
+          fill: var(--color-red);
+          margin-left: -6px;
+          margin-right: 10px;
+          width: 25px;
+          height: 25px;
+        }
       }
       &>span {
         flex-grow: 1;
@@ -84,7 +91,7 @@
           }
         }
         &-wrapper {
-          display: block;
+          display: none;
         }
       }
       &.is-active {
@@ -96,6 +103,9 @@
             svg.icon {
               transform: rotate(-90deg);
             }
+          }
+          &-wrapper {
+            display: block;
           }
         }
       }
